@@ -2,7 +2,7 @@
 
 2026 秋《数字媒体程序设计》· 第2章 编程语言概论
 在线地址：https://github.com/ShiZiyukuo/dsp-2026-lab03-04
-同步时间：2026-11-17 02:26
+同步时间：2026-11-17 02:39
 
 配套实验报告（两讲各 6 页，日期均为 2026-11-16）：
 - 第03讲：矩阵乘法四层实现—从 Verilog 到 CUDA
@@ -62,5 +62,6 @@ C(-O0) / C(-O2) / Verilog 仿真（Icarus Verilog 12.0）/ CUDA-CPU 等价实现
   - **gcc 16.2.0**（MSYS2 mingw-w64，`-O2`；`-S` 输出 AT&T 汇编）
   - Rust：rustup + rustc **1.100.0**（`x86_64-pc-windows-msvc`，`-C opt-level=3`≈`--release`）
   - Verilog：**Icarus Verilog 12.0**（本地安装，`-g2012` 仿真）
-  - CUDA：**无 nvcc**，`matmul.cu` 未编译；用 CPU 等价实现验证算法语义，未编造 GPU 耗时
+  - CUDA：**CUDA Toolkit 13.5（V13.5.37，pip 包 `nvidia-cuda-nvcc` 提供的完整 toolkit 布局）**，
+    `nvcc -O2 -arch=sm_89` 真机编译运行于 GeForce RTX 4060 Laptop（sm_89，8 GB），核函数结果 CHECKSUM=621 与 CPU/Verilog 一致
 - 运行环境：Windows 11 x64 + Visual Studio 2022 Community，Python 3.12.14。

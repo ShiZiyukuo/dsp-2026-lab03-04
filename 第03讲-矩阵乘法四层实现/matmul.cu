@@ -7,12 +7,15 @@
  *           该 block 共 32*32 = 1024 个线程，其中只有 3*3 = 9 个线程真正计算
  *           有效利用率 9/1024 ≈ 0.88%   ← 3x3 太小，GPU 完全喂不饱
  *
- * ⚠ 本机情况（如实记录）：本机确有 NVIDIA GeForce RTX 4060 Laptop GPU，
- *   但**未安装 CUDA Toolkit（无 nvcc）**，因此本文件**未编译、未运行**，
- *   只做静态实现与逐行说明。
- *   为证明「核函数的算法与 C 版完全一致」，另附 matmul_cu_ref.c ——
- *   它与本文件内核的累加循环逐行同构，已在 cl 下真实编译运行，
- *   CHECKSUM = 621，与 C/Verilog/NumPy 三层一致（见日志 run_cu_ref.txt）。
+ * 真机情况（已跑通）：NVIDIA GeForce RTX 4060 Laptop GPU / sm_89 / 24 SM / 8 GB。
+ *   编译：nvcc 13.5 (V13.5.37)，命令见 code\build_cuda.ps1：
+ *     nvcc -O2 -arch=sm_89 -Xcompiler /utf-8 -I<cu13>\include matmul.cu ^
+ *          -o build\matmul_cu.exe -L<cu13>\lib\x64 -lcudart      （须在 vcvars64 里）
+ *   运行：需把 <cu13>\bin\x86_64 加进 PATH（否则缺 cudart64_13.dll）。
+ *   实测输出：blockDim=(32,32)=1024 线程/block，gridDim=(1,1) -> 1 个 block，
+ *             利用率 0.88%，C = [30 24 18; 84 69 54; 138 114 90]，CHECKSUM = 621，
+ *             与 C / Verilog / NumPy 三层一致（日志 logs\run_cuda.txt）。
+ *   大 N 的性能对比见 matmul_cu_bench.cu（N=1024，CPU vs GPU naive vs GPU tiled）。
  *
  * MUSA 迁移（指南第 8 步）：把下面的 cuda 前缀全部换成 musa 即得摩尔线程版本，
  *   见 matmul_musa.cu 与 musa_diff.txt 的真实 diff 统计。

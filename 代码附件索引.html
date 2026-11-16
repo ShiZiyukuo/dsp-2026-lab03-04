@@ -19,12 +19,12 @@
 <p>邹玥（学号 2025311160，数字媒体艺术2班） · 2026 秋《数字媒体程序设计》· 全部源码为本次实验真实运行版本 ·
 在线仓库 <a href="https://github.com/ShiZiyukuo/dsp-2026-lab03-04">https://github.com/ShiZiyukuo/dsp-2026-lab03-04</a></p></header>
 <main>
-<div class="toc"><b>文件清单（82 个）：</b><br><a href="#f0">README.md</a><a href="#f1">第03讲-矩阵乘法四层实现/README.md</a><a href="#f2">第03讲-矩阵乘法四层实现/bench_matmul.c</a><a href="#f3">第03讲-矩阵乘法四层实现/matmul.c</a><a href="#f4">第03讲-矩阵乘法四层实现/matmul.cu</a><a href="#f5">第03讲-矩阵乘法四层实现/matmul.v</a><a href="#f6">第03讲-矩阵乘法四层实现/matmul_O0.s</a><a href="#f7">第03讲-矩阵乘法四层实现/matmul_O2.s</a><a href="#f8">第03讲-矩阵乘法四层实现/matmul_cu_ref.c</a><a href="#f9">第03讲-矩阵乘法四层实现/matmul_musa.cu</a><a href="#f10">第03讲-矩阵乘法四层实现/musa_diff.txt</a><a href="#f11">第03讲-矩阵乘法四层实现/tb_matmul.v</a><a href="#f12">第03讲-矩阵乘法四层实现/_运行日志/bench_O0_O2.txt</a><a href="#f13">第03讲-矩阵乘法四层实现/_运行日志/bench_gcc.txt</a><a href="#f14">第03讲-矩阵乘法四层实现/_运行日志/gcc_pipeline.txt</a><a href="#f15">第03讲-矩阵乘法四层实现/_运行日志/gcc_stats.txt</a><a href="#f16">第03讲-矩阵乘法四层实现/_运行日志/run_cl_O2.txt</a><a href="#f17">第03讲-矩阵乘法四层实现/_运行日志/run_cl_Od.txt</a><a href="#f18">第03讲-矩阵乘法四层实现/_运行日志/run_cu_ref.txt</a><a href="#f19">第03讲-矩阵乘法四层实现/_运行日志/run_gcc_O0.txt</a><a href="#f20">第03讲-矩阵乘法四层实现/_运行日志/run_gcc_O2.txt</a><a href="#f21">第03讲-矩阵乘法四层实现/_运行日志/sim.txt</a><a href="#f22">第03讲-矩阵乘法四层实现/_运行日志/sim_compile.txt</a><a href="#f23">第03讲-矩阵乘法四层实现/appendix_msvc_cl/matmul_O0.asm</a><a href="#f24">第03讲-矩阵乘法四层实现/appendix_msvc_cl/matmul_O0_src.asm</a><a href="#f25">第03讲-矩阵乘法四层实现/appendix_msvc_cl/matmul_O2.asm</a><a href="#f26">第03讲-矩阵乘法四层实现/appendix_msvc_cl/matmul_O2_src.asm</a><a href="#f27">第03讲-矩阵乘法四层实现/appendix_msvc_cl/matmul_Od.asm</a><a href="#f28">第03讲-矩阵乘法四层实现/appendix_msvc_cl/matmul_asm_annotated.txt</a><a href="#f29">第04讲-ScaledDotProduct/ablation.py</a><a href="#f30">第04讲-ScaledDotProduct/benchmark.py</a><a href="#f31">第04讲-ScaledDotProduct/build_all.bat</a><a href="#f32">第04讲-ScaledDotProduct/build_report.py</a><a href="#f33">第04讲-ScaledDotProduct/diag_docx.py</a><a href="#f34">第04讲-ScaledDotProduct/dot.c</a><a href="#f35">第04讲-ScaledDotProduct/dot.py</a><a href="#f36">第04讲-ScaledDotProduct/dot.rs</a><a href="#f37">第04讲-ScaledDotProduct/dot_v0_noconsume.c</a><a href="#f38">第04讲-ScaledDotProduct/gen_data.py</a><a href="#f39">第04讲-ScaledDotProduct/make_figs.py</a><a href="#f40">第04讲-ScaledDotProduct/make_readme.py</a><a href="#f41">第04讲-ScaledDotProduct/merge_runs.py</a><a href="#f42">第04讲-ScaledDotProduct/prompt_v1.md</a><a href="#f43">第04讲-ScaledDotProduct/prompt_v2.md</a><a href="#f44">第04讲-ScaledDotProduct/test_dot.py</a><a href="#f45">第04讲-ScaledDotProduct/_运行日志/ablation.json</a><a href="#f46">第04讲-ScaledDotProduct/_运行日志/ablation.txt</a><a href="#f47">第04讲-ScaledDotProduct/_运行日志/benchmark_console.txt</a><a href="#f48">第04讲-ScaledDotProduct/_运行日志/benchmark_raw.json</a><a href="#f49">第04讲-ScaledDotProduct/_运行日志/benchmark_raw_run1.json</a><a href="#f50">第04讲-ScaledDotProduct/_运行日志/benchmark_raw_run2.json</a><a href="#f51">第04讲-ScaledDotProduct/_运行日志/benchmark_raw_run3.json</a><a href="#f52">第04讲-ScaledDotProduct/_运行日志/benchmark_rerun.txt</a><a href="#f53">第04讲-ScaledDotProduct/_运行日志/benchmark_run1.txt</a><a href="#f54">第04讲-ScaledDotProduct/_运行日志/benchmark_run2.txt</a><a href="#f55">第04讲-ScaledDotProduct/_运行日志/benchmark_run3.txt</a><a href="#f56">第04讲-ScaledDotProduct/_运行日志/compile.txt</a><a href="#f57">第04讲-ScaledDotProduct/_运行日志/env.json</a><a href="#f58">第04讲-ScaledDotProduct/_运行日志/gen_data.txt</a><a href="#f59">第04讲-ScaledDotProduct/_运行日志/merge_runs.txt</a><a href="#f60">第04讲-ScaledDotProduct/_运行日志/naive_demo.txt</a><a href="#f61">第04讲-ScaledDotProduct/_运行日志/naive_whole_process.json</a><a href="#f62">第04讲-ScaledDotProduct/_运行日志/stability.json</a><a href="#f63">第04讲-ScaledDotProduct/_运行日志/test_dot.txt</a><a href="#f64">第04讲-ScaledDotProduct/_运行日志/test_dot_python_only.txt</a><a href="#f65">第04讲-ScaledDotProduct/_运行日志/versions.json</a><a href="#f66">第04讲-ScaledDotProduct/_运行日志/msvc_prev/ablation.json</a><a href="#f67">第04讲-ScaledDotProduct/_运行日志/msvc_prev/ablation.txt</a><a href="#f68">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_console.txt</a><a href="#f69">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw.json</a><a href="#f70">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_rerun.json</a><a href="#f71">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_run1.json</a><a href="#f72">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_run2.json</a><a href="#f73">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_run3.json</a><a href="#f74">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_smoke.json</a><a href="#f75">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_run1.txt</a><a href="#f76">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_run2.txt</a><a href="#f77">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_run3.txt</a><a href="#f78">第04讲-ScaledDotProduct/_运行日志/msvc_prev/compile.txt</a><a href="#f79">第04讲-ScaledDotProduct/_运行日志/msvc_prev/naive_whole_process.json</a><a href="#f80">第04讲-ScaledDotProduct/_运行日志/msvc_prev/stability.json</a><a href="#f81">第04讲-ScaledDotProduct/_运行日志/msvc_prev/versions.json</a></div>
-<div class="file" id="f0"><h2>README.md<span>4,439 B</span></h2><pre># 邹玥（学号 2025311160，数字媒体艺术2班） · 第03/04讲 实验代码
+<div class="toc"><b>文件清单（86 个）：</b><br><a href="#f0">README.md</a><a href="#f1">第03讲-矩阵乘法四层实现/README.md</a><a href="#f2">第03讲-矩阵乘法四层实现/bench_matmul.c</a><a href="#f3">第03讲-矩阵乘法四层实现/matmul.c</a><a href="#f4">第03讲-矩阵乘法四层实现/matmul.cu</a><a href="#f5">第03讲-矩阵乘法四层实现/matmul.v</a><a href="#f6">第03讲-矩阵乘法四层实现/matmul_O0.s</a><a href="#f7">第03讲-矩阵乘法四层实现/matmul_O2.s</a><a href="#f8">第03讲-矩阵乘法四层实现/matmul_cu_bench.cu</a><a href="#f9">第03讲-矩阵乘法四层实现/matmul_cu_ref.c</a><a href="#f10">第03讲-矩阵乘法四层实现/matmul_musa.cu</a><a href="#f11">第03讲-矩阵乘法四层实现/musa_diff.txt</a><a href="#f12">第03讲-矩阵乘法四层实现/tb_matmul.v</a><a href="#f13">第03讲-矩阵乘法四层实现/_运行日志/bench_O0_O2.txt</a><a href="#f14">第03讲-矩阵乘法四层实现/_运行日志/bench_gcc.txt</a><a href="#f15">第03讲-矩阵乘法四层实现/_运行日志/cuda_bench.txt</a><a href="#f16">第03讲-矩阵乘法四层实现/_运行日志/cuda_install.log</a><a href="#f17">第03讲-矩阵乘法四层实现/_运行日志/gcc_pipeline.txt</a><a href="#f18">第03讲-矩阵乘法四层实现/_运行日志/gcc_stats.txt</a><a href="#f19">第03讲-矩阵乘法四层实现/_运行日志/run_cl_O2.txt</a><a href="#f20">第03讲-矩阵乘法四层实现/_运行日志/run_cl_Od.txt</a><a href="#f21">第03讲-矩阵乘法四层实现/_运行日志/run_cu_ref.txt</a><a href="#f22">第03讲-矩阵乘法四层实现/_运行日志/run_cuda.txt</a><a href="#f23">第03讲-矩阵乘法四层实现/_运行日志/run_gcc_O0.txt</a><a href="#f24">第03讲-矩阵乘法四层实现/_运行日志/run_gcc_O2.txt</a><a href="#f25">第03讲-矩阵乘法四层实现/_运行日志/sim.txt</a><a href="#f26">第03讲-矩阵乘法四层实现/_运行日志/sim_compile.txt</a><a href="#f27">第03讲-矩阵乘法四层实现/appendix_msvc_cl/matmul_O0.asm</a><a href="#f28">第03讲-矩阵乘法四层实现/appendix_msvc_cl/matmul_O0_src.asm</a><a href="#f29">第03讲-矩阵乘法四层实现/appendix_msvc_cl/matmul_O2.asm</a><a href="#f30">第03讲-矩阵乘法四层实现/appendix_msvc_cl/matmul_O2_src.asm</a><a href="#f31">第03讲-矩阵乘法四层实现/appendix_msvc_cl/matmul_Od.asm</a><a href="#f32">第03讲-矩阵乘法四层实现/appendix_msvc_cl/matmul_asm_annotated.txt</a><a href="#f33">第04讲-ScaledDotProduct/ablation.py</a><a href="#f34">第04讲-ScaledDotProduct/benchmark.py</a><a href="#f35">第04讲-ScaledDotProduct/build_all.bat</a><a href="#f36">第04讲-ScaledDotProduct/build_report.py</a><a href="#f37">第04讲-ScaledDotProduct/diag_docx.py</a><a href="#f38">第04讲-ScaledDotProduct/dot.c</a><a href="#f39">第04讲-ScaledDotProduct/dot.py</a><a href="#f40">第04讲-ScaledDotProduct/dot.rs</a><a href="#f41">第04讲-ScaledDotProduct/dot_v0_noconsume.c</a><a href="#f42">第04讲-ScaledDotProduct/gen_data.py</a><a href="#f43">第04讲-ScaledDotProduct/make_figs.py</a><a href="#f44">第04讲-ScaledDotProduct/make_readme.py</a><a href="#f45">第04讲-ScaledDotProduct/merge_runs.py</a><a href="#f46">第04讲-ScaledDotProduct/prompt_v1.md</a><a href="#f47">第04讲-ScaledDotProduct/prompt_v2.md</a><a href="#f48">第04讲-ScaledDotProduct/test_dot.py</a><a href="#f49">第04讲-ScaledDotProduct/_运行日志/ablation.json</a><a href="#f50">第04讲-ScaledDotProduct/_运行日志/ablation.txt</a><a href="#f51">第04讲-ScaledDotProduct/_运行日志/benchmark_console.txt</a><a href="#f52">第04讲-ScaledDotProduct/_运行日志/benchmark_raw.json</a><a href="#f53">第04讲-ScaledDotProduct/_运行日志/benchmark_raw_run1.json</a><a href="#f54">第04讲-ScaledDotProduct/_运行日志/benchmark_raw_run2.json</a><a href="#f55">第04讲-ScaledDotProduct/_运行日志/benchmark_raw_run3.json</a><a href="#f56">第04讲-ScaledDotProduct/_运行日志/benchmark_rerun.txt</a><a href="#f57">第04讲-ScaledDotProduct/_运行日志/benchmark_run1.txt</a><a href="#f58">第04讲-ScaledDotProduct/_运行日志/benchmark_run2.txt</a><a href="#f59">第04讲-ScaledDotProduct/_运行日志/benchmark_run3.txt</a><a href="#f60">第04讲-ScaledDotProduct/_运行日志/compile.txt</a><a href="#f61">第04讲-ScaledDotProduct/_运行日志/env.json</a><a href="#f62">第04讲-ScaledDotProduct/_运行日志/gen_data.txt</a><a href="#f63">第04讲-ScaledDotProduct/_运行日志/merge_runs.txt</a><a href="#f64">第04讲-ScaledDotProduct/_运行日志/naive_demo.txt</a><a href="#f65">第04讲-ScaledDotProduct/_运行日志/naive_whole_process.json</a><a href="#f66">第04讲-ScaledDotProduct/_运行日志/stability.json</a><a href="#f67">第04讲-ScaledDotProduct/_运行日志/test_dot.txt</a><a href="#f68">第04讲-ScaledDotProduct/_运行日志/test_dot_python_only.txt</a><a href="#f69">第04讲-ScaledDotProduct/_运行日志/versions.json</a><a href="#f70">第04讲-ScaledDotProduct/_运行日志/msvc_prev/ablation.json</a><a href="#f71">第04讲-ScaledDotProduct/_运行日志/msvc_prev/ablation.txt</a><a href="#f72">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_console.txt</a><a href="#f73">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw.json</a><a href="#f74">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_rerun.json</a><a href="#f75">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_run1.json</a><a href="#f76">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_run2.json</a><a href="#f77">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_run3.json</a><a href="#f78">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_smoke.json</a><a href="#f79">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_run1.txt</a><a href="#f80">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_run2.txt</a><a href="#f81">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_run3.txt</a><a href="#f82">第04讲-ScaledDotProduct/_运行日志/msvc_prev/compile.txt</a><a href="#f83">第04讲-ScaledDotProduct/_运行日志/msvc_prev/naive_whole_process.json</a><a href="#f84">第04讲-ScaledDotProduct/_运行日志/msvc_prev/stability.json</a><a href="#f85">第04讲-ScaledDotProduct/_运行日志/msvc_prev/versions.json</a></div>
+<div class="file" id="f0"><h2>README.md<span>4,583 B</span></h2><pre># 邹玥（学号 2025311160，数字媒体艺术2班） · 第03/04讲 实验代码
 
 2026 秋《数字媒体程序设计》· 第2章 编程语言概论
 在线地址：https://github.com/ShiZiyukuo/dsp-2026-lab03-04
-同步时间：2026-11-17 02:26
+同步时间：2026-11-17 02:39
 
 配套实验报告（两讲各 6 页，日期均为 2026-11-16）：
 - 第03讲：矩阵乘法四层实现—从 Verilog 到 CUDA
@@ -84,10 +84,11 @@ C(-O0) / C(-O2) / Verilog 仿真（Icarus Verilog 12.0）/ CUDA-CPU 等价实现
   - **gcc 16.2.0**（MSYS2 mingw-w64，`-O2`；`-S` 输出 AT&amp;T 汇编）
   - Rust：rustup + rustc **1.100.0**（`x86_64-pc-windows-msvc`，`-C opt-level=3`≈`--release`）
   - Verilog：**Icarus Verilog 12.0**（本地安装，`-g2012` 仿真）
-  - CUDA：**无 nvcc**，`matmul.cu` 未编译；用 CPU 等价实现验证算法语义，未编造 GPU 耗时
+  - CUDA：**CUDA Toolkit 13.5（V13.5.37，pip 包 `nvidia-cuda-nvcc` 提供的完整 toolkit 布局）**，
+    `nvcc -O2 -arch=sm_89` 真机编译运行于 GeForce RTX 4060 Laptop（sm_89，8 GB），核函数结果 CHECKSUM=621 与 CPU/Verilog 一致
 - 运行环境：Windows 11 x64 + Visual Studio 2022 Community，Python 3.12.14。
 </pre></div>
-<div class="file" id="f1"><h2>第03讲-矩阵乘法四层实现/README.md<span>15,353 B</span></h2><pre># 第03讲　矩阵乘法四层实现——从 Verilog 到 CUDA
+<div class="file" id="f1"><h2>第03讲-矩阵乘法四层实现/README.md<span>17,415 B</span></h2><pre># 第03讲　矩阵乘法四层实现——从 Verilog 到 CUDA
 
 &gt; 同一个 3×3 整数矩阵乘法 `C = A × B`，在 **Verilog / 汇编 / C / CUDA** 四层各写一遍，
 &gt; 理解「同一算法、四种代价」。
@@ -149,7 +150,9 @@ CHECKSUM = 621          # 30+24+18 + 84+69+54 + 138+114+90
 | `appendix_msvc_cl/` | 附录：MSVC `cl /FA` 的 MASM 汇编（-Od 658 行 / -O2 517 行）与逐行注释对照 |
 | `matmul.v` | Verilog 版：`parameter N=3`，`generate`+`genvar` 例化乘法器，`assign` 写组合逻辑 |
 | `tb_matmul.v` | Verilog testbench：同一组输入，逐项比对 C 版结果 |
-| `matmul.cu` | CUDA 版：一线程算一个 `C[i][j]`，`blockDim=32`，含完整宿主代码 |
+| `matmul.cu` | CUDA 版：一线程算一个 `C[i][j]`，`blockDim=32`，含完整宿主代码（**nvcc 13.5 真机跑通**） |
+| `matmul_cu_bench.cu` | **真机基准**：N=1024，CPU vs GPU naive vs GPU tiled，cudaEvent 计时取中位 |
+| `build_cuda.ps1` | 一键编译+运行脚本（含 vcvars64 与 cudart PATH 处理） |
 | `matmul_musa.cu` | MUSA 版：`cuda*` → `musa*` 机械替换结果（106 行中 14 行改动） |
 | `musa_diff.txt` | 上面这个改写的真实 unified diff（39 行） |
 | `matmul_cu_ref.c` | 无 GPU 时验证 CUDA 内核算法语义的 CPU 等价实现（已真实运行） |
@@ -289,18 +292,60 @@ RESULT: 9/9 PASS  ==&gt; ALL PASS（与 C 版 CHECKSUM=621 一致）
 
 ---
 
-## 5. CUDA 层要点
+## 5. CUDA 层要点（**已真机编译运行**）
 
-- **一线程一个 `C[i][j]`**：`row = blockIdx.y*blockDim.y+threadIdx.y`，`col = blockIdx.x*blockDim.x+threadIdx.x`。
-- **3×3 需要几个 block / 几个线程**（`blockDim = 32×32`）：
-  - `gridDim = ( ⌈3/32⌉, ⌈3/32⌉ ) = (1, 1)` → **1 个 block**
-  - 该 block 共 `32 × 32 = 1024` 个线程，**只有 3×3 = 9 个线程真正计算**
-  - 有效利用率 `9 / 1024 ≈ 0.88%` —— 这就是「3×3 太小、GPU 完全跑不满」的量化证据
-- **越界判断必不可少**：`if (row &lt; n &amp;&amp; col &lt; n)`，否则 1015 个多余线程越界读写直接崩。
-- **本机情况（如实）**：本机确有 **NVIDIA GeForce RTX 4060 Laptop GPU**，
-  但**未安装 CUDA Toolkit（无 nvcc）**，故 `matmul.cu` **未编译、未运行**。
-  为不放空话，另写 `matmul_cu_ref.c`（与核函数累加循环逐行同构）已真实编译运行，
-  `CHECKSUM = 621`、`9/9 PASS`。
+&gt; 环境：nvcc 13.5（Cuda compilation tools, release 13.5, **V13.5.37**，Build cuda_13.5.r13.5/compiler.39125733_0）
+&gt; GPU：**NVIDIA GeForce RTX 4060 Laptop GPU**，compute capability **8.9 (sm_89)**，**24 个 SM**，
+&gt; 8.00 GiB 显存，128 bit 总线，每 block 最大 1024 线程，共享内存 49152 字节，
+&gt; 驱动 621.01 / CUDA UMD 13.5，CUDA 运行时版本 13050。
+&gt; Toolkit 位于 `D:\DeepSeek-Harness\hw-0304\tools\cuda13\nvidia\cu13`（轻量 pip 包 `nvidia-cuda-nvcc` 提供的完整布局）。
+
+### 一键复现
+```powershell
+# 编译 + 运行全部（内部已处理 vcvars64 与 PATH）
+powershell -NoProfile -ExecutionPolicy Bypass -File code\build_cuda.ps1
+# 只编译
+powershell -NoProfile -ExecutionPolicy Bypass -File code\build_cuda.ps1 -BuildOnly
+```
+
+### 3×3 教学版（`matmul.cu`，一线程一个 C[i][j]）
+编译：`nvcc -O2 -arch=sm_89 -Xcompiler /utf-8 -I&lt;cu13&gt;\include code\matmul.cu -o build\matmul_cu.exe -L&lt;cu13&gt;\lib\x64 -lcudart`（**必须在 vcvars64 环境里**，nvcc 要 cl.exe 当 host）
+运行：先把 `&lt;cu13&gt;\bin\x86_64` 加进 PATH（否则缺 `cudart64_13.dll`）
+
+**实测输出**（`logs/run_cuda.txt`）：
+```
+blockDim = (32, 32) = 1024 线程/block
+gridDim  = (1, 1) -&gt; 1 个 block
+总线程数 = 1024，实际计算 = 9，利用率 = 0.88%
+C = A x B =
+  [   30   24   18 ]
+  [   84   69   54 ]
+  [  138  114   90 ]
+CHECKSUM = 621
+```
+→ **CHECKSUM = 621，与 C / Verilog / NumPy 四层完全一致。**
+
+### 3×3 到底要几个 block / 几个线程
+- `blockDim = 32×32 = 1024` 线程/block，`gridDim = ( ⌈3/32⌉, ⌈3/32⌉ ) = (1,1)` → **1 个 block、1024 个线程**
+- 其中只有 `3×3 = 9` 个线程真正计算，**利用率 9/1024 ≈ 0.88%**；24 个 SM 只有 1 个在干活
+- 这是「3×3 太小、GPU 优势完全体现不出来」的量化证据
+- 若 `blockDim = (1,1)`，则 `gridDim = (3,3)` = 9 个 block、9 个线程，利用率 100%，但调度开销远大于计算本身
+
+### N=1024 真机性能基准（`matmul_cu_bench.cu`）
+`cudaEventRecord` 计时，warmup 5 次 + REPEAT 50 次**取中位**；同一次运行的真实输出（`logs/cuda_bench.txt`）：
+
+| 实现 | 用时 | 相对 CPU 加速 | 相对 naive 加速 |
+|---|---|---|---|
+| CPU i-j-k 三重循环 | **5660.00 ms** | 1× | — |
+| GPU naive（1 线程/元素） | **3.2777 ms**（min 3.0106 / max 28.6885） | **1726.82×** | 1× |
+| GPU tiled（16×16 共享内存） | **1.7674 ms**（min 1.7422 / max 2.6429） | **3202.46×** | **1.85×** |
+
+**正确性**：CPU 参考、GPU naive、GPU tiled 三者 `CHECKSUM = 21758082314`，
+GPU 与 CPU **逐元素不一致个数均为 0**（两版都 PASS）。
+
+**Tiling 为什么能提速**：把 A、B 的子块先搬进共享内存复用，全局显存访问次数从 O(N³) 降到 O(N³/T)
+（T=16 理论降 16 倍）。实测只快 1.85 倍，说明 N=1024 时瓶颈已不只在全局访存，
+还受 SM 占用率与共享内存带宽限制。
 
 ### MUSA 迁移（指南第 8 步）
 
@@ -325,18 +370,12 @@ RESULT: 9/9 PASS  ==&gt; ALL PASS（与 C 版 CHECKSUM=621 一致）
 | `cudaDeviceSynchronize` | `musaDeviceSynchronize` | 1 |
 | 注释/字符串里的 `CUDA` | `MUSA` | 3 行 |
 
-**MUSA 与 CUDA 的接口关系**：
-
-- MUSA（摩尔线程 Moore Threads）的运行时 API **刻意对齐 CUDA**：`musaMalloc`/`musaMemcpy`/
-  `musaFree`/`musaDeviceSynchronize` 与 `cudaXxx` 一一同名同签名。
-- **语言层完全同构、不需改**：`__global__`、`blockIdx`、`blockDim`、`threadIdx`、
-  `&lt;&lt;&lt;grid, block&gt;&gt;&gt;` 启动语法、warp 概念全部保留。
-- 因此 CUDA 代码迁移到 MUSA **通常只是「换前缀 + 换头文件 + 换编译器（nvcc → mcc）」**，
-  本实验 106 行源码里只有 14 行（13%）需要动，且全是**机械替换**，没有算法改动。
-- 边界：生态工具链（cuBLAS ↔ muBLAS、Nsight ↔ muDNN 等）与具体算子库不完全对等，
-  `__shfl_*` 等 warp 内建函数的细节可能有差异，大数据量/复杂 kernel 仍需人工核对。
-
----
+**MUSA 与 CUDA 的接口关系**：MUSA 的运行时 API 刻意与 CUDA 对齐——
+`musaMalloc`/`musaMemcpy`/`musaFree`/`musaDeviceSynchronize` 与 `cudaXxx` 同名同签名；
+语言层的 `__global__`、`blockIdx`、`blockDim`、`threadIdx`、`&lt;&lt;&lt;grid, block&gt;&gt;&gt;` 全部保留。
+所以 CUDA 迁 MUSA 通常只是「换前缀 + 换头文件 + 换编译器（nvcc → mcc）」，
+本实验 106 行里只有 14 行（13%）需要动，且全是机械替换，无算法改动。
+**边界**：MUSA 侧本机无摩尔线程显卡，未运行，只做静态改写与 diff 统计。
 
 ## 6. 复现命令（本机实测可跑）
 
@@ -559,7 +598,7 @@ int main(void)
     return (passed == total) ? 0 : 1;
 }
 </pre></div>
-<div class="file" id="f4"><h2>第03讲-矩阵乘法四层实现/matmul.cu<span>4,301 B</span></h2><pre>/*
+<div class="file" id="f4"><h2>第03讲-矩阵乘法四层实现/matmul.cu<span>4,578 B</span></h2><pre>/*
  * 第03讲 矩阵乘法四层实现 —— 第 4 层：CUDA（一线程算一个 C[i][j]）
  *
  * 规格：3x3 整数矩阵 C = A x B
@@ -568,12 +607,15 @@ int main(void)
  *           该 block 共 32*32 = 1024 个线程，其中只有 3*3 = 9 个线程真正计算
  *           有效利用率 9/1024 ≈ 0.88%   ← 3x3 太小，GPU 完全喂不饱
  *
- * ⚠ 本机情况（如实记录）：本机确有 NVIDIA GeForce RTX 4060 Laptop GPU，
- *   但**未安装 CUDA Toolkit（无 nvcc）**，因此本文件**未编译、未运行**，
- *   只做静态实现与逐行说明。
- *   为证明「核函数的算法与 C 版完全一致」，另附 matmul_cu_ref.c ——
- *   它与本文件内核的累加循环逐行同构，已在 cl 下真实编译运行，
- *   CHECKSUM = 621，与 C/Verilog/NumPy 三层一致（见日志 run_cu_ref.txt）。
+ * 真机情况（已跑通）：NVIDIA GeForce RTX 4060 Laptop GPU / sm_89 / 24 SM / 8 GB。
+ *   编译：nvcc 13.5 (V13.5.37)，命令见 code\build_cuda.ps1：
+ *     nvcc -O2 -arch=sm_89 -Xcompiler /utf-8 -I&lt;cu13&gt;\include matmul.cu ^
+ *          -o build\matmul_cu.exe -L&lt;cu13&gt;\lib\x64 -lcudart      （须在 vcvars64 里）
+ *   运行：需把 &lt;cu13&gt;\bin\x86_64 加进 PATH（否则缺 cudart64_13.dll）。
+ *   实测输出：blockDim=(32,32)=1024 线程/block，gridDim=(1,1) -&gt; 1 个 block，
+ *             利用率 0.88%，C = [30 24 18; 84 69 54; 138 114 90]，CHECKSUM = 621，
+ *             与 C / Verilog / NumPy 三层一致（日志 logs\run_cuda.txt）。
+ *   大 N 的性能对比见 matmul_cu_bench.cu（N=1024，CPU vs GPU naive vs GPU tiled）。
  *
  * MUSA 迁移（指南第 8 步）：把下面的 cuda 前缀全部换成 musa 即得摩尔线程版本，
  *   见 matmul_musa.cu 与 musa_diff.txt 的真实 diff 统计。
@@ -1487,7 +1529,253 @@ A:
 	.def	puts;	.scl	2;	.type	32;	.endef
 	.def	putchar;	.scl	2;	.type	32;	.endef
 </pre></div>
-<div class="file" id="f8"><h2>第03讲-矩阵乘法四层实现/matmul_cu_ref.c<span>2,199 B</span></h2><pre>/*
+<div class="file" id="f8"><h2>第03讲-矩阵乘法四层实现/matmul_cu_bench.cu<span>9,385 B</span></h2><pre>/*
+ * matmul_cu_bench.cu —— CUDA 真机性能对比（第03讲 拓展用）
+ *
+ * 目的：3x3 太小，GPU 完全体现不出并行优势；这里把 N 放大到 512/1024，
+ *       用 cudaEventRecord 真测 kernel 时间，和 CPU 三重循环对比，
+ *       并额外给一个 shared-memory Tiling 版本，量化「分块为什么能提速」。
+ *
+ * 编译（需 vcvars64 环境）：
+ *   nvcc -O2 -arch=sm_89 -DN=1024 matmul_cu_bench.cu -o ..\build\matmul_cu_bench.exe
+ * 运行（需把 cudart DLL 目录加进 PATH）：
+ *   matmul_cu_bench.exe
+ *
+ * 所有数字都是本机真跑出来的，没有任何预设。
+ */
+#include &lt;cstdio&gt;
+#include &lt;cstdlib&gt;
+#include &lt;ctime&gt;
+#include &lt;cuda_runtime.h&gt;
+
+#ifndef N
+#define N 1024
+#endif
+
+#define TILE 16          /* Tiling 版的分块边长 */
+#define BLKX 32          /* 教学版 / naive 版的 blockDim.x */
+#define BLKY 32
+#define REPEAT 50        /* 计时重复次数，取中位 */
+
+/* ---------------- 工具：CUDA 错误检查 ---------------- */
+#define CK(expr)                                                              \
+    do {                                                                      \
+        cudaError_t _e = (expr);                                              \
+        if (_e != cudaSuccess) {                                              \
+            printf(&quot;[CUDA ERROR] %s -&gt; %s\n&quot;, #expr, cudaGetErrorString(_e)); \
+            exit(1);                                                          \
+        }                                                                     \
+    } while (0)
+
+/* ---------------- 测试数据：确定性填充，CPU/GPU 用同一份 ---------------- */
+static void fill(int *a, int n, unsigned seed)
+{
+    unsigned s = seed;
+    for (int i = 0; i &lt; n * n; ++i) {
+        s = s * 1103515245u + 12345u;      /* LCG，跨平台确定 */
+        a[i] = (int)((s &gt;&gt; 16) % 10);      /* 0..9，保证累加不溢出 int */
+    }
+}
+
+/* ---------------- CPU 参考实现：i-j-k 三重循环 ---------------- */
+static void matmul_cpu(const int *A, const int *B, int *C, int n)
+{
+    for (int i = 0; i &lt; n; ++i)
+        for (int j = 0; j &lt; n; ++j) {
+            int sum = 0;
+            for (int k = 0; k &lt; n; ++k)
+                sum += A[i * n + k] * B[k * n + j];
+            C[i * n + j] = sum;
+        }
+}
+
+/* ---------------- GPU 核函数 1：一线程一个 C[i][j]（教学版同款） ---------------- */
+__global__ void kernel_naive(const int *A, const int *B, int *C, int n)
+{
+    int col = blockIdx.x * blockDim.x + threadIdx.x;
+    int row = blockIdx.y * blockDim.y + threadIdx.y;
+    if (row &lt; n &amp;&amp; col &lt; n) {
+        int sum = 0;
+        for (int k = 0; k &lt; n; ++k)
+            sum += A[row * n + k] * B[k * n + col];
+        C[row * n + col] = sum;
+    }
+}
+
+/* ---------------- GPU 核函数 2：shared-memory Tiling ---------------- */
+__global__ void kernel_tiled(const int *A, const int *B, int *C, int n)
+{
+    __shared__ int As[TILE][TILE];
+    __shared__ int Bs[TILE][TILE];
+
+    int tx = threadIdx.x, ty = threadIdx.y;
+    int row = blockIdx.y * TILE + ty;
+    int col = blockIdx.x * TILE + tx;
+    int sum = 0;
+
+    for (int t = 0; t &lt; (n + TILE - 1) / TILE; ++t) {
+        /* 每个线程搬一个元素进共享内存（越界补 0） */
+        int aRow = row, aCol = t * TILE + tx;
+        As[ty][tx] = (aRow &lt; n &amp;&amp; aCol &lt; n) ? A[aRow * n + aCol] : 0;
+        int bRow = t * TILE + ty, bCol = col;
+        Bs[ty][tx] = (bRow &lt; n &amp;&amp; bCol &lt; n) ? B[bRow * n + bCol] : 0;
+
+        __syncthreads();
+
+        for (int k = 0; k &lt; TILE; ++k)
+            sum += As[ty][k] * Bs[k][tx];
+
+        __syncthreads();
+    }
+    if (row &lt; n &amp;&amp; col &lt; n)
+        C[row * n + col] = sum;
+}
+
+/* ---------------- 计时：warmup + REPEAT 次，返回中位毫秒 ---------------- */
+static int cmp_double(const void *a, const void *b)
+{
+    double x = *(const double *)a, y = *(const double *)b;
+    return (x &lt; y) ? -1 : (x &gt; y) ? 1 : 0;
+}
+
+static double time_kernel(void (*launch)(const int *, const int *, int *, int),
+                          const int *dA, const int *dB, int *dC, int n,
+                          const char *tag)
+{
+    double ms[REPEAT];
+    cudaEvent_t e0, e1;
+    CK(cudaEventCreate(&amp;e0));
+    CK(cudaEventCreate(&amp;e1));
+
+    /* warmup：让 GPU 时钟升上去、把首次的初始化成本排除掉 */
+    for (int i = 0; i &lt; 5; ++i) launch(dA, dB, dC, n);
+    CK(cudaDeviceSynchronize());
+
+    for (int i = 0; i &lt; REPEAT; ++i) {
+        float fms = 0.0f;              /* CUDA 13 起 cudaEventElapsedTime 只接受 float* */
+        CK(cudaEventRecord(e0));
+        launch(dA, dB, dC, n);
+        CK(cudaEventRecord(e1));
+        CK(cudaEventSynchronize(e1));
+        CK(cudaEventElapsedTime(&amp;fms, e0, e1));
+        ms[i] = (double)fms;
+    }
+    CK(cudaEventDestroy(e0));
+    CK(cudaEventDestroy(e1));
+
+    qsort(ms, REPEAT, sizeof(double), cmp_double);
+    double med = ms[REPEAT / 2];
+    printf(&quot;  %-18s kernel 用时中位 = %8.4f ms   (min %.4f / max %.4f, %d 次)\n&quot;,
+           tag, med, ms[0], ms[REPEAT - 1], REPEAT);
+    return med;
+}
+
+/* launch 包装（把 &lt;&lt;&lt;&gt;&gt;&gt; 语法藏进函数指针） */
+static void launch_naive(const int *A, const int *B, int *C, int n)
+{
+    dim3 blk(BLKX, BLKY);
+    dim3 grd((n + BLKX - 1) / BLKX, (n + BLKY - 1) / BLKY);
+    kernel_naive&lt;&lt;&lt;grd, blk&gt;&gt;&gt;(A, B, C, n);
+}
+
+static void launch_tiled(const int *A, const int *B, int *C, int n)
+{
+    dim3 blk(TILE, TILE);
+    dim3 grd((n + TILE - 1) / TILE, (n + TILE - 1) / TILE);
+    kernel_tiled&lt;&lt;&lt;grd, blk&gt;&gt;&gt;(A, B, C, n);
+}
+
+int main(void)
+{
+    const int n = N;
+    size_t bytes = (size_t)n * n * sizeof(int);
+
+    printf(&quot;=== CUDA 真机基准：%dx%d 整数矩阵乘法 ===\n&quot;, n, n);
+
+    /* ---------- 1. 设备属性（一律来自 cudaGetDeviceProperties） ---------- */
+    cudaDeviceProp prop;
+    CK(cudaGetDeviceProperties(&amp;prop, 0));
+    printf(&quot;--- 设备属性 (cudaGetDeviceProperties) ---\n&quot;);
+    printf(&quot;  device name          : %s\n&quot;, prop.name);
+    printf(&quot;  compute capability   : %d.%d  (sm_%d%d)\n&quot;,
+           prop.major, prop.minor, prop.major, prop.minor);
+    printf(&quot;  multiprocessor 数    : %d\n&quot;, prop.multiProcessorCount);
+    printf(&quot;  每 block 最大线程数  : %d\n&quot;, prop.maxThreadsPerBlock);
+    printf(&quot;  全局显存             : %.2f GiB (%zu 字节)\n&quot;,
+           prop.totalGlobalMem / 1073741824.0, prop.totalGlobalMem);
+    printf(&quot;  显存总线宽度         : %d bit\n&quot;, prop.memoryBusWidth);
+    printf(&quot;  共享内存/block       : %zu 字节\n&quot;, prop.sharedMemPerBlock);
+    printf(&quot;  CUDA 运行时版本      : %d\n&quot;, (int)CUDART_VERSION);
+
+    /* ---------- 2. 准备数据 ---------- */
+    int *hA = (int *)malloc(bytes);
+    int *hB = (int *)malloc(bytes);
+    int *hC = (int *)malloc(bytes);
+    int *hRef = (int *)malloc(bytes);
+    fill(hA, n, 12345u);
+    fill(hB, n, 67890u);
+
+    int *dA, *dB, *dC;
+    CK(cudaMalloc(&amp;dA, bytes));
+    CK(cudaMalloc(&amp;dB, bytes));
+    CK(cudaMalloc(&amp;dC, bytes));
+    CK(cudaMemcpy(dA, hA, bytes, cudaMemcpyHostToDevice));
+    CK(cudaMemcpy(dB, hB, bytes, cudaMemcpyHostToDevice));
+
+    /* ---------- 3. CPU 参考 + 计时 ---------- */
+    clock_t c0 = clock();
+    matmul_cpu(hA, hB, hRef, n);
+    clock_t c1 = clock();
+    double cpu_ms = (double)(c1 - c0) * 1000.0 / CLOCKS_PER_SEC;
+    printf(&quot;--- CPU 参考实现 (i-j-k 三重循环) ---\n&quot;);
+    printf(&quot;  用时 = %.2f ms\n&quot;, cpu_ms);
+
+    long long cpu_sum = 0;
+    for (size_t i = 0; i &lt; (size_t)n * n; ++i) cpu_sum += hRef[i];
+    printf(&quot;  CHECKSUM = %lld\n&quot;, cpu_sum);
+
+    /* ---------- 4. GPU naive ---------- */
+    printf(&quot;--- GPU kernel ---\n&quot;);
+    double t_naive = time_kernel(launch_naive, dA, dB, dC, n,
+                                 &quot;naive 1 thread/元素&quot;);
+    CK(cudaMemcpy(hC, dC, bytes, cudaMemcpyDeviceToHost));
+    long long gpu_sum = 0;
+    int mismatch = 0;
+    for (size_t i = 0; i &lt; (size_t)n * n; ++i) {
+        gpu_sum += hC[i];
+        if (hC[i] != hRef[i]) ++mismatch;
+    }
+    printf(&quot;  GPU CHECKSUM = %lld   与 CPU 逐元素不一致个数 = %d\n&quot;, gpu_sum, mismatch);
+
+    /* ---------- 5. GPU tiled ---------- */
+    double t_tiled = time_kernel(launch_tiled, dA, dB, dC, n,
+                                 &quot;tiled 16x16 共享内存&quot;);
+    CK(cudaMemcpy(hC, dC, bytes, cudaMemcpyDeviceToHost));
+    long long tiled_sum = 0;
+    int mismatch2 = 0;
+    for (size_t i = 0; i &lt; (size_t)n * n; ++i) {
+        tiled_sum += hC[i];
+        if (hC[i] != hRef[i]) ++mismatch2;
+    }
+    printf(&quot;  Tiled CHECKSUM = %lld  与 CPU 不一致个数 = %d\n&quot;, tiled_sum, mismatch2);
+
+    /* ---------- 6. 汇总 ---------- */
+    printf(&quot;--- 汇总 (N=%d) ---\n&quot;, n);
+    printf(&quot;  CPU 三重循环        : %9.2f ms\n&quot;, cpu_ms);
+    printf(&quot;  GPU naive kernel    : %9.4f ms   相对 CPU 加速 %.2fx\n&quot;,
+           t_naive, cpu_ms / t_naive);
+    printf(&quot;  GPU tiled kernel    : %9.4f ms   相对 CPU 加速 %.2fx   相对 naive 加速 %.2fx\n&quot;,
+           t_tiled, cpu_ms / t_tiled, t_naive / t_tiled);
+    printf(&quot;  结果一致性          : naive %s / tiled %s\n&quot;,
+           mismatch == 0 ? &quot;PASS(全部一致)&quot; : &quot;FAIL&quot;,
+           mismatch2 == 0 ? &quot;PASS(全部一致)&quot; : &quot;FAIL&quot;);
+
+    free(hA); free(hB); free(hC); free(hRef);
+    CK(cudaFree(dA)); CK(cudaFree(dB)); CK(cudaFree(dC));
+    return (mismatch == 0 &amp;&amp; mismatch2 == 0) ? 0 : 1;
+}
+</pre></div>
+<div class="file" id="f9"><h2>第03讲-矩阵乘法四层实现/matmul_cu_ref.c<span>2,199 B</span></h2><pre>/*
  * matmul_cu_ref.c —— matmul.cu 内核算法语义的无 GPU 验证件
  *
  * 本机未装 CUDA Toolkit（无 nvcc），matmul.cu 无法编译运行。
@@ -1551,7 +1839,7 @@ int main(void)
     return (passed == 9) ? 0 : 1;
 }
 </pre></div>
-<div class="file" id="f9"><h2>第03讲-矩阵乘法四层实现/matmul_musa.cu<span>4,301 B</span></h2><pre>/*
+<div class="file" id="f10"><h2>第03讲-矩阵乘法四层实现/matmul_musa.cu<span>4,301 B</span></h2><pre>/*
  * 第03讲 矩阵乘法四层实现 —— 第 4 层：MUSA（一线程算一个 C[i][j]）
  *
  * 规格：3x3 整数矩阵 C = A x B
@@ -1658,7 +1946,7 @@ int main(void)
     return 0;
 }
 </pre></div>
-<div class="file" id="f10"><h2>第03讲-矩阵乘法四层实现/musa_diff.txt<span>1,674 B</span></h2><pre>--- matmul.cu
+<div class="file" id="f11"><h2>第03讲-矩阵乘法四层实现/musa_diff.txt<span>1,674 B</span></h2><pre>--- matmul.cu
 +++ matmul_musa.cu
 @@ -2 +2 @@
 - * 第03讲 矩阵乘法四层实现 —— 第 4 层：CUDA（一线程算一个 C[i][j]）
@@ -1698,7 +1986,7 @@ int main(void)
 +    musaFree(d_B);
 +    musaFree(d_C);
 </pre></div>
-<div class="file" id="f11"><h2>第03讲-矩阵乘法四层实现/tb_matmul.v<span>3,511 B</span></h2><pre>/*
+<div class="file" id="f12"><h2>第03讲-矩阵乘法四层实现/tb_matmul.v<span>3,511 B</span></h2><pre>/*
  * 第03讲 matmul.v 的 testbench
  * 用与 matmul.c 完全相同的 A、B 测试数据，检查输出 Y 是否逐项等于 C 版结果。
  * 期望值（与 matmul.c 的 REF 一致）：
@@ -1808,7 +2096,7 @@ module tb_matmul;
 
 endmodule
 </pre></div>
-<div class="file" id="f12"><h2>第03讲-矩阵乘法四层实现/_运行日志/bench_O0_O2.txt<span>294 B</span></h2><pre>===== -Od (等价 -O0) =====
+<div class="file" id="f13"><h2>第03讲-矩阵乘法四层实现/_运行日志/bench_O0_O2.txt<span>294 B</span></h2><pre>===== -Od (等价 -O0) =====
 REPEAT = 20000000 轮 x 9 元素 = 180000000 次 C[i][j] 计算
 CHECKSUM = 90
 CPU_TIME = 2.8810 s
@@ -1819,7 +2107,7 @@ CHECKSUM = 90
 CPU_TIME = 0.3470 s
 PER_ITER = 17.350 ns
 </pre></div>
-<div class="file" id="f13"><h2>第03讲-矩阵乘法四层实现/_运行日志/bench_gcc.txt<span>1,367 B</span></h2><pre>﻿##############################################################
+<div class="file" id="f14"><h2>第03讲-矩阵乘法四层实现/_运行日志/bench_gcc.txt<span>1,367 B</span></h2><pre>﻿##############################################################
 # gcc 16.2.0  bench_matmul.c  2000 万轮（每轮 9 个 C[i][j]）
 # 每个配置连跑 3 次看波动；报告正文取中位数那一组
 ##############################################################
@@ -1865,7 +2153,84 @@ PER_ITER = 16.850 ns
 -O2: 0.347 / 0.329 / 0.337   中位数 = 0.337
 加速比 = 8.54x
 </pre></div>
-<div class="file" id="f14"><h2>第03讲-矩阵乘法四层实现/_运行日志/gcc_pipeline.txt<span>2,226 B</span></h2><pre>### gcc --version ###
+<div class="file" id="f15"><h2>第03讲-矩阵乘法四层实现/_运行日志/cuda_bench.txt<span>1,206 B</span></h2><pre>﻿=== CUDA 真机基准：1024x1024 整数矩阵乘法 ===
+--- 设备属性 (cudaGetDeviceProperties) ---
+  device name          : NVIDIA GeForce RTX 4060 Laptop GPU
+  compute capability   : 8.9  (sm_89)
+  multiprocessor 数    : 24
+  每 block 最大线程数  : 1024
+  全局显存             : 8.00 GiB (8585216000 字节)
+  显存总线宽度         : 128 bit
+  共享内存/block       : 49152 字节
+  CUDA 运行时版本      : 13050
+--- CPU 参考实现 (i-j-k 三重循环) ---
+  用时 = 5660.00 ms
+  CHECKSUM = 21758082314
+--- GPU kernel ---
+  naive 1 thread/元素 kernel 用时中位 =   3.2777 ms   (min 3.0106 / max 28.4805, 50 次)
+  GPU CHECKSUM = 21758082314   与 CPU 逐元素不一致个数 = 0
+  tiled 16x16 共享内存 kernel 用时中位 =   1.7674 ms   (min 1.7142 / max 2.6429, 50 次)
+  Tiled CHECKSUM = 21758082314  与 CPU 不一致个数 = 0
+--- 汇总 (N=1024) ---
+  CPU 三重循环        :   5660.00 ms
+  GPU naive kernel    :    3.2777 ms   相对 CPU 加速 1726.82x
+  GPU tiled kernel    :    1.7674 ms   相对 CPU 加速 3202.46x   相对 naive 加速 1.85x
+  结果一致性          : naive PASS(全部一致) / tiled PASS(全部一致)
+</pre></div>
+<div class="file" id="f16"><h2>第03讲-矩阵乘法四层实现/_运行日志/cuda_install.log<span>3,280 B</span></h2><pre>锘縖02:32:17] START pip install -&gt; D:\DeepSeek-Harness\hw-0304\lab03\tools\cuda_light
+C o l l e c t i n g   n v i d i a - c u d a - n v c c - c u 1 2 = = 1 2 . 9 . 8 6 
+ 
+     D o w n l o a d i n g   n v i d i a _ c u d a _ n v c c _ c u 1 2 - 1 2 . 9 . 8 6 - p y 3 - n o n e - w i n _ a m d 6 4 . w h l . m e t a d a t a   ( 1 . 7   k B ) 
+ 
+ C o l l e c t i n g   n v i d i a - c u d a - r u n t i m e - c u 1 2 = = 1 2 . 9 . 7 9 
+ 
+     D o w n l o a d i n g   n v i d i a _ c u d a _ r u n t i m e _ c u 1 2 - 1 2 . 9 . 7 9 - p y 3 - n o n e - w i n _ a m d 6 4 . w h l . m e t a d a t a   ( 1 . 7   k B ) 
+ 
+ C o l l e c t i n g   n v i d i a - c u d a - c c c l - c u 1 2 = = 1 2 . 9 . 2 7 
+ 
+     D o w n l o a d i n g   n v i d i a _ c u d a _ c c c l _ c u 1 2 - 1 2 . 9 . 2 7 - p y 3 - n o n e - w i n _ a m d 6 4 . w h l . m e t a d a t a   ( 1 . 7   k B ) 
+ 
+ D o w n l o a d i n g   n v i d i a _ c u d a _ n v c c _ c u 1 2 - 1 2 . 9 . 8 6 - p y 3 - n o n e - w i n _ a m d 6 4 . w h l   ( 3 4 . 7   M B ) 
+ 
+       - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   3 4 . 7 / 3 4 . 7   M B   2 4 9 . 5   k B / s     0 : 0 2 : 0 9 
+ 
+ D o w n l o a d i n g   n v i d i a _ c u d a _ r u n t i m e _ c u 1 2 - 1 2 . 9 . 7 9 - p y 3 - n o n e - w i n _ a m d 6 4 . w h l   ( 3 . 6   M B ) 
+ 
+       - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   3 . 6 / 3 . 6   M B   2 5 4 . 0   k B / s     0 : 0 0 : 1 4 
+ 
+ D o w n l o a d i n g   n v i d i a _ c u d a _ c c c l _ c u 1 2 - 1 2 . 9 . 2 7 - p y 3 - n o n e - w i n _ a m d 6 4 . w h l   ( 3 . 2   M B ) 
+ 
+       - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   3 . 2 / 3 . 2   M B   2 5 8 . 0   k B / s     0 : 0 0 : 1 2 
+ 
+ I n s t a l l i n g   c o l l e c t e d   p a c k a g e s :   n v i d i a - c u d a - r u n t i m e - c u 1 2 ,   n v i d i a - c u d a - n v c c - c u 1 2 ,   n v i d i a - c u d a - c c c l - c u 1 2 
+ 
+ 
+ 
+ S u c c e s s f u l l y   i n s t a l l e d   n v i d i a - c u d a - c c c l - c u 1 2 - 1 2 . 9 . 2 7   n v i d i a - c u d a - n v c c - c u 1 2 - 1 2 . 9 . 8 6   n v i d i a - c u d a - r u n t i m e - c u 1 2 - 1 2 . 9 . 7 9 
+ 
+ p y t h o n . e x e   :   
+ 
+ @b(WMOn  L�: 7   W[&amp;{:   1 
+ 
+ +   &amp;   $ p y   - m   p i p   i n s t a l l   - - n o - w a r n - s c r i p t - l o c a t i o n   - - t a r g e t   $ t a r g e t   ` 
+ 
+ +   ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+ 
+         +   C a t e g o r y I n f o                     :   N o t S p e c i f i e d :   ( : S t r i n g )   [ ] ,   R e m o t e E x c e p t i o n 
+ 
+         +   F u l l y Q u a l i f i e d E r r o r I d   :   N a t i v e C o m m a n d E r r o r 
+ 
+   
+ 
+ [ n o t i c e ]   A   n e w   r e l e a s e   o f   p i p   i s   a v a i l a b l e :   2 6 . 2 . 1   - &gt;   2 6 . 3 
+ 
+ [ n o t i c e ]   T o   u p d a t e ,   r u n :   D : \ D e e p S e e k - H a r n e s s \ r u n t i m e \ d a t a \ d s h - r u n t i m e s \ d s h - p r i m a r y - r u n t i m e \ d e p e n d e n c i e s \ p y t h o n \ p y t h o n . e 
+ 
+ x e   - m   p i p   i n s t a l l   - - u p g r a d e   p i p 
+ 
+ [02:35:08] pip exit=0
+</pre></div>
+<div class="file" id="f17"><h2>第03讲-矩阵乘法四层实现/_运行日志/gcc_pipeline.txt<span>2,226 B</span></h2><pre>### gcc --version ###
 gcc.exe (Rev7, Built by MSYS2 project) 16.2.0
 Copyright (C) 2026 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
@@ -1945,7 +2310,7 @@ CHECKSUM = 90
 CPU_TIME = 0.2890 s
 PER_ITER = 14.450 ns
 </pre></div>
-<div class="file" id="f15"><h2>第03讲-矩阵乘法四层实现/_运行日志/gcc_stats.txt<span>465 B</span></h2><pre>gcc: gcc.exe (Rev7, Built by MSYS2 project) 16.2.0
+<div class="file" id="f18"><h2>第03讲-矩阵乘法四层实现/_运行日志/gcc_stats.txt<span>465 B</span></h2><pre>gcc: gcc.exe (Rev7, Built by MSYS2 project) 16.2.0
 
 matmul_O0.s    总行数= 572  指令行(估)= 340
     imul     x 1
@@ -1969,7 +2334,7 @@ matmul_O2.s    总行数= 367  指令行(估)= 174
     pmulld   x 0
     paddd    x 3
 </pre></div>
-<div class="file" id="f16"><h2>第03讲-矩阵乘法四层实现/_运行日志/run_cl_O2.txt<span>741 B</span></h2><pre>﻿matmul.c
+<div class="file" id="f19"><h2>第03讲-矩阵乘法四层实现/_运行日志/run_cl_O2.txt<span>741 B</span></h2><pre>﻿matmul.c
 === C 语言三重循环实现 3x3 矩阵乘法 (N=3) ===
 A =
   [    1    2    3 ]
@@ -1997,7 +2362,7 @@ CHECKSUM = 621
   C[2][2] =   90  REF =   90  PASS
 RESULT: 9/9 PASS  ==&gt; ALL PASS
 </pre></div>
-<div class="file" id="f17"><h2>第03讲-矩阵乘法四层实现/_运行日志/run_cl_Od.txt<span>738 B</span></h2><pre>matmul.c
+<div class="file" id="f20"><h2>第03讲-矩阵乘法四层实现/_运行日志/run_cl_Od.txt<span>738 B</span></h2><pre>matmul.c
 === C 语言三重循环实现 3x3 矩阵乘法 (N=3) ===
 A =
   [    1    2    3 ]
@@ -2025,7 +2390,7 @@ CHECKSUM = 621
   C[2][2] =   90  REF =   90  PASS
 RESULT: 9/9 PASS  ==&gt; ALL PASS
 </pre></div>
-<div class="file" id="f18"><h2>第03讲-矩阵乘法四层实现/_运行日志/run_cu_ref.txt<span>411 B</span></h2><pre>matmul_cu_ref.c
+<div class="file" id="f21"><h2>第03讲-矩阵乘法四层实现/_运行日志/run_cu_ref.txt<span>411 B</span></h2><pre>matmul_cu_ref.c
 === matmul.cu 核函数语义的 CPU 等价验证 (N=3) ===
 （本机无 CUDA Toolkit，故 matmul.cu 未编译；此处验证其算法）
 C = A x B =
@@ -2037,7 +2402,17 @@ CHECKSUM = 621
 RESULT: 9/9 PASS  ==&gt; ALL PASS
 结论：CUDA 内核的算法在 CPU 等价实现下与 C 版逐项一致（621）。
 </pre></div>
-<div class="file" id="f19"><h2>第03讲-矩阵乘法四层实现/_运行日志/run_gcc_O0.txt<span>731 B</span></h2><pre>﻿=== C 语言三重循环实现 3x3 矩阵乘法 (N=3) ===
+<div class="file" id="f22"><h2>第03讲-矩阵乘法四层实现/_运行日志/run_cuda.txt<span>264 B</span></h2><pre>﻿=== CUDA 版 matmul (N=3) ===
+blockDim = (32, 32) = 1024 线程/block
+gridDim  = (1, 1) -&gt; 1 个 block
+总线程数 = 1024，实际计算 = 9，利用率 = 0.88%
+C = A x B =
+  [   30   24   18 ]
+  [   84   69   54 ]
+  [  138  114   90 ]
+CHECKSUM = 621
+</pre></div>
+<div class="file" id="f23"><h2>第03讲-矩阵乘法四层实现/_运行日志/run_gcc_O0.txt<span>731 B</span></h2><pre>﻿=== C 语言三重循环实现 3x3 矩阵乘法 (N=3) ===
 A =
   [    1    2    3 ]
   [    4    5    6 ]
@@ -2064,7 +2439,7 @@ CHECKSUM = 621
   C[2][2] =   90  REF =   90  PASS
 RESULT: 9/9 PASS  ==&gt; ALL PASS
 </pre></div>
-<div class="file" id="f20"><h2>第03讲-矩阵乘法四层实现/_运行日志/run_gcc_O2.txt<span>731 B</span></h2><pre>﻿=== C 语言三重循环实现 3x3 矩阵乘法 (N=3) ===
+<div class="file" id="f24"><h2>第03讲-矩阵乘法四层实现/_运行日志/run_gcc_O2.txt<span>731 B</span></h2><pre>﻿=== C 语言三重循环实现 3x3 矩阵乘法 (N=3) ===
 A =
   [    1    2    3 ]
   [    4    5    6 ]
@@ -2091,7 +2466,7 @@ CHECKSUM = 621
   C[2][2] =   90  REF =   90  PASS
 RESULT: 9/9 PASS  ==&gt; ALL PASS
 </pre></div>
-<div class="file" id="f21"><h2>第03讲-矩阵乘法四层实现/_运行日志/sim.txt<span>1,291 B</span></h2><pre>###############################################################
+<div class="file" id="f25"><h2>第03讲-矩阵乘法四层实现/_运行日志/sim.txt<span>1,291 B</span></h2><pre>###############################################################
 # 第03讲 Verilog 仿真日志（真实输出，stdout+stderr 合并）
 # 仿真器：Icarus Verilog version 12.0 (devel) (s20150603-1539-g2693dd32b)
 ###############################################################
@@ -2124,7 +2499,7 @@ RESULT: 9/9 PASS  ==&gt; ALL PASS（与 C 版 CHECKSUM=621 一致）
 code\tb_matmul.v:106: $finish called at 10000 (1ps)
 [vvp exit code = 0]
 </pre></div>
-<div class="file" id="f22"><h2>第03讲-矩阵乘法四层实现/_运行日志/sim_compile.txt<span>419 B</span></h2><pre>iverilog.exe : tb_matmul.v:21: syntax error
+<div class="file" id="f26"><h2>第03讲-矩阵乘法四层实现/_运行日志/sim_compile.txt<span>419 B</span></h2><pre>iverilog.exe : tb_matmul.v:21: syntax error
 所在位置 行:8 字符: 1
 + &amp; $iv -o tb.vvp -s tb_matmul matmul.v tb_matmul.v 2&gt;&amp;1 | Tee-Object &quot; ...
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -2133,7 +2508,7 @@ code\tb_matmul.v:106: $finish called at 10000 (1ps)
  
 tb_matmul.v:21: error: Invalid module instantiation
 </pre></div>
-<div class="file" id="f23"><h2>第03讲-矩阵乘法四层实现/appendix_msvc_cl/matmul_O0.asm<span>14,312 B</span></h2><pre>; Listing generated by Microsoft (R) Optimizing Compiler Version 19.44.35228.0 
+<div class="file" id="f27"><h2>第03讲-矩阵乘法四层实现/appendix_msvc_cl/matmul_O0.asm<span>14,312 B</span></h2><pre>; Listing generated by Microsoft (R) Optimizing Compiler Version 19.44.35228.0 
 
 include listing.inc
 
@@ -2792,7 +3167,7 @@ __local_stdio_printf_options ENDP
 _TEXT	ENDS
 END
 </pre></div>
-<div class="file" id="f24"><h2>第03讲-矩阵乘法四层实现/appendix_msvc_cl/matmul_O0_src.asm<span>17,310 B</span></h2><pre>; Listing generated by Microsoft (R) Optimizing Compiler Version 19.44.35228.0 
+<div class="file" id="f28"><h2>第03讲-矩阵乘法四层实现/appendix_msvc_cl/matmul_O0_src.asm<span>17,310 B</span></h2><pre>; Listing generated by Microsoft (R) Optimizing Compiler Version 19.44.35228.0 
 
 include listing.inc
 
@@ -3607,7 +3982,7 @@ __local_stdio_printf_options ENDP
 _TEXT	ENDS
 END
 </pre></div>
-<div class="file" id="f25"><h2>第03讲-矩阵乘法四层实现/appendix_msvc_cl/matmul_O2.asm<span>13,945 B</span></h2><pre>; Listing generated by Microsoft (R) Optimizing Compiler Version 19.44.35228.0 
+<div class="file" id="f29"><h2>第03讲-矩阵乘法四层实现/appendix_msvc_cl/matmul_O2.asm<span>13,945 B</span></h2><pre>; Listing generated by Microsoft (R) Optimizing Compiler Version 19.44.35228.0 
 
 include listing.inc
 
@@ -4125,7 +4500,7 @@ __local_stdio_printf_options ENDP
 _TEXT	ENDS
 END
 </pre></div>
-<div class="file" id="f26"><h2>第03讲-矩阵乘法四层实现/appendix_msvc_cl/matmul_O2_src.asm<span>17,405 B</span></h2><pre>; Listing generated by Microsoft (R) Optimizing Compiler Version 19.44.35228.0 
+<div class="file" id="f30"><h2>第03讲-矩阵乘法四层实现/appendix_msvc_cl/matmul_O2_src.asm<span>17,405 B</span></h2><pre>; Listing generated by Microsoft (R) Optimizing Compiler Version 19.44.35228.0 
 
 include listing.inc
 
@@ -4780,7 +5155,7 @@ __local_stdio_printf_options ENDP
 _TEXT	ENDS
 END
 </pre></div>
-<div class="file" id="f27"><h2>第03讲-矩阵乘法四层实现/appendix_msvc_cl/matmul_Od.asm<span>14,312 B</span></h2><pre>; Listing generated by Microsoft (R) Optimizing Compiler Version 19.44.35228.0 
+<div class="file" id="f31"><h2>第03讲-矩阵乘法四层实现/appendix_msvc_cl/matmul_Od.asm<span>14,312 B</span></h2><pre>; Listing generated by Microsoft (R) Optimizing Compiler Version 19.44.35228.0 
 
 include listing.inc
 
@@ -5439,7 +5814,7 @@ __local_stdio_printf_options ENDP
 _TEXT	ENDS
 END
 </pre></div>
-<div class="file" id="f28"><h2>第03讲-矩阵乘法四层实现/appendix_msvc_cl/matmul_asm_annotated.txt<span>4,657 B</span></h2><pre>第03讲 矩阵乘法四层实现 —— 内层乘加指令对照（真实 cl.exe /FA 输出摘录）
+<div class="file" id="f32"><h2>第03讲-矩阵乘法四层实现/appendix_msvc_cl/matmul_asm_annotated.txt<span>4,657 B</span></h2><pre>第03讲 矩阵乘法四层实现 —— 内层乘加指令对照（真实 cl.exe /FA 输出摘录）
 编译器：MSVC 19.44.35228 x64；源文件 matmul.c；/Od 对应 -O0，/O2 对应 -O2
 
 C 源码 matmul.c 第 45-52 行（内层最核心的是第 49 行）：
@@ -5554,7 +5929,7 @@ C 源码 matmul.c 第 45-52 行（内层最核心的是第 49 行）：
       (3) C[i][j] 是循环携带依赖，打包需要重排，代价高于收益。
 
 </pre></div>
-<div class="file" id="f29"><h2>第04讲-ScaledDotProduct/ablation.py<span>8,094 B</span></h2><pre>#!/usr/bin/env python3
+<div class="file" id="f33"><h2>第04讲-ScaledDotProduct/ablation.py<span>8,094 B</span></h2><pre>#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 &quot;&quot;&quot;ablation.py —— 消融/对照实验：把「编译参数」和「结果是否被消费」各当一次自变量。
 
@@ -5737,7 +6112,7 @@ def main():
 if __name__ == &quot;__main__&quot;:
     sys.exit(main())
 </pre></div>
-<div class="file" id="f30"><h2>第04讲-ScaledDotProduct/benchmark.py<span>14,207 B</span></h2><pre>#!/usr/bin/env python3
+<div class="file" id="f34"><h2>第04讲-ScaledDotProduct/benchmark.py<span>14,207 B</span></h2><pre>#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 &quot;&quot;&quot;benchmark.py —— 三语言统一点积基准测试（仅标准库）。
 
@@ -6086,7 +6461,7 @@ def naive_demo(sizes, langs):
 if __name__ == &quot;__main__&quot;:
     sys.exit(main())
 </pre></div>
-<div class="file" id="f31"><h2>第04讲-ScaledDotProduct/build_all.bat<span>1,247 B</span></h2><pre>@echo off
+<div class="file" id="f35"><h2>第04讲-ScaledDotProduct/build_all.bat<span>1,247 B</span></h2><pre>@echo off
 REM build_all.bat - build C (MSVC cl /O2) and Rust (rustc, msvc host) binaries.
 REM Usage (from lab04\):  cmd /c &quot;code\build_all.bat&quot;
 REM Note: no usable gcc on this machine (WinLibs download aborted), so C uses MSVC cl /O2.
@@ -6122,7 +6497,7 @@ echo === build artifacts ===
 dir /b build
 endlocal
 </pre></div>
-<div class="file" id="f32"><h2>第04讲-ScaledDotProduct/build_report.py<span>41,458 B</span></h2><pre>#!/usr/bin/env python3
+<div class="file" id="f36"><h2>第04讲-ScaledDotProduct/build_report.py<span>41,458 B</span></h2><pre>#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 &quot;&quot;&quot;build_report.py —— 用 python-docx 把真实数据填进模板，生成第 04 讲实验报告 docx。
 
@@ -6852,7 +7227,7 @@ def main():
 if __name__ == &quot;__main__&quot;:
     sys.exit(main())
 </pre></div>
-<div class="file" id="f33"><h2>第04讲-ScaledDotProduct/diag_docx.py<span>1,769 B</span></h2><pre>#!/usr/bin/env python3
+<div class="file" id="f37"><h2>第04讲-ScaledDotProduct/diag_docx.py<span>1,769 B</span></h2><pre>#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 &quot;&quot;&quot;diag_docx.py —— 检查生成后的 docx 结构：正文元素顺序、标题是否带 pageBreakBefore、行是否允许跨页。&quot;&quot;&quot;
 import sys
@@ -6900,7 +7275,7 @@ for sec in d.sections:
         if p.text.strip():
             print(repr(p.text))
 </pre></div>
-<div class="file" id="f34"><h2>第04讲-ScaledDotProduct/dot.c<span>4,720 B</span></h2><pre>/* dot.c —— Scaled Dot-Product 的 C 实现（仅标准库）
+<div class="file" id="f38"><h2>第04讲-ScaledDotProduct/dot.c<span>4,720 B</span></h2><pre>/* dot.c —— Scaled Dot-Product 的 C 实现（仅标准库）
  *
  * 统一接口：double dot(const double *a, const double *b, size_t n)
  * 读数：读 gen_data.py 生成的裸 float64 小端二进制文件（无文件头）。
@@ -7045,7 +7420,7 @@ int main(int argc, char **argv)
     return 2;
 }
 </pre></div>
-<div class="file" id="f35"><h2>第04讲-ScaledDotProduct/dot.py<span>3,961 B</span></h2><pre>#!/usr/bin/env python3
+<div class="file" id="f39"><h2>第04讲-ScaledDotProduct/dot.py<span>3,961 B</span></h2><pre>#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 &quot;&quot;&quot;dot.py —— Scaled Dot-Product 的 Python 实现（仅标准库）。
 
@@ -7174,7 +7549,7 @@ def main(argv):
 if __name__ == &quot;__main__&quot;:
     sys.exit(main(sys.argv))
 </pre></div>
-<div class="file" id="f36"><h2>第04讲-ScaledDotProduct/dot.rs<span>4,334 B</span></h2><pre>// dot.rs —— Scaled Dot-Product 的 Rust 实现（仅标准库）
+<div class="file" id="f40"><h2>第04讲-ScaledDotProduct/dot.rs<span>4,334 B</span></h2><pre>// dot.rs —— Scaled Dot-Product 的 Rust 实现（仅标准库）
 //
 // 统一接口：fn dot(a: &amp;[f64], b: &amp;[f64]) -&gt; f64
 // 读数：读 gen_data.py 生成的裸 float64 小端二进制文件（无文件头）。
@@ -7300,7 +7675,7 @@ fn main() {
     }
 }
 </pre></div>
-<div class="file" id="f37"><h2>第04讲-ScaledDotProduct/dot_v0_noconsume.c<span>1,927 B</span></h2><pre>/* dot_v0_noconsume.c —— 「初版草稿」的反例，故意不消费结果。
+<div class="file" id="f41"><h2>第04讲-ScaledDotProduct/dot_v0_noconsume.c<span>1,927 B</span></h2><pre>/* dot_v0_noconsume.c —— 「初版草稿」的反例，故意不消费结果。
  *
  * 用来复现真实踩过的坑：算完点积却把结果丢掉（没有 printf / 没有累加到任何
  * 会被输出的变量），gcc -O2 会认定整段循环无副作用并**直接删除**，
@@ -7355,7 +7730,7 @@ int main(int argc, char **argv)
     return 0;
 }
 </pre></div>
-<div class="file" id="f38"><h2>第04讲-ScaledDotProduct/gen_data.py<span>2,420 B</span></h2><pre>#!/usr/bin/env python3
+<div class="file" id="f42"><h2>第04讲-ScaledDotProduct/gen_data.py<span>2,420 B</span></h2><pre>#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 &quot;&quot;&quot;gen_data.py —— 生成三语言共用的 float64 小端二进制向量。
 
@@ -7427,7 +7802,7 @@ def main():
 if __name__ == &quot;__main__&quot;:
     main()
 </pre></div>
-<div class="file" id="f39"><h2>第04讲-ScaledDotProduct/make_figs.py<span>12,878 B</span></h2><pre>#!/usr/bin/env python3
+<div class="file" id="f43"><h2>第04讲-ScaledDotProduct/make_figs.py<span>12,878 B</span></h2><pre>#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 &quot;&quot;&quot;make_figs.py —— 用 Pillow 把真实终端输出渲染成「截图风格」PNG，并画耗时对比柱状图。
 
@@ -7783,7 +8158,7 @@ def main():
 if __name__ == &quot;__main__&quot;:
     sys.exit(main())
 </pre></div>
-<div class="file" id="f40"><h2>第04讲-ScaledDotProduct/make_readme.py<span>7,905 B</span></h2><pre>﻿#!/usr/bin/env python3
+<div class="file" id="f44"><h2>第04讲-ScaledDotProduct/make_readme.py<span>7,905 B</span></h2><pre>﻿#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 &quot;&quot;&quot;make_readme.py —— 依据 logs/benchmark_raw.json 的真实数据生成 README.md 的耗时表部分。
 
@@ -7937,7 +8312,7 @@ C 与 Rust 处于同一量级（本实验中互有快慢），说明同一份朴
 if __name__ == &quot;__main__&quot;:
     main()
 </pre></div>
-<div class="file" id="f41"><h2>第04讲-ScaledDotProduct/merge_runs.py<span>3,878 B</span></h2><pre>#!/usr/bin/env python3
+<div class="file" id="f45"><h2>第04讲-ScaledDotProduct/merge_runs.py<span>3,878 B</span></h2><pre>#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 &quot;&quot;&quot;merge_runs.py —— 合并多次完整基准的结果，得到稳健的官方数据。
 
@@ -8036,7 +8411,7 @@ def main():
 if __name__ == &quot;__main__&quot;:
     raise SystemExit(main())
 </pre></div>
-<div class="file" id="f42"><h2>第04讲-ScaledDotProduct/prompt_v1.md<span>4,201 B</span></h2><pre># 提示词 v1（四要素版：输入 / 输出 / 约束 / 示例）
+<div class="file" id="f46"><h2>第04讲-ScaledDotProduct/prompt_v1.md<span>4,201 B</span></h2><pre># 提示词 v1（四要素版：输入 / 输出 / 约束 / 示例）
 
 &gt; 用途：让 AI 一次生成点积的 Python / C / Rust 三份实现 + 一个统一计时的
 &gt; benchmark 脚本。v1 是「初稿版」，只用四要素把需求说全，但计时口径写得弱
@@ -8098,7 +8473,7 @@ AI 按 v1 给出的是「能跑通」的草稿，但出现了两类问题，都�
 
 修错记录与最终 v2 见 `logs/` 与 `report`。
 </pre></div>
-<div class="file" id="f43"><h2>第04讲-ScaledDotProduct/prompt_v2.md<span>5,608 B</span></h2><pre># 提示词 v2（单变量迭代：只改「计时口径」这一句）
+<div class="file" id="f47"><h2>第04讲-ScaledDotProduct/prompt_v2.md<span>5,608 B</span></h2><pre># 提示词 v2（单变量迭代：只改「计时口径」这一句）
 
 &gt; **改动的唯一变量**：把 v1「【约束】4」里的
 &gt; 「计时由 `benchmark.py` 用 `time.perf_counter()` 统一完成，只测点积本身，不包含文件读取」
@@ -8180,7 +8555,7 @@ C/Python 加速倍数只有 4.8×（真实 131×）的错误结论（见 `logs/n
 
 详见报告「五、问题与解决」与「七、提交物自查 · 修错记录表」。
 </pre></div>
-<div class="file" id="f44"><h2>第04讲-ScaledDotProduct/test_dot.py<span>5,702 B</span></h2><pre>#!/usr/bin/env python3
+<div class="file" id="f48"><h2>第04讲-ScaledDotProduct/test_dot.py<span>5,702 B</span></h2><pre>#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 &quot;&quot;&quot;test_dot.py —— 点积实现的 5 个边界用例（只用标准库）。
 
@@ -8339,7 +8714,7 @@ def main():
 if __name__ == &quot;__main__&quot;:
     sys.exit(main())
 </pre></div>
-<div class="file" id="f45"><h2>第04讲-ScaledDotProduct/_运行日志/ablation.json<span>2,201 B</span></h2><pre>{
+<div class="file" id="f49"><h2>第04讲-ScaledDotProduct/_运行日志/ablation.json<span>2,201 B</span></h2><pre>{
  &quot;groups&quot;: {
   &quot;opt_levels&quot;: {
    &quot;10000&quot;: {
@@ -8436,7 +8811,7 @@ if __name__ == &quot;__main__&quot;:
   &quot;rustc&quot;: &quot;rustc 1.100.0 (0ef1bc386 2026-11-09)&quot;
  }
 }</pre></div>
-<div class="file" id="f46"><h2>第04讲-ScaledDotProduct/_运行日志/ablation.txt<span>9,878 B</span></h2><pre>��= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+<div class="file" id="f50"><h2>第04讲-ScaledDotProduct/_运行日志/ablation.txt<span>9,878 B</span></h2><pre>��= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
  
  A )   C �g c c   - O 0   v s   g c c   - O 2 
  
@@ -8613,7 +8988,7 @@ P
  橯eQ  l o g s / a b l a t i o n . j s o n 
  
  </pre></div>
-<div class="file" id="f47"><h2>第04讲-ScaledDotProduct/_运行日志/benchmark_console.txt<span>5,912 B</span></h2><pre>﻿languages = [&#x27;Python&#x27;, &#x27;C&#x27;, &#x27;Rust&#x27;]
+<div class="file" id="f51"><h2>第04讲-ScaledDotProduct/_运行日志/benchmark_console.txt<span>5,912 B</span></h2><pre>﻿languages = [&#x27;Python&#x27;, &#x27;C&#x27;, &#x27;Rust&#x27;]
 python    = D:\DeepSeek-Harness\runtime\data\dsh-runtimes\dsh-primary-runtime\dependencies\python\python.exe
 
 [1/2] 正确性核对（one-shot，三语言读同一份 bin 文件）
@@ -8687,7 +9062,7 @@ N        Python          C               Rust                C/Python Rust/Pytho
 
 原始数据已写入 logs/benchmark_raw_run3.json
 </pre></div>
-<div class="file" id="f48"><h2>第04讲-ScaledDotProduct/_运行日志/benchmark_raw.json<span>4,099 B</span></h2><pre>{
+<div class="file" id="f52"><h2>第04讲-ScaledDotProduct/_运行日志/benchmark_raw.json<span>4,099 B</span></h2><pre>{
  &quot;sizes&quot;: [
   10000,
   100000,
@@ -8862,7 +9237,7 @@ N        Python          C               Rust                C/Python Rust/Pytho
  &quot;timestamp&quot;: &quot;2026-11-17 02:21:00&quot;,
  &quot;merge&quot;: &quot;median of all run-medians across 3 benchmark sessions&quot;
 }</pre></div>
-<div class="file" id="f49"><h2>第04讲-ScaledDotProduct/_运行日志/benchmark_raw_run1.json<span>4,222 B</span></h2><pre>{
+<div class="file" id="f53"><h2>第04讲-ScaledDotProduct/_运行日志/benchmark_raw_run1.json<span>4,222 B</span></h2><pre>{
  &quot;sizes&quot;: [
   10000,
   100000,
@@ -9044,7 +9419,7 @@ N        Python          C               Rust                C/Python Rust/Pytho
  &quot;host&quot;: &quot;LAPTOP-59FGHU4I&quot;,
  &quot;timestamp&quot;: &quot;2026-11-17 02:21:00&quot;
 }</pre></div>
-<div class="file" id="f50"><h2>第04讲-ScaledDotProduct/_运行日志/benchmark_raw_run2.json<span>4,216 B</span></h2><pre>{
+<div class="file" id="f54"><h2>第04讲-ScaledDotProduct/_运行日志/benchmark_raw_run2.json<span>4,216 B</span></h2><pre>{
  &quot;sizes&quot;: [
   10000,
   100000,
@@ -9226,7 +9601,7 @@ N        Python          C               Rust                C/Python Rust/Pytho
  &quot;host&quot;: &quot;LAPTOP-59FGHU4I&quot;,
  &quot;timestamp&quot;: &quot;2026-11-17 02:21:58&quot;
 }</pre></div>
-<div class="file" id="f51"><h2>第04讲-ScaledDotProduct/_运行日志/benchmark_raw_run3.json<span>4,207 B</span></h2><pre>{
+<div class="file" id="f55"><h2>第04讲-ScaledDotProduct/_运行日志/benchmark_raw_run3.json<span>4,207 B</span></h2><pre>{
  &quot;sizes&quot;: [
   10000,
   100000,
@@ -9408,7 +9783,7 @@ N        Python          C               Rust                C/Python Rust/Pytho
  &quot;host&quot;: &quot;LAPTOP-59FGHU4I&quot;,
  &quot;timestamp&quot;: &quot;2026-11-17 02:22:53&quot;
 }</pre></div>
-<div class="file" id="f52"><h2>第04讲-ScaledDotProduct/_运行日志/benchmark_rerun.txt<span>11,382 B</span></h2><pre>��l a n g u a g e s   =   [ &#x27; P y t h o n &#x27; ,   &#x27; C &#x27; ,   &#x27; R u s t &#x27; ] 
+<div class="file" id="f56"><h2>第04讲-ScaledDotProduct/_运行日志/benchmark_rerun.txt<span>11,382 B</span></h2><pre>��l a n g u a g e s   =   [ &#x27; P y t h o n &#x27; ,   &#x27; C &#x27; ,   &#x27; R u s t &#x27; ] 
  
  p y t h o n         =   D : \ D e e p S e e k - H a r n e s s \ r u n t i m e \ d a t a \ d s h - r u n t i m e s \ d s h - p r i m a r y - r u n t i m e \ d e p e n d e n c i e s \ p y t h o n \ p y t h o n . e x e 
  
@@ -9555,7 +9930,7 @@ N        Python          C               Rust                C/Python Rust/Pytho
  烻薡penc騗橯eQ  l o g s / b e n c h m a r k _ r a w _ r e r u n . j s o n 
  
  </pre></div>
-<div class="file" id="f53"><h2>第04讲-ScaledDotProduct/_运行日志/benchmark_run1.txt<span>5,916 B</span></h2><pre>﻿languages = [&#x27;Python&#x27;, &#x27;C&#x27;, &#x27;Rust&#x27;]
+<div class="file" id="f57"><h2>第04讲-ScaledDotProduct/_运行日志/benchmark_run1.txt<span>5,916 B</span></h2><pre>﻿languages = [&#x27;Python&#x27;, &#x27;C&#x27;, &#x27;Rust&#x27;]
 python    = D:\DeepSeek-Harness\runtime\data\dsh-runtimes\dsh-primary-runtime\dependencies\python\python.exe
 
 [1/2] 正确性核对（one-shot，三语言读同一份 bin 文件）
@@ -9629,7 +10004,7 @@ N        Python          C               Rust                C/Python Rust/Pytho
 
 原始数据已写入 logs/benchmark_raw_run1.json
 </pre></div>
-<div class="file" id="f54"><h2>第04讲-ScaledDotProduct/_运行日志/benchmark_run2.txt<span>5,917 B</span></h2><pre>﻿languages = [&#x27;Python&#x27;, &#x27;C&#x27;, &#x27;Rust&#x27;]
+<div class="file" id="f58"><h2>第04讲-ScaledDotProduct/_运行日志/benchmark_run2.txt<span>5,917 B</span></h2><pre>﻿languages = [&#x27;Python&#x27;, &#x27;C&#x27;, &#x27;Rust&#x27;]
 python    = D:\DeepSeek-Harness\runtime\data\dsh-runtimes\dsh-primary-runtime\dependencies\python\python.exe
 
 [1/2] 正确性核对（one-shot，三语言读同一份 bin 文件）
@@ -9703,7 +10078,7 @@ N        Python          C               Rust                C/Python Rust/Pytho
 
 原始数据已写入 logs/benchmark_raw_run2.json
 </pre></div>
-<div class="file" id="f55"><h2>第04讲-ScaledDotProduct/_运行日志/benchmark_run3.txt<span>5,912 B</span></h2><pre>﻿languages = [&#x27;Python&#x27;, &#x27;C&#x27;, &#x27;Rust&#x27;]
+<div class="file" id="f59"><h2>第04讲-ScaledDotProduct/_运行日志/benchmark_run3.txt<span>5,912 B</span></h2><pre>﻿languages = [&#x27;Python&#x27;, &#x27;C&#x27;, &#x27;Rust&#x27;]
 python    = D:\DeepSeek-Harness\runtime\data\dsh-runtimes\dsh-primary-runtime\dependencies\python\python.exe
 
 [1/2] 正确性核对（one-shot，三语言读同一份 bin 文件）
@@ -9777,7 +10152,7 @@ N        Python          C               Rust                C/Python Rust/Pytho
 
 原始数据已写入 logs/benchmark_raw_run3.json
 </pre></div>
-<div class="file" id="f56"><h2>第04讲-ScaledDotProduct/_运行日志/compile.txt<span>801 B</span></h2><pre>﻿$ gcc --version
+<div class="file" id="f60"><h2>第04讲-ScaledDotProduct/_运行日志/compile.txt<span>801 B</span></h2><pre>﻿$ gcc --version
 gcc.exe (Rev7, Built by MSYS2 project) 16.2.0
 $ gcc -O2 -o build\dot_c.exe code\dot.c
 [C BUILD OK]
@@ -9803,7 +10178,7 @@ dot_rs.exe
 dot_rs_opt0.exe
 dot_rs_opt3.exe
 </pre></div>
-<div class="file" id="f57"><h2>第04讲-ScaledDotProduct/_运行日志/env.json<span>342 B</span></h2><pre>﻿{
+<div class="file" id="f61"><h2>第04讲-ScaledDotProduct/_运行日志/env.json<span>342 B</span></h2><pre>﻿{
     &quot;datetime&quot;:  &quot;2026-11-17 01:28:22&quot;,
     &quot;arch&quot;:  &quot;64-bit&quot;,
     &quot;mem_gb&quot;:  15.63,
@@ -9817,7 +10192,7 @@ dot_rs_opt3.exe
     &quot;build&quot;:  &quot;26200&quot;
 }
 </pre></div>
-<div class="file" id="f58"><h2>第04讲-ScaledDotProduct/_运行日志/gen_data.txt<span>808 B</span></h2><pre>��s e e d   =   2 0 2 6 1 1 1 7 
+<div class="file" id="f62"><h2>第04讲-ScaledDotProduct/_运行日志/gen_data.txt<span>808 B</span></h2><pre>��s e e d   =   2 0 2 6 1 1 1 7 
  
  o u t     =   D : \ D e e p S e e k - H a r n e s s \ h w - 0 3 0 4 \ l a b 0 4 \ d a t a 
  
@@ -9832,7 +10207,7 @@ dot_rs_opt3.exe
  d o n e . 
  
  </pre></div>
-<div class="file" id="f59"><h2>第04讲-ScaledDotProduct/_运行日志/merge_runs.txt<span>1,500 B</span></h2><pre>�﨨                   l a n g                             s 1                       s 2                       s 3         s p r e a d % 
+<div class="file" id="f63"><h2>第04讲-ScaledDotProduct/_运行日志/merge_runs.txt<span>1,500 B</span></h2><pre>�﨨                   l a n g                             s 1                       s 2                       s 3         s p r e a d % 
  
  1 0 0 0 0           P y t h o n         0 . 0 0 0 9 8 3 0 8       0 . 0 0 1 0 2 2 3 7     0 . 0 0 0 9 0 3 7 7 9             1 3 . 1 % 
  
@@ -9857,7 +10232,7 @@ dot_rs_opt3.exe
  榌筫penc�鑽  3   !k鶺芉剉  1 5   *N袕L�-NMOpe剉-NMOpe	�騗橯eQ  l o g s / b e n c h m a r k _ r a w . j s o n 
  
  </pre></div>
-<div class="file" id="f60"><h2>第04讲-ScaledDotProduct/_运行日志/naive_demo.txt<span>948 B</span></h2><pre>��l a n g u a g e s   =   [ &#x27; P y t h o n &#x27; ,   &#x27; C &#x27; ,   &#x27; R u s t &#x27; ] 
+<div class="file" id="f64"><h2>第04讲-ScaledDotProduct/_运行日志/naive_demo.txt<span>948 B</span></h2><pre>��l a n g u a g e s   =   [ &#x27; P y t h o n &#x27; ,   &#x27; C &#x27; ,   &#x27; R u s t &#x27; ] 
  
  p y t h o n         =   D : \ D e e p S e e k - H a r n e s s \ r u n t i m e \ d a t a \ d s h - r u n t i m e s \ d s h - p r i m a r y - r u n t i m e \ d e p e n d e n c i e s \ p y t h o n \ p y t h o n . e x e 
  
@@ -9880,7 +10255,7 @@ NY
 0剉曪嬘~簨      購ck/f臺{榋P擽T{_OS畫剉烻郪0
  
  </pre></div>
-<div class="file" id="f61"><h2>第04讲-ScaledDotProduct/_运行日志/naive_whole_process.json<span>490 B</span></h2><pre>{
+<div class="file" id="f65"><h2>第04讲-ScaledDotProduct/_运行日志/naive_whole_process.json<span>490 B</span></h2><pre>{
  &quot;naive_whole_process&quot;: {
   &quot;10000&quot;: {
    &quot;Python&quot;: 0.0793075000110548,
@@ -9909,7 +10284,7 @@ NY
   &quot;Rust&quot;
  ]
 }</pre></div>
-<div class="file" id="f62"><h2>第04讲-ScaledDotProduct/_运行日志/stability.json<span>1,577 B</span></h2><pre>{
+<div class="file" id="f66"><h2>第04讲-ScaledDotProduct/_运行日志/stability.json<span>1,577 B</span></h2><pre>{
  &quot;10000&quot;: {
   &quot;Python&quot;: {
    &quot;session_medians&quot;: [
@@ -9989,7 +10364,7 @@ NY
   }
  }
 }</pre></div>
-<div class="file" id="f63"><h2>第04讲-ScaledDotProduct/_运行日志/test_dot.txt<span>1,668 B</span></h2><pre>��= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+<div class="file" id="f67"><h2>第04讲-ScaledDotProduct/_运行日志/test_dot.txt<span>1,668 B</span></h2><pre>��= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
  
  筽飝箯Lu(u婳�P y t h o n   璭 �  +   C / R u s t   	N韹 姢N蒘寶翄	�
  
@@ -10018,7 +10393,7 @@ N9SM慶knx�b�        V a l u e E r r o r :   l e n g t h   m i s m a t c h 
  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
  
  </pre></div>
-<div class="file" id="f64"><h2>第04讲-ScaledDotProduct/_运行日志/test_dot_python_only.txt<span>1,716 B</span></h2><pre>��= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+<div class="file" id="f68"><h2>第04讲-ScaledDotProduct/_运行日志/test_dot_python_only.txt<span>1,716 B</span></h2><pre>��= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
  
  筽飝箯Lu(u婳�P y t h o n   璭 �  +   C / R u s t   	N韹 姢N蒘寶翄	�
  
@@ -10047,7 +10422,7 @@ N9SM慶knx�b�        V a l u e E r r o r :   l e n g t h   m i s m a t c h 
  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
  
  </pre></div>
-<div class="file" id="f65"><h2>第04讲-ScaledDotProduct/_运行日志/versions.json<span>623 B</span></h2><pre>{
+<div class="file" id="f69"><h2>第04讲-ScaledDotProduct/_运行日志/versions.json<span>623 B</span></h2><pre>{
  &quot;python&quot;: &quot;3.12.14&quot;,
  &quot;python_full&quot;: &quot;Python 3.12.14 (DSH runtime)&quot;,
  &quot;c_compiler&quot;: &quot;gcc 16.2.0 (MSYS2 mingw-w64, -O2)&quot;,
@@ -10056,7 +10431,7 @@ N9SM慶knx�b�        V a l u e E r r o r :   l e n g t h   m i s m a t c h 
  &quot;rustc_long&quot;: &quot;rustc 1.100.0 (0ef1bc386 2026-11-09)，host x86_64-pc-windows-msvc，-C opt-level=3（等价 cargo --release）&quot;,
  &quot;collected&quot;: &quot;2026-11-17 02:31:00&quot;
 }</pre></div>
-<div class="file" id="f66"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/ablation.json<span>1,947 B</span></h2><pre>{
+<div class="file" id="f70"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/ablation.json<span>1,947 B</span></h2><pre>{
  &quot;groups&quot;: {
   &quot;opt_levels&quot;: {
    &quot;10000&quot;: {
@@ -10143,7 +10518,7 @@ N9SM慶knx�b�        V a l u e E r r o r :   l e n g t h   m i s m a t c h 
   }
  }
 }</pre></div>
-<div class="file" id="f67"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/ablation.txt<span>10,924 B</span></h2><pre>��= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+<div class="file" id="f71"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/ablation.txt<span>10,924 B</span></h2><pre>��= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
  
  A )   C �c l   / O d   v s   c l   / O 2 
  
@@ -10349,7 +10724,7 @@ P
  橯eQ  l o g s / a b l a t i o n . j s o n 
  
  </pre></div>
-<div class="file" id="f68"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_console.txt<span>11,388 B</span></h2><pre>��l a n g u a g e s   =   [ &#x27; P y t h o n &#x27; ,   &#x27; C &#x27; ,   &#x27; R u s t &#x27; ] 
+<div class="file" id="f72"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_console.txt<span>11,388 B</span></h2><pre>��l a n g u a g e s   =   [ &#x27; P y t h o n &#x27; ,   &#x27; C &#x27; ,   &#x27; R u s t &#x27; ] 
  
  p y t h o n         =   D : \ D e e p S e e k - H a r n e s s \ r u n t i m e \ d a t a \ d s h - r u n t i m e s \ d s h - p r i m a r y - r u n t i m e \ d e p e n d e n c i e s \ p y t h o n \ p y t h o n . e x e 
  
@@ -10496,7 +10871,7 @@ P
  烻薡penc騗橯eQ  l o g s / b e n c h m a r k _ r a w _ r u n 3 . j s o n 
  
  </pre></div>
-<div class="file" id="f69"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw.json<span>4,097 B</span></h2><pre>{
+<div class="file" id="f73"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw.json<span>4,097 B</span></h2><pre>{
  &quot;sizes&quot;: [
   10000,
   100000,
@@ -10671,7 +11046,7 @@ P
  &quot;timestamp&quot;: &quot;2026-11-17 01:32:10&quot;,
  &quot;merge&quot;: &quot;median of all run-medians across 3 benchmark sessions&quot;
 }</pre></div>
-<div class="file" id="f70"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_rerun.json<span>4,205 B</span></h2><pre>{
+<div class="file" id="f74"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_rerun.json<span>4,205 B</span></h2><pre>{
  &quot;sizes&quot;: [
   10000,
   100000,
@@ -10853,7 +11228,7 @@ P
  &quot;host&quot;: &quot;LAPTOP-59FGHU4I&quot;,
  &quot;timestamp&quot;: &quot;2026-11-17 01:34:31&quot;
 }</pre></div>
-<div class="file" id="f71"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_run1.json<span>4,222 B</span></h2><pre>{
+<div class="file" id="f75"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_run1.json<span>4,222 B</span></h2><pre>{
  &quot;sizes&quot;: [
   10000,
   100000,
@@ -11035,7 +11410,7 @@ P
  &quot;host&quot;: &quot;LAPTOP-59FGHU4I&quot;,
  &quot;timestamp&quot;: &quot;2026-11-17 01:32:10&quot;
 }</pre></div>
-<div class="file" id="f72"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_run2.json<span>4,205 B</span></h2><pre>{
+<div class="file" id="f76"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_run2.json<span>4,205 B</span></h2><pre>{
  &quot;sizes&quot;: [
   10000,
   100000,
@@ -11217,7 +11592,7 @@ P
  &quot;host&quot;: &quot;LAPTOP-59FGHU4I&quot;,
  &quot;timestamp&quot;: &quot;2026-11-17 01:34:31&quot;
 }</pre></div>
-<div class="file" id="f73"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_run3.json<span>4,217 B</span></h2><pre>{
+<div class="file" id="f77"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_run3.json<span>4,217 B</span></h2><pre>{
  &quot;sizes&quot;: [
   10000,
   100000,
@@ -11399,7 +11774,7 @@ P
  &quot;host&quot;: &quot;LAPTOP-59FGHU4I&quot;,
  &quot;timestamp&quot;: &quot;2026-11-17 01:35:40&quot;
 }</pre></div>
-<div class="file" id="f74"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_smoke.json<span>1,047 B</span></h2><pre>{
+<div class="file" id="f78"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_smoke.json<span>1,047 B</span></h2><pre>{
  &quot;sizes&quot;: [
   10000,
   1000000
@@ -11453,7 +11828,7 @@ P
  &quot;host&quot;: &quot;LAPTOP-59FGHU4I&quot;,
  &quot;timestamp&quot;: &quot;2026-11-17 01:26:39&quot;
 }</pre></div>
-<div class="file" id="f75"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_run1.txt<span>11,408 B</span></h2><pre>��l a n g u a g e s   =   [ &#x27; P y t h o n &#x27; ,   &#x27; C &#x27; ,   &#x27; R u s t &#x27; ] 
+<div class="file" id="f79"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_run1.txt<span>11,408 B</span></h2><pre>��l a n g u a g e s   =   [ &#x27; P y t h o n &#x27; ,   &#x27; C &#x27; ,   &#x27; R u s t &#x27; ] 
  
  p y t h o n         =   D : \ D e e p S e e k - H a r n e s s \ r u n t i m e \ d a t a \ d s h - r u n t i m e s \ d s h - p r i m a r y - r u n t i m e \ d e p e n d e n c i e s \ p y t h o n \ p y t h o n . e x e 
  
@@ -11600,7 +11975,7 @@ P
  烻薡penc騗橯eQ  l o g s / b e n c h m a r k _ r a w . j s o n 
  
  </pre></div>
-<div class="file" id="f76"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_run2.txt<span>11,382 B</span></h2><pre>��l a n g u a g e s   =   [ &#x27; P y t h o n &#x27; ,   &#x27; C &#x27; ,   &#x27; R u s t &#x27; ] 
+<div class="file" id="f80"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_run2.txt<span>11,382 B</span></h2><pre>��l a n g u a g e s   =   [ &#x27; P y t h o n &#x27; ,   &#x27; C &#x27; ,   &#x27; R u s t &#x27; ] 
  
  p y t h o n         =   D : \ D e e p S e e k - H a r n e s s \ r u n t i m e \ d a t a \ d s h - r u n t i m e s \ d s h - p r i m a r y - r u n t i m e \ d e p e n d e n c i e s \ p y t h o n \ p y t h o n . e x e 
  
@@ -11747,7 +12122,7 @@ P
  烻薡penc騗橯eQ  l o g s / b e n c h m a r k _ r a w _ r e r u n . j s o n 
  
  </pre></div>
-<div class="file" id="f77"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_run3.txt<span>11,388 B</span></h2><pre>��l a n g u a g e s   =   [ &#x27; P y t h o n &#x27; ,   &#x27; C &#x27; ,   &#x27; R u s t &#x27; ] 
+<div class="file" id="f81"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_run3.txt<span>11,388 B</span></h2><pre>��l a n g u a g e s   =   [ &#x27; P y t h o n &#x27; ,   &#x27; C &#x27; ,   &#x27; R u s t &#x27; ] 
  
  p y t h o n         =   D : \ D e e p S e e k - H a r n e s s \ r u n t i m e \ d a t a \ d s h - r u n t i m e s \ d s h - p r i m a r y - r u n t i m e \ d e p e n d e n c i e s \ p y t h o n \ p y t h o n . e x e 
  
@@ -11894,7 +12269,7 @@ P
  烻薡penc騗橯eQ  l o g s / b e n c h m a r k _ r a w _ r u n 3 . j s o n 
  
  </pre></div>
-<div class="file" id="f78"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/compile.txt<span>830 B</span></h2><pre>﻿$ gcc --version
+<div class="file" id="f82"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/compile.txt<span>830 B</span></h2><pre>﻿$ gcc --version
 gcc.exe (Rev7, Built by MSYS2 project) 16.2.0
 $ gcc -O2 -o build\dot_c.exe code\dot.c
 [C BUILD OK]
@@ -11924,7 +12299,7 @@ dot_rs_opt0.pdb
 dot_rs_opt3.exe
 dot_rs_opt3.pdb
 </pre></div>
-<div class="file" id="f79"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/naive_whole_process.json<span>489 B</span></h2><pre>{
+<div class="file" id="f83"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/naive_whole_process.json<span>489 B</span></h2><pre>{
  &quot;naive_whole_process&quot;: {
   &quot;10000&quot;: {
    &quot;Python&quot;: 0.11359909997554496,
@@ -11953,7 +12328,7 @@ dot_rs_opt3.pdb
   &quot;Rust&quot;
  ]
 }</pre></div>
-<div class="file" id="f80"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/stability.json<span>1,575 B</span></h2><pre>{
+<div class="file" id="f84"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/stability.json<span>1,575 B</span></h2><pre>{
  &quot;10000&quot;: {
   &quot;Python&quot;: {
    &quot;session_medians&quot;: [
@@ -12033,7 +12408,7 @@ dot_rs_opt3.pdb
   }
  }
 }</pre></div>
-<div class="file" id="f81"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/versions.json<span>546 B</span></h2><pre>{
+<div class="file" id="f85"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/versions.json<span>546 B</span></h2><pre>{
  &quot;python&quot;: &quot;3.12.14&quot;,
  &quot;python_full&quot;: &quot;Python 3.12.14 (build in DSH runtime)&quot;,
  &quot;c_compiler&quot;: &quot;MSVC cl 19.44.35228 /O2&quot;,

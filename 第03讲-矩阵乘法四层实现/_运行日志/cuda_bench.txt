@@ -1,0 +1,23 @@
+﻿=== CUDA 真机基准：1024x1024 整数矩阵乘法 ===
+--- 设备属性 (cudaGetDeviceProperties) ---
+  device name          : NVIDIA GeForce RTX 4060 Laptop GPU
+  compute capability   : 8.9  (sm_89)
+  multiprocessor 数    : 24
+  每 block 最大线程数  : 1024
+  全局显存             : 8.00 GiB (8585216000 字节)
+  显存总线宽度         : 128 bit
+  共享内存/block       : 49152 字节
+  CUDA 运行时版本      : 13050
+--- CPU 参考实现 (i-j-k 三重循环) ---
+  用时 = 5660.00 ms
+  CHECKSUM = 21758082314
+--- GPU kernel ---
+  naive 1 thread/元素 kernel 用时中位 =   3.2777 ms   (min 3.0106 / max 28.4805, 50 次)
+  GPU CHECKSUM = 21758082314   与 CPU 逐元素不一致个数 = 0
+  tiled 16x16 共享内存 kernel 用时中位 =   1.7674 ms   (min 1.7142 / max 2.6429, 50 次)
+  Tiled CHECKSUM = 21758082314  与 CPU 不一致个数 = 0
+--- 汇总 (N=1024) ---
+  CPU 三重循环        :   5660.00 ms
+  GPU naive kernel    :    3.2777 ms   相对 CPU 加速 1726.82x
+  GPU tiled kernel    :    1.7674 ms   相对 CPU 加速 3202.46x   相对 naive 加速 1.85x
+  结果一致性          : naive PASS(全部一致) / tiled PASS(全部一致)

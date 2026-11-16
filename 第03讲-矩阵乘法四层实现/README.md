@@ -60,7 +60,9 @@ CHECKSUM = 621          # 30+24+18 + 84+69+54 + 138+114+90
 | `appendix_msvc_cl/` | 附录：MSVC `cl /FA` 的 MASM 汇编（-Od 658 行 / -O2 517 行）与逐行注释对照 |
 | `matmul.v` | Verilog 版：`parameter N=3`，`generate`+`genvar` 例化乘法器，`assign` 写组合逻辑 |
 | `tb_matmul.v` | Verilog testbench：同一组输入，逐项比对 C 版结果 |
-| `matmul.cu` | CUDA 版：一线程算一个 `C[i][j]`，`blockDim=32`，含完整宿主代码 |
+| `matmul.cu` | CUDA 版：一线程算一个 `C[i][j]`，`blockDim=32`，含完整宿主代码（**nvcc 13.5 真机跑通**） |
+| `matmul_cu_bench.cu` | **真机基准**：N=1024，CPU vs GPU naive vs GPU tiled，cudaEvent 计时取中位 |
+| `build_cuda.ps1` | 一键编译+运行脚本（含 vcvars64 与 cudart PATH 处理） |
 | `matmul_musa.cu` | MUSA 版：`cuda*` → `musa*` 机械替换结果（106 行中 14 行改动） |
 | `musa_diff.txt` | 上面这个改写的真实 unified diff（39 行） |
 | `matmul_cu_ref.c` | 无 GPU 时验证 CUDA 内核算法语义的 CPU 等价实现（已真实运行） |
@@ -200,18 +202,60 @@ RESULT: 9/9 PASS  ==> ALL PASS（与 C 版 CHECKSUM=621 一致）
 
 ---
 
-## 5. CUDA 层要点
+## 5. CUDA 层要点（**已真机编译运行**）
 
-- **一线程一个 `C[i][j]`**：`row = blockIdx.y*blockDim.y+threadIdx.y`，`col = blockIdx.x*blockDim.x+threadIdx.x`。
-- **3×3 需要几个 block / 几个线程**（`blockDim = 32×32`）：
-  - `gridDim = ( ⌈3/32⌉, ⌈3/32⌉ ) = (1, 1)` → **1 个 block**
-  - 该 block 共 `32 × 32 = 1024` 个线程，**只有 3×3 = 9 个线程真正计算**
-  - 有效利用率 `9 / 1024 ≈ 0.88%` —— 这就是「3×3 太小、GPU 完全跑不满」的量化证据
-- **越界判断必不可少**：`if (row < n && col < n)`，否则 1015 个多余线程越界读写直接崩。
-- **本机情况（如实）**：本机确有 **NVIDIA GeForce RTX 4060 Laptop GPU**，
-  但**未安装 CUDA Toolkit（无 nvcc）**，故 `matmul.cu` **未编译、未运行**。
-  为不放空话，另写 `matmul_cu_ref.c`（与核函数累加循环逐行同构）已真实编译运行，
-  `CHECKSUM = 621`、`9/9 PASS`。
+> 环境：nvcc 13.5（Cuda compilation tools, release 13.5, **V13.5.37**，Build cuda_13.5.r13.5/compiler.39125733_0）
+> GPU：**NVIDIA GeForce RTX 4060 Laptop GPU**，compute capability **8.9 (sm_89)**，**24 个 SM**，
+> 8.00 GiB 显存，128 bit 总线，每 block 最大 1024 线程，共享内存 49152 字节，
+> 驱动 621.01 / CUDA UMD 13.5，CUDA 运行时版本 13050。
+> Toolkit 位于 `D:\DeepSeek-Harness\hw-0304\tools\cuda13\nvidia\cu13`（轻量 pip 包 `nvidia-cuda-nvcc` 提供的完整布局）。
+
+### 一键复现
+```powershell
+# 编译 + 运行全部（内部已处理 vcvars64 与 PATH）
+powershell -NoProfile -ExecutionPolicy Bypass -File code\build_cuda.ps1
+# 只编译
+powershell -NoProfile -ExecutionPolicy Bypass -File code\build_cuda.ps1 -BuildOnly
+```
+
+### 3×3 教学版（`matmul.cu`，一线程一个 C[i][j]）
+编译：`nvcc -O2 -arch=sm_89 -Xcompiler /utf-8 -I<cu13>\include code\matmul.cu -o build\matmul_cu.exe -L<cu13>\lib\x64 -lcudart`（**必须在 vcvars64 环境里**，nvcc 要 cl.exe 当 host）
+运行：先把 `<cu13>\bin\x86_64` 加进 PATH（否则缺 `cudart64_13.dll`）
+
+**实测输出**（`logs/run_cuda.txt`）：
+```
+blockDim = (32, 32) = 1024 线程/block
+gridDim  = (1, 1) -> 1 个 block
+总线程数 = 1024，实际计算 = 9，利用率 = 0.88%
+C = A x B =
+  [   30   24   18 ]
+  [   84   69   54 ]
+  [  138  114   90 ]
+CHECKSUM = 621
+```
+→ **CHECKSUM = 621，与 C / Verilog / NumPy 四层完全一致。**
+
+### 3×3 到底要几个 block / 几个线程
+- `blockDim = 32×32 = 1024` 线程/block，`gridDim = ( ⌈3/32⌉, ⌈3/32⌉ ) = (1,1)` → **1 个 block、1024 个线程**
+- 其中只有 `3×3 = 9` 个线程真正计算，**利用率 9/1024 ≈ 0.88%**；24 个 SM 只有 1 个在干活
+- 这是「3×3 太小、GPU 优势完全体现不出来」的量化证据
+- 若 `blockDim = (1,1)`，则 `gridDim = (3,3)` = 9 个 block、9 个线程，利用率 100%，但调度开销远大于计算本身
+
+### N=1024 真机性能基准（`matmul_cu_bench.cu`）
+`cudaEventRecord` 计时，warmup 5 次 + REPEAT 50 次**取中位**；同一次运行的真实输出（`logs/cuda_bench.txt`）：
+
+| 实现 | 用时 | 相对 CPU 加速 | 相对 naive 加速 |
+|---|---|---|---|
+| CPU i-j-k 三重循环 | **5660.00 ms** | 1× | — |
+| GPU naive（1 线程/元素） | **3.2777 ms**（min 3.0106 / max 28.6885） | **1726.82×** | 1× |
+| GPU tiled（16×16 共享内存） | **1.7674 ms**（min 1.7422 / max 2.6429） | **3202.46×** | **1.85×** |
+
+**正确性**：CPU 参考、GPU naive、GPU tiled 三者 `CHECKSUM = 21758082314`，
+GPU 与 CPU **逐元素不一致个数均为 0**（两版都 PASS）。
+
+**Tiling 为什么能提速**：把 A、B 的子块先搬进共享内存复用，全局显存访问次数从 O(N³) 降到 O(N³/T)
+（T=16 理论降 16 倍）。实测只快 1.85 倍，说明 N=1024 时瓶颈已不只在全局访存，
+还受 SM 占用率与共享内存带宽限制。
 
 ### MUSA 迁移（指南第 8 步）
 
@@ -236,18 +280,12 @@ RESULT: 9/9 PASS  ==> ALL PASS（与 C 版 CHECKSUM=621 一致）
 | `cudaDeviceSynchronize` | `musaDeviceSynchronize` | 1 |
 | 注释/字符串里的 `CUDA` | `MUSA` | 3 行 |
 
-**MUSA 与 CUDA 的接口关系**：
-
-- MUSA（摩尔线程 Moore Threads）的运行时 API **刻意对齐 CUDA**：`musaMalloc`/`musaMemcpy`/
-  `musaFree`/`musaDeviceSynchronize` 与 `cudaXxx` 一一同名同签名。
-- **语言层完全同构、不需改**：`__global__`、`blockIdx`、`blockDim`、`threadIdx`、
-  `<<<grid, block>>>` 启动语法、warp 概念全部保留。
-- 因此 CUDA 代码迁移到 MUSA **通常只是「换前缀 + 换头文件 + 换编译器（nvcc → mcc）」**，
-  本实验 106 行源码里只有 14 行（13%）需要动，且全是**机械替换**，没有算法改动。
-- 边界：生态工具链（cuBLAS ↔ muBLAS、Nsight ↔ muDNN 等）与具体算子库不完全对等，
-  `__shfl_*` 等 warp 内建函数的细节可能有差异，大数据量/复杂 kernel 仍需人工核对。
-
----
+**MUSA 与 CUDA 的接口关系**：MUSA 的运行时 API 刻意与 CUDA 对齐——
+`musaMalloc`/`musaMemcpy`/`musaFree`/`musaDeviceSynchronize` 与 `cudaXxx` 同名同签名；
+语言层的 `__global__`、`blockIdx`、`blockDim`、`threadIdx`、`<<<grid, block>>>` 全部保留。
+所以 CUDA 迁 MUSA 通常只是「换前缀 + 换头文件 + 换编译器（nvcc → mcc）」，
+本实验 106 行里只有 14 行（13%）需要动，且全是机械替换，无算法改动。
+**边界**：MUSA 侧本机无摩尔线程显卡，未运行，只做静态改写与 diff 统计。
 
 ## 6. 复现命令（本机实测可跑）
 
