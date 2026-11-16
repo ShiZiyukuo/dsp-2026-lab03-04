@@ -1,0 +1,39 @@
+--- matmul.cu
++++ matmul_musa.cu
+@@ -2 +2 @@
+- * 第03讲 矩阵乘法四层实现 —— 第 4 层：CUDA（一线程算一个 C[i][j]）
++ * 第03讲 矩阵乘法四层实现 —— 第 4 层：MUSA（一线程算一个 C[i][j]）
+@@ -11 +11 @@
+- *   但**未安装 CUDA Toolkit（无 nvcc）**，因此本文件**未编译、未运行**，
++ *   但**未安装 MUSA Toolkit（无 nvcc）**，因此本文件**未编译、未运行**，
+@@ -17 +17 @@
+- * MUSA 迁移（指南第 8 步）：把下面的 cuda 前缀全部换成 musa 即得摩尔线程版本，
++ * MUSA 迁移（指南第 8 步）：把下面的 musa 前缀全部换成 musa 即得摩尔线程版本，
+@@ -63,3 +63,3 @@
+-    cudaMalloc((void **)&d_A, bytes);
+-    cudaMalloc((void **)&d_B, bytes);
+-    cudaMalloc((void **)&d_C, bytes);
++    musaMalloc((void **)&d_A, bytes);
++    musaMalloc((void **)&d_B, bytes);
++    musaMalloc((void **)&d_C, bytes);
+@@ -68,2 +68,2 @@
+-    cudaMemcpy(d_A, h_A, bytes, cudaMemcpyHostToDevice);
+-    cudaMemcpy(d_B, h_B, bytes, cudaMemcpyHostToDevice);
++    musaMemcpy(d_A, h_A, bytes, musaMemcpyHostToDevice);
++    musaMemcpy(d_B, h_B, bytes, musaMemcpyHostToDevice);
+@@ -76 +76 @@
+-    printf("=== CUDA 版 matmul (N=%d) ===\n", N);
++    printf("=== MUSA 版 matmul (N=%d) ===\n", N);
+@@ -86 +86 @@
+-    cudaDeviceSynchronize();
++    musaDeviceSynchronize();
+@@ -89 +89 @@
+-    cudaMemcpy(h_C, d_C, bytes, cudaMemcpyDeviceToHost);
++    musaMemcpy(h_C, d_C, bytes, musaMemcpyDeviceToHost);
+@@ -102,3 +102,3 @@
+-    cudaFree(d_A);
+-    cudaFree(d_B);
+-    cudaFree(d_C);
++    musaFree(d_A);
++    musaFree(d_B);
++    musaFree(d_C);

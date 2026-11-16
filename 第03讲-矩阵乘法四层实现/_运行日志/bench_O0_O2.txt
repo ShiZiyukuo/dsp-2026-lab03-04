@@ -1,0 +1,10 @@
+===== -Od (等价 -O0) =====
+REPEAT = 20000000 轮 x 9 元素 = 180000000 次 C[i][j] 计算
+CHECKSUM = 90
+CPU_TIME = 2.8810 s
+PER_ITER = 144.050 ns
+===== -O2 =====
+REPEAT = 20000000 轮 x 9 元素 = 180000000 次 C[i][j] 计算
+CHECKSUM = 90
+CPU_TIME = 0.3470 s
+PER_ITER = 17.350 ns

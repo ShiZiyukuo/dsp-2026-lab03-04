@@ -1,0 +1,11 @@
+matmul_cu_ref.c
+=== matmul.cu 核函数语义的 CPU 等价验证 (N=3) ===
+（本机无 CUDA Toolkit，故 matmul.cu 未编译；此处验证其算法）
+C = A x B =
+  [   30   24   18 ]
+  [   84   69   54 ]
+  [  138  114   90 ]
+C_FLAT = 30 24 18 84 69 54 138 114 90
+CHECKSUM = 621
+RESULT: 9/9 PASS  ==> ALL PASS
+结论：CUDA 内核的算法在 CPU 等价实现下与 C 版逐项一致（621）。

@@ -1,0 +1,114 @@
+第03讲 矩阵乘法四层实现 —— 内层乘加指令对照（真实 cl.exe /FA 输出摘录）
+编译器：MSVC 19.44.35228 x64；源文件 matmul.c；/Od 对应 -O0，/O2 对应 -O2
+
+C 源码 matmul.c 第 45-52 行（内层最核心的是第 49 行）：
+    for (i = 0; i < N; i++)
+      for (j = 0; j < N; j++) {
+        C[i][j] = 0;
+        for (k = 0; k < N; k++)
+          C[i][j] += A[i][k] * B[k][j];   // <<== 第 49 行，就是这一行
+      }
+
+生成命令：
+    cl /nologo /utf-8 /Od /FA /Faasm_cl\matmul_Od.asm matmul.c
+    cl /nologo /utf-8 /O2 /FA /Faasm_cl\matmul_O2.asm matmul.c
+
+
+##############################################################################
+# [Od] 内层 k 循环体：imul/add 就在这里   (Od.asm 第 189-219 行)
+##############################################################################
+ 189| $LN10@main:
+ 190| 	cmp	DWORD PTR k$[rsp], 3
+ 191| 	jge	SHORT $LN9@main
+ 192| ; Line 49
+ 193| 	movsxd	rax, DWORD PTR i$[rsp]
+ 194| 	imul	rax, rax, 12
+ 195| 	lea	rax, QWORD PTR C$[rsp+rax]
+ 196| 	movsxd	rcx, DWORD PTR j$[rsp]
+ 197| 	movsxd	rdx, DWORD PTR i$[rsp]
+ 198| 	imul	rdx, rdx, 12
+ 199| 	lea	r8, OFFSET FLAT:A
+ 200| 	add	r8, rdx
+ 201| 	mov	rdx, r8
+ 202| 	movsxd	r8, DWORD PTR k$[rsp]
+ 203| 	movsxd	r9, DWORD PTR k$[rsp]
+ 204| 	imul	r9, r9, 12
+ 205| 	lea	r10, OFFSET FLAT:B
+ 206| 	add	r10, r9
+ 207| 	mov	r9, r10
+ 208| 	movsxd	r10, DWORD PTR j$[rsp]
+ 209| 	mov	edx, DWORD PTR [rdx+r8*4]
+ 210| 	imul	edx, DWORD PTR [r9+r10*4]
+ 211| 	add	edx, DWORD PTR [rax+rcx*4]
+ 212| 	mov	eax, edx
+ 213| 	movsxd	rcx, DWORD PTR j$[rsp]
+ 214| 	movsxd	rdx, DWORD PTR i$[rsp]
+ 215| 	imul	rdx, rdx, 12
+ 216| 	lea	rdx, QWORD PTR C$[rsp+rdx]
+ 217| 	mov	DWORD PTR [rdx+rcx*4], eax
+ 218| ; Line 50
+ 219| 	jmp	SHORT $LN8@main
+
+  * c[i][j] += a[i][k]*b[k][j] 在 -Od 下对应**两条**指令：
+      第 210 行  imul  edx, DWORD PTR [r9+r10*4]   ; edx = A[i][k] * B[k][j]
+      第 211 行  add   edx, DWORD PTR [rax+rcx*4]   ; edx = edx + C[i][j]
+    （第 209 行 mov edx,[rdx+r8*4] 只把 A[i][k] 读进 edx，供 imul 使用）
+    加上寻址与写回，-Od 一次内层迭代约 28 条指令（190-219 行含循环判断），
+    三次 k 迭代 => 每个 C[i][j] 约 84 条动态指令。
+
+  * 另有两处 imul 是行主序地址计算，不是乘法运算本体：
+      第 194 行  imul rax, rax, 12   ; i*3*sizeof(int)=i*12，定位 C 第 i 行
+      第 204 行  imul r9,  r9, 12    ; k*12，定位 B 第 k 行
+
+
+##############################################################################
+# [O2] k 循环已完全展开为 3 条 imul + 2 条 add   (O2.asm 第 214-240 行)
+##############################################################################
+ 214| $LL4@main:
+ 215| ; Line 46
+ 216| 	mov	r10d, DWORD PTR [r9]
+ 217| 	lea	rbp, QWORD PTR [r15+r9]
+ 218| 	mov	r11d, DWORD PTR [r9+4]
+ 219| 	mov	rax, rbx
+ 220| 	mov	esi, DWORD PTR [r9+8]
+ 221| 	mov	r8d, 3
+ 222| 	npad	8
+ 223| $LL7@main:
+ 224| ; Line 49
+ 225| 	mov	edx, esi
+ 226| 	mov	ecx, r11d
+ 227| 	imul	ecx, DWORD PTR [rax+12]
+ 228| 	imul	edx, DWORD PTR [rax+24]
+ 229| 	lea	rax, QWORD PTR [rax+4]
+ 230| 	add	edx, ecx
+ 231| 	mov	ecx, r10d
+ 232| 	imul	ecx, DWORD PTR [rax-4]
+ 233| 	add	edx, ecx
+ 234| 	mov	DWORD PTR [rax+rbp-4], edx
+ 235| 	sub	r8, 1
+ 236| 	jne	SHORT $LL7@main
+ 237| ; Line 45
+ 238| 	add	r9, 12
+ 239| 	sub	r14, 1
+ 240| 	jne	SHORT $LL4@main
+
+  * -O2 下内层 k 循环被**完全展开**（没有任何 k 的比较/跳转指令）：
+      第 227 行  imul ecx, DWORD PTR [rax+12]  ; A[i][1]*B[1][j]
+      第 228 行  imul edx, DWORD PTR [rax+24]  ; A[i][2]*B[2][j]
+      第 232 行  imul ecx, DWORD PTR [rax-4]   ; A[i][0]*B[0][j]
+      第 230 行  add  edx, ecx                 ; 前两项相加
+      第 233 行  add  edx, ecx                 ; 加第三项 => C[i][j]
+      第 234 行  mov  DWORD PTR [rax+rbp-4], edx ; 直接写回 C[i][j]
+    一个 C[i][j] 只需 12 条指令（225-236 行），相比 -Od 约 84 条，
+    指令数比约 7 倍，与实测耗时比 8.30 倍属同一量级，互相印证。
+
+  * 强度削弱：-O2 把 i*12 / k*12 这类 imul 消掉了，改用 lea/add 递增指针
+    （第 229 行 lea rax,[rax+4]、第 237 行 add r9,12）。
+
+  * 向量化：**没有**。-O2 汇编里找不到 xmm/ymm/zmm/paddd/pmulld 任何一条
+    SIMD 指令（已用 Select-String grep 确认，0 命中）。原因：
+      (1) 内层只有 3 个 int，凑不满 SSE 的 4 lane 打包；
+      (2) 整数 32bit 乘法需要 SSE4.1 的 pmulld，而这里是标量乘-加链，
+          编译器判断展开成标量更快；
+      (3) C[i][j] 是循环携带依赖，打包需要重排，代价高于收益。
+

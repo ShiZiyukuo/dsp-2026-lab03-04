@@ -1,0 +1,32 @@
+###############################################################
+# 第03讲 Verilog 仿真日志（真实输出，stdout+stderr 合并）
+# 仿真器：Icarus Verilog version 12.0 (devel) (s20150603-1539-g2693dd32b)
+###############################################################
+
+$ iverilog -V
+Icarus Verilog version 12.0 (devel) (s20150603-1539-g2693dd32b)
+
+$ iverilog -g2012 -o tmp\tb.vvp -s tb_matmul code\matmul.v code\tb_matmul.v
+[iverilog exit code = 0]  (0 = 编译成功，无任何 warning)
+
+$ vvp tmp\tb.vvp
+VCD info: dumpfile tb_matmul.vcd opened for output.
+=== Verilog 组合逻辑仿真 matmul (N=3) ===
+A = 1 2 3 / 4 5 6 / 7 8 9
+B = 9 8 7 / 6 5 4 / 3 2 1
+Y = [ 30 24 18 ]  [ 84 69 54 ]  [ 138 114 90 ]
+--- 与 C 版结果逐项比对 ---
+  Y[0][0] =   30  REF =   30  PASS
+  Y[0][1] =   24  REF =   24  PASS
+  Y[0][2] =   18  REF =   18  PASS
+  Y[1][0] =   84  REF =   84  PASS
+  Y[1][1] =   69  REF =   69  PASS
+  Y[1][2] =   54  REF =   54  PASS
+  Y[2][0] =  138  REF =  138  PASS
+  Y[2][1] =  114  REF =  114  PASS
+  Y[2][2] =   90  REF =   90  PASS
+Y_FLAT = 30 24 18 84 69 54 138 114 90
+CHECKSUM = 621
+RESULT: 9/9 PASS  ==> ALL PASS（与 C 版 CHECKSUM=621 一致）
+code\tb_matmul.v:106: $finish called at 10000 (1ps)
+[vvp exit code = 0]
