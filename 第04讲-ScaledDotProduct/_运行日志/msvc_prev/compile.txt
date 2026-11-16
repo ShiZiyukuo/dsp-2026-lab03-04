@@ -1,0 +1,29 @@
+﻿$ gcc --version
+gcc.exe (Rev7, Built by MSYS2 project) 16.2.0
+$ gcc -O2 -o build\dot_c.exe code\dot.c
+[C BUILD OK]
+$ gcc -O0 -o build\dot_c_O0.exe code\dot.c   (仅 ablation 对照用)
+$ gcc -O2 -o build\dot_c_noconsume.exe code\dot_v0_noconsume.c
+
+$ rustc --version
+rustc 1.100.0 (0ef1bc386 2026-11-09)
+$ rustc --edition 2021 -C opt-level=3 -o build\dot_rs.exe code\dot.rs
+[RUST BUILD OK]
+
+=== codegen check ===
+$ objdump -d build\dot_c.exe  (统计浮点指令，看 gcc -O2 是否向量化)
+dot_c.exe(-O2)      : mulsd=15 addsd=14 mulpd=0 addpd=0
+dot_c_noconsume.exe : mulsd=14 addsd=10  (反例：结果被丢弃)
+
+=== build artifacts ===
+dot_c.exe
+dot_c_noconsume.exe
+dot_c_O0.exe
+dot_c_O2.exe
+dot_c_Od.exe
+dot_rs.exe
+dot_rs.pdb
+dot_rs_opt0.exe
+dot_rs_opt0.pdb
+dot_rs_opt3.exe
+dot_rs_opt3.pdb

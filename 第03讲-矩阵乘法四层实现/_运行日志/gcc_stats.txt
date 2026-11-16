@@ -1,0 +1,23 @@
+gcc: gcc.exe (Rev7, Built by MSYS2 project) 16.2.0
+
+matmul_O0.s    总行数= 572  指令行(估)= 340
+    imul     x 1
+    addl     x 18
+    movl     x 90
+    leal     x 1
+    cltq     x 0
+    xmm      x 0
+    ymm      x 0
+    pmulld   x 0
+    paddd    x 0
+
+matmul_O2.s    总行数= 367  指令行(估)= 174
+    imul     x 3
+    addl     x 7
+    movl     x 23
+    leal     x 0
+    cltq     x 0
+    xmm      x 13
+    ymm      x 0
+    pmulld   x 0
+    paddd    x 3

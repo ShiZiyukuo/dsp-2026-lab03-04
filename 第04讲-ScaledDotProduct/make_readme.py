@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """make_readme.py —— 依据 logs/benchmark_raw.json 的真实数据生成 README.md 的耗时表部分。
 
@@ -59,7 +59,7 @@ def main():
 # 0) 生成测试数据（固定种子，三语言共用同一份 bin，保证可比性）
 python code\\gen_data.py
 
-# 1) 编译（本机无 gcc，C 用 MSVC cl /O2；Rust 用 rustc -C opt-level=3）
+# 1) 编译（C 用 gcc -O2；Rust 用 rustc -C opt-level=3；需要先把 mingw64\\bin 放进 PATH）
 cmd /c "code\\build_all.bat"
 
 # 2) 正确性：三语言 one-shot 校验和 + 相对误差（要求 ≤ 1e-9）
@@ -73,7 +73,7 @@ python code\\test_dot.py
 # 4) 正式基准：3 规模 × 3 语言 × %(runs)d 次独立运行（每次预热 %(warm)d 轮 + 正式 %(rounds)d 轮取中位数）
 python code\\benchmark.py
 
-# 5) 对照实验（/Od vs /O2、rustc opt-level=0 vs 3、整进程计时 vs 应答式、dumpbin 看指令）
+# 5) 对照实验（gcc -O0 vs -O2、rustc opt-level=0 vs 3、整进程计时 vs 逐请求、objdump 看指令）
 python code\\ablation.py
 
 # 6) 生成截图与柱状图，然后填报告并导出 PDF
@@ -87,9 +87,9 @@ python code\\build_report.py
 |---|---|
 | `code/gen_data.py` | 生成 N=10^4/10^5/10^6 的 `a_<N>_f64.bin` / `b_<N>_f64.bin`（裸 float64 小端，seed=20261117） |
 | `code/dot.py` | Python 实现：`dot(a,b)->float`；另有 `--serve` 应答式 worker 模式与 one-shot 模式 |
-| `code/dot.c` | C 实现（`cl /O2` 编译）；结果必须被消费 + `noinline` 防优化 |
+| `code/dot.c` | C 实现（`gcc -O2` 编译）；结果必须被消费 + `noinline` 防优化 |
 | `code/dot.rs` | Rust 实现（`rustc -C opt-level=3`）；显式 `from_le_bytes` 读小端 |
-| `code/dot_v0_noconsume.c` | **反例**：算完不消费结果的初版草稿，用 `dumpbin` 对比机器码 |
+| `code/dot_v0_noconsume.c` | **反例**：算完不消费结果的初版草稿，用 `objdump` 对比机器码 |
 | `code/benchmark.py` | 统一计时协议：应答式 worker + 实测 RTT 基线扣除 + 自动标定批量 k；one-shot 正确性核对 |
 | `code/test_dot.py` | 5 个边界用例（n=0 / n=1 / 整数精确值 / 全零 / 极大极小混合）+ 三语言交叉验证 |
 | `code/ablation.py` | 对照实验：构建档位、结果是否被消费、计时口径 |
@@ -107,7 +107,7 @@ python code\\build_report.py
 - Python %(python)s（仅标准库：array / struct / math / subprocess / time）
 - C 编译器：%(cc)s
 - Rust 编译器：%(rustc)s
-- 注：本机最终**没有可用的 gcc**（WinLibs 下载中断），因此 C 改用 MSVC cl /O2（同为 -O2 优化档），如实记录。
+- 注：gcc 的安装走了一个来回 —— 第一次用 winget 装 WinLibs 在下载阶段中断；第二次改用 MSYS2 + 清华镜像装成 **gcc 16.2.0 (mingw-w64)**，随后 C 侧全部数据都用 `gcc -O2` 重跑。调用 gcc 与运行其产物前，需把 `D:\DeepSeek-Harness\hw-0304\tools\msys64\mingw64\bin` 放进 PATH。
 
 ## 四、耗时对比（真实数据）
 
@@ -132,8 +132,8 @@ C 与 Rust 处于同一量级（本实验中互有快慢），说明同一份朴
 
 1. **不要把进程启动与文件读取算进计时**：N=10^4 时 C 的真实点积只有 ~10 µs，而进程启动约 20 ms，
    整进程计时会把 C 的耗时虚高约 1800 倍，加速倍数从 131× 被压成 4.8×。本实验用应答式协议解决。
-2. **结果必须被消费**：算完不打印、不累加，`/O2` 下可能被整段删除（本机 MSVC 未触发，但写法上必须防）。
-3. **必须同为优化构建**：`/Od`、`rustc -C opt-level=0` 比优化构建慢 3~5 倍（实测），不可混用。
+2. **结果必须被消费，重复调用要挡优化**：算完不打印、不累加时，优化构建可能把整段删除；另外 gcc -O2 会把「k 次入参相同的 dot」做循环不变量外提，把单次耗时算成 0.001 us —— 本实验在重复循环里加了编译器屏障（空 asm + memory clobber）挡住它。
+3. **必须同为优化构建**：`gcc -O0`、`rustc -C opt-level=0` 比优化构建慢 3~5 倍（实测），不可混用。
 """ % {
         "runs": runs, "rounds": rounds, "warm": warm, "sess": sess, "total": total,
         "cpu": "Intel(R) Core(TM) i9-14900HX（24 核 32 线程）",

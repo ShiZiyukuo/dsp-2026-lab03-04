@@ -1,0 +1,79 @@
+### gcc --version ###
+gcc.exe (Rev7, Built by MSYS2 project) 16.2.0
+Copyright (C) 2026 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+$ gcc -O0 -S -fverbose-asm -o matmul_O0.s matmul.c   [exit=0]
+
+$ gcc -O2 -S -fverbose-asm -o matmul_O2.s matmul.c   [exit=0]
+
+$ gcc -O0 -o build\matmul_gcc_O0.exe matmul.c   [exit=0]
+=== C 语言三重循环实现 3x3 矩阵乘法 (N=3) ===
+A =
+  [    1    2    3 ]
+  [    4    5    6 ]
+  [    7    8    9 ]
+B =
+  [    9    8    7 ]
+  [    6    5    4 ]
+  [    3    2    1 ]
+C = A x B =
+  [   30   24   18 ]
+  [   84   69   54 ]
+  [  138  114   90 ]
+C_FLAT = 30 24 18 84 69 54 138 114 90
+CHECKSUM = 621
+--- 与标准答案逐项比对 ---
+  C[0][0] =   30  REF =   30  PASS
+  C[0][1] =   24  REF =   24  PASS
+  C[0][2] =   18  REF =   18  PASS
+  C[1][0] =   84  REF =   84  PASS
+  C[1][1] =   69  REF =   69  PASS
+  C[1][2] =   54  REF =   54  PASS
+  C[2][0] =  138  REF =  138  PASS
+  C[2][1] =  114  REF =  114  PASS
+  C[2][2] =   90  REF =   90  PASS
+RESULT: 9/9 PASS  ==> ALL PASS
+[run exit=0]
+
+$ gcc -O2 -o build\matmul_gcc_O2.exe matmul.c   [exit=0]
+=== C 语言三重循环实现 3x3 矩阵乘法 (N=3) ===
+A =
+  [    1    2    3 ]
+  [    4    5    6 ]
+  [    7    8    9 ]
+B =
+  [    9    8    7 ]
+  [    6    5    4 ]
+  [    3    2    1 ]
+C = A x B =
+  [   30   24   18 ]
+  [   84   69   54 ]
+  [  138  114   90 ]
+C_FLAT = 30 24 18 84 69 54 138 114 90
+CHECKSUM = 621
+--- 与标准答案逐项比对 ---
+  C[0][0] =   30  REF =   30  PASS
+  C[0][1] =   24  REF =   24  PASS
+  C[0][2] =   18  REF =   18  PASS
+  C[1][0] =   84  REF =   84  PASS
+  C[1][1] =   69  REF =   69  PASS
+  C[1][2] =   54  REF =   54  PASS
+  C[2][0] =  138  REF =  138  PASS
+  C[2][1] =  114  REF =  114  PASS
+  C[2][2] =   90  REF =   90  PASS
+RESULT: 9/9 PASS  ==> ALL PASS
+[run exit=0]
+
+### gcc -O0 bench ###
+REPEAT = 20000000 轮 x 9 元素 = 180000000 次 C[i][j] 计算
+CHECKSUM = 90
+CPU_TIME = 2.4600 s
+PER_ITER = 123.000 ns
+
+### gcc -O2 bench ###
+REPEAT = 20000000 轮 x 9 元素 = 180000000 次 C[i][j] 计算
+CHECKSUM = 90
+CPU_TIME = 0.2890 s
+PER_ITER = 14.450 ns

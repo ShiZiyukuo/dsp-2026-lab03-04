@@ -111,6 +111,13 @@ static int run_serve(const char *pa, const char *pb)
             double total = 0.0;
             for (long i = 0; i < k; i++) {
                 total += dot(a, b, na);
+#if defined(__GNUC__)
+                /* 编译器屏障：gcc -O2 会把「k 次入参完全相同的 dot」做循环不变量外提，
+                 * 只算一次再累加 k 次，于是测出来的「单次耗时」是 0.001 us 的假数据
+                 * （MSVC /O2 不做这个优化，所以之前的 cl 版没暴露）。
+                 * 有了这行 empty asm + memory clobber，编译器必须假定内存可能变，不能外提。 */
+                __asm__ __volatile__("" ::: "memory");
+#endif
             }
             printf("%.17g\n", total);
             fflush(stdout);
