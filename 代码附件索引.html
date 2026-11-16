@@ -19,12 +19,12 @@
 <p>邹玥（学号 2025311160，数字媒体艺术2班） · 2026 秋《数字媒体程序设计》· 全部源码为本次实验真实运行版本 ·
 在线仓库 <a href="https://github.com/ShiZiyukuo/dsp-2026-lab03-04">https://github.com/ShiZiyukuo/dsp-2026-lab03-04</a></p></header>
 <main>
-<div class="toc"><b>文件清单（86 个）：</b><br><a href="#f0">README.md</a><a href="#f1">第03讲-矩阵乘法四层实现/README.md</a><a href="#f2">第03讲-矩阵乘法四层实现/bench_matmul.c</a><a href="#f3">第03讲-矩阵乘法四层实现/matmul.c</a><a href="#f4">第03讲-矩阵乘法四层实现/matmul.cu</a><a href="#f5">第03讲-矩阵乘法四层实现/matmul.v</a><a href="#f6">第03讲-矩阵乘法四层实现/matmul_O0.s</a><a href="#f7">第03讲-矩阵乘法四层实现/matmul_O2.s</a><a href="#f8">第03讲-矩阵乘法四层实现/matmul_cu_bench.cu</a><a href="#f9">第03讲-矩阵乘法四层实现/matmul_cu_ref.c</a><a href="#f10">第03讲-矩阵乘法四层实现/matmul_musa.cu</a><a href="#f11">第03讲-矩阵乘法四层实现/musa_diff.txt</a><a href="#f12">第03讲-矩阵乘法四层实现/tb_matmul.v</a><a href="#f13">第03讲-矩阵乘法四层实现/_运行日志/bench_O0_O2.txt</a><a href="#f14">第03讲-矩阵乘法四层实现/_运行日志/bench_gcc.txt</a><a href="#f15">第03讲-矩阵乘法四层实现/_运行日志/cuda_bench.txt</a><a href="#f16">第03讲-矩阵乘法四层实现/_运行日志/cuda_install.log</a><a href="#f17">第03讲-矩阵乘法四层实现/_运行日志/gcc_pipeline.txt</a><a href="#f18">第03讲-矩阵乘法四层实现/_运行日志/gcc_stats.txt</a><a href="#f19">第03讲-矩阵乘法四层实现/_运行日志/run_cl_O2.txt</a><a href="#f20">第03讲-矩阵乘法四层实现/_运行日志/run_cl_Od.txt</a><a href="#f21">第03讲-矩阵乘法四层实现/_运行日志/run_cu_ref.txt</a><a href="#f22">第03讲-矩阵乘法四层实现/_运行日志/run_cuda.txt</a><a href="#f23">第03讲-矩阵乘法四层实现/_运行日志/run_gcc_O0.txt</a><a href="#f24">第03讲-矩阵乘法四层实现/_运行日志/run_gcc_O2.txt</a><a href="#f25">第03讲-矩阵乘法四层实现/_运行日志/sim.txt</a><a href="#f26">第03讲-矩阵乘法四层实现/_运行日志/sim_compile.txt</a><a href="#f27">第03讲-矩阵乘法四层实现/appendix_msvc_cl/matmul_O0.asm</a><a href="#f28">第03讲-矩阵乘法四层实现/appendix_msvc_cl/matmul_O0_src.asm</a><a href="#f29">第03讲-矩阵乘法四层实现/appendix_msvc_cl/matmul_O2.asm</a><a href="#f30">第03讲-矩阵乘法四层实现/appendix_msvc_cl/matmul_O2_src.asm</a><a href="#f31">第03讲-矩阵乘法四层实现/appendix_msvc_cl/matmul_Od.asm</a><a href="#f32">第03讲-矩阵乘法四层实现/appendix_msvc_cl/matmul_asm_annotated.txt</a><a href="#f33">第04讲-ScaledDotProduct/ablation.py</a><a href="#f34">第04讲-ScaledDotProduct/benchmark.py</a><a href="#f35">第04讲-ScaledDotProduct/build_all.bat</a><a href="#f36">第04讲-ScaledDotProduct/build_report.py</a><a href="#f37">第04讲-ScaledDotProduct/diag_docx.py</a><a href="#f38">第04讲-ScaledDotProduct/dot.c</a><a href="#f39">第04讲-ScaledDotProduct/dot.py</a><a href="#f40">第04讲-ScaledDotProduct/dot.rs</a><a href="#f41">第04讲-ScaledDotProduct/dot_v0_noconsume.c</a><a href="#f42">第04讲-ScaledDotProduct/gen_data.py</a><a href="#f43">第04讲-ScaledDotProduct/make_figs.py</a><a href="#f44">第04讲-ScaledDotProduct/make_readme.py</a><a href="#f45">第04讲-ScaledDotProduct/merge_runs.py</a><a href="#f46">第04讲-ScaledDotProduct/prompt_v1.md</a><a href="#f47">第04讲-ScaledDotProduct/prompt_v2.md</a><a href="#f48">第04讲-ScaledDotProduct/test_dot.py</a><a href="#f49">第04讲-ScaledDotProduct/_运行日志/ablation.json</a><a href="#f50">第04讲-ScaledDotProduct/_运行日志/ablation.txt</a><a href="#f51">第04讲-ScaledDotProduct/_运行日志/benchmark_console.txt</a><a href="#f52">第04讲-ScaledDotProduct/_运行日志/benchmark_raw.json</a><a href="#f53">第04讲-ScaledDotProduct/_运行日志/benchmark_raw_run1.json</a><a href="#f54">第04讲-ScaledDotProduct/_运行日志/benchmark_raw_run2.json</a><a href="#f55">第04讲-ScaledDotProduct/_运行日志/benchmark_raw_run3.json</a><a href="#f56">第04讲-ScaledDotProduct/_运行日志/benchmark_rerun.txt</a><a href="#f57">第04讲-ScaledDotProduct/_运行日志/benchmark_run1.txt</a><a href="#f58">第04讲-ScaledDotProduct/_运行日志/benchmark_run2.txt</a><a href="#f59">第04讲-ScaledDotProduct/_运行日志/benchmark_run3.txt</a><a href="#f60">第04讲-ScaledDotProduct/_运行日志/compile.txt</a><a href="#f61">第04讲-ScaledDotProduct/_运行日志/env.json</a><a href="#f62">第04讲-ScaledDotProduct/_运行日志/gen_data.txt</a><a href="#f63">第04讲-ScaledDotProduct/_运行日志/merge_runs.txt</a><a href="#f64">第04讲-ScaledDotProduct/_运行日志/naive_demo.txt</a><a href="#f65">第04讲-ScaledDotProduct/_运行日志/naive_whole_process.json</a><a href="#f66">第04讲-ScaledDotProduct/_运行日志/stability.json</a><a href="#f67">第04讲-ScaledDotProduct/_运行日志/test_dot.txt</a><a href="#f68">第04讲-ScaledDotProduct/_运行日志/test_dot_python_only.txt</a><a href="#f69">第04讲-ScaledDotProduct/_运行日志/versions.json</a><a href="#f70">第04讲-ScaledDotProduct/_运行日志/msvc_prev/ablation.json</a><a href="#f71">第04讲-ScaledDotProduct/_运行日志/msvc_prev/ablation.txt</a><a href="#f72">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_console.txt</a><a href="#f73">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw.json</a><a href="#f74">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_rerun.json</a><a href="#f75">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_run1.json</a><a href="#f76">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_run2.json</a><a href="#f77">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_run3.json</a><a href="#f78">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_smoke.json</a><a href="#f79">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_run1.txt</a><a href="#f80">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_run2.txt</a><a href="#f81">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_run3.txt</a><a href="#f82">第04讲-ScaledDotProduct/_运行日志/msvc_prev/compile.txt</a><a href="#f83">第04讲-ScaledDotProduct/_运行日志/msvc_prev/naive_whole_process.json</a><a href="#f84">第04讲-ScaledDotProduct/_运行日志/msvc_prev/stability.json</a><a href="#f85">第04讲-ScaledDotProduct/_运行日志/msvc_prev/versions.json</a></div>
-<div class="file" id="f0"><h2>README.md<span>4,583 B</span></h2><pre># 邹玥（学号 2025311160，数字媒体艺术2班） · 第03/04讲 实验代码
+<div class="toc"><b>文件清单（80 个）：</b><br><a href="#f0">README.md</a><a href="#f1">第03讲-矩阵乘法四层实现/README.md</a><a href="#f2">第03讲-矩阵乘法四层实现/bench_matmul.c</a><a href="#f3">第03讲-矩阵乘法四层实现/matmul.c</a><a href="#f4">第03讲-矩阵乘法四层实现/matmul.cu</a><a href="#f5">第03讲-矩阵乘法四层实现/matmul.v</a><a href="#f6">第03讲-矩阵乘法四层实现/matmul_O0.s</a><a href="#f7">第03讲-矩阵乘法四层实现/matmul_O2.s</a><a href="#f8">第03讲-矩阵乘法四层实现/matmul_cu_bench.cu</a><a href="#f9">第03讲-矩阵乘法四层实现/matmul_cu_ref.c</a><a href="#f10">第03讲-矩阵乘法四层实现/matmul_musa.cu</a><a href="#f11">第03讲-矩阵乘法四层实现/musa_diff.txt</a><a href="#f12">第03讲-矩阵乘法四层实现/tb_matmul.v</a><a href="#f13">第03讲-矩阵乘法四层实现/_运行日志/bench_O0_O2.txt</a><a href="#f14">第03讲-矩阵乘法四层实现/_运行日志/bench_gcc.txt</a><a href="#f15">第03讲-矩阵乘法四层实现/_运行日志/cuda_bench.txt</a><a href="#f16">第03讲-矩阵乘法四层实现/_运行日志/cuda_install.log</a><a href="#f17">第03讲-矩阵乘法四层实现/_运行日志/gcc_pipeline.txt</a><a href="#f18">第03讲-矩阵乘法四层实现/_运行日志/gcc_stats.txt</a><a href="#f19">第03讲-矩阵乘法四层实现/_运行日志/run_cl_O2.txt</a><a href="#f20">第03讲-矩阵乘法四层实现/_运行日志/run_cl_Od.txt</a><a href="#f21">第03讲-矩阵乘法四层实现/_运行日志/run_cu_ref.txt</a><a href="#f22">第03讲-矩阵乘法四层实现/_运行日志/run_cuda.txt</a><a href="#f23">第03讲-矩阵乘法四层实现/_运行日志/run_gcc_O0.txt</a><a href="#f24">第03讲-矩阵乘法四层实现/_运行日志/run_gcc_O2.txt</a><a href="#f25">第03讲-矩阵乘法四层实现/_运行日志/sim.txt</a><a href="#f26">第03讲-矩阵乘法四层实现/_运行日志/sim_compile.txt</a><a href="#f27">第04讲-ScaledDotProduct/ablation.py</a><a href="#f28">第04讲-ScaledDotProduct/benchmark.py</a><a href="#f29">第04讲-ScaledDotProduct/build_all.bat</a><a href="#f30">第04讲-ScaledDotProduct/build_report.py</a><a href="#f31">第04讲-ScaledDotProduct/diag_docx.py</a><a href="#f32">第04讲-ScaledDotProduct/dot.c</a><a href="#f33">第04讲-ScaledDotProduct/dot.py</a><a href="#f34">第04讲-ScaledDotProduct/dot.rs</a><a href="#f35">第04讲-ScaledDotProduct/dot_v0_noconsume.c</a><a href="#f36">第04讲-ScaledDotProduct/gen_data.py</a><a href="#f37">第04讲-ScaledDotProduct/make_figs.py</a><a href="#f38">第04讲-ScaledDotProduct/make_readme.py</a><a href="#f39">第04讲-ScaledDotProduct/merge_runs.py</a><a href="#f40">第04讲-ScaledDotProduct/prompt_v1.md</a><a href="#f41">第04讲-ScaledDotProduct/prompt_v2.md</a><a href="#f42">第04讲-ScaledDotProduct/test_dot.py</a><a href="#f43">第04讲-ScaledDotProduct/_运行日志/ablation.json</a><a href="#f44">第04讲-ScaledDotProduct/_运行日志/ablation.txt</a><a href="#f45">第04讲-ScaledDotProduct/_运行日志/benchmark_console.txt</a><a href="#f46">第04讲-ScaledDotProduct/_运行日志/benchmark_raw.json</a><a href="#f47">第04讲-ScaledDotProduct/_运行日志/benchmark_raw_run1.json</a><a href="#f48">第04讲-ScaledDotProduct/_运行日志/benchmark_raw_run2.json</a><a href="#f49">第04讲-ScaledDotProduct/_运行日志/benchmark_raw_run3.json</a><a href="#f50">第04讲-ScaledDotProduct/_运行日志/benchmark_rerun.txt</a><a href="#f51">第04讲-ScaledDotProduct/_运行日志/benchmark_run1.txt</a><a href="#f52">第04讲-ScaledDotProduct/_运行日志/benchmark_run2.txt</a><a href="#f53">第04讲-ScaledDotProduct/_运行日志/benchmark_run3.txt</a><a href="#f54">第04讲-ScaledDotProduct/_运行日志/compile.txt</a><a href="#f55">第04讲-ScaledDotProduct/_运行日志/env.json</a><a href="#f56">第04讲-ScaledDotProduct/_运行日志/gen_data.txt</a><a href="#f57">第04讲-ScaledDotProduct/_运行日志/merge_runs.txt</a><a href="#f58">第04讲-ScaledDotProduct/_运行日志/naive_demo.txt</a><a href="#f59">第04讲-ScaledDotProduct/_运行日志/naive_whole_process.json</a><a href="#f60">第04讲-ScaledDotProduct/_运行日志/stability.json</a><a href="#f61">第04讲-ScaledDotProduct/_运行日志/test_dot.txt</a><a href="#f62">第04讲-ScaledDotProduct/_运行日志/test_dot_python_only.txt</a><a href="#f63">第04讲-ScaledDotProduct/_运行日志/versions.json</a><a href="#f64">第04讲-ScaledDotProduct/_运行日志/msvc_prev/ablation.json</a><a href="#f65">第04讲-ScaledDotProduct/_运行日志/msvc_prev/ablation.txt</a><a href="#f66">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_console.txt</a><a href="#f67">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw.json</a><a href="#f68">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_rerun.json</a><a href="#f69">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_run1.json</a><a href="#f70">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_run2.json</a><a href="#f71">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_run3.json</a><a href="#f72">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_smoke.json</a><a href="#f73">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_run1.txt</a><a href="#f74">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_run2.txt</a><a href="#f75">第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_run3.txt</a><a href="#f76">第04讲-ScaledDotProduct/_运行日志/msvc_prev/compile.txt</a><a href="#f77">第04讲-ScaledDotProduct/_运行日志/msvc_prev/naive_whole_process.json</a><a href="#f78">第04讲-ScaledDotProduct/_运行日志/msvc_prev/stability.json</a><a href="#f79">第04讲-ScaledDotProduct/_运行日志/msvc_prev/versions.json</a></div>
+<div class="file" id="f0"><h2>README.md<span>5,002 B</span></h2><pre># 邹玥（学号 2025311160，数字媒体艺术2班） · 第03/04讲 实验代码
 
 2026 秋《数字媒体程序设计》· 第2章 编程语言概论
 在线地址：https://github.com/ShiZiyukuo/dsp-2026-lab03-04
-同步时间：2026-11-17 02:39
+同步时间：2026-11-17 03:08
 
 配套实验报告（两讲各 6 页，日期均为 2026-11-16）：
 - 第03讲：矩阵乘法四层实现—从 Verilog 到 CUDA
@@ -40,17 +40,21 @@
 | `matmul_O0.s` / `matmul_O2.s` | 真实 **gcc 16.2.0 `-S`** 输出（AT&amp;T 语法），460 行 / 285 行 |
 | `matmul.v` / `tb_matmul.v` | Verilog RTL：generate+genvar 例化 27 个 mul8s + testbench |
 | `matmul.cu` / `matmul_musa.cu` / `musa_diff.txt` | CUDA 核函数、MUSA 前缀改写版、两者 unified diff |
-| `matmul_cu_ref.c` | 把 CUDA 核函数累加循环搬到 CPU 的等价实现（本机无 nvcc 时的语义验证） |
+| `matmul_cu_ref.c` | 把 CUDA 核函数累加循环搬到 CPU 的等价实现（CPU 参考对照） |
 | `bench_matmul.c` | `-O0` vs `-O2` 耗时基准（2000 万轮 × 3 次取中位数） |
-| `appendix_msvc_cl/` | 附录：MSVC `cl /FA` 的 MASM 汇编（先前环境对照，正文数字不用它） |
+| `matmul_cu_bench.cu` | 真机 CUDA 基准：N=1024，CPU vs GPU naive vs GPU tiled，cudaEvent 计时 + 设备属性采集 |
+| `build_cuda.ps1` | 一键编译运行 CUDA 版（处理 vcvars64 与 cudart PATH） |
 | `README.md` | 五维度对照表（并行粒度 / 数据落点 / 调度归属 / 代码行数 / 出错方式）+ 复现命令 |
 | `_运行日志/` | 全部真实终端输出（run_gcc_O0.txt、run_gcc_O2.txt、bench_gcc.txt、sim.txt…） |
 
 关键真实结果：`C = [30,24,18; 84,69,54; 138,114,90]`，`CHECKSUM = 621`；
-C(-O0) / C(-O2) / Verilog 仿真（Icarus Verilog 12.0）/ CUDA-CPU 等价实现四路均 **9/9 PASS**；
+C(-O0) / C(-O2) / Verilog 仿真（Icarus Verilog 12.0）/ CUDA（nvcc 13.5 真机）四路均 **9/9 PASS**；
 `-O0` 2.8780 s → `-O2` 0.3370 s（**8.54×**），汇编 **460 → 285 行**；
 `-O0` 内层 `c[i][j]+=a[i][k]*b[k][j]` 对应 `imull` + `leal`（第 138、139 行），`-O2` 把 k 循环展开成 3 `imull` + 2 `addl`；
 向量化只出现在校验和规约（3 条 `paddd`），矩阵乘法本身未向量化。
+CUDA 基准（N=1024，RTX 4060 Laptop / sm_89）说明 3×3 规模下 1024 线程仅用 9 个（利用率 0.88%）；
+N=1024 时 CPU 三重循环 5660 ms、GPU naive 3.2777 ms（1726.82×）、GPU tiled 1.7674 ms（3202.46×，比 naive 再快 1.85×），
+三者 CHECKSUM 均为 `21758082314`、逐元素不一致 0 个。
 
 ## 第04讲 Scaled Dot-Product 效率对比（`第04讲-ScaledDotProduct/`）
 
@@ -2508,3428 +2512,7 @@ code\tb_matmul.v:106: $finish called at 10000 (1ps)
  
 tb_matmul.v:21: error: Invalid module instantiation
 </pre></div>
-<div class="file" id="f27"><h2>第03讲-矩阵乘法四层实现/appendix_msvc_cl/matmul_O0.asm<span>14,312 B</span></h2><pre>; Listing generated by Microsoft (R) Optimizing Compiler Version 19.44.35228.0 
-
-include listing.inc
-
-INCLUDELIB LIBCMT
-INCLUDELIB OLDNAMES
-
-CONST	SEGMENT
-A	DD	01H
-	DD	02H
-	DD	03H
-	DD	04H
-	DD	05H
-	DD	06H
-	DD	07H
-	DD	08H
-	DD	09H
-	ORG $+4
-B	DD	09H
-	DD	08H
-	DD	07H
-	DD	06H
-	DD	05H
-	DD	04H
-	DD	03H
-	DD	02H
-	DD	01H
-	ORG $+4
-REF	DD	01eH
-	DD	018H
-	DD	012H
-	DD	054H
-	DD	045H
-	DD	036H
-	DD	08aH
-	DD	072H
-	DD	05aH
-CONST	ENDS
-PUBLIC	__local_stdio_printf_options
-PUBLIC	_vfprintf_l
-PUBLIC	printf
-PUBLIC	main
-EXTRN	__acrt_iob_func:PROC
-EXTRN	__stdio_common_vfprintf:PROC
-EXTRN	__GSHandlerCheck:PROC
-EXTRN	__security_check_cookie:PROC
-EXTRN	__security_cookie:QWORD
-_DATA	SEGMENT
-COMM	?_OptionsStorage@?1??__local_stdio_printf_options@@9@9:QWORD							; `__local_stdio_printf_options&#x27;::`2&#x27;::_OptionsStorage
-_DATA	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$_vfprintf_l DD imagerel $LN3
-	DD	imagerel $LN3+67
-	DD	imagerel $unwind$_vfprintf_l
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$printf DD imagerel $LN3
-	DD	imagerel $LN3+87
-	DD	imagerel $unwind$printf
-pdata	ENDS
-pdata	SEGMENT
-$pdata$main DD	imagerel $LN54
-	DD	imagerel $LN54+1370
-	DD	imagerel $unwind$main
-pdata	ENDS
-_DATA	SEGMENT
-$SG9969	DB	&#x27;=== C &#x27;, 0e8H, 0afH, 0adH, 0e8H, 0a8H, 080H, 0e4H, 0b8H, 089H
-	DB	0e9H, 087H, 08dH, 0e5H, 0beH, 0aaH, 0e7H, 08eH, 0afH, 0e5H, 0aeH
-	DB	09eH, 0e7H, 08eH, 0b0H, &#x27; 3x3 &#x27;, 0e7H, 09fH, 0a9H, 0e9H, 098H, 0b5H
-	DB	0e4H, 0b9H, 098H, 0e6H, 0b3H, 095H, &#x27; (N=%d) ===&#x27;, 0aH, 00H
-$SG9970	DB	&#x27;A =&#x27;, 0aH, 00H
-	ORG $+3
-$SG9971	DB	&#x27;  [&#x27;, 00H
-$SG9972	DB	&#x27; %4d&#x27;, 00H
-	ORG $+3
-$SG9973	DB	&#x27; ]&#x27;, 0aH, 00H
-$SG9974	DB	&#x27;B =&#x27;, 0aH, 00H
-	ORG $+3
-$SG9975	DB	&#x27;  [&#x27;, 00H
-$SG9976	DB	&#x27; %4d&#x27;, 00H
-	ORG $+3
-$SG9977	DB	&#x27; ]&#x27;, 0aH, 00H
-$SG9984	DB	0aH, 00H
-	ORG $+2
-$SG9978	DB	&#x27;C = A x B =&#x27;, 0aH, 00H
-	ORG $+3
-$SG9979	DB	&#x27;  [&#x27;, 00H
-$SG9980	DB	&#x27; %4d&#x27;, 00H
-	ORG $+3
-$SG9981	DB	&#x27; ]&#x27;, 0aH, 00H
-$SG9982	DB	&#x27;C_FLAT =&#x27;, 00H
-	ORG $+3
-$SG9983	DB	&#x27; %d&#x27;, 00H
-$SG9985	DB	&#x27;CHECKSUM = %ld&#x27;, 0aH, 00H
-$SG9986	DB	&#x27;--- &#x27;, 0e4H, 0b8H, 08eH, 0e6H, 0a0H, 087H, 0e5H, 087H, 086H
-	DB	0e7H, 0adH, 094H, 0e6H, 0a1H, 088H, 0e9H, 080H, 090H, 0e9H, 0a1H
-	DB	0b9H, 0e6H, 0afH, 094H, 0e5H, 0afH, 0b9H, &#x27; ---&#x27;, 0aH, 00H
-	ORG $+3
-$SG9989	DB	&#x27;  C[%d][%d] = %4d  REF = %4d  PASS&#x27;, 0aH, 00H
-	ORG $+4
-$SG9990	DB	&#x27;  C[%d][%d] = %4d  REF = %4d  FAIL&#x27;, 0aH, 00H
-	ORG $+4
-$SG9991	DB	&#x27;RESULT: %d/%d PASS&#x27;, 00H
-	ORG $+5
-$SG9994	DB	&#x27;  ==&gt; ALL PASS&#x27;, 0aH, 00H
-$SG9995	DB	&#x27;  ==&gt; MISMATCH&#x27;, 0aH, 00H
-_DATA	ENDS
-voltbl	SEGMENT
-_volmd	DD	0ffffffffH
-	DDSymXIndex: 	FLAT:main
-	DD	011H
-	DD	0545H
-voltbl	ENDS
-xdata	SEGMENT
-$unwind$main DD	021619H
-	DD	0110107H
-	DD	imagerel __GSHandlerCheck
-	DD	078H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$printf DD 011801H
-	DD	06218H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$_vfprintf_l DD 011801H
-	DD	06218H
-xdata	ENDS
-; Function compile flags: /Odtp
-_TEXT	SEGMENT
-j$ = 48
-i$ = 52
-k$ = 56
-total$ = 60
-passed$ = 64
-checksum$ = 68
-tv269 = 72
-C$ = 80
-__$ArrayPad$ = 120
-main	PROC
-; File D:\DeepSeek-Harness\hw-0304\lab03\code\matmul.c
-; Line 38
-$LN54:
-	sub	rsp, 136				; 00000088H
-	mov	rax, QWORD PTR __security_cookie
-	xor	rax, rsp
-	mov	QWORD PTR __$ArrayPad$[rsp], rax
-; Line 41
-	mov	DWORD PTR checksum$[rsp], 0
-; Line 42
-	mov	DWORD PTR passed$[rsp], 0
-	mov	DWORD PTR total$[rsp], 0
-; Line 45
-	mov	DWORD PTR i$[rsp], 0
-	jmp	SHORT $LN4@main
-$LN2@main:
-	mov	eax, DWORD PTR i$[rsp]
-	inc	eax
-	mov	DWORD PTR i$[rsp], eax
-$LN4@main:
-	cmp	DWORD PTR i$[rsp], 3
-	jge	$LN3@main
-; Line 46
-	mov	DWORD PTR j$[rsp], 0
-	jmp	SHORT $LN7@main
-$LN5@main:
-	mov	eax, DWORD PTR j$[rsp]
-	inc	eax
-	mov	DWORD PTR j$[rsp], eax
-$LN7@main:
-	cmp	DWORD PTR j$[rsp], 3
-	jge	$LN6@main
-; Line 47
-	movsxd	rax, DWORD PTR i$[rsp]
-	imul	rax, rax, 12
-	lea	rax, QWORD PTR C$[rsp+rax]
-	movsxd	rcx, DWORD PTR j$[rsp]
-	mov	DWORD PTR [rax+rcx*4], 0
-; Line 48
-	mov	DWORD PTR k$[rsp], 0
-	jmp	SHORT $LN10@main
-$LN8@main:
-	mov	eax, DWORD PTR k$[rsp]
-	inc	eax
-	mov	DWORD PTR k$[rsp], eax
-$LN10@main:
-	cmp	DWORD PTR k$[rsp], 3
-	jge	SHORT $LN9@main
-; Line 49
-	movsxd	rax, DWORD PTR i$[rsp]
-	imul	rax, rax, 12
-	lea	rax, QWORD PTR C$[rsp+rax]
-	movsxd	rcx, DWORD PTR j$[rsp]
-	movsxd	rdx, DWORD PTR i$[rsp]
-	imul	rdx, rdx, 12
-	lea	r8, OFFSET FLAT:A
-	add	r8, rdx
-	mov	rdx, r8
-	movsxd	r8, DWORD PTR k$[rsp]
-	movsxd	r9, DWORD PTR k$[rsp]
-	imul	r9, r9, 12
-	lea	r10, OFFSET FLAT:B
-	add	r10, r9
-	mov	r9, r10
-	movsxd	r10, DWORD PTR j$[rsp]
-	mov	edx, DWORD PTR [rdx+r8*4]
-	imul	edx, DWORD PTR [r9+r10*4]
-	add	edx, DWORD PTR [rax+rcx*4]
-	mov	eax, edx
-	movsxd	rcx, DWORD PTR j$[rsp]
-	movsxd	rdx, DWORD PTR i$[rsp]
-	imul	rdx, rdx, 12
-	lea	rdx, QWORD PTR C$[rsp+rdx]
-	mov	DWORD PTR [rdx+rcx*4], eax
-; Line 50
-	jmp	SHORT $LN8@main
-$LN9@main:
-; Line 51
-	jmp	$LN5@main
-$LN6@main:
-; Line 52
-	jmp	$LN2@main
-$LN3@main:
-; Line 55
-	mov	edx, 3
-	lea	rcx, OFFSET FLAT:$SG9969
-	call	printf
-; Line 56
-	lea	rcx, OFFSET FLAT:$SG9970
-	call	printf
-	npad	1
-; Line 57
-	mov	DWORD PTR i$[rsp], 0
-	jmp	SHORT $LN13@main
-$LN11@main:
-	mov	eax, DWORD PTR i$[rsp]
-	inc	eax
-	mov	DWORD PTR i$[rsp], eax
-$LN13@main:
-	cmp	DWORD PTR i$[rsp], 3
-	jge	SHORT $LN12@main
-; Line 58
-	lea	rcx, OFFSET FLAT:$SG9971
-	call	printf
-	npad	1
-; Line 59
-	mov	DWORD PTR j$[rsp], 0
-	jmp	SHORT $LN16@main
-$LN14@main:
-	mov	eax, DWORD PTR j$[rsp]
-	inc	eax
-	mov	DWORD PTR j$[rsp], eax
-$LN16@main:
-	cmp	DWORD PTR j$[rsp], 3
-	jge	SHORT $LN15@main
-	movsxd	rax, DWORD PTR i$[rsp]
-	imul	rax, rax, 12
-	lea	rcx, OFFSET FLAT:A
-	add	rcx, rax
-	mov	rax, rcx
-	movsxd	rcx, DWORD PTR j$[rsp]
-	mov	edx, DWORD PTR [rax+rcx*4]
-	lea	rcx, OFFSET FLAT:$SG9972
-	call	printf
-	npad	1
-	jmp	SHORT $LN14@main
-$LN15@main:
-; Line 60
-	lea	rcx, OFFSET FLAT:$SG9973
-	call	printf
-	npad	1
-; Line 61
-	jmp	SHORT $LN11@main
-$LN12@main:
-; Line 62
-	lea	rcx, OFFSET FLAT:$SG9974
-	call	printf
-	npad	1
-; Line 63
-	mov	DWORD PTR i$[rsp], 0
-	jmp	SHORT $LN19@main
-$LN17@main:
-	mov	eax, DWORD PTR i$[rsp]
-	inc	eax
-	mov	DWORD PTR i$[rsp], eax
-$LN19@main:
-	cmp	DWORD PTR i$[rsp], 3
-	jge	SHORT $LN18@main
-; Line 64
-	lea	rcx, OFFSET FLAT:$SG9975
-	call	printf
-	npad	1
-; Line 65
-	mov	DWORD PTR j$[rsp], 0
-	jmp	SHORT $LN22@main
-$LN20@main:
-	mov	eax, DWORD PTR j$[rsp]
-	inc	eax
-	mov	DWORD PTR j$[rsp], eax
-$LN22@main:
-	cmp	DWORD PTR j$[rsp], 3
-	jge	SHORT $LN21@main
-	movsxd	rax, DWORD PTR i$[rsp]
-	imul	rax, rax, 12
-	lea	rcx, OFFSET FLAT:B
-	add	rcx, rax
-	mov	rax, rcx
-	movsxd	rcx, DWORD PTR j$[rsp]
-	mov	edx, DWORD PTR [rax+rcx*4]
-	lea	rcx, OFFSET FLAT:$SG9976
-	call	printf
-	npad	1
-	jmp	SHORT $LN20@main
-$LN21@main:
-; Line 66
-	lea	rcx, OFFSET FLAT:$SG9977
-	call	printf
-	npad	1
-; Line 67
-	jmp	SHORT $LN17@main
-$LN18@main:
-; Line 70
-	lea	rcx, OFFSET FLAT:$SG9978
-	call	printf
-	npad	1
-; Line 71
-	mov	DWORD PTR i$[rsp], 0
-	jmp	SHORT $LN25@main
-$LN23@main:
-	mov	eax, DWORD PTR i$[rsp]
-	inc	eax
-	mov	DWORD PTR i$[rsp], eax
-$LN25@main:
-	cmp	DWORD PTR i$[rsp], 3
-	jge	SHORT $LN24@main
-; Line 72
-	lea	rcx, OFFSET FLAT:$SG9979
-	call	printf
-	npad	1
-; Line 73
-	mov	DWORD PTR j$[rsp], 0
-	jmp	SHORT $LN28@main
-$LN26@main:
-	mov	eax, DWORD PTR j$[rsp]
-	inc	eax
-	mov	DWORD PTR j$[rsp], eax
-$LN28@main:
-	cmp	DWORD PTR j$[rsp], 3
-	jge	SHORT $LN27@main
-	movsxd	rax, DWORD PTR i$[rsp]
-	imul	rax, rax, 12
-	lea	rax, QWORD PTR C$[rsp+rax]
-	movsxd	rcx, DWORD PTR j$[rsp]
-	mov	edx, DWORD PTR [rax+rcx*4]
-	lea	rcx, OFFSET FLAT:$SG9980
-	call	printf
-	npad	1
-	jmp	SHORT $LN26@main
-$LN27@main:
-; Line 74
-	lea	rcx, OFFSET FLAT:$SG9981
-	call	printf
-	npad	1
-; Line 75
-	jmp	SHORT $LN23@main
-$LN24@main:
-; Line 78
-	lea	rcx, OFFSET FLAT:$SG9982
-	call	printf
-	npad	1
-; Line 79
-	mov	DWORD PTR i$[rsp], 0
-	jmp	SHORT $LN31@main
-$LN29@main:
-	mov	eax, DWORD PTR i$[rsp]
-	inc	eax
-	mov	DWORD PTR i$[rsp], eax
-$LN31@main:
-	cmp	DWORD PTR i$[rsp], 3
-	jge	SHORT $LN30@main
-; Line 80
-	mov	DWORD PTR j$[rsp], 0
-	jmp	SHORT $LN34@main
-$LN32@main:
-	mov	eax, DWORD PTR j$[rsp]
-	inc	eax
-	mov	DWORD PTR j$[rsp], eax
-$LN34@main:
-	cmp	DWORD PTR j$[rsp], 3
-	jge	SHORT $LN33@main
-; Line 81
-	movsxd	rax, DWORD PTR i$[rsp]
-	imul	rax, rax, 12
-	lea	rax, QWORD PTR C$[rsp+rax]
-	movsxd	rcx, DWORD PTR j$[rsp]
-	mov	edx, DWORD PTR [rax+rcx*4]
-	lea	rcx, OFFSET FLAT:$SG9983
-	call	printf
-	npad	1
-	jmp	SHORT $LN32@main
-$LN33@main:
-	jmp	SHORT $LN29@main
-$LN30@main:
-; Line 82
-	lea	rcx, OFFSET FLAT:$SG9984
-	call	printf
-	npad	1
-; Line 85
-	mov	DWORD PTR i$[rsp], 0
-	jmp	SHORT $LN37@main
-$LN35@main:
-	mov	eax, DWORD PTR i$[rsp]
-	inc	eax
-	mov	DWORD PTR i$[rsp], eax
-$LN37@main:
-	cmp	DWORD PTR i$[rsp], 3
-	jge	SHORT $LN36@main
-; Line 86
-	mov	DWORD PTR j$[rsp], 0
-	jmp	SHORT $LN40@main
-$LN38@main:
-	mov	eax, DWORD PTR j$[rsp]
-	inc	eax
-	mov	DWORD PTR j$[rsp], eax
-$LN40@main:
-	cmp	DWORD PTR j$[rsp], 3
-	jge	SHORT $LN39@main
-; Line 87
-	movsxd	rax, DWORD PTR i$[rsp]
-	imul	rax, rax, 12
-	lea	rax, QWORD PTR C$[rsp+rax]
-	movsxd	rcx, DWORD PTR j$[rsp]
-	mov	eax, DWORD PTR [rax+rcx*4]
-	mov	ecx, DWORD PTR checksum$[rsp]
-	add	ecx, eax
-	mov	eax, ecx
-	mov	DWORD PTR checksum$[rsp], eax
-	jmp	SHORT $LN38@main
-$LN39@main:
-	jmp	SHORT $LN35@main
-$LN36@main:
-; Line 88
-	mov	edx, DWORD PTR checksum$[rsp]
-	lea	rcx, OFFSET FLAT:$SG9985
-	call	printf
-; Line 91
-	lea	rcx, OFFSET FLAT:$SG9986
-	call	printf
-	npad	1
-; Line 92
-	mov	DWORD PTR i$[rsp], 0
-	jmp	SHORT $LN43@main
-$LN41@main:
-	mov	eax, DWORD PTR i$[rsp]
-	inc	eax
-	mov	DWORD PTR i$[rsp], eax
-$LN43@main:
-	cmp	DWORD PTR i$[rsp], 3
-	jge	$LN42@main
-; Line 93
-	mov	DWORD PTR j$[rsp], 0
-	jmp	SHORT $LN46@main
-$LN44@main:
-	mov	eax, DWORD PTR j$[rsp]
-	inc	eax
-	mov	DWORD PTR j$[rsp], eax
-$LN46@main:
-	cmp	DWORD PTR j$[rsp], 3
-	jge	$LN45@main
-; Line 94
-	mov	eax, DWORD PTR total$[rsp]
-	inc	eax
-	mov	DWORD PTR total$[rsp], eax
-; Line 95
-	movsxd	rax, DWORD PTR i$[rsp]
-	imul	rax, rax, 12
-	lea	rax, QWORD PTR C$[rsp+rax]
-	movsxd	rcx, DWORD PTR j$[rsp]
-	movsxd	rdx, DWORD PTR i$[rsp]
-	imul	rdx, rdx, 12
-	lea	r8, OFFSET FLAT:REF
-	add	r8, rdx
-	mov	rdx, r8
-	movsxd	r8, DWORD PTR j$[rsp]
-	mov	edx, DWORD PTR [rdx+r8*4]
-	cmp	DWORD PTR [rax+rcx*4], edx
-	jne	SHORT $LN47@main
-; Line 96
-	mov	eax, DWORD PTR passed$[rsp]
-	inc	eax
-	mov	DWORD PTR passed$[rsp], eax
-; Line 97
-	movsxd	rax, DWORD PTR i$[rsp]
-	imul	rax, rax, 12
-	lea	rcx, OFFSET FLAT:REF
-	add	rcx, rax
-	mov	rax, rcx
-	movsxd	rcx, DWORD PTR j$[rsp]
-	movsxd	rdx, DWORD PTR i$[rsp]
-	imul	rdx, rdx, 12
-	lea	rdx, QWORD PTR C$[rsp+rdx]
-	movsxd	r8, DWORD PTR j$[rsp]
-	mov	eax, DWORD PTR [rax+rcx*4]
-	mov	DWORD PTR [rsp+32], eax
-	mov	r9d, DWORD PTR [rdx+r8*4]
-	mov	r8d, DWORD PTR j$[rsp]
-	mov	edx, DWORD PTR i$[rsp]
-	lea	rcx, OFFSET FLAT:$SG9989
-	call	printf
-	npad	1
-; Line 99
-	jmp	SHORT $LN48@main
-$LN47@main:
-; Line 100
-	movsxd	rax, DWORD PTR i$[rsp]
-	imul	rax, rax, 12
-	lea	rcx, OFFSET FLAT:REF
-	add	rcx, rax
-	mov	rax, rcx
-	movsxd	rcx, DWORD PTR j$[rsp]
-	movsxd	rdx, DWORD PTR i$[rsp]
-	imul	rdx, rdx, 12
-	lea	rdx, QWORD PTR C$[rsp+rdx]
-	movsxd	r8, DWORD PTR j$[rsp]
-	mov	eax, DWORD PTR [rax+rcx*4]
-	mov	DWORD PTR [rsp+32], eax
-	mov	r9d, DWORD PTR [rdx+r8*4]
-	mov	r8d, DWORD PTR j$[rsp]
-	mov	edx, DWORD PTR i$[rsp]
-	lea	rcx, OFFSET FLAT:$SG9990
-	call	printf
-	npad	1
-$LN48@main:
-; Line 103
-	jmp	$LN44@main
-$LN45@main:
-; Line 104
-	jmp	$LN41@main
-$LN42@main:
-; Line 105
-	mov	r8d, DWORD PTR total$[rsp]
-	mov	edx, DWORD PTR passed$[rsp]
-	lea	rcx, OFFSET FLAT:$SG9991
-	call	printf
-; Line 106
-	mov	eax, DWORD PTR total$[rsp]
-	cmp	DWORD PTR passed$[rsp], eax
-	jne	SHORT $LN49@main
-; Line 107
-	lea	rcx, OFFSET FLAT:$SG9994
-	call	printf
-	npad	1
-	jmp	SHORT $LN50@main
-$LN49@main:
-; Line 109
-	lea	rcx, OFFSET FLAT:$SG9995
-	call	printf
-	npad	1
-$LN50@main:
-; Line 111
-	mov	eax, DWORD PTR total$[rsp]
-	cmp	DWORD PTR passed$[rsp], eax
-	jne	SHORT $LN52@main
-	mov	DWORD PTR tv269[rsp], 0
-	jmp	SHORT $LN53@main
-$LN52@main:
-	mov	DWORD PTR tv269[rsp], 1
-$LN53@main:
-	mov	eax, DWORD PTR tv269[rsp]
-; Line 112
-	mov	rcx, QWORD PTR __$ArrayPad$[rsp]
-	xor	rcx, rsp
-	call	__security_check_cookie
-	add	rsp, 136				; 00000088H
-	ret	0
-main	ENDP
-_TEXT	ENDS
-; Function compile flags: /Odtp
-;	COMDAT printf
-_TEXT	SEGMENT
-_Result$ = 32
-_ArgList$ = 40
-_Format$ = 64
-printf	PROC						; COMDAT
-; File C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdio.h
-; Line 956
-$LN3:
-	mov	QWORD PTR [rsp+8], rcx
-	mov	QWORD PTR [rsp+16], rdx
-	mov	QWORD PTR [rsp+24], r8
-	mov	QWORD PTR [rsp+32], r9
-	sub	rsp, 56					; 00000038H
-; Line 959
-	lea	rax, QWORD PTR _Format$[rsp+8]
-	mov	QWORD PTR _ArgList$[rsp], rax
-; Line 960
-	mov	ecx, 1
-	call	__acrt_iob_func
-	mov	r9, QWORD PTR _ArgList$[rsp]
-	xor	r8d, r8d
-	mov	rdx, QWORD PTR _Format$[rsp]
-	mov	rcx, rax
-	call	_vfprintf_l
-	mov	DWORD PTR _Result$[rsp], eax
-; Line 961
-	mov	QWORD PTR _ArgList$[rsp], 0
-; Line 962
-	mov	eax, DWORD PTR _Result$[rsp]
-; Line 963
-	add	rsp, 56					; 00000038H
-	ret	0
-printf	ENDP
-_TEXT	ENDS
-; Function compile flags: /Odtp
-;	COMDAT _vfprintf_l
-_TEXT	SEGMENT
-_Stream$ = 64
-_Format$ = 72
-_Locale$ = 80
-_ArgList$ = 88
-_vfprintf_l PROC					; COMDAT
-; File C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdio.h
-; Line 644
-$LN3:
-	mov	QWORD PTR [rsp+32], r9
-	mov	QWORD PTR [rsp+24], r8
-	mov	QWORD PTR [rsp+16], rdx
-	mov	QWORD PTR [rsp+8], rcx
-	sub	rsp, 56					; 00000038H
-; Line 645
-	call	__local_stdio_printf_options
-	mov	rcx, QWORD PTR _ArgList$[rsp]
-	mov	QWORD PTR [rsp+32], rcx
-	mov	r9, QWORD PTR _Locale$[rsp]
-	mov	r8, QWORD PTR _Format$[rsp]
-	mov	rdx, QWORD PTR _Stream$[rsp]
-	mov	rcx, QWORD PTR [rax]
-	call	__stdio_common_vfprintf
-; Line 646
-	add	rsp, 56					; 00000038H
-	ret	0
-_vfprintf_l ENDP
-_TEXT	ENDS
-; Function compile flags: /Odtp
-;	COMDAT __local_stdio_printf_options
-_TEXT	SEGMENT
-__local_stdio_printf_options PROC			; COMDAT
-; File C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_stdio_config.h
-; Line 92
-	lea	rax, OFFSET FLAT:?_OptionsStorage@?1??__local_stdio_printf_options@@9@9 ; `__local_stdio_printf_options&#x27;::`2&#x27;::_OptionsStorage
-; Line 93
-	ret	0
-__local_stdio_printf_options ENDP
-_TEXT	ENDS
-END
-</pre></div>
-<div class="file" id="f28"><h2>第03讲-矩阵乘法四层实现/appendix_msvc_cl/matmul_O0_src.asm<span>17,310 B</span></h2><pre>; Listing generated by Microsoft (R) Optimizing Compiler Version 19.44.35228.0 
-
-include listing.inc
-
-INCLUDELIB LIBCMT
-INCLUDELIB OLDNAMES
-
-CONST	SEGMENT
-A	DD	01H
-	DD	02H
-	DD	03H
-	DD	04H
-	DD	05H
-	DD	06H
-	DD	07H
-	DD	08H
-	DD	09H
-	ORG $+4
-B	DD	09H
-	DD	08H
-	DD	07H
-	DD	06H
-	DD	05H
-	DD	04H
-	DD	03H
-	DD	02H
-	DD	01H
-	ORG $+4
-REF	DD	01eH
-	DD	018H
-	DD	012H
-	DD	054H
-	DD	045H
-	DD	036H
-	DD	08aH
-	DD	072H
-	DD	05aH
-CONST	ENDS
-PUBLIC	__local_stdio_printf_options
-PUBLIC	_vfprintf_l
-PUBLIC	printf
-PUBLIC	main
-EXTRN	__acrt_iob_func:PROC
-EXTRN	__stdio_common_vfprintf:PROC
-EXTRN	__GSHandlerCheck:PROC
-EXTRN	__security_check_cookie:PROC
-EXTRN	__security_cookie:QWORD
-_DATA	SEGMENT
-COMM	?_OptionsStorage@?1??__local_stdio_printf_options@@9@9:QWORD							; `__local_stdio_printf_options&#x27;::`2&#x27;::_OptionsStorage
-_DATA	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$_vfprintf_l DD imagerel $LN3
-	DD	imagerel $LN3+67
-	DD	imagerel $unwind$_vfprintf_l
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$printf DD imagerel $LN3
-	DD	imagerel $LN3+87
-	DD	imagerel $unwind$printf
-pdata	ENDS
-pdata	SEGMENT
-$pdata$main DD	imagerel $LN54
-	DD	imagerel $LN54+1370
-	DD	imagerel $unwind$main
-pdata	ENDS
-_DATA	SEGMENT
-$SG9969	DB	&#x27;=== C &#x27;, 0e8H, 0afH, 0adH, 0e8H, 0a8H, 080H, 0e4H, 0b8H, 089H
-	DB	0e9H, 087H, 08dH, 0e5H, 0beH, 0aaH, 0e7H, 08eH, 0afH, 0e5H, 0aeH
-	DB	09eH, 0e7H, 08eH, 0b0H, &#x27; 3x3 &#x27;, 0e7H, 09fH, 0a9H, 0e9H, 098H, 0b5H
-	DB	0e4H, 0b9H, 098H, 0e6H, 0b3H, 095H, &#x27; (N=%d) ===&#x27;, 0aH, 00H
-$SG9970	DB	&#x27;A =&#x27;, 0aH, 00H
-	ORG $+3
-$SG9971	DB	&#x27;  [&#x27;, 00H
-$SG9972	DB	&#x27; %4d&#x27;, 00H
-	ORG $+3
-$SG9973	DB	&#x27; ]&#x27;, 0aH, 00H
-$SG9974	DB	&#x27;B =&#x27;, 0aH, 00H
-	ORG $+3
-$SG9975	DB	&#x27;  [&#x27;, 00H
-$SG9976	DB	&#x27; %4d&#x27;, 00H
-	ORG $+3
-$SG9977	DB	&#x27; ]&#x27;, 0aH, 00H
-$SG9984	DB	0aH, 00H
-	ORG $+2
-$SG9978	DB	&#x27;C = A x B =&#x27;, 0aH, 00H
-	ORG $+3
-$SG9979	DB	&#x27;  [&#x27;, 00H
-$SG9980	DB	&#x27; %4d&#x27;, 00H
-	ORG $+3
-$SG9981	DB	&#x27; ]&#x27;, 0aH, 00H
-$SG9982	DB	&#x27;C_FLAT =&#x27;, 00H
-	ORG $+3
-$SG9983	DB	&#x27; %d&#x27;, 00H
-$SG9985	DB	&#x27;CHECKSUM = %ld&#x27;, 0aH, 00H
-$SG9986	DB	&#x27;--- &#x27;, 0e4H, 0b8H, 08eH, 0e6H, 0a0H, 087H, 0e5H, 087H, 086H
-	DB	0e7H, 0adH, 094H, 0e6H, 0a1H, 088H, 0e9H, 080H, 090H, 0e9H, 0a1H
-	DB	0b9H, 0e6H, 0afH, 094H, 0e5H, 0afH, 0b9H, &#x27; ---&#x27;, 0aH, 00H
-	ORG $+3
-$SG9989	DB	&#x27;  C[%d][%d] = %4d  REF = %4d  PASS&#x27;, 0aH, 00H
-	ORG $+4
-$SG9990	DB	&#x27;  C[%d][%d] = %4d  REF = %4d  FAIL&#x27;, 0aH, 00H
-	ORG $+4
-$SG9991	DB	&#x27;RESULT: %d/%d PASS&#x27;, 00H
-	ORG $+5
-$SG9994	DB	&#x27;  ==&gt; ALL PASS&#x27;, 0aH, 00H
-$SG9995	DB	&#x27;  ==&gt; MISMATCH&#x27;, 0aH, 00H
-_DATA	ENDS
-voltbl	SEGMENT
-_volmd	DD	0ffffffffH
-	DDSymXIndex: 	FLAT:main
-	DD	011H
-	DD	0545H
-voltbl	ENDS
-xdata	SEGMENT
-$unwind$main DD	021619H
-	DD	0110107H
-	DD	imagerel __GSHandlerCheck
-	DD	078H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$printf DD 011801H
-	DD	06218H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$_vfprintf_l DD 011801H
-	DD	06218H
-xdata	ENDS
-; Function compile flags: /Odtp
-; File D:\DeepSeek-Harness\hw-0304\lab03\code\matmul.c
-_TEXT	SEGMENT
-j$ = 48
-i$ = 52
-k$ = 56
-total$ = 60
-passed$ = 64
-checksum$ = 68
-tv269 = 72
-C$ = 80
-__$ArrayPad$ = 120
-main	PROC
-
-; 38   : {
-
-$LN54:
-	sub	rsp, 136				; 00000088H
-	mov	rax, QWORD PTR __security_cookie
-	xor	rax, rsp
-	mov	QWORD PTR __$ArrayPad$[rsp], rax
-
-; 39   :     int C[N][N];
-; 40   :     int i, j, k;
-; 41   :     long checksum = 0;
-
-	mov	DWORD PTR checksum$[rsp], 0
-
-; 42   :     int passed = 0, total = 0;
-
-	mov	DWORD PTR passed$[rsp], 0
-	mov	DWORD PTR total$[rsp], 0
-
-; 43   : 
-; 44   :     /* ---------- 1. 三重循环矩阵乘法 ---------- */
-; 45   :     for (i = 0; i &lt; N; i++) {
-
-	mov	DWORD PTR i$[rsp], 0
-	jmp	SHORT $LN4@main
-$LN2@main:
-	mov	eax, DWORD PTR i$[rsp]
-	inc	eax
-	mov	DWORD PTR i$[rsp], eax
-$LN4@main:
-	cmp	DWORD PTR i$[rsp], 3
-	jge	$LN3@main
-
-; 46   :         for (j = 0; j &lt; N; j++) {
-
-	mov	DWORD PTR j$[rsp], 0
-	jmp	SHORT $LN7@main
-$LN5@main:
-	mov	eax, DWORD PTR j$[rsp]
-	inc	eax
-	mov	DWORD PTR j$[rsp], eax
-$LN7@main:
-	cmp	DWORD PTR j$[rsp], 3
-	jge	$LN6@main
-
-; 47   :             C[i][j] = 0;
-
-	movsxd	rax, DWORD PTR i$[rsp]
-	imul	rax, rax, 12
-	lea	rax, QWORD PTR C$[rsp+rax]
-	movsxd	rcx, DWORD PTR j$[rsp]
-	mov	DWORD PTR [rax+rcx*4], 0
-
-; 48   :             for (k = 0; k &lt; N; k++) {
-
-	mov	DWORD PTR k$[rsp], 0
-	jmp	SHORT $LN10@main
-$LN8@main:
-	mov	eax, DWORD PTR k$[rsp]
-	inc	eax
-	mov	DWORD PTR k$[rsp], eax
-$LN10@main:
-	cmp	DWORD PTR k$[rsp], 3
-	jge	SHORT $LN9@main
-
-; 49   :                 C[i][j] += A[i][k] * B[k][j];
-
-	movsxd	rax, DWORD PTR i$[rsp]
-	imul	rax, rax, 12
-	lea	rax, QWORD PTR C$[rsp+rax]
-	movsxd	rcx, DWORD PTR j$[rsp]
-	movsxd	rdx, DWORD PTR i$[rsp]
-	imul	rdx, rdx, 12
-	lea	r8, OFFSET FLAT:A
-	add	r8, rdx
-	mov	rdx, r8
-	movsxd	r8, DWORD PTR k$[rsp]
-	movsxd	r9, DWORD PTR k$[rsp]
-	imul	r9, r9, 12
-	lea	r10, OFFSET FLAT:B
-	add	r10, r9
-	mov	r9, r10
-	movsxd	r10, DWORD PTR j$[rsp]
-	mov	edx, DWORD PTR [rdx+r8*4]
-	imul	edx, DWORD PTR [r9+r10*4]
-	add	edx, DWORD PTR [rax+rcx*4]
-	mov	eax, edx
-	movsxd	rcx, DWORD PTR j$[rsp]
-	movsxd	rdx, DWORD PTR i$[rsp]
-	imul	rdx, rdx, 12
-	lea	rdx, QWORD PTR C$[rsp+rdx]
-	mov	DWORD PTR [rdx+rcx*4], eax
-
-; 50   :             }
-
-	jmp	SHORT $LN8@main
-$LN9@main:
-
-; 51   :         }
-
-	jmp	$LN5@main
-$LN6@main:
-
-; 52   :     }
-
-	jmp	$LN2@main
-$LN3@main:
-
-; 53   : 
-; 54   :     /* ---------- 2. 打印输入 ---------- */
-; 55   :     printf(&quot;=== C 语言三重循环实现 3x3 矩阵乘法 (N=%d) ===\n&quot;, N);
-
-	mov	edx, 3
-	lea	rcx, OFFSET FLAT:$SG9969
-	call	printf
-
-; 56   :     printf(&quot;A =\n&quot;);
-
-	lea	rcx, OFFSET FLAT:$SG9970
-	call	printf
-	npad	1
-
-; 57   :     for (i = 0; i &lt; N; i++) {
-
-	mov	DWORD PTR i$[rsp], 0
-	jmp	SHORT $LN13@main
-$LN11@main:
-	mov	eax, DWORD PTR i$[rsp]
-	inc	eax
-	mov	DWORD PTR i$[rsp], eax
-$LN13@main:
-	cmp	DWORD PTR i$[rsp], 3
-	jge	SHORT $LN12@main
-
-; 58   :         printf(&quot;  [&quot;);
-
-	lea	rcx, OFFSET FLAT:$SG9971
-	call	printf
-	npad	1
-
-; 59   :         for (j = 0; j &lt; N; j++) printf(&quot; %4d&quot;, A[i][j]);
-
-	mov	DWORD PTR j$[rsp], 0
-	jmp	SHORT $LN16@main
-$LN14@main:
-	mov	eax, DWORD PTR j$[rsp]
-	inc	eax
-	mov	DWORD PTR j$[rsp], eax
-$LN16@main:
-	cmp	DWORD PTR j$[rsp], 3
-	jge	SHORT $LN15@main
-	movsxd	rax, DWORD PTR i$[rsp]
-	imul	rax, rax, 12
-	lea	rcx, OFFSET FLAT:A
-	add	rcx, rax
-	mov	rax, rcx
-	movsxd	rcx, DWORD PTR j$[rsp]
-	mov	edx, DWORD PTR [rax+rcx*4]
-	lea	rcx, OFFSET FLAT:$SG9972
-	call	printf
-	npad	1
-	jmp	SHORT $LN14@main
-$LN15@main:
-
-; 60   :         printf(&quot; ]\n&quot;);
-
-	lea	rcx, OFFSET FLAT:$SG9973
-	call	printf
-	npad	1
-
-; 61   :     }
-
-	jmp	SHORT $LN11@main
-$LN12@main:
-
-; 62   :     printf(&quot;B =\n&quot;);
-
-	lea	rcx, OFFSET FLAT:$SG9974
-	call	printf
-	npad	1
-
-; 63   :     for (i = 0; i &lt; N; i++) {
-
-	mov	DWORD PTR i$[rsp], 0
-	jmp	SHORT $LN19@main
-$LN17@main:
-	mov	eax, DWORD PTR i$[rsp]
-	inc	eax
-	mov	DWORD PTR i$[rsp], eax
-$LN19@main:
-	cmp	DWORD PTR i$[rsp], 3
-	jge	SHORT $LN18@main
-
-; 64   :         printf(&quot;  [&quot;);
-
-	lea	rcx, OFFSET FLAT:$SG9975
-	call	printf
-	npad	1
-
-; 65   :         for (j = 0; j &lt; N; j++) printf(&quot; %4d&quot;, B[i][j]);
-
-	mov	DWORD PTR j$[rsp], 0
-	jmp	SHORT $LN22@main
-$LN20@main:
-	mov	eax, DWORD PTR j$[rsp]
-	inc	eax
-	mov	DWORD PTR j$[rsp], eax
-$LN22@main:
-	cmp	DWORD PTR j$[rsp], 3
-	jge	SHORT $LN21@main
-	movsxd	rax, DWORD PTR i$[rsp]
-	imul	rax, rax, 12
-	lea	rcx, OFFSET FLAT:B
-	add	rcx, rax
-	mov	rax, rcx
-	movsxd	rcx, DWORD PTR j$[rsp]
-	mov	edx, DWORD PTR [rax+rcx*4]
-	lea	rcx, OFFSET FLAT:$SG9976
-	call	printf
-	npad	1
-	jmp	SHORT $LN20@main
-$LN21@main:
-
-; 66   :         printf(&quot; ]\n&quot;);
-
-	lea	rcx, OFFSET FLAT:$SG9977
-	call	printf
-	npad	1
-
-; 67   :     }
-
-	jmp	SHORT $LN17@main
-$LN18@main:
-
-; 68   : 
-; 69   :     /* ---------- 3. 打印结果 ---------- */
-; 70   :     printf(&quot;C = A x B =\n&quot;);
-
-	lea	rcx, OFFSET FLAT:$SG9978
-	call	printf
-	npad	1
-
-; 71   :     for (i = 0; i &lt; N; i++) {
-
-	mov	DWORD PTR i$[rsp], 0
-	jmp	SHORT $LN25@main
-$LN23@main:
-	mov	eax, DWORD PTR i$[rsp]
-	inc	eax
-	mov	DWORD PTR i$[rsp], eax
-$LN25@main:
-	cmp	DWORD PTR i$[rsp], 3
-	jge	SHORT $LN24@main
-
-; 72   :         printf(&quot;  [&quot;);
-
-	lea	rcx, OFFSET FLAT:$SG9979
-	call	printf
-	npad	1
-
-; 73   :         for (j = 0; j &lt; N; j++) printf(&quot; %4d&quot;, C[i][j]);
-
-	mov	DWORD PTR j$[rsp], 0
-	jmp	SHORT $LN28@main
-$LN26@main:
-	mov	eax, DWORD PTR j$[rsp]
-	inc	eax
-	mov	DWORD PTR j$[rsp], eax
-$LN28@main:
-	cmp	DWORD PTR j$[rsp], 3
-	jge	SHORT $LN27@main
-	movsxd	rax, DWORD PTR i$[rsp]
-	imul	rax, rax, 12
-	lea	rax, QWORD PTR C$[rsp+rax]
-	movsxd	rcx, DWORD PTR j$[rsp]
-	mov	edx, DWORD PTR [rax+rcx*4]
-	lea	rcx, OFFSET FLAT:$SG9980
-	call	printf
-	npad	1
-	jmp	SHORT $LN26@main
-$LN27@main:
-
-; 74   :         printf(&quot; ]\n&quot;);
-
-	lea	rcx, OFFSET FLAT:$SG9981
-	call	printf
-	npad	1
-
-; 75   :     }
-
-	jmp	SHORT $LN23@main
-$LN24@main:
-
-; 76   : 
-; 77   :     /* 一行可 diff 形式，供其他三层实现做字符串级对比 */
-; 78   :     printf(&quot;C_FLAT =&quot;);
-
-	lea	rcx, OFFSET FLAT:$SG9982
-	call	printf
-	npad	1
-
-; 79   :     for (i = 0; i &lt; N; i++)
-
-	mov	DWORD PTR i$[rsp], 0
-	jmp	SHORT $LN31@main
-$LN29@main:
-	mov	eax, DWORD PTR i$[rsp]
-	inc	eax
-	mov	DWORD PTR i$[rsp], eax
-$LN31@main:
-	cmp	DWORD PTR i$[rsp], 3
-	jge	SHORT $LN30@main
-
-; 80   :         for (j = 0; j &lt; N; j++)
-
-	mov	DWORD PTR j$[rsp], 0
-	jmp	SHORT $LN34@main
-$LN32@main:
-	mov	eax, DWORD PTR j$[rsp]
-	inc	eax
-	mov	DWORD PTR j$[rsp], eax
-$LN34@main:
-	cmp	DWORD PTR j$[rsp], 3
-	jge	SHORT $LN33@main
-
-; 81   :             printf(&quot; %d&quot;, C[i][j]);
-
-	movsxd	rax, DWORD PTR i$[rsp]
-	imul	rax, rax, 12
-	lea	rax, QWORD PTR C$[rsp+rax]
-	movsxd	rcx, DWORD PTR j$[rsp]
-	mov	edx, DWORD PTR [rax+rcx*4]
-	lea	rcx, OFFSET FLAT:$SG9983
-	call	printf
-	npad	1
-	jmp	SHORT $LN32@main
-$LN33@main:
-	jmp	SHORT $LN29@main
-$LN30@main:
-
-; 82   :     printf(&quot;\n&quot;);
-
-	lea	rcx, OFFSET FLAT:$SG9984
-	call	printf
-	npad	1
-
-; 83   : 
-; 84   :     /* ---------- 4. 校验和 ---------- */
-; 85   :     for (i = 0; i &lt; N; i++)
-
-	mov	DWORD PTR i$[rsp], 0
-	jmp	SHORT $LN37@main
-$LN35@main:
-	mov	eax, DWORD PTR i$[rsp]
-	inc	eax
-	mov	DWORD PTR i$[rsp], eax
-$LN37@main:
-	cmp	DWORD PTR i$[rsp], 3
-	jge	SHORT $LN36@main
-
-; 86   :         for (j = 0; j &lt; N; j++)
-
-	mov	DWORD PTR j$[rsp], 0
-	jmp	SHORT $LN40@main
-$LN38@main:
-	mov	eax, DWORD PTR j$[rsp]
-	inc	eax
-	mov	DWORD PTR j$[rsp], eax
-$LN40@main:
-	cmp	DWORD PTR j$[rsp], 3
-	jge	SHORT $LN39@main
-
-; 87   :             checksum += C[i][j];
-
-	movsxd	rax, DWORD PTR i$[rsp]
-	imul	rax, rax, 12
-	lea	rax, QWORD PTR C$[rsp+rax]
-	movsxd	rcx, DWORD PTR j$[rsp]
-	mov	eax, DWORD PTR [rax+rcx*4]
-	mov	ecx, DWORD PTR checksum$[rsp]
-	add	ecx, eax
-	mov	eax, ecx
-	mov	DWORD PTR checksum$[rsp], eax
-	jmp	SHORT $LN38@main
-$LN39@main:
-	jmp	SHORT $LN35@main
-$LN36@main:
-
-; 88   :     printf(&quot;CHECKSUM = %ld\n&quot;, checksum);
-
-	mov	edx, DWORD PTR checksum$[rsp]
-	lea	rcx, OFFSET FLAT:$SG9985
-	call	printf
-
-; 89   : 
-; 90   :     /* ---------- 5. 与标准答案逐项比对 ---------- */
-; 91   :     printf(&quot;--- 与标准答案逐项比对 ---\n&quot;);
-
-	lea	rcx, OFFSET FLAT:$SG9986
-	call	printf
-	npad	1
-
-; 92   :     for (i = 0; i &lt; N; i++) {
-
-	mov	DWORD PTR i$[rsp], 0
-	jmp	SHORT $LN43@main
-$LN41@main:
-	mov	eax, DWORD PTR i$[rsp]
-	inc	eax
-	mov	DWORD PTR i$[rsp], eax
-$LN43@main:
-	cmp	DWORD PTR i$[rsp], 3
-	jge	$LN42@main
-
-; 93   :         for (j = 0; j &lt; N; j++) {
-
-	mov	DWORD PTR j$[rsp], 0
-	jmp	SHORT $LN46@main
-$LN44@main:
-	mov	eax, DWORD PTR j$[rsp]
-	inc	eax
-	mov	DWORD PTR j$[rsp], eax
-$LN46@main:
-	cmp	DWORD PTR j$[rsp], 3
-	jge	$LN45@main
-
-; 94   :             total++;
-
-	mov	eax, DWORD PTR total$[rsp]
-	inc	eax
-	mov	DWORD PTR total$[rsp], eax
-
-; 95   :             if (C[i][j] == REF[i][j]) {
-
-	movsxd	rax, DWORD PTR i$[rsp]
-	imul	rax, rax, 12
-	lea	rax, QWORD PTR C$[rsp+rax]
-	movsxd	rcx, DWORD PTR j$[rsp]
-	movsxd	rdx, DWORD PTR i$[rsp]
-	imul	rdx, rdx, 12
-	lea	r8, OFFSET FLAT:REF
-	add	r8, rdx
-	mov	rdx, r8
-	movsxd	r8, DWORD PTR j$[rsp]
-	mov	edx, DWORD PTR [rdx+r8*4]
-	cmp	DWORD PTR [rax+rcx*4], edx
-	jne	SHORT $LN47@main
-
-; 96   :                 passed++;
-
-	mov	eax, DWORD PTR passed$[rsp]
-	inc	eax
-	mov	DWORD PTR passed$[rsp], eax
-
-; 97   :                 printf(&quot;  C[%d][%d] = %4d  REF = %4d  PASS\n&quot;,
-
-	movsxd	rax, DWORD PTR i$[rsp]
-	imul	rax, rax, 12
-	lea	rcx, OFFSET FLAT:REF
-	add	rcx, rax
-	mov	rax, rcx
-	movsxd	rcx, DWORD PTR j$[rsp]
-	movsxd	rdx, DWORD PTR i$[rsp]
-	imul	rdx, rdx, 12
-	lea	rdx, QWORD PTR C$[rsp+rdx]
-	movsxd	r8, DWORD PTR j$[rsp]
-	mov	eax, DWORD PTR [rax+rcx*4]
-	mov	DWORD PTR [rsp+32], eax
-	mov	r9d, DWORD PTR [rdx+r8*4]
-	mov	r8d, DWORD PTR j$[rsp]
-	mov	edx, DWORD PTR i$[rsp]
-	lea	rcx, OFFSET FLAT:$SG9989
-	call	printf
-	npad	1
-
-; 98   :                        i, j, C[i][j], REF[i][j]);
-; 99   :             } else {
-
-	jmp	SHORT $LN48@main
-$LN47@main:
-
-; 100  :                 printf(&quot;  C[%d][%d] = %4d  REF = %4d  FAIL\n&quot;,
-
-	movsxd	rax, DWORD PTR i$[rsp]
-	imul	rax, rax, 12
-	lea	rcx, OFFSET FLAT:REF
-	add	rcx, rax
-	mov	rax, rcx
-	movsxd	rcx, DWORD PTR j$[rsp]
-	movsxd	rdx, DWORD PTR i$[rsp]
-	imul	rdx, rdx, 12
-	lea	rdx, QWORD PTR C$[rsp+rdx]
-	movsxd	r8, DWORD PTR j$[rsp]
-	mov	eax, DWORD PTR [rax+rcx*4]
-	mov	DWORD PTR [rsp+32], eax
-	mov	r9d, DWORD PTR [rdx+r8*4]
-	mov	r8d, DWORD PTR j$[rsp]
-	mov	edx, DWORD PTR i$[rsp]
-	lea	rcx, OFFSET FLAT:$SG9990
-	call	printf
-	npad	1
-$LN48@main:
-
-; 101  :                        i, j, C[i][j], REF[i][j]);
-; 102  :             }
-; 103  :         }
-
-	jmp	$LN44@main
-$LN45@main:
-
-; 104  :     }
-
-	jmp	$LN41@main
-$LN42@main:
-
-; 105  :     printf(&quot;RESULT: %d/%d PASS&quot;, passed, total);
-
-	mov	r8d, DWORD PTR total$[rsp]
-	mov	edx, DWORD PTR passed$[rsp]
-	lea	rcx, OFFSET FLAT:$SG9991
-	call	printf
-
-; 106  :     if (passed == total)
-
-	mov	eax, DWORD PTR total$[rsp]
-	cmp	DWORD PTR passed$[rsp], eax
-	jne	SHORT $LN49@main
-
-; 107  :         printf(&quot;  ==&gt; ALL PASS\n&quot;);
-
-	lea	rcx, OFFSET FLAT:$SG9994
-	call	printf
-	npad	1
-	jmp	SHORT $LN50@main
-$LN49@main:
-
-; 108  :     else
-; 109  :         printf(&quot;  ==&gt; MISMATCH\n&quot;);
-
-	lea	rcx, OFFSET FLAT:$SG9995
-	call	printf
-	npad	1
-$LN50@main:
-
-; 110  : 
-; 111  :     return (passed == total) ? 0 : 1;
-
-	mov	eax, DWORD PTR total$[rsp]
-	cmp	DWORD PTR passed$[rsp], eax
-	jne	SHORT $LN52@main
-	mov	DWORD PTR tv269[rsp], 0
-	jmp	SHORT $LN53@main
-$LN52@main:
-	mov	DWORD PTR tv269[rsp], 1
-$LN53@main:
-	mov	eax, DWORD PTR tv269[rsp]
-
-; 112  : }
-
-	mov	rcx, QWORD PTR __$ArrayPad$[rsp]
-	xor	rcx, rsp
-	call	__security_check_cookie
-	add	rsp, 136				; 00000088H
-	ret	0
-main	ENDP
-_TEXT	ENDS
-; Function compile flags: /Odtp
-; File C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdio.h
-;	COMDAT printf
-_TEXT	SEGMENT
-_Result$ = 32
-_ArgList$ = 40
-_Format$ = 64
-printf	PROC						; COMDAT
-
-; 956  :     {
-
-$LN3:
-	mov	QWORD PTR [rsp+8], rcx
-	mov	QWORD PTR [rsp+16], rdx
-	mov	QWORD PTR [rsp+24], r8
-	mov	QWORD PTR [rsp+32], r9
-	sub	rsp, 56					; 00000038H
-
-; 957  :         int _Result;
-; 958  :         va_list _ArgList;
-; 959  :         __crt_va_start(_ArgList, _Format);
-
-	lea	rax, QWORD PTR _Format$[rsp+8]
-	mov	QWORD PTR _ArgList$[rsp], rax
-
-; 960  :         _Result = _vfprintf_l(stdout, _Format, NULL, _ArgList);
-
-	mov	ecx, 1
-	call	__acrt_iob_func
-	mov	r9, QWORD PTR _ArgList$[rsp]
-	xor	r8d, r8d
-	mov	rdx, QWORD PTR _Format$[rsp]
-	mov	rcx, rax
-	call	_vfprintf_l
-	mov	DWORD PTR _Result$[rsp], eax
-
-; 961  :         __crt_va_end(_ArgList);
-
-	mov	QWORD PTR _ArgList$[rsp], 0
-
-; 962  :         return _Result;
-
-	mov	eax, DWORD PTR _Result$[rsp]
-
-; 963  :     }
-
-	add	rsp, 56					; 00000038H
-	ret	0
-printf	ENDP
-_TEXT	ENDS
-; Function compile flags: /Odtp
-; File C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdio.h
-;	COMDAT _vfprintf_l
-_TEXT	SEGMENT
-_Stream$ = 64
-_Format$ = 72
-_Locale$ = 80
-_ArgList$ = 88
-_vfprintf_l PROC					; COMDAT
-
-; 644  :     {
-
-$LN3:
-	mov	QWORD PTR [rsp+32], r9
-	mov	QWORD PTR [rsp+24], r8
-	mov	QWORD PTR [rsp+16], rdx
-	mov	QWORD PTR [rsp+8], rcx
-	sub	rsp, 56					; 00000038H
-
-; 645  :         return __stdio_common_vfprintf(_CRT_INTERNAL_LOCAL_PRINTF_OPTIONS, _Stream, _Format, _Locale, _ArgList);
-
-	call	__local_stdio_printf_options
-	mov	rcx, QWORD PTR _ArgList$[rsp]
-	mov	QWORD PTR [rsp+32], rcx
-	mov	r9, QWORD PTR _Locale$[rsp]
-	mov	r8, QWORD PTR _Format$[rsp]
-	mov	rdx, QWORD PTR _Stream$[rsp]
-	mov	rcx, QWORD PTR [rax]
-	call	__stdio_common_vfprintf
-
-; 646  :     }
-
-	add	rsp, 56					; 00000038H
-	ret	0
-_vfprintf_l ENDP
-_TEXT	ENDS
-; Function compile flags: /Odtp
-; File C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_stdio_config.h
-;	COMDAT __local_stdio_printf_options
-_TEXT	SEGMENT
-__local_stdio_printf_options PROC			; COMDAT
-
-; 91   :         static unsigned __int64 _OptionsStorage;
-; 92   :         return &amp;_OptionsStorage;
-
-	lea	rax, OFFSET FLAT:?_OptionsStorage@?1??__local_stdio_printf_options@@9@9 ; `__local_stdio_printf_options&#x27;::`2&#x27;::_OptionsStorage
-
-; 93   :     }
-
-	ret	0
-__local_stdio_printf_options ENDP
-_TEXT	ENDS
-END
-</pre></div>
-<div class="file" id="f29"><h2>第03讲-矩阵乘法四层实现/appendix_msvc_cl/matmul_O2.asm<span>13,945 B</span></h2><pre>; Listing generated by Microsoft (R) Optimizing Compiler Version 19.44.35228.0 
-
-include listing.inc
-
-INCLUDELIB LIBCMT
-INCLUDELIB OLDNAMES
-
-CONST	SEGMENT
-A	DD	01H
-	DD	02H
-	DD	03H
-	DD	04H
-	DD	05H
-	DD	06H
-	DD	07H
-	DD	08H
-	DD	09H
-	ORG $+4
-B	DD	09H
-	DD	08H
-	DD	07H
-	DD	06H
-	DD	05H
-	DD	04H
-	DD	03H
-	DD	02H
-	DD	01H
-	ORG $+4
-REF	DD	01eH
-	DD	018H
-	DD	012H
-	DD	054H
-	DD	045H
-	DD	036H
-	DD	08aH
-	DD	072H
-	DD	05aH
-CONST	ENDS
-PUBLIC	__local_stdio_printf_options
-PUBLIC	_vfprintf_l
-PUBLIC	printf
-PUBLIC	main
-PUBLIC	??_C@_0DM@EACPKENL@?$DN?$DN?$DN?5C?5?h?$KP?$KN?h?$KI?$IA?d?$LI?$IJ?i?$IH?$IN?e?$LO?$KK?g?$IO?$KP?e?$KO?$JO?g?$IO?$LA?5@ ; `string&#x27;
-PUBLIC	??_C@_04CKCAEIGM@A?5?$DN?6@			; `string&#x27;
-PUBLIC	??_C@_03BPILENKC@?5?5?$FL@			; `string&#x27;
-PUBLIC	??_C@_04ENADJLAF@?5?$CF4d@			; `string&#x27;
-PUBLIC	??_C@_03OAACNKLE@?5?$FN?6@			; `string&#x27;
-PUBLIC	??_C@_04GNIADCLM@B?5?$DN?6@			; `string&#x27;
-PUBLIC	??_C@_0N@PILHEOBN@C?5?$DN?5A?5x?5B?5?$DN?6@	; `string&#x27;
-PUBLIC	??_C@_08FOPHFIPP@C_FLAT?5?$DN@			; `string&#x27;
-PUBLIC	??_C@_03EBJOKFHF@?5?$CFd@			; `string&#x27;
-PUBLIC	??_C@_01EEMJAFIK@?6@				; `string&#x27;
-PUBLIC	??_C@_0BA@POBOOEGN@CHECKSUM?5?$DN?5?$CFld?6@	; `string&#x27;
-PUBLIC	??_C@_0CF@CFMOJFEA@?9?9?9?5?d?$LI?$IO?f?$KA?$IH?e?$IH?$IG?g?$KN?$JE?f?$KB?$II?i?$IA?$JA?i?$KB?$LJ?f?$KP?$JE?e?$KP?$LJ@ ; `string&#x27;
-PUBLIC	??_C@_0CE@KMHPDHBA@?5?5C?$FL?$CFd?$FN?$FL?$CFd?$FN?5?$DN?5?$CF4d?5?5REF?5?$DN?5?$CF4d?5?5P@ ; `string&#x27;
-PUBLIC	??_C@_0CE@FBCOIFCA@?5?5C?$FL?$CFd?$FN?$FL?$CFd?$FN?5?$DN?5?$CF4d?5?5REF?5?$DN?5?$CF4d?5?5F@ ; `string&#x27;
-PUBLIC	??_C@_0BD@DBNGCHKH@RESULT?3?5?$CFd?1?$CFd?5PASS@ ; `string&#x27;
-PUBLIC	??_C@_0BA@HHKCPBKI@?5?5?$DN?$DN?$DO?5ALL?5PASS?6@ ; `string&#x27;
-PUBLIC	??_C@_0BA@EIBDIIAJ@?5?5?$DN?$DN?$DO?5MISMATCH?6@ ; `string&#x27;
-EXTRN	__acrt_iob_func:PROC
-EXTRN	__stdio_common_vfprintf:PROC
-_DATA	SEGMENT
-COMM	?_OptionsStorage@?1??__local_stdio_printf_options@@9@9:QWORD							; `__local_stdio_printf_options&#x27;::`2&#x27;::_OptionsStorage
-_DATA	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$_vfprintf_l DD imagerel $LN4
-	DD	imagerel $LN4+80
-	DD	imagerel $unwind$_vfprintf_l
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$printf DD imagerel $LN6
-	DD	imagerel $LN6+83
-	DD	imagerel $unwind$printf
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$main DD	imagerel $LN151
-	DD	imagerel $LN151+835
-	DD	imagerel $unwind$main
-pdata	ENDS
-;	COMDAT ??_C@_0BA@EIBDIIAJ@?5?5?$DN?$DN?$DO?5MISMATCH?6@
-CONST	SEGMENT
-??_C@_0BA@EIBDIIAJ@?5?5?$DN?$DN?$DO?5MISMATCH?6@ DB &#x27;  ==&gt; MISMATCH&#x27;, 0aH
-	DB	00H						; `string&#x27;
-CONST	ENDS
-;	COMDAT ??_C@_0BA@HHKCPBKI@?5?5?$DN?$DN?$DO?5ALL?5PASS?6@
-CONST	SEGMENT
-??_C@_0BA@HHKCPBKI@?5?5?$DN?$DN?$DO?5ALL?5PASS?6@ DB &#x27;  ==&gt; ALL PASS&#x27;, 0aH
-	DB	00H						; `string&#x27;
-CONST	ENDS
-;	COMDAT ??_C@_0BD@DBNGCHKH@RESULT?3?5?$CFd?1?$CFd?5PASS@
-CONST	SEGMENT
-??_C@_0BD@DBNGCHKH@RESULT?3?5?$CFd?1?$CFd?5PASS@ DB &#x27;RESULT: %d/%d PASS&#x27;, 00H ; `string&#x27;
-CONST	ENDS
-;	COMDAT ??_C@_0CE@FBCOIFCA@?5?5C?$FL?$CFd?$FN?$FL?$CFd?$FN?5?$DN?5?$CF4d?5?5REF?5?$DN?5?$CF4d?5?5F@
-CONST	SEGMENT
-??_C@_0CE@FBCOIFCA@?5?5C?$FL?$CFd?$FN?$FL?$CFd?$FN?5?$DN?5?$CF4d?5?5REF?5?$DN?5?$CF4d?5?5F@ DB &#x27; &#x27;
-	DB	&#x27; C[%d][%d] = %4d  REF = %4d  FAIL&#x27;, 0aH, 00H ; `string&#x27;
-CONST	ENDS
-;	COMDAT ??_C@_0CE@KMHPDHBA@?5?5C?$FL?$CFd?$FN?$FL?$CFd?$FN?5?$DN?5?$CF4d?5?5REF?5?$DN?5?$CF4d?5?5P@
-CONST	SEGMENT
-??_C@_0CE@KMHPDHBA@?5?5C?$FL?$CFd?$FN?$FL?$CFd?$FN?5?$DN?5?$CF4d?5?5REF?5?$DN?5?$CF4d?5?5P@ DB &#x27; &#x27;
-	DB	&#x27; C[%d][%d] = %4d  REF = %4d  PASS&#x27;, 0aH, 00H ; `string&#x27;
-CONST	ENDS
-;	COMDAT ??_C@_0CF@CFMOJFEA@?9?9?9?5?d?$LI?$IO?f?$KA?$IH?e?$IH?$IG?g?$KN?$JE?f?$KB?$II?i?$IA?$JA?i?$KB?$LJ?f?$KP?$JE?e?$KP?$LJ@
-CONST	SEGMENT
-??_C@_0CF@CFMOJFEA@?9?9?9?5?d?$LI?$IO?f?$KA?$IH?e?$IH?$IG?g?$KN?$JE?f?$KB?$II?i?$IA?$JA?i?$KB?$LJ?f?$KP?$JE?e?$KP?$LJ@ DB &#x27;-&#x27;
-	DB	&#x27;-- &#x27;, 0e4H, 0b8H, 08eH, 0e6H, 0a0H, 087H, 0e5H, 087H, 086H, 0e7H
-	DB	0adH, 094H, 0e6H, 0a1H, 088H, 0e9H, 080H, 090H, 0e9H, 0a1H, 0b9H
-	DB	0e6H, 0afH, 094H, 0e5H, 0afH, 0b9H, &#x27; ---&#x27;, 0aH, 00H ; `string&#x27;
-CONST	ENDS
-;	COMDAT ??_C@_0BA@POBOOEGN@CHECKSUM?5?$DN?5?$CFld?6@
-CONST	SEGMENT
-??_C@_0BA@POBOOEGN@CHECKSUM?5?$DN?5?$CFld?6@ DB &#x27;CHECKSUM = %ld&#x27;, 0aH, 00H ; `string&#x27;
-CONST	ENDS
-;	COMDAT ??_C@_01EEMJAFIK@?6@
-CONST	SEGMENT
-??_C@_01EEMJAFIK@?6@ DB 0aH, 00H			; `string&#x27;
-CONST	ENDS
-;	COMDAT ??_C@_03EBJOKFHF@?5?$CFd@
-CONST	SEGMENT
-??_C@_03EBJOKFHF@?5?$CFd@ DB &#x27; %d&#x27;, 00H			; `string&#x27;
-CONST	ENDS
-;	COMDAT ??_C@_08FOPHFIPP@C_FLAT?5?$DN@
-CONST	SEGMENT
-??_C@_08FOPHFIPP@C_FLAT?5?$DN@ DB &#x27;C_FLAT =&#x27;, 00H	; `string&#x27;
-CONST	ENDS
-;	COMDAT ??_C@_0N@PILHEOBN@C?5?$DN?5A?5x?5B?5?$DN?6@
-CONST	SEGMENT
-??_C@_0N@PILHEOBN@C?5?$DN?5A?5x?5B?5?$DN?6@ DB &#x27;C = A x B =&#x27;, 0aH, 00H ; `string&#x27;
-CONST	ENDS
-;	COMDAT ??_C@_04GNIADCLM@B?5?$DN?6@
-CONST	SEGMENT
-??_C@_04GNIADCLM@B?5?$DN?6@ DB &#x27;B =&#x27;, 0aH, 00H		; `string&#x27;
-CONST	ENDS
-;	COMDAT ??_C@_03OAACNKLE@?5?$FN?6@
-CONST	SEGMENT
-??_C@_03OAACNKLE@?5?$FN?6@ DB &#x27; ]&#x27;, 0aH, 00H		; `string&#x27;
-CONST	ENDS
-;	COMDAT ??_C@_04ENADJLAF@?5?$CF4d@
-CONST	SEGMENT
-??_C@_04ENADJLAF@?5?$CF4d@ DB &#x27; %4d&#x27;, 00H		; `string&#x27;
-CONST	ENDS
-;	COMDAT ??_C@_03BPILENKC@?5?5?$FL@
-CONST	SEGMENT
-??_C@_03BPILENKC@?5?5?$FL@ DB &#x27;  [&#x27;, 00H		; `string&#x27;
-CONST	ENDS
-;	COMDAT ??_C@_04CKCAEIGM@A?5?$DN?6@
-CONST	SEGMENT
-??_C@_04CKCAEIGM@A?5?$DN?6@ DB &#x27;A =&#x27;, 0aH, 00H		; `string&#x27;
-CONST	ENDS
-;	COMDAT ??_C@_0DM@EACPKENL@?$DN?$DN?$DN?5C?5?h?$KP?$KN?h?$KI?$IA?d?$LI?$IJ?i?$IH?$IN?e?$LO?$KK?g?$IO?$KP?e?$KO?$JO?g?$IO?$LA?5@
-CONST	SEGMENT
-??_C@_0DM@EACPKENL@?$DN?$DN?$DN?5C?5?h?$KP?$KN?h?$KI?$IA?d?$LI?$IJ?i?$IH?$IN?e?$LO?$KK?g?$IO?$KP?e?$KO?$JO?g?$IO?$LA?5@ DB &#x27;=&#x27;
-	DB	&#x27;== C &#x27;, 0e8H, 0afH, 0adH, 0e8H, 0a8H, 080H, 0e4H, 0b8H, 089H, 0e9H
-	DB	087H, 08dH, 0e5H, 0beH, 0aaH, 0e7H, 08eH, 0afH, 0e5H, 0aeH, 09eH
-	DB	0e7H, 08eH, 0b0H, &#x27; 3x3 &#x27;, 0e7H, 09fH, 0a9H, 0e9H, 098H, 0b5H, 0e4H
-	DB	0b9H, 098H, 0e6H, 0b3H, 095H, &#x27; (N=%d) ===&#x27;, 0aH, 00H ; `string&#x27;
-CONST	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$main DD	0c1c01H
-	DD	014641cH
-	DD	013541cH
-	DD	012341cH
-	DD	0f018b21cH
-	DD	0d014e016H
-	DD	07010c012H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$printf DD 041b01H
-	DD	07017521bH
-	DD	030156016H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$_vfprintf_l DD 081401H
-	DD	0a6414H
-	DD	095414H
-	DD	083414H
-	DD	070105214H
-xdata	ENDS
-; Function compile flags: /Ogtpy
-;	COMDAT main
-_TEXT	SEGMENT
-C$ = 48
-main	PROC						; COMDAT
-; File D:\DeepSeek-Harness\hw-0304\lab03\code\matmul.c
-; Line 38
-$LN151:
-	mov	QWORD PTR [rsp+8], rbx
-	mov	QWORD PTR [rsp+16], rbp
-	mov	QWORD PTR [rsp+24], rsi
-	push	rdi
-	push	r12
-	push	r13
-	push	r14
-	push	r15
-	sub	rsp, 96					; 00000060H
-; Line 42
-	xor	r12d, r12d
-	lea	rdi, OFFSET FLAT:A
-	lea	rbx, OFFSET FLAT:B
-	mov	r13d, r12d
-	lea	r15, QWORD PTR C$[rsp]
-	mov	r9, rdi
-	sub	r15, rbx
-	mov	r14d, 3
-	sub	r15, rdi
-	npad	12
-$LL4@main:
-; Line 46
-	mov	r10d, DWORD PTR [r9]
-	lea	rbp, QWORD PTR [r15+r9]
-	mov	r11d, DWORD PTR [r9+4]
-	mov	rax, rbx
-	mov	esi, DWORD PTR [r9+8]
-	mov	r8d, 3
-	npad	8
-$LL7@main:
-; Line 49
-	mov	edx, esi
-	mov	ecx, r11d
-	imul	ecx, DWORD PTR [rax+12]
-	imul	edx, DWORD PTR [rax+24]
-	lea	rax, QWORD PTR [rax+4]
-	add	edx, ecx
-	mov	ecx, r10d
-	imul	ecx, DWORD PTR [rax-4]
-	add	edx, ecx
-	mov	DWORD PTR [rax+rbp-4], edx
-	sub	r8, 1
-	jne	SHORT $LL7@main
-; Line 45
-	add	r9, 12
-	sub	r14, 1
-	jne	SHORT $LL4@main
-; Line 55
-	mov	edx, 3
-	lea	rcx, OFFSET FLAT:??_C@_0DM@EACPKENL@?$DN?$DN?$DN?5C?5?h?$KP?$KN?h?$KI?$IA?d?$LI?$IJ?i?$IH?$IN?e?$LO?$KK?g?$IO?$KP?e?$KO?$JO?g?$IO?$LA?5@
-	call	printf
-; Line 56
-	lea	rcx, OFFSET FLAT:??_C@_04CKCAEIGM@A?5?$DN?6@
-	call	printf
-	lea	rbp, OFFSET FLAT:A+36
-$LL13@main:
-; Line 58
-	lea	rcx, OFFSET FLAT:??_C@_03BPILENKC@?5?5?$FL@
-	call	printf
-	mov	esi, 3
-	npad	11
-$LL16@main:
-; Line 59
-	mov	edx, DWORD PTR [rdi]
-	lea	rcx, OFFSET FLAT:??_C@_04ENADJLAF@?5?$CF4d@
-	call	printf
-	add	rdi, 4
-	sub	rsi, 1
-	jne	SHORT $LL16@main
-; Line 60
-	lea	rcx, OFFSET FLAT:??_C@_03OAACNKLE@?5?$FN?6@
-	call	printf
-	cmp	rdi, rbp
-	jl	SHORT $LL13@main
-; Line 62
-	lea	rcx, OFFSET FLAT:??_C@_04GNIADCLM@B?5?$DN?6@
-	call	printf
-	lea	rsi, OFFSET FLAT:B+36
-	npad	4
-$LL19@main:
-; Line 64
-	lea	rcx, OFFSET FLAT:??_C@_03BPILENKC@?5?5?$FL@
-	call	printf
-	mov	edi, 3
-$LL22@main:
-; Line 65
-	mov	edx, DWORD PTR [rbx]
-	lea	rcx, OFFSET FLAT:??_C@_04ENADJLAF@?5?$CF4d@
-	call	printf
-	add	rbx, 4
-	sub	rdi, 1
-	jne	SHORT $LL22@main
-; Line 66
-	lea	rcx, OFFSET FLAT:??_C@_03OAACNKLE@?5?$FN?6@
-	call	printf
-	cmp	rbx, rsi
-	jl	SHORT $LL19@main
-; Line 70
-	lea	rcx, OFFSET FLAT:??_C@_0N@PILHEOBN@C?5?$DN?5A?5x?5B?5?$DN?6@
-	call	printf
-	lea	rbx, QWORD PTR C$[rsp]
-	mov	esi, 3
-$LL25@main:
-; Line 72
-	lea	rcx, OFFSET FLAT:??_C@_03BPILENKC@?5?5?$FL@
-	call	printf
-	mov	edi, 3
-$LL28@main:
-; Line 73
-	mov	edx, DWORD PTR [rbx]
-	lea	rcx, OFFSET FLAT:??_C@_04ENADJLAF@?5?$CF4d@
-	call	printf
-	add	rbx, 4
-	sub	rdi, 1
-	jne	SHORT $LL28@main
-; Line 74
-	lea	rcx, OFFSET FLAT:??_C@_03OAACNKLE@?5?$FN?6@
-	call	printf
-	sub	rsi, 1
-	jne	SHORT $LL25@main
-; Line 78
-	lea	rcx, OFFSET FLAT:??_C@_08FOPHFIPP@C_FLAT?5?$DN@
-	call	printf
-	lea	rbx, QWORD PTR C$[rsp]
-	mov	esi, 3
-$LL31@main:
-; Line 80
-	mov	edi, 3
-	npad	10
-$LL34@main:
-; Line 81
-	mov	edx, DWORD PTR [rbx]
-	lea	rcx, OFFSET FLAT:??_C@_03EBJOKFHF@?5?$CFd@
-	call	printf
-	add	rbx, 4
-	sub	rdi, 1
-	jne	SHORT $LL34@main
-; Line 79
-	sub	rsi, 1
-	jne	SHORT $LL31@main
-; Line 82
-	lea	rcx, OFFSET FLAT:??_C@_01EEMJAFIK@?6@
-	call	printf
-; Line 87
-	mov	edx, DWORD PTR C$[rsp+32]
-; Line 88
-	lea	rcx, OFFSET FLAT:??_C@_0BA@POBOOEGN@CHECKSUM?5?$DN?5?$CFld?6@
-	add	edx, DWORD PTR C$[rsp+28]
-	add	edx, DWORD PTR C$[rsp+24]
-	add	edx, DWORD PTR C$[rsp+20]
-	add	edx, DWORD PTR C$[rsp+16]
-	add	edx, DWORD PTR C$[rsp+12]
-	add	edx, DWORD PTR C$[rsp+8]
-	add	edx, DWORD PTR C$[rsp+4]
-	add	edx, DWORD PTR C$[rsp]
-	call	printf
-; Line 91
-	lea	rcx, OFFSET FLAT:??_C@_0CF@CFMOJFEA@?9?9?9?5?d?$LI?$IO?f?$KA?$IH?e?$IH?$IG?g?$KN?$JE?f?$KB?$II?i?$IA?$JA?i?$KB?$LJ?f?$KP?$JE?e?$KP?$LJ@
-	call	printf
-	mov	esi, r12d
-	lea	rbp, OFFSET FLAT:REF
-	mov	rdi, r12
-	lea	r14, OFFSET FLAT:??_C@_0CE@FBCOIFCA@?5?5C?$FL?$CFd?$FN?$FL?$CFd?$FN?5?$DN?5?$CF4d?5?5REF?5?$DN?5?$CF4d?5?5F@
-	npad	6
-$LL43@main:
-; Line 95
-	mov	eax, DWORD PTR [rdi+rbp]
-	lea	ebx, DWORD PTR [r13+1]
-	mov	r9d, DWORD PTR C$[rsp+rdi]
-	lea	rcx, OFFSET FLAT:??_C@_0CE@KMHPDHBA@?5?5C?$FL?$CFd?$FN?$FL?$CFd?$FN?5?$DN?5?$CF4d?5?5REF?5?$DN?5?$CF4d?5?5P@
-	cmp	r9d, eax
-	mov	DWORD PTR [rsp+32], eax
-	mov	edx, esi
-	cmovne	ebx, r13d
-	cmovne	rcx, r14
-	xor	r8d, r8d
-	call	printf
-	mov	eax, DWORD PTR [rdi+rbp+4]
-	mov	r9d, DWORD PTR C$[rsp+rdi+4]
-	cmp	r9d, eax
-	jne	SHORT $LN102@main
-; Line 96
-	inc	ebx
-$LN102@main:
-; Line 95
-	cmp	r9d, eax
-	mov	DWORD PTR [rsp+32], eax
-	lea	rcx, OFFSET FLAT:??_C@_0CE@KMHPDHBA@?5?5C?$FL?$CFd?$FN?$FL?$CFd?$FN?5?$DN?5?$CF4d?5?5REF?5?$DN?5?$CF4d?5?5P@
-	mov	r8d, 1
-	cmovne	rcx, r14
-	mov	edx, esi
-	call	printf
-	mov	eax, DWORD PTR [rdi+rbp+8]
-; Line 100
-	lea	rcx, OFFSET FLAT:??_C@_0CE@KMHPDHBA@?5?5C?$FL?$CFd?$FN?$FL?$CFd?$FN?5?$DN?5?$CF4d?5?5REF?5?$DN?5?$CF4d?5?5P@
-	mov	r9d, DWORD PTR C$[rsp+rdi+8]
-	lea	r13d, DWORD PTR [rbx+1]
-	cmp	r9d, eax
-	mov	DWORD PTR [rsp+32], eax
-	mov	r8d, 2
-	mov	edx, esi
-	cmovne	rcx, r14
-	cmovne	r13d, ebx
-	call	printf
-	inc	esi
-	add	rdi, 12
-	cmp	esi, 3
-	jl	$LL43@main
-; Line 105
-	mov	r8d, 9
-	lea	rcx, OFFSET FLAT:??_C@_0BD@DBNGCHKH@RESULT?3?5?$CFd?1?$CFd?5PASS@
-	mov	edx, r13d
-	call	printf
-; Line 111
-	lea	rax, OFFSET FLAT:??_C@_0BA@EIBDIIAJ@?5?5?$DN?$DN?$DO?5MISMATCH?6@
-	cmp	r13d, 9
-	lea	rcx, OFFSET FLAT:??_C@_0BA@HHKCPBKI@?5?5?$DN?$DN?$DO?5ALL?5PASS?6@
-	cmovne	rcx, rax
-	call	printf
-; Line 112
-	lea	r11, QWORD PTR [rsp+96]
-	cmp	r13d, 9
-	mov	rbx, QWORD PTR [r11+48]
-	mov	rbp, QWORD PTR [r11+56]
-	setne	r12b
-	mov	rsi, QWORD PTR [r11+64]
-	mov	eax, r12d
-	mov	rsp, r11
-	pop	r15
-	pop	r14
-	pop	r13
-	pop	r12
-	pop	rdi
-	ret	0
-main	ENDP
-_TEXT	ENDS
-; Function compile flags: /Ogtpy
-;	COMDAT printf
-_TEXT	SEGMENT
-_Format$ = 80
-printf	PROC						; COMDAT
-; File C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdio.h
-; Line 956
-$LN6:
-	mov	QWORD PTR [rsp+8], rcx
-	mov	QWORD PTR [rsp+16], rdx
-	mov	QWORD PTR [rsp+24], r8
-	mov	QWORD PTR [rsp+32], r9
-	push	rbx
-	push	rsi
-	push	rdi
-	sub	rsp, 48					; 00000030H
-	mov	rdi, rcx
-; Line 959
-	lea	rsi, QWORD PTR _Format$[rsp+8]
-; Line 960
-	mov	ecx, 1
-	call	__acrt_iob_func
-	mov	rbx, rax
-; Line 645
-	call	__local_stdio_printf_options
-	xor	r9d, r9d
-	mov	QWORD PTR [rsp+32], rsi
-	mov	r8, rdi
-	mov	rdx, rbx
-	mov	rcx, QWORD PTR [rax]
-	call	__stdio_common_vfprintf
-; Line 963
-	add	rsp, 48					; 00000030H
-	pop	rdi
-	pop	rsi
-	pop	rbx
-	ret	0
-printf	ENDP
-_TEXT	ENDS
-; Function compile flags: /Ogtpy
-;	COMDAT _vfprintf_l
-_TEXT	SEGMENT
-_Stream$ = 64
-_Format$ = 72
-_Locale$ = 80
-_ArgList$ = 88
-_vfprintf_l PROC					; COMDAT
-; File C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdio.h
-; Line 644
-$LN4:
-	mov	QWORD PTR [rsp+8], rbx
-	mov	QWORD PTR [rsp+16], rbp
-	mov	QWORD PTR [rsp+24], rsi
-	push	rdi
-	sub	rsp, 48					; 00000030H
-	mov	rbx, r9
-	mov	rdi, r8
-	mov	rsi, rdx
-	mov	rbp, rcx
-; Line 645
-	call	__local_stdio_printf_options
-	mov	r9, rdi
-	mov	QWORD PTR [rsp+32], rbx
-	mov	r8, rsi
-	mov	rdx, rbp
-	mov	rcx, QWORD PTR [rax]
-	call	__stdio_common_vfprintf
-; Line 646
-	mov	rbx, QWORD PTR [rsp+64]
-	mov	rbp, QWORD PTR [rsp+72]
-	mov	rsi, QWORD PTR [rsp+80]
-	add	rsp, 48					; 00000030H
-	pop	rdi
-	ret	0
-_vfprintf_l ENDP
-_TEXT	ENDS
-; Function compile flags: /Ogtpy
-;	COMDAT __local_stdio_printf_options
-_TEXT	SEGMENT
-__local_stdio_printf_options PROC			; COMDAT
-; File C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_stdio_config.h
-; Line 92
-	lea	rax, OFFSET FLAT:?_OptionsStorage@?1??__local_stdio_printf_options@@9@9 ; `__local_stdio_printf_options&#x27;::`2&#x27;::_OptionsStorage
-; Line 93
-	ret	0
-__local_stdio_printf_options ENDP
-_TEXT	ENDS
-END
-</pre></div>
-<div class="file" id="f30"><h2>第03讲-矩阵乘法四层实现/appendix_msvc_cl/matmul_O2_src.asm<span>17,405 B</span></h2><pre>; Listing generated by Microsoft (R) Optimizing Compiler Version 19.44.35228.0 
-
-include listing.inc
-
-INCLUDELIB LIBCMT
-INCLUDELIB OLDNAMES
-
-CONST	SEGMENT
-A	DD	01H
-	DD	02H
-	DD	03H
-	DD	04H
-	DD	05H
-	DD	06H
-	DD	07H
-	DD	08H
-	DD	09H
-	ORG $+4
-B	DD	09H
-	DD	08H
-	DD	07H
-	DD	06H
-	DD	05H
-	DD	04H
-	DD	03H
-	DD	02H
-	DD	01H
-	ORG $+4
-REF	DD	01eH
-	DD	018H
-	DD	012H
-	DD	054H
-	DD	045H
-	DD	036H
-	DD	08aH
-	DD	072H
-	DD	05aH
-CONST	ENDS
-PUBLIC	__local_stdio_printf_options
-PUBLIC	_vfprintf_l
-PUBLIC	printf
-PUBLIC	main
-PUBLIC	??_C@_0DM@EACPKENL@?$DN?$DN?$DN?5C?5?h?$KP?$KN?h?$KI?$IA?d?$LI?$IJ?i?$IH?$IN?e?$LO?$KK?g?$IO?$KP?e?$KO?$JO?g?$IO?$LA?5@ ; `string&#x27;
-PUBLIC	??_C@_04CKCAEIGM@A?5?$DN?6@			; `string&#x27;
-PUBLIC	??_C@_03BPILENKC@?5?5?$FL@			; `string&#x27;
-PUBLIC	??_C@_04ENADJLAF@?5?$CF4d@			; `string&#x27;
-PUBLIC	??_C@_03OAACNKLE@?5?$FN?6@			; `string&#x27;
-PUBLIC	??_C@_04GNIADCLM@B?5?$DN?6@			; `string&#x27;
-PUBLIC	??_C@_0N@PILHEOBN@C?5?$DN?5A?5x?5B?5?$DN?6@	; `string&#x27;
-PUBLIC	??_C@_08FOPHFIPP@C_FLAT?5?$DN@			; `string&#x27;
-PUBLIC	??_C@_03EBJOKFHF@?5?$CFd@			; `string&#x27;
-PUBLIC	??_C@_01EEMJAFIK@?6@				; `string&#x27;
-PUBLIC	??_C@_0BA@POBOOEGN@CHECKSUM?5?$DN?5?$CFld?6@	; `string&#x27;
-PUBLIC	??_C@_0CF@CFMOJFEA@?9?9?9?5?d?$LI?$IO?f?$KA?$IH?e?$IH?$IG?g?$KN?$JE?f?$KB?$II?i?$IA?$JA?i?$KB?$LJ?f?$KP?$JE?e?$KP?$LJ@ ; `string&#x27;
-PUBLIC	??_C@_0CE@KMHPDHBA@?5?5C?$FL?$CFd?$FN?$FL?$CFd?$FN?5?$DN?5?$CF4d?5?5REF?5?$DN?5?$CF4d?5?5P@ ; `string&#x27;
-PUBLIC	??_C@_0CE@FBCOIFCA@?5?5C?$FL?$CFd?$FN?$FL?$CFd?$FN?5?$DN?5?$CF4d?5?5REF?5?$DN?5?$CF4d?5?5F@ ; `string&#x27;
-PUBLIC	??_C@_0BD@DBNGCHKH@RESULT?3?5?$CFd?1?$CFd?5PASS@ ; `string&#x27;
-PUBLIC	??_C@_0BA@HHKCPBKI@?5?5?$DN?$DN?$DO?5ALL?5PASS?6@ ; `string&#x27;
-PUBLIC	??_C@_0BA@EIBDIIAJ@?5?5?$DN?$DN?$DO?5MISMATCH?6@ ; `string&#x27;
-EXTRN	__acrt_iob_func:PROC
-EXTRN	__stdio_common_vfprintf:PROC
-_DATA	SEGMENT
-COMM	?_OptionsStorage@?1??__local_stdio_printf_options@@9@9:QWORD							; `__local_stdio_printf_options&#x27;::`2&#x27;::_OptionsStorage
-_DATA	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$_vfprintf_l DD imagerel $LN4
-	DD	imagerel $LN4+80
-	DD	imagerel $unwind$_vfprintf_l
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$printf DD imagerel $LN6
-	DD	imagerel $LN6+83
-	DD	imagerel $unwind$printf
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$main DD	imagerel $LN151
-	DD	imagerel $LN151+835
-	DD	imagerel $unwind$main
-pdata	ENDS
-;	COMDAT ??_C@_0BA@EIBDIIAJ@?5?5?$DN?$DN?$DO?5MISMATCH?6@
-CONST	SEGMENT
-??_C@_0BA@EIBDIIAJ@?5?5?$DN?$DN?$DO?5MISMATCH?6@ DB &#x27;  ==&gt; MISMATCH&#x27;, 0aH
-	DB	00H						; `string&#x27;
-CONST	ENDS
-;	COMDAT ??_C@_0BA@HHKCPBKI@?5?5?$DN?$DN?$DO?5ALL?5PASS?6@
-CONST	SEGMENT
-??_C@_0BA@HHKCPBKI@?5?5?$DN?$DN?$DO?5ALL?5PASS?6@ DB &#x27;  ==&gt; ALL PASS&#x27;, 0aH
-	DB	00H						; `string&#x27;
-CONST	ENDS
-;	COMDAT ??_C@_0BD@DBNGCHKH@RESULT?3?5?$CFd?1?$CFd?5PASS@
-CONST	SEGMENT
-??_C@_0BD@DBNGCHKH@RESULT?3?5?$CFd?1?$CFd?5PASS@ DB &#x27;RESULT: %d/%d PASS&#x27;, 00H ; `string&#x27;
-CONST	ENDS
-;	COMDAT ??_C@_0CE@FBCOIFCA@?5?5C?$FL?$CFd?$FN?$FL?$CFd?$FN?5?$DN?5?$CF4d?5?5REF?5?$DN?5?$CF4d?5?5F@
-CONST	SEGMENT
-??_C@_0CE@FBCOIFCA@?5?5C?$FL?$CFd?$FN?$FL?$CFd?$FN?5?$DN?5?$CF4d?5?5REF?5?$DN?5?$CF4d?5?5F@ DB &#x27; &#x27;
-	DB	&#x27; C[%d][%d] = %4d  REF = %4d  FAIL&#x27;, 0aH, 00H ; `string&#x27;
-CONST	ENDS
-;	COMDAT ??_C@_0CE@KMHPDHBA@?5?5C?$FL?$CFd?$FN?$FL?$CFd?$FN?5?$DN?5?$CF4d?5?5REF?5?$DN?5?$CF4d?5?5P@
-CONST	SEGMENT
-??_C@_0CE@KMHPDHBA@?5?5C?$FL?$CFd?$FN?$FL?$CFd?$FN?5?$DN?5?$CF4d?5?5REF?5?$DN?5?$CF4d?5?5P@ DB &#x27; &#x27;
-	DB	&#x27; C[%d][%d] = %4d  REF = %4d  PASS&#x27;, 0aH, 00H ; `string&#x27;
-CONST	ENDS
-;	COMDAT ??_C@_0CF@CFMOJFEA@?9?9?9?5?d?$LI?$IO?f?$KA?$IH?e?$IH?$IG?g?$KN?$JE?f?$KB?$II?i?$IA?$JA?i?$KB?$LJ?f?$KP?$JE?e?$KP?$LJ@
-CONST	SEGMENT
-??_C@_0CF@CFMOJFEA@?9?9?9?5?d?$LI?$IO?f?$KA?$IH?e?$IH?$IG?g?$KN?$JE?f?$KB?$II?i?$IA?$JA?i?$KB?$LJ?f?$KP?$JE?e?$KP?$LJ@ DB &#x27;-&#x27;
-	DB	&#x27;-- &#x27;, 0e4H, 0b8H, 08eH, 0e6H, 0a0H, 087H, 0e5H, 087H, 086H, 0e7H
-	DB	0adH, 094H, 0e6H, 0a1H, 088H, 0e9H, 080H, 090H, 0e9H, 0a1H, 0b9H
-	DB	0e6H, 0afH, 094H, 0e5H, 0afH, 0b9H, &#x27; ---&#x27;, 0aH, 00H ; `string&#x27;
-CONST	ENDS
-;	COMDAT ??_C@_0BA@POBOOEGN@CHECKSUM?5?$DN?5?$CFld?6@
-CONST	SEGMENT
-??_C@_0BA@POBOOEGN@CHECKSUM?5?$DN?5?$CFld?6@ DB &#x27;CHECKSUM = %ld&#x27;, 0aH, 00H ; `string&#x27;
-CONST	ENDS
-;	COMDAT ??_C@_01EEMJAFIK@?6@
-CONST	SEGMENT
-??_C@_01EEMJAFIK@?6@ DB 0aH, 00H			; `string&#x27;
-CONST	ENDS
-;	COMDAT ??_C@_03EBJOKFHF@?5?$CFd@
-CONST	SEGMENT
-??_C@_03EBJOKFHF@?5?$CFd@ DB &#x27; %d&#x27;, 00H			; `string&#x27;
-CONST	ENDS
-;	COMDAT ??_C@_08FOPHFIPP@C_FLAT?5?$DN@
-CONST	SEGMENT
-??_C@_08FOPHFIPP@C_FLAT?5?$DN@ DB &#x27;C_FLAT =&#x27;, 00H	; `string&#x27;
-CONST	ENDS
-;	COMDAT ??_C@_0N@PILHEOBN@C?5?$DN?5A?5x?5B?5?$DN?6@
-CONST	SEGMENT
-??_C@_0N@PILHEOBN@C?5?$DN?5A?5x?5B?5?$DN?6@ DB &#x27;C = A x B =&#x27;, 0aH, 00H ; `string&#x27;
-CONST	ENDS
-;	COMDAT ??_C@_04GNIADCLM@B?5?$DN?6@
-CONST	SEGMENT
-??_C@_04GNIADCLM@B?5?$DN?6@ DB &#x27;B =&#x27;, 0aH, 00H		; `string&#x27;
-CONST	ENDS
-;	COMDAT ??_C@_03OAACNKLE@?5?$FN?6@
-CONST	SEGMENT
-??_C@_03OAACNKLE@?5?$FN?6@ DB &#x27; ]&#x27;, 0aH, 00H		; `string&#x27;
-CONST	ENDS
-;	COMDAT ??_C@_04ENADJLAF@?5?$CF4d@
-CONST	SEGMENT
-??_C@_04ENADJLAF@?5?$CF4d@ DB &#x27; %4d&#x27;, 00H		; `string&#x27;
-CONST	ENDS
-;	COMDAT ??_C@_03BPILENKC@?5?5?$FL@
-CONST	SEGMENT
-??_C@_03BPILENKC@?5?5?$FL@ DB &#x27;  [&#x27;, 00H		; `string&#x27;
-CONST	ENDS
-;	COMDAT ??_C@_04CKCAEIGM@A?5?$DN?6@
-CONST	SEGMENT
-??_C@_04CKCAEIGM@A?5?$DN?6@ DB &#x27;A =&#x27;, 0aH, 00H		; `string&#x27;
-CONST	ENDS
-;	COMDAT ??_C@_0DM@EACPKENL@?$DN?$DN?$DN?5C?5?h?$KP?$KN?h?$KI?$IA?d?$LI?$IJ?i?$IH?$IN?e?$LO?$KK?g?$IO?$KP?e?$KO?$JO?g?$IO?$LA?5@
-CONST	SEGMENT
-??_C@_0DM@EACPKENL@?$DN?$DN?$DN?5C?5?h?$KP?$KN?h?$KI?$IA?d?$LI?$IJ?i?$IH?$IN?e?$LO?$KK?g?$IO?$KP?e?$KO?$JO?g?$IO?$LA?5@ DB &#x27;=&#x27;
-	DB	&#x27;== C &#x27;, 0e8H, 0afH, 0adH, 0e8H, 0a8H, 080H, 0e4H, 0b8H, 089H, 0e9H
-	DB	087H, 08dH, 0e5H, 0beH, 0aaH, 0e7H, 08eH, 0afH, 0e5H, 0aeH, 09eH
-	DB	0e7H, 08eH, 0b0H, &#x27; 3x3 &#x27;, 0e7H, 09fH, 0a9H, 0e9H, 098H, 0b5H, 0e4H
-	DB	0b9H, 098H, 0e6H, 0b3H, 095H, &#x27; (N=%d) ===&#x27;, 0aH, 00H ; `string&#x27;
-CONST	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$main DD	0c1c01H
-	DD	014641cH
-	DD	013541cH
-	DD	012341cH
-	DD	0f018b21cH
-	DD	0d014e016H
-	DD	07010c012H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$printf DD 041b01H
-	DD	07017521bH
-	DD	030156016H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$_vfprintf_l DD 081401H
-	DD	0a6414H
-	DD	095414H
-	DD	083414H
-	DD	070105214H
-xdata	ENDS
-; Function compile flags: /Ogtpy
-; File D:\DeepSeek-Harness\hw-0304\lab03\code\matmul.c
-;	COMDAT main
-_TEXT	SEGMENT
-C$ = 48
-main	PROC						; COMDAT
-
-; 38   : {
-
-$LN151:
-	mov	QWORD PTR [rsp+8], rbx
-	mov	QWORD PTR [rsp+16], rbp
-	mov	QWORD PTR [rsp+24], rsi
-	push	rdi
-	push	r12
-	push	r13
-	push	r14
-	push	r15
-	sub	rsp, 96					; 00000060H
-
-; 39   :     int C[N][N];
-; 40   :     int i, j, k;
-; 41   :     long checksum = 0;
-; 42   :     int passed = 0, total = 0;
-
-	xor	r12d, r12d
-	lea	rdi, OFFSET FLAT:A
-	lea	rbx, OFFSET FLAT:B
-	mov	r13d, r12d
-	lea	r15, QWORD PTR C$[rsp]
-	mov	r9, rdi
-	sub	r15, rbx
-	mov	r14d, 3
-	sub	r15, rdi
-	npad	12
-$LL4@main:
-
-; 46   :         for (j = 0; j &lt; N; j++) {
-
-	mov	r10d, DWORD PTR [r9]
-	lea	rbp, QWORD PTR [r15+r9]
-	mov	r11d, DWORD PTR [r9+4]
-	mov	rax, rbx
-	mov	esi, DWORD PTR [r9+8]
-	mov	r8d, 3
-	npad	8
-$LL7@main:
-
-; 47   :             C[i][j] = 0;
-; 48   :             for (k = 0; k &lt; N; k++) {
-; 49   :                 C[i][j] += A[i][k] * B[k][j];
-
-	mov	edx, esi
-	mov	ecx, r11d
-	imul	ecx, DWORD PTR [rax+12]
-	imul	edx, DWORD PTR [rax+24]
-	lea	rax, QWORD PTR [rax+4]
-	add	edx, ecx
-	mov	ecx, r10d
-	imul	ecx, DWORD PTR [rax-4]
-	add	edx, ecx
-	mov	DWORD PTR [rax+rbp-4], edx
-	sub	r8, 1
-	jne	SHORT $LL7@main
-
-; 43   : 
-; 44   :     /* ---------- 1. 三重循环矩阵乘法 ---------- */
-; 45   :     for (i = 0; i &lt; N; i++) {
-
-	add	r9, 12
-	sub	r14, 1
-	jne	SHORT $LL4@main
-
-; 50   :             }
-; 51   :         }
-; 52   :     }
-; 53   : 
-; 54   :     /* ---------- 2. 打印输入 ---------- */
-; 55   :     printf(&quot;=== C 语言三重循环实现 3x3 矩阵乘法 (N=%d) ===\n&quot;, N);
-
-	mov	edx, 3
-	lea	rcx, OFFSET FLAT:??_C@_0DM@EACPKENL@?$DN?$DN?$DN?5C?5?h?$KP?$KN?h?$KI?$IA?d?$LI?$IJ?i?$IH?$IN?e?$LO?$KK?g?$IO?$KP?e?$KO?$JO?g?$IO?$LA?5@
-	call	printf
-
-; 56   :     printf(&quot;A =\n&quot;);
-
-	lea	rcx, OFFSET FLAT:??_C@_04CKCAEIGM@A?5?$DN?6@
-	call	printf
-	lea	rbp, OFFSET FLAT:A+36
-$LL13@main:
-
-; 57   :     for (i = 0; i &lt; N; i++) {
-; 58   :         printf(&quot;  [&quot;);
-
-	lea	rcx, OFFSET FLAT:??_C@_03BPILENKC@?5?5?$FL@
-	call	printf
-	mov	esi, 3
-	npad	11
-$LL16@main:
-
-; 59   :         for (j = 0; j &lt; N; j++) printf(&quot; %4d&quot;, A[i][j]);
-
-	mov	edx, DWORD PTR [rdi]
-	lea	rcx, OFFSET FLAT:??_C@_04ENADJLAF@?5?$CF4d@
-	call	printf
-	add	rdi, 4
-	sub	rsi, 1
-	jne	SHORT $LL16@main
-
-; 60   :         printf(&quot; ]\n&quot;);
-
-	lea	rcx, OFFSET FLAT:??_C@_03OAACNKLE@?5?$FN?6@
-	call	printf
-	cmp	rdi, rbp
-	jl	SHORT $LL13@main
-
-; 61   :     }
-; 62   :     printf(&quot;B =\n&quot;);
-
-	lea	rcx, OFFSET FLAT:??_C@_04GNIADCLM@B?5?$DN?6@
-	call	printf
-	lea	rsi, OFFSET FLAT:B+36
-	npad	4
-$LL19@main:
-
-; 63   :     for (i = 0; i &lt; N; i++) {
-; 64   :         printf(&quot;  [&quot;);
-
-	lea	rcx, OFFSET FLAT:??_C@_03BPILENKC@?5?5?$FL@
-	call	printf
-	mov	edi, 3
-$LL22@main:
-
-; 65   :         for (j = 0; j &lt; N; j++) printf(&quot; %4d&quot;, B[i][j]);
-
-	mov	edx, DWORD PTR [rbx]
-	lea	rcx, OFFSET FLAT:??_C@_04ENADJLAF@?5?$CF4d@
-	call	printf
-	add	rbx, 4
-	sub	rdi, 1
-	jne	SHORT $LL22@main
-
-; 66   :         printf(&quot; ]\n&quot;);
-
-	lea	rcx, OFFSET FLAT:??_C@_03OAACNKLE@?5?$FN?6@
-	call	printf
-	cmp	rbx, rsi
-	jl	SHORT $LL19@main
-
-; 67   :     }
-; 68   : 
-; 69   :     /* ---------- 3. 打印结果 ---------- */
-; 70   :     printf(&quot;C = A x B =\n&quot;);
-
-	lea	rcx, OFFSET FLAT:??_C@_0N@PILHEOBN@C?5?$DN?5A?5x?5B?5?$DN?6@
-	call	printf
-	lea	rbx, QWORD PTR C$[rsp]
-	mov	esi, 3
-$LL25@main:
-
-; 71   :     for (i = 0; i &lt; N; i++) {
-; 72   :         printf(&quot;  [&quot;);
-
-	lea	rcx, OFFSET FLAT:??_C@_03BPILENKC@?5?5?$FL@
-	call	printf
-	mov	edi, 3
-$LL28@main:
-
-; 73   :         for (j = 0; j &lt; N; j++) printf(&quot; %4d&quot;, C[i][j]);
-
-	mov	edx, DWORD PTR [rbx]
-	lea	rcx, OFFSET FLAT:??_C@_04ENADJLAF@?5?$CF4d@
-	call	printf
-	add	rbx, 4
-	sub	rdi, 1
-	jne	SHORT $LL28@main
-
-; 74   :         printf(&quot; ]\n&quot;);
-
-	lea	rcx, OFFSET FLAT:??_C@_03OAACNKLE@?5?$FN?6@
-	call	printf
-	sub	rsi, 1
-	jne	SHORT $LL25@main
-
-; 75   :     }
-; 76   : 
-; 77   :     /* 一行可 diff 形式，供其他三层实现做字符串级对比 */
-; 78   :     printf(&quot;C_FLAT =&quot;);
-
-	lea	rcx, OFFSET FLAT:??_C@_08FOPHFIPP@C_FLAT?5?$DN@
-	call	printf
-	lea	rbx, QWORD PTR C$[rsp]
-	mov	esi, 3
-$LL31@main:
-
-; 80   :         for (j = 0; j &lt; N; j++)
-
-	mov	edi, 3
-	npad	10
-$LL34@main:
-
-; 81   :             printf(&quot; %d&quot;, C[i][j]);
-
-	mov	edx, DWORD PTR [rbx]
-	lea	rcx, OFFSET FLAT:??_C@_03EBJOKFHF@?5?$CFd@
-	call	printf
-	add	rbx, 4
-	sub	rdi, 1
-	jne	SHORT $LL34@main
-
-; 79   :     for (i = 0; i &lt; N; i++)
-
-	sub	rsi, 1
-	jne	SHORT $LL31@main
-
-; 82   :     printf(&quot;\n&quot;);
-
-	lea	rcx, OFFSET FLAT:??_C@_01EEMJAFIK@?6@
-	call	printf
-
-; 83   : 
-; 84   :     /* ---------- 4. 校验和 ---------- */
-; 85   :     for (i = 0; i &lt; N; i++)
-; 86   :         for (j = 0; j &lt; N; j++)
-; 87   :             checksum += C[i][j];
-
-	mov	edx, DWORD PTR C$[rsp+32]
-
-; 88   :     printf(&quot;CHECKSUM = %ld\n&quot;, checksum);
-
-	lea	rcx, OFFSET FLAT:??_C@_0BA@POBOOEGN@CHECKSUM?5?$DN?5?$CFld?6@
-	add	edx, DWORD PTR C$[rsp+28]
-	add	edx, DWORD PTR C$[rsp+24]
-	add	edx, DWORD PTR C$[rsp+20]
-	add	edx, DWORD PTR C$[rsp+16]
-	add	edx, DWORD PTR C$[rsp+12]
-	add	edx, DWORD PTR C$[rsp+8]
-	add	edx, DWORD PTR C$[rsp+4]
-	add	edx, DWORD PTR C$[rsp]
-	call	printf
-
-; 89   : 
-; 90   :     /* ---------- 5. 与标准答案逐项比对 ---------- */
-; 91   :     printf(&quot;--- 与标准答案逐项比对 ---\n&quot;);
-
-	lea	rcx, OFFSET FLAT:??_C@_0CF@CFMOJFEA@?9?9?9?5?d?$LI?$IO?f?$KA?$IH?e?$IH?$IG?g?$KN?$JE?f?$KB?$II?i?$IA?$JA?i?$KB?$LJ?f?$KP?$JE?e?$KP?$LJ@
-	call	printf
-	mov	esi, r12d
-	lea	rbp, OFFSET FLAT:REF
-	mov	rdi, r12
-	lea	r14, OFFSET FLAT:??_C@_0CE@FBCOIFCA@?5?5C?$FL?$CFd?$FN?$FL?$CFd?$FN?5?$DN?5?$CF4d?5?5REF?5?$DN?5?$CF4d?5?5F@
-	npad	6
-$LL43@main:
-
-; 92   :     for (i = 0; i &lt; N; i++) {
-; 93   :         for (j = 0; j &lt; N; j++) {
-; 94   :             total++;
-; 95   :             if (C[i][j] == REF[i][j]) {
-
-	mov	eax, DWORD PTR [rdi+rbp]
-	lea	ebx, DWORD PTR [r13+1]
-	mov	r9d, DWORD PTR C$[rsp+rdi]
-	lea	rcx, OFFSET FLAT:??_C@_0CE@KMHPDHBA@?5?5C?$FL?$CFd?$FN?$FL?$CFd?$FN?5?$DN?5?$CF4d?5?5REF?5?$DN?5?$CF4d?5?5P@
-	cmp	r9d, eax
-	mov	DWORD PTR [rsp+32], eax
-	mov	edx, esi
-	cmovne	ebx, r13d
-	cmovne	rcx, r14
-	xor	r8d, r8d
-	call	printf
-	mov	eax, DWORD PTR [rdi+rbp+4]
-	mov	r9d, DWORD PTR C$[rsp+rdi+4]
-	cmp	r9d, eax
-	jne	SHORT $LN102@main
-
-; 96   :                 passed++;
-
-	inc	ebx
-$LN102@main:
-
-; 92   :     for (i = 0; i &lt; N; i++) {
-; 93   :         for (j = 0; j &lt; N; j++) {
-; 94   :             total++;
-; 95   :             if (C[i][j] == REF[i][j]) {
-
-	cmp	r9d, eax
-	mov	DWORD PTR [rsp+32], eax
-	lea	rcx, OFFSET FLAT:??_C@_0CE@KMHPDHBA@?5?5C?$FL?$CFd?$FN?$FL?$CFd?$FN?5?$DN?5?$CF4d?5?5REF?5?$DN?5?$CF4d?5?5P@
-	mov	r8d, 1
-	cmovne	rcx, r14
-	mov	edx, esi
-	call	printf
-	mov	eax, DWORD PTR [rdi+rbp+8]
-
-; 97   :                 printf(&quot;  C[%d][%d] = %4d  REF = %4d  PASS\n&quot;,
-; 98   :                        i, j, C[i][j], REF[i][j]);
-; 99   :             } else {
-; 100  :                 printf(&quot;  C[%d][%d] = %4d  REF = %4d  FAIL\n&quot;,
-
-	lea	rcx, OFFSET FLAT:??_C@_0CE@KMHPDHBA@?5?5C?$FL?$CFd?$FN?$FL?$CFd?$FN?5?$DN?5?$CF4d?5?5REF?5?$DN?5?$CF4d?5?5P@
-	mov	r9d, DWORD PTR C$[rsp+rdi+8]
-	lea	r13d, DWORD PTR [rbx+1]
-	cmp	r9d, eax
-	mov	DWORD PTR [rsp+32], eax
-	mov	r8d, 2
-	mov	edx, esi
-	cmovne	rcx, r14
-	cmovne	r13d, ebx
-	call	printf
-	inc	esi
-	add	rdi, 12
-	cmp	esi, 3
-	jl	$LL43@main
-
-; 101  :                        i, j, C[i][j], REF[i][j]);
-; 102  :             }
-; 103  :         }
-; 104  :     }
-; 105  :     printf(&quot;RESULT: %d/%d PASS&quot;, passed, total);
-
-	mov	r8d, 9
-	lea	rcx, OFFSET FLAT:??_C@_0BD@DBNGCHKH@RESULT?3?5?$CFd?1?$CFd?5PASS@
-	mov	edx, r13d
-	call	printf
-
-; 106  :     if (passed == total)
-; 107  :         printf(&quot;  ==&gt; ALL PASS\n&quot;);
-; 108  :     else
-; 109  :         printf(&quot;  ==&gt; MISMATCH\n&quot;);
-; 110  : 
-; 111  :     return (passed == total) ? 0 : 1;
-
-	lea	rax, OFFSET FLAT:??_C@_0BA@EIBDIIAJ@?5?5?$DN?$DN?$DO?5MISMATCH?6@
-	cmp	r13d, 9
-	lea	rcx, OFFSET FLAT:??_C@_0BA@HHKCPBKI@?5?5?$DN?$DN?$DO?5ALL?5PASS?6@
-	cmovne	rcx, rax
-	call	printf
-
-; 112  : }
-
-	lea	r11, QWORD PTR [rsp+96]
-	cmp	r13d, 9
-	mov	rbx, QWORD PTR [r11+48]
-	mov	rbp, QWORD PTR [r11+56]
-	setne	r12b
-	mov	rsi, QWORD PTR [r11+64]
-	mov	eax, r12d
-	mov	rsp, r11
-	pop	r15
-	pop	r14
-	pop	r13
-	pop	r12
-	pop	rdi
-	ret	0
-main	ENDP
-_TEXT	ENDS
-; Function compile flags: /Ogtpy
-; File C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdio.h
-;	COMDAT printf
-_TEXT	SEGMENT
-_Format$ = 80
-printf	PROC						; COMDAT
-
-; 956  :     {
-
-$LN6:
-	mov	QWORD PTR [rsp+8], rcx
-	mov	QWORD PTR [rsp+16], rdx
-	mov	QWORD PTR [rsp+24], r8
-	mov	QWORD PTR [rsp+32], r9
-	push	rbx
-	push	rsi
-	push	rdi
-	sub	rsp, 48					; 00000030H
-	mov	rdi, rcx
-
-; 957  :         int _Result;
-; 958  :         va_list _ArgList;
-; 959  :         __crt_va_start(_ArgList, _Format);
-
-	lea	rsi, QWORD PTR _Format$[rsp+8]
-
-; 960  :         _Result = _vfprintf_l(stdout, _Format, NULL, _ArgList);
-
-	mov	ecx, 1
-	call	__acrt_iob_func
-	mov	rbx, rax
-
-; 645  :         return __stdio_common_vfprintf(_CRT_INTERNAL_LOCAL_PRINTF_OPTIONS, _Stream, _Format, _Locale, _ArgList);
-
-	call	__local_stdio_printf_options
-	xor	r9d, r9d
-	mov	QWORD PTR [rsp+32], rsi
-	mov	r8, rdi
-	mov	rdx, rbx
-	mov	rcx, QWORD PTR [rax]
-	call	__stdio_common_vfprintf
-
-; 961  :         __crt_va_end(_ArgList);
-; 962  :         return _Result;
-; 963  :     }
-
-	add	rsp, 48					; 00000030H
-	pop	rdi
-	pop	rsi
-	pop	rbx
-	ret	0
-printf	ENDP
-_TEXT	ENDS
-; Function compile flags: /Ogtpy
-; File C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdio.h
-;	COMDAT _vfprintf_l
-_TEXT	SEGMENT
-_Stream$ = 64
-_Format$ = 72
-_Locale$ = 80
-_ArgList$ = 88
-_vfprintf_l PROC					; COMDAT
-
-; 644  :     {
-
-$LN4:
-	mov	QWORD PTR [rsp+8], rbx
-	mov	QWORD PTR [rsp+16], rbp
-	mov	QWORD PTR [rsp+24], rsi
-	push	rdi
-	sub	rsp, 48					; 00000030H
-	mov	rbx, r9
-	mov	rdi, r8
-	mov	rsi, rdx
-	mov	rbp, rcx
-
-; 645  :         return __stdio_common_vfprintf(_CRT_INTERNAL_LOCAL_PRINTF_OPTIONS, _Stream, _Format, _Locale, _ArgList);
-
-	call	__local_stdio_printf_options
-	mov	r9, rdi
-	mov	QWORD PTR [rsp+32], rbx
-	mov	r8, rsi
-	mov	rdx, rbp
-	mov	rcx, QWORD PTR [rax]
-	call	__stdio_common_vfprintf
-
-; 646  :     }
-
-	mov	rbx, QWORD PTR [rsp+64]
-	mov	rbp, QWORD PTR [rsp+72]
-	mov	rsi, QWORD PTR [rsp+80]
-	add	rsp, 48					; 00000030H
-	pop	rdi
-	ret	0
-_vfprintf_l ENDP
-_TEXT	ENDS
-; Function compile flags: /Ogtpy
-; File C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_stdio_config.h
-;	COMDAT __local_stdio_printf_options
-_TEXT	SEGMENT
-__local_stdio_printf_options PROC			; COMDAT
-
-; 91   :         static unsigned __int64 _OptionsStorage;
-; 92   :         return &amp;_OptionsStorage;
-
-	lea	rax, OFFSET FLAT:?_OptionsStorage@?1??__local_stdio_printf_options@@9@9 ; `__local_stdio_printf_options&#x27;::`2&#x27;::_OptionsStorage
-
-; 93   :     }
-
-	ret	0
-__local_stdio_printf_options ENDP
-_TEXT	ENDS
-END
-</pre></div>
-<div class="file" id="f31"><h2>第03讲-矩阵乘法四层实现/appendix_msvc_cl/matmul_Od.asm<span>14,312 B</span></h2><pre>; Listing generated by Microsoft (R) Optimizing Compiler Version 19.44.35228.0 
-
-include listing.inc
-
-INCLUDELIB LIBCMT
-INCLUDELIB OLDNAMES
-
-CONST	SEGMENT
-A	DD	01H
-	DD	02H
-	DD	03H
-	DD	04H
-	DD	05H
-	DD	06H
-	DD	07H
-	DD	08H
-	DD	09H
-	ORG $+4
-B	DD	09H
-	DD	08H
-	DD	07H
-	DD	06H
-	DD	05H
-	DD	04H
-	DD	03H
-	DD	02H
-	DD	01H
-	ORG $+4
-REF	DD	01eH
-	DD	018H
-	DD	012H
-	DD	054H
-	DD	045H
-	DD	036H
-	DD	08aH
-	DD	072H
-	DD	05aH
-CONST	ENDS
-PUBLIC	__local_stdio_printf_options
-PUBLIC	_vfprintf_l
-PUBLIC	printf
-PUBLIC	main
-EXTRN	__acrt_iob_func:PROC
-EXTRN	__stdio_common_vfprintf:PROC
-EXTRN	__GSHandlerCheck:PROC
-EXTRN	__security_check_cookie:PROC
-EXTRN	__security_cookie:QWORD
-_DATA	SEGMENT
-COMM	?_OptionsStorage@?1??__local_stdio_printf_options@@9@9:QWORD							; `__local_stdio_printf_options&#x27;::`2&#x27;::_OptionsStorage
-_DATA	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$_vfprintf_l DD imagerel $LN3
-	DD	imagerel $LN3+67
-	DD	imagerel $unwind$_vfprintf_l
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$printf DD imagerel $LN3
-	DD	imagerel $LN3+87
-	DD	imagerel $unwind$printf
-pdata	ENDS
-pdata	SEGMENT
-$pdata$main DD	imagerel $LN54
-	DD	imagerel $LN54+1370
-	DD	imagerel $unwind$main
-pdata	ENDS
-_DATA	SEGMENT
-$SG9969	DB	&#x27;=== C &#x27;, 0e8H, 0afH, 0adH, 0e8H, 0a8H, 080H, 0e4H, 0b8H, 089H
-	DB	0e9H, 087H, 08dH, 0e5H, 0beH, 0aaH, 0e7H, 08eH, 0afH, 0e5H, 0aeH
-	DB	09eH, 0e7H, 08eH, 0b0H, &#x27; 3x3 &#x27;, 0e7H, 09fH, 0a9H, 0e9H, 098H, 0b5H
-	DB	0e4H, 0b9H, 098H, 0e6H, 0b3H, 095H, &#x27; (N=%d) ===&#x27;, 0aH, 00H
-$SG9970	DB	&#x27;A =&#x27;, 0aH, 00H
-	ORG $+3
-$SG9971	DB	&#x27;  [&#x27;, 00H
-$SG9972	DB	&#x27; %4d&#x27;, 00H
-	ORG $+3
-$SG9973	DB	&#x27; ]&#x27;, 0aH, 00H
-$SG9974	DB	&#x27;B =&#x27;, 0aH, 00H
-	ORG $+3
-$SG9975	DB	&#x27;  [&#x27;, 00H
-$SG9976	DB	&#x27; %4d&#x27;, 00H
-	ORG $+3
-$SG9977	DB	&#x27; ]&#x27;, 0aH, 00H
-$SG9984	DB	0aH, 00H
-	ORG $+2
-$SG9978	DB	&#x27;C = A x B =&#x27;, 0aH, 00H
-	ORG $+3
-$SG9979	DB	&#x27;  [&#x27;, 00H
-$SG9980	DB	&#x27; %4d&#x27;, 00H
-	ORG $+3
-$SG9981	DB	&#x27; ]&#x27;, 0aH, 00H
-$SG9982	DB	&#x27;C_FLAT =&#x27;, 00H
-	ORG $+3
-$SG9983	DB	&#x27; %d&#x27;, 00H
-$SG9985	DB	&#x27;CHECKSUM = %ld&#x27;, 0aH, 00H
-$SG9986	DB	&#x27;--- &#x27;, 0e4H, 0b8H, 08eH, 0e6H, 0a0H, 087H, 0e5H, 087H, 086H
-	DB	0e7H, 0adH, 094H, 0e6H, 0a1H, 088H, 0e9H, 080H, 090H, 0e9H, 0a1H
-	DB	0b9H, 0e6H, 0afH, 094H, 0e5H, 0afH, 0b9H, &#x27; ---&#x27;, 0aH, 00H
-	ORG $+3
-$SG9989	DB	&#x27;  C[%d][%d] = %4d  REF = %4d  PASS&#x27;, 0aH, 00H
-	ORG $+4
-$SG9990	DB	&#x27;  C[%d][%d] = %4d  REF = %4d  FAIL&#x27;, 0aH, 00H
-	ORG $+4
-$SG9991	DB	&#x27;RESULT: %d/%d PASS&#x27;, 00H
-	ORG $+5
-$SG9994	DB	&#x27;  ==&gt; ALL PASS&#x27;, 0aH, 00H
-$SG9995	DB	&#x27;  ==&gt; MISMATCH&#x27;, 0aH, 00H
-_DATA	ENDS
-voltbl	SEGMENT
-_volmd	DD	0ffffffffH
-	DDSymXIndex: 	FLAT:main
-	DD	011H
-	DD	0545H
-voltbl	ENDS
-xdata	SEGMENT
-$unwind$main DD	021619H
-	DD	0110107H
-	DD	imagerel __GSHandlerCheck
-	DD	078H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$printf DD 011801H
-	DD	06218H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$_vfprintf_l DD 011801H
-	DD	06218H
-xdata	ENDS
-; Function compile flags: /Odtp
-_TEXT	SEGMENT
-j$ = 48
-i$ = 52
-k$ = 56
-total$ = 60
-passed$ = 64
-checksum$ = 68
-tv269 = 72
-C$ = 80
-__$ArrayPad$ = 120
-main	PROC
-; File D:\DeepSeek-Harness\hw-0304\lab03\code\matmul.c
-; Line 38
-$LN54:
-	sub	rsp, 136				; 00000088H
-	mov	rax, QWORD PTR __security_cookie
-	xor	rax, rsp
-	mov	QWORD PTR __$ArrayPad$[rsp], rax
-; Line 41
-	mov	DWORD PTR checksum$[rsp], 0
-; Line 42
-	mov	DWORD PTR passed$[rsp], 0
-	mov	DWORD PTR total$[rsp], 0
-; Line 45
-	mov	DWORD PTR i$[rsp], 0
-	jmp	SHORT $LN4@main
-$LN2@main:
-	mov	eax, DWORD PTR i$[rsp]
-	inc	eax
-	mov	DWORD PTR i$[rsp], eax
-$LN4@main:
-	cmp	DWORD PTR i$[rsp], 3
-	jge	$LN3@main
-; Line 46
-	mov	DWORD PTR j$[rsp], 0
-	jmp	SHORT $LN7@main
-$LN5@main:
-	mov	eax, DWORD PTR j$[rsp]
-	inc	eax
-	mov	DWORD PTR j$[rsp], eax
-$LN7@main:
-	cmp	DWORD PTR j$[rsp], 3
-	jge	$LN6@main
-; Line 47
-	movsxd	rax, DWORD PTR i$[rsp]
-	imul	rax, rax, 12
-	lea	rax, QWORD PTR C$[rsp+rax]
-	movsxd	rcx, DWORD PTR j$[rsp]
-	mov	DWORD PTR [rax+rcx*4], 0
-; Line 48
-	mov	DWORD PTR k$[rsp], 0
-	jmp	SHORT $LN10@main
-$LN8@main:
-	mov	eax, DWORD PTR k$[rsp]
-	inc	eax
-	mov	DWORD PTR k$[rsp], eax
-$LN10@main:
-	cmp	DWORD PTR k$[rsp], 3
-	jge	SHORT $LN9@main
-; Line 49
-	movsxd	rax, DWORD PTR i$[rsp]
-	imul	rax, rax, 12
-	lea	rax, QWORD PTR C$[rsp+rax]
-	movsxd	rcx, DWORD PTR j$[rsp]
-	movsxd	rdx, DWORD PTR i$[rsp]
-	imul	rdx, rdx, 12
-	lea	r8, OFFSET FLAT:A
-	add	r8, rdx
-	mov	rdx, r8
-	movsxd	r8, DWORD PTR k$[rsp]
-	movsxd	r9, DWORD PTR k$[rsp]
-	imul	r9, r9, 12
-	lea	r10, OFFSET FLAT:B
-	add	r10, r9
-	mov	r9, r10
-	movsxd	r10, DWORD PTR j$[rsp]
-	mov	edx, DWORD PTR [rdx+r8*4]
-	imul	edx, DWORD PTR [r9+r10*4]
-	add	edx, DWORD PTR [rax+rcx*4]
-	mov	eax, edx
-	movsxd	rcx, DWORD PTR j$[rsp]
-	movsxd	rdx, DWORD PTR i$[rsp]
-	imul	rdx, rdx, 12
-	lea	rdx, QWORD PTR C$[rsp+rdx]
-	mov	DWORD PTR [rdx+rcx*4], eax
-; Line 50
-	jmp	SHORT $LN8@main
-$LN9@main:
-; Line 51
-	jmp	$LN5@main
-$LN6@main:
-; Line 52
-	jmp	$LN2@main
-$LN3@main:
-; Line 55
-	mov	edx, 3
-	lea	rcx, OFFSET FLAT:$SG9969
-	call	printf
-; Line 56
-	lea	rcx, OFFSET FLAT:$SG9970
-	call	printf
-	npad	1
-; Line 57
-	mov	DWORD PTR i$[rsp], 0
-	jmp	SHORT $LN13@main
-$LN11@main:
-	mov	eax, DWORD PTR i$[rsp]
-	inc	eax
-	mov	DWORD PTR i$[rsp], eax
-$LN13@main:
-	cmp	DWORD PTR i$[rsp], 3
-	jge	SHORT $LN12@main
-; Line 58
-	lea	rcx, OFFSET FLAT:$SG9971
-	call	printf
-	npad	1
-; Line 59
-	mov	DWORD PTR j$[rsp], 0
-	jmp	SHORT $LN16@main
-$LN14@main:
-	mov	eax, DWORD PTR j$[rsp]
-	inc	eax
-	mov	DWORD PTR j$[rsp], eax
-$LN16@main:
-	cmp	DWORD PTR j$[rsp], 3
-	jge	SHORT $LN15@main
-	movsxd	rax, DWORD PTR i$[rsp]
-	imul	rax, rax, 12
-	lea	rcx, OFFSET FLAT:A
-	add	rcx, rax
-	mov	rax, rcx
-	movsxd	rcx, DWORD PTR j$[rsp]
-	mov	edx, DWORD PTR [rax+rcx*4]
-	lea	rcx, OFFSET FLAT:$SG9972
-	call	printf
-	npad	1
-	jmp	SHORT $LN14@main
-$LN15@main:
-; Line 60
-	lea	rcx, OFFSET FLAT:$SG9973
-	call	printf
-	npad	1
-; Line 61
-	jmp	SHORT $LN11@main
-$LN12@main:
-; Line 62
-	lea	rcx, OFFSET FLAT:$SG9974
-	call	printf
-	npad	1
-; Line 63
-	mov	DWORD PTR i$[rsp], 0
-	jmp	SHORT $LN19@main
-$LN17@main:
-	mov	eax, DWORD PTR i$[rsp]
-	inc	eax
-	mov	DWORD PTR i$[rsp], eax
-$LN19@main:
-	cmp	DWORD PTR i$[rsp], 3
-	jge	SHORT $LN18@main
-; Line 64
-	lea	rcx, OFFSET FLAT:$SG9975
-	call	printf
-	npad	1
-; Line 65
-	mov	DWORD PTR j$[rsp], 0
-	jmp	SHORT $LN22@main
-$LN20@main:
-	mov	eax, DWORD PTR j$[rsp]
-	inc	eax
-	mov	DWORD PTR j$[rsp], eax
-$LN22@main:
-	cmp	DWORD PTR j$[rsp], 3
-	jge	SHORT $LN21@main
-	movsxd	rax, DWORD PTR i$[rsp]
-	imul	rax, rax, 12
-	lea	rcx, OFFSET FLAT:B
-	add	rcx, rax
-	mov	rax, rcx
-	movsxd	rcx, DWORD PTR j$[rsp]
-	mov	edx, DWORD PTR [rax+rcx*4]
-	lea	rcx, OFFSET FLAT:$SG9976
-	call	printf
-	npad	1
-	jmp	SHORT $LN20@main
-$LN21@main:
-; Line 66
-	lea	rcx, OFFSET FLAT:$SG9977
-	call	printf
-	npad	1
-; Line 67
-	jmp	SHORT $LN17@main
-$LN18@main:
-; Line 70
-	lea	rcx, OFFSET FLAT:$SG9978
-	call	printf
-	npad	1
-; Line 71
-	mov	DWORD PTR i$[rsp], 0
-	jmp	SHORT $LN25@main
-$LN23@main:
-	mov	eax, DWORD PTR i$[rsp]
-	inc	eax
-	mov	DWORD PTR i$[rsp], eax
-$LN25@main:
-	cmp	DWORD PTR i$[rsp], 3
-	jge	SHORT $LN24@main
-; Line 72
-	lea	rcx, OFFSET FLAT:$SG9979
-	call	printf
-	npad	1
-; Line 73
-	mov	DWORD PTR j$[rsp], 0
-	jmp	SHORT $LN28@main
-$LN26@main:
-	mov	eax, DWORD PTR j$[rsp]
-	inc	eax
-	mov	DWORD PTR j$[rsp], eax
-$LN28@main:
-	cmp	DWORD PTR j$[rsp], 3
-	jge	SHORT $LN27@main
-	movsxd	rax, DWORD PTR i$[rsp]
-	imul	rax, rax, 12
-	lea	rax, QWORD PTR C$[rsp+rax]
-	movsxd	rcx, DWORD PTR j$[rsp]
-	mov	edx, DWORD PTR [rax+rcx*4]
-	lea	rcx, OFFSET FLAT:$SG9980
-	call	printf
-	npad	1
-	jmp	SHORT $LN26@main
-$LN27@main:
-; Line 74
-	lea	rcx, OFFSET FLAT:$SG9981
-	call	printf
-	npad	1
-; Line 75
-	jmp	SHORT $LN23@main
-$LN24@main:
-; Line 78
-	lea	rcx, OFFSET FLAT:$SG9982
-	call	printf
-	npad	1
-; Line 79
-	mov	DWORD PTR i$[rsp], 0
-	jmp	SHORT $LN31@main
-$LN29@main:
-	mov	eax, DWORD PTR i$[rsp]
-	inc	eax
-	mov	DWORD PTR i$[rsp], eax
-$LN31@main:
-	cmp	DWORD PTR i$[rsp], 3
-	jge	SHORT $LN30@main
-; Line 80
-	mov	DWORD PTR j$[rsp], 0
-	jmp	SHORT $LN34@main
-$LN32@main:
-	mov	eax, DWORD PTR j$[rsp]
-	inc	eax
-	mov	DWORD PTR j$[rsp], eax
-$LN34@main:
-	cmp	DWORD PTR j$[rsp], 3
-	jge	SHORT $LN33@main
-; Line 81
-	movsxd	rax, DWORD PTR i$[rsp]
-	imul	rax, rax, 12
-	lea	rax, QWORD PTR C$[rsp+rax]
-	movsxd	rcx, DWORD PTR j$[rsp]
-	mov	edx, DWORD PTR [rax+rcx*4]
-	lea	rcx, OFFSET FLAT:$SG9983
-	call	printf
-	npad	1
-	jmp	SHORT $LN32@main
-$LN33@main:
-	jmp	SHORT $LN29@main
-$LN30@main:
-; Line 82
-	lea	rcx, OFFSET FLAT:$SG9984
-	call	printf
-	npad	1
-; Line 85
-	mov	DWORD PTR i$[rsp], 0
-	jmp	SHORT $LN37@main
-$LN35@main:
-	mov	eax, DWORD PTR i$[rsp]
-	inc	eax
-	mov	DWORD PTR i$[rsp], eax
-$LN37@main:
-	cmp	DWORD PTR i$[rsp], 3
-	jge	SHORT $LN36@main
-; Line 86
-	mov	DWORD PTR j$[rsp], 0
-	jmp	SHORT $LN40@main
-$LN38@main:
-	mov	eax, DWORD PTR j$[rsp]
-	inc	eax
-	mov	DWORD PTR j$[rsp], eax
-$LN40@main:
-	cmp	DWORD PTR j$[rsp], 3
-	jge	SHORT $LN39@main
-; Line 87
-	movsxd	rax, DWORD PTR i$[rsp]
-	imul	rax, rax, 12
-	lea	rax, QWORD PTR C$[rsp+rax]
-	movsxd	rcx, DWORD PTR j$[rsp]
-	mov	eax, DWORD PTR [rax+rcx*4]
-	mov	ecx, DWORD PTR checksum$[rsp]
-	add	ecx, eax
-	mov	eax, ecx
-	mov	DWORD PTR checksum$[rsp], eax
-	jmp	SHORT $LN38@main
-$LN39@main:
-	jmp	SHORT $LN35@main
-$LN36@main:
-; Line 88
-	mov	edx, DWORD PTR checksum$[rsp]
-	lea	rcx, OFFSET FLAT:$SG9985
-	call	printf
-; Line 91
-	lea	rcx, OFFSET FLAT:$SG9986
-	call	printf
-	npad	1
-; Line 92
-	mov	DWORD PTR i$[rsp], 0
-	jmp	SHORT $LN43@main
-$LN41@main:
-	mov	eax, DWORD PTR i$[rsp]
-	inc	eax
-	mov	DWORD PTR i$[rsp], eax
-$LN43@main:
-	cmp	DWORD PTR i$[rsp], 3
-	jge	$LN42@main
-; Line 93
-	mov	DWORD PTR j$[rsp], 0
-	jmp	SHORT $LN46@main
-$LN44@main:
-	mov	eax, DWORD PTR j$[rsp]
-	inc	eax
-	mov	DWORD PTR j$[rsp], eax
-$LN46@main:
-	cmp	DWORD PTR j$[rsp], 3
-	jge	$LN45@main
-; Line 94
-	mov	eax, DWORD PTR total$[rsp]
-	inc	eax
-	mov	DWORD PTR total$[rsp], eax
-; Line 95
-	movsxd	rax, DWORD PTR i$[rsp]
-	imul	rax, rax, 12
-	lea	rax, QWORD PTR C$[rsp+rax]
-	movsxd	rcx, DWORD PTR j$[rsp]
-	movsxd	rdx, DWORD PTR i$[rsp]
-	imul	rdx, rdx, 12
-	lea	r8, OFFSET FLAT:REF
-	add	r8, rdx
-	mov	rdx, r8
-	movsxd	r8, DWORD PTR j$[rsp]
-	mov	edx, DWORD PTR [rdx+r8*4]
-	cmp	DWORD PTR [rax+rcx*4], edx
-	jne	SHORT $LN47@main
-; Line 96
-	mov	eax, DWORD PTR passed$[rsp]
-	inc	eax
-	mov	DWORD PTR passed$[rsp], eax
-; Line 97
-	movsxd	rax, DWORD PTR i$[rsp]
-	imul	rax, rax, 12
-	lea	rcx, OFFSET FLAT:REF
-	add	rcx, rax
-	mov	rax, rcx
-	movsxd	rcx, DWORD PTR j$[rsp]
-	movsxd	rdx, DWORD PTR i$[rsp]
-	imul	rdx, rdx, 12
-	lea	rdx, QWORD PTR C$[rsp+rdx]
-	movsxd	r8, DWORD PTR j$[rsp]
-	mov	eax, DWORD PTR [rax+rcx*4]
-	mov	DWORD PTR [rsp+32], eax
-	mov	r9d, DWORD PTR [rdx+r8*4]
-	mov	r8d, DWORD PTR j$[rsp]
-	mov	edx, DWORD PTR i$[rsp]
-	lea	rcx, OFFSET FLAT:$SG9989
-	call	printf
-	npad	1
-; Line 99
-	jmp	SHORT $LN48@main
-$LN47@main:
-; Line 100
-	movsxd	rax, DWORD PTR i$[rsp]
-	imul	rax, rax, 12
-	lea	rcx, OFFSET FLAT:REF
-	add	rcx, rax
-	mov	rax, rcx
-	movsxd	rcx, DWORD PTR j$[rsp]
-	movsxd	rdx, DWORD PTR i$[rsp]
-	imul	rdx, rdx, 12
-	lea	rdx, QWORD PTR C$[rsp+rdx]
-	movsxd	r8, DWORD PTR j$[rsp]
-	mov	eax, DWORD PTR [rax+rcx*4]
-	mov	DWORD PTR [rsp+32], eax
-	mov	r9d, DWORD PTR [rdx+r8*4]
-	mov	r8d, DWORD PTR j$[rsp]
-	mov	edx, DWORD PTR i$[rsp]
-	lea	rcx, OFFSET FLAT:$SG9990
-	call	printf
-	npad	1
-$LN48@main:
-; Line 103
-	jmp	$LN44@main
-$LN45@main:
-; Line 104
-	jmp	$LN41@main
-$LN42@main:
-; Line 105
-	mov	r8d, DWORD PTR total$[rsp]
-	mov	edx, DWORD PTR passed$[rsp]
-	lea	rcx, OFFSET FLAT:$SG9991
-	call	printf
-; Line 106
-	mov	eax, DWORD PTR total$[rsp]
-	cmp	DWORD PTR passed$[rsp], eax
-	jne	SHORT $LN49@main
-; Line 107
-	lea	rcx, OFFSET FLAT:$SG9994
-	call	printf
-	npad	1
-	jmp	SHORT $LN50@main
-$LN49@main:
-; Line 109
-	lea	rcx, OFFSET FLAT:$SG9995
-	call	printf
-	npad	1
-$LN50@main:
-; Line 111
-	mov	eax, DWORD PTR total$[rsp]
-	cmp	DWORD PTR passed$[rsp], eax
-	jne	SHORT $LN52@main
-	mov	DWORD PTR tv269[rsp], 0
-	jmp	SHORT $LN53@main
-$LN52@main:
-	mov	DWORD PTR tv269[rsp], 1
-$LN53@main:
-	mov	eax, DWORD PTR tv269[rsp]
-; Line 112
-	mov	rcx, QWORD PTR __$ArrayPad$[rsp]
-	xor	rcx, rsp
-	call	__security_check_cookie
-	add	rsp, 136				; 00000088H
-	ret	0
-main	ENDP
-_TEXT	ENDS
-; Function compile flags: /Odtp
-;	COMDAT printf
-_TEXT	SEGMENT
-_Result$ = 32
-_ArgList$ = 40
-_Format$ = 64
-printf	PROC						; COMDAT
-; File C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdio.h
-; Line 956
-$LN3:
-	mov	QWORD PTR [rsp+8], rcx
-	mov	QWORD PTR [rsp+16], rdx
-	mov	QWORD PTR [rsp+24], r8
-	mov	QWORD PTR [rsp+32], r9
-	sub	rsp, 56					; 00000038H
-; Line 959
-	lea	rax, QWORD PTR _Format$[rsp+8]
-	mov	QWORD PTR _ArgList$[rsp], rax
-; Line 960
-	mov	ecx, 1
-	call	__acrt_iob_func
-	mov	r9, QWORD PTR _ArgList$[rsp]
-	xor	r8d, r8d
-	mov	rdx, QWORD PTR _Format$[rsp]
-	mov	rcx, rax
-	call	_vfprintf_l
-	mov	DWORD PTR _Result$[rsp], eax
-; Line 961
-	mov	QWORD PTR _ArgList$[rsp], 0
-; Line 962
-	mov	eax, DWORD PTR _Result$[rsp]
-; Line 963
-	add	rsp, 56					; 00000038H
-	ret	0
-printf	ENDP
-_TEXT	ENDS
-; Function compile flags: /Odtp
-;	COMDAT _vfprintf_l
-_TEXT	SEGMENT
-_Stream$ = 64
-_Format$ = 72
-_Locale$ = 80
-_ArgList$ = 88
-_vfprintf_l PROC					; COMDAT
-; File C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdio.h
-; Line 644
-$LN3:
-	mov	QWORD PTR [rsp+32], r9
-	mov	QWORD PTR [rsp+24], r8
-	mov	QWORD PTR [rsp+16], rdx
-	mov	QWORD PTR [rsp+8], rcx
-	sub	rsp, 56					; 00000038H
-; Line 645
-	call	__local_stdio_printf_options
-	mov	rcx, QWORD PTR _ArgList$[rsp]
-	mov	QWORD PTR [rsp+32], rcx
-	mov	r9, QWORD PTR _Locale$[rsp]
-	mov	r8, QWORD PTR _Format$[rsp]
-	mov	rdx, QWORD PTR _Stream$[rsp]
-	mov	rcx, QWORD PTR [rax]
-	call	__stdio_common_vfprintf
-; Line 646
-	add	rsp, 56					; 00000038H
-	ret	0
-_vfprintf_l ENDP
-_TEXT	ENDS
-; Function compile flags: /Odtp
-;	COMDAT __local_stdio_printf_options
-_TEXT	SEGMENT
-__local_stdio_printf_options PROC			; COMDAT
-; File C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_stdio_config.h
-; Line 92
-	lea	rax, OFFSET FLAT:?_OptionsStorage@?1??__local_stdio_printf_options@@9@9 ; `__local_stdio_printf_options&#x27;::`2&#x27;::_OptionsStorage
-; Line 93
-	ret	0
-__local_stdio_printf_options ENDP
-_TEXT	ENDS
-END
-</pre></div>
-<div class="file" id="f32"><h2>第03讲-矩阵乘法四层实现/appendix_msvc_cl/matmul_asm_annotated.txt<span>4,657 B</span></h2><pre>第03讲 矩阵乘法四层实现 —— 内层乘加指令对照（真实 cl.exe /FA 输出摘录）
-编译器：MSVC 19.44.35228 x64；源文件 matmul.c；/Od 对应 -O0，/O2 对应 -O2
-
-C 源码 matmul.c 第 45-52 行（内层最核心的是第 49 行）：
-    for (i = 0; i &lt; N; i++)
-      for (j = 0; j &lt; N; j++) {
-        C[i][j] = 0;
-        for (k = 0; k &lt; N; k++)
-          C[i][j] += A[i][k] * B[k][j];   // &lt;&lt;== 第 49 行，就是这一行
-      }
-
-生成命令：
-    cl /nologo /utf-8 /Od /FA /Faasm_cl\matmul_Od.asm matmul.c
-    cl /nologo /utf-8 /O2 /FA /Faasm_cl\matmul_O2.asm matmul.c
-
-
-##############################################################################
-# [Od] 内层 k 循环体：imul/add 就在这里   (Od.asm 第 189-219 行)
-##############################################################################
- 189| $LN10@main:
- 190| 	cmp	DWORD PTR k$[rsp], 3
- 191| 	jge	SHORT $LN9@main
- 192| ; Line 49
- 193| 	movsxd	rax, DWORD PTR i$[rsp]
- 194| 	imul	rax, rax, 12
- 195| 	lea	rax, QWORD PTR C$[rsp+rax]
- 196| 	movsxd	rcx, DWORD PTR j$[rsp]
- 197| 	movsxd	rdx, DWORD PTR i$[rsp]
- 198| 	imul	rdx, rdx, 12
- 199| 	lea	r8, OFFSET FLAT:A
- 200| 	add	r8, rdx
- 201| 	mov	rdx, r8
- 202| 	movsxd	r8, DWORD PTR k$[rsp]
- 203| 	movsxd	r9, DWORD PTR k$[rsp]
- 204| 	imul	r9, r9, 12
- 205| 	lea	r10, OFFSET FLAT:B
- 206| 	add	r10, r9
- 207| 	mov	r9, r10
- 208| 	movsxd	r10, DWORD PTR j$[rsp]
- 209| 	mov	edx, DWORD PTR [rdx+r8*4]
- 210| 	imul	edx, DWORD PTR [r9+r10*4]
- 211| 	add	edx, DWORD PTR [rax+rcx*4]
- 212| 	mov	eax, edx
- 213| 	movsxd	rcx, DWORD PTR j$[rsp]
- 214| 	movsxd	rdx, DWORD PTR i$[rsp]
- 215| 	imul	rdx, rdx, 12
- 216| 	lea	rdx, QWORD PTR C$[rsp+rdx]
- 217| 	mov	DWORD PTR [rdx+rcx*4], eax
- 218| ; Line 50
- 219| 	jmp	SHORT $LN8@main
-
-  * c[i][j] += a[i][k]*b[k][j] 在 -Od 下对应**两条**指令：
-      第 210 行  imul  edx, DWORD PTR [r9+r10*4]   ; edx = A[i][k] * B[k][j]
-      第 211 行  add   edx, DWORD PTR [rax+rcx*4]   ; edx = edx + C[i][j]
-    （第 209 行 mov edx,[rdx+r8*4] 只把 A[i][k] 读进 edx，供 imul 使用）
-    加上寻址与写回，-Od 一次内层迭代约 28 条指令（190-219 行含循环判断），
-    三次 k 迭代 =&gt; 每个 C[i][j] 约 84 条动态指令。
-
-  * 另有两处 imul 是行主序地址计算，不是乘法运算本体：
-      第 194 行  imul rax, rax, 12   ; i*3*sizeof(int)=i*12，定位 C 第 i 行
-      第 204 行  imul r9,  r9, 12    ; k*12，定位 B 第 k 行
-
-
-##############################################################################
-# [O2] k 循环已完全展开为 3 条 imul + 2 条 add   (O2.asm 第 214-240 行)
-##############################################################################
- 214| $LL4@main:
- 215| ; Line 46
- 216| 	mov	r10d, DWORD PTR [r9]
- 217| 	lea	rbp, QWORD PTR [r15+r9]
- 218| 	mov	r11d, DWORD PTR [r9+4]
- 219| 	mov	rax, rbx
- 220| 	mov	esi, DWORD PTR [r9+8]
- 221| 	mov	r8d, 3
- 222| 	npad	8
- 223| $LL7@main:
- 224| ; Line 49
- 225| 	mov	edx, esi
- 226| 	mov	ecx, r11d
- 227| 	imul	ecx, DWORD PTR [rax+12]
- 228| 	imul	edx, DWORD PTR [rax+24]
- 229| 	lea	rax, QWORD PTR [rax+4]
- 230| 	add	edx, ecx
- 231| 	mov	ecx, r10d
- 232| 	imul	ecx, DWORD PTR [rax-4]
- 233| 	add	edx, ecx
- 234| 	mov	DWORD PTR [rax+rbp-4], edx
- 235| 	sub	r8, 1
- 236| 	jne	SHORT $LL7@main
- 237| ; Line 45
- 238| 	add	r9, 12
- 239| 	sub	r14, 1
- 240| 	jne	SHORT $LL4@main
-
-  * -O2 下内层 k 循环被**完全展开**（没有任何 k 的比较/跳转指令）：
-      第 227 行  imul ecx, DWORD PTR [rax+12]  ; A[i][1]*B[1][j]
-      第 228 行  imul edx, DWORD PTR [rax+24]  ; A[i][2]*B[2][j]
-      第 232 行  imul ecx, DWORD PTR [rax-4]   ; A[i][0]*B[0][j]
-      第 230 行  add  edx, ecx                 ; 前两项相加
-      第 233 行  add  edx, ecx                 ; 加第三项 =&gt; C[i][j]
-      第 234 行  mov  DWORD PTR [rax+rbp-4], edx ; 直接写回 C[i][j]
-    一个 C[i][j] 只需 12 条指令（225-236 行），相比 -Od 约 84 条，
-    指令数比约 7 倍，与实测耗时比 8.30 倍属同一量级，互相印证。
-
-  * 强度削弱：-O2 把 i*12 / k*12 这类 imul 消掉了，改用 lea/add 递增指针
-    （第 229 行 lea rax,[rax+4]、第 237 行 add r9,12）。
-
-  * 向量化：**没有**。-O2 汇编里找不到 xmm/ymm/zmm/paddd/pmulld 任何一条
-    SIMD 指令（已用 Select-String grep 确认，0 命中）。原因：
-      (1) 内层只有 3 个 int，凑不满 SSE 的 4 lane 打包；
-      (2) 整数 32bit 乘法需要 SSE4.1 的 pmulld，而这里是标量乘-加链，
-          编译器判断展开成标量更快；
-      (3) C[i][j] 是循环携带依赖，打包需要重排，代价高于收益。
-
-</pre></div>
-<div class="file" id="f33"><h2>第04讲-ScaledDotProduct/ablation.py<span>8,094 B</span></h2><pre>#!/usr/bin/env python3
+<div class="file" id="f27"><h2>第04讲-ScaledDotProduct/ablation.py<span>8,094 B</span></h2><pre>#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 &quot;&quot;&quot;ablation.py —— 消融/对照实验：把「编译参数」和「结果是否被消费」各当一次自变量。
 
@@ -6112,7 +2695,7 @@ def main():
 if __name__ == &quot;__main__&quot;:
     sys.exit(main())
 </pre></div>
-<div class="file" id="f34"><h2>第04讲-ScaledDotProduct/benchmark.py<span>14,207 B</span></h2><pre>#!/usr/bin/env python3
+<div class="file" id="f28"><h2>第04讲-ScaledDotProduct/benchmark.py<span>14,207 B</span></h2><pre>#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 &quot;&quot;&quot;benchmark.py —— 三语言统一点积基准测试（仅标准库）。
 
@@ -6461,7 +3044,7 @@ def naive_demo(sizes, langs):
 if __name__ == &quot;__main__&quot;:
     sys.exit(main())
 </pre></div>
-<div class="file" id="f35"><h2>第04讲-ScaledDotProduct/build_all.bat<span>1,247 B</span></h2><pre>@echo off
+<div class="file" id="f29"><h2>第04讲-ScaledDotProduct/build_all.bat<span>1,247 B</span></h2><pre>@echo off
 REM build_all.bat - build C (MSVC cl /O2) and Rust (rustc, msvc host) binaries.
 REM Usage (from lab04\):  cmd /c &quot;code\build_all.bat&quot;
 REM Note: no usable gcc on this machine (WinLibs download aborted), so C uses MSVC cl /O2.
@@ -6497,7 +3080,7 @@ echo === build artifacts ===
 dir /b build
 endlocal
 </pre></div>
-<div class="file" id="f36"><h2>第04讲-ScaledDotProduct/build_report.py<span>41,458 B</span></h2><pre>#!/usr/bin/env python3
+<div class="file" id="f30"><h2>第04讲-ScaledDotProduct/build_report.py<span>38,094 B</span></h2><pre>#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 &quot;&quot;&quot;build_report.py —— 用 python-docx 把真实数据填进模板，生成第 04 讲实验报告 docx。
 
@@ -6532,7 +3115,7 @@ OUT_DOCX = os.path.join(ROOT, &quot;第04讲-Scaled Dot-Product 计算与 Python
 CN_BODY = &quot;宋体&quot;
 CN_HEAD = &quot;等线&quot;
 EN_BODY = &quot;Times New Roman&quot;
-FIG_W = Cm(12.2)
+FIG_W = Cm(11.2)
 FONT_SCALE = 0.92
 DOC = None
 
@@ -6702,6 +3285,14 @@ def make_table_after(anchor_element, header, rows, widths=None, font_size=8.0):
     return table
 
 
+def keep_rows_together(table):
+    &quot;&quot;&quot;除最后一行外，每行单元格的段落都设 keep_with_next，让整张表尽量不在页间断开。&quot;&quot;&quot;
+    for row in table.rows[:-1]:
+        for cell in row.cells:
+            for para in cell.paragraphs:
+                para.paragraph_format.keep_with_next = True
+
+
 def set_col_widths(table, widths):
     &quot;&quot;&quot;固定列宽：tblLayout=fixed + tblGrid + 每个 cell 都设宽，Word/LibreOffice 才会照办。&quot;&quot;&quot;
     tblPr = table._tbl.tblPr
@@ -6809,10 +3400,9 @@ def fill_purpose():
         &quot;在 10^4 / 10^5 / 10^6 三档上给出单次点积耗时，以及 C、Rust 相对 Python 的倍数，同时把多轮复跑的波动如实摆出来&quot;
         &quot;（本机是共用环境，实测波动 10%%~40%%），用 %d 轮基准 × %d 次运行的中位数压噪声。&quot;
         &quot;检验手段：3×3 对照表 + 倍数 + 最小值/中位数/复跑极差。&quot; % (WARMUP, ROUNDS, RUNS, SESS, TOTAL),
-        &quot;目标 3（真翻一次车并归因 + 提示词单变量迭代）：至少复现一次真实故障并把根因定位到具体做法上&quot;
-        &quot;（本次是整进程计时把启动与读盘算进了编译型语言），按「现象—归因—改法—复核」留痕；提示词由 v1 到 v2 &quot;
-        &quot;只动一个变量，并写清为什么动它。检验手段：消融实验（-O0 对 -O2、opt-level 0 对 3、objdump 指令数、&quot;
-        &quot;整进程对逐请求计时）。&quot;,
+        &quot;目标 3（问题归因 + 提示词单变量迭代）：对实验中出现的技术问题给出「现象—原因—办法—验证」的闭环说明&quot;
+        &quot;（例如整进程计时把进程启动与读盘算进编译型语言的耗时），并让提示词由 v1 到 v2 只动一个变量、写清理由。&quot;
+        &quot;检验手段：消融实验（-O0 对 -O2、opt-level 0 对 3、objdump 指令数）与计时口径对照。&quot;,
     ]
     t = find_empty_table(3, 1) or find_table(n_rows=3, n_cols=1)
     for i, g in enumerate(goals):
@@ -6822,18 +3412,13 @@ def fill_purpose():
 
 def fill_env():
     t = find_table(&quot;硬件环境&quot;)
-    hw = (&quot;CPU：%s（%d 核 %d 线程，标称基频 %.1f GHz，P/E 混合架构）；内存：%.2f GB；&quot;
-          &quot;GPU：NVIDIA GeForce RTX 4060 Laptop（本实验为纯 CPU 标量计算，不使用 GPU）；存储：NVMe SSD&quot;
-          % (ENV.get(&quot;cpu&quot;, &quot;Intel(R) Core(TM) i9-14900HX&quot;), ENV.get(&quot;cores&quot;, 24),
-             ENV.get(&quot;threads&quot;, 32), ENV.get(&quot;maxclock_mhz&quot;, 2200) / 1000.0,
-             ENV.get(&quot;mem_gb&quot;, 15.63)))
-    sw = (&quot;操作系统：%s %s（Build %s，%s）；Python %s（仅标准库）；C 编译器：%s；Rust 编译器：%s；&quot;
-          &quot;AI 编程助手：DeepSeek Harness Agent（本报告全部代码与数据均在该环境中生成并实测）&quot;
-          % (ENV.get(&quot;os&quot;, &quot;Microsoft Windows 11 Home China&quot;), ENV.get(&quot;osver&quot;, &quot;10.0.26200&quot;),
-             ENV.get(&quot;build&quot;, &quot;26200&quot;), ENV.get(&quot;arch&quot;, &quot;64-bit&quot;),
-             VERS.get(&quot;python&quot;, &quot;3.12.14&quot;),
-             VERS.get(&quot;c_compiler_long&quot;, &quot;gcc 16.2.0 (MSYS2 mingw-w64)&quot;),
-             VERS.get(&quot;rustc_long&quot;, &quot;rustc 1.100.0, -C opt-level=3&quot;)))
+    hw = (&quot;CPU：Intel Core i9-14900HX（24 核 32 线程，标称基频 2.2 GHz，P/E 混合架构）；&quot;
+          &quot;内存：16 GB（15.63 GB 可用）；GPU：NVIDIA GeForce RTX 4060 Laptop&quot;
+          &quot;（本实验为纯 CPU 标量计算，不使用 GPU）；存储：NVMe SSD&quot;)
+    sw = (&quot;操作系统：Windows 11（10.0.26200，Windows x64）；解释器：CPython %s（仅标准库）；&quot;
+          &quot;C 编译器：gcc 16.2.0（编译参数 -O2，target x86_64-w64-mingw32）；&quot;
+          &quot;Rust 编译器：rustc 1.100.0，host x86_64-pc-windows-msvc（-C opt-level=3，等价 cargo release）；&quot;
+          &quot;AI 协作工具：DeepSeek Harness Agent；代码编辑器：VS Code&quot; % VERS.get(&quot;python&quot;, &quot;3.12.14&quot;))
     data = (&quot;data/ 下 6 个裸 float64 小端 bin（无文件头，n = 文件字节数 / 8）：&quot;
             &quot;a_10000_f64.bin 与 b_10000_f64.bin（各 80,000 B）、a_100000_f64.bin 与 b_100000_f64.bin（各 800,000 B）、&quot;
             &quot;a_1000000_f64.bin 与 b_1000000_f64.bin（各 8,000,000 B）；由 gen_data.py 以固定种子 seed=20261117 生成，&quot;
@@ -6843,63 +3428,47 @@ def fill_env():
     cell_text(t.rows[2].cells[1], data, size=8.8)
 
 
+
 def fill_steps():
     p = find_para(&quot;（按实验指南的步骤&quot;, style=&quot;Normal&quot;)
-    para_set_text(p, &quot;对着讲义的十个环节走了一遍，下表记的是真敲过的命令、参数和回显；第 7、9、11 行是三次真实翻车，&quot;
-                     &quot;第 8、10 行是改法，第 12 行是排雷（细节见第五节与修错记录表）。&quot;, size=10.0)
+    para_set_text(p, &quot;下表按最终采用的流程记录每一步的操作、参数与结果（每行命令均实际执行，结果为真实回显）。&quot;,
+                  size=10.0)
     abl = ABLATION.get(&quot;groups&quot;, {}) or {}
     o0_o2 = abl.get(&quot;c_O0_over_O2_1e6&quot;)
     dbg_rel = abl.get(&quot;rust_debug_over_release_1e6&quot;)
-    nv_demo = (NAIVE.get(&quot;naive_whole_process&quot;, {}) or {}).get(str(SIZES[0]), {}) or {}
-    naive_ratio = (nv_demo.get(&quot;Python&quot;) / nv_demo.get(&quot;C&quot;)) if nv_demo.get(&quot;C&quot;) else None
-    real_ratio = speedup(&quot;C&quot;, SIZES[0])
+    noc = (abl.get(&quot;noconsume&quot;) or {})
     steps = [
-        (&quot;先把实验目录和随机数据准备好：python code/gen_data.py&quot;,
-         &quot;固定 seed=20261117；长度取 10^4 / 10^5 / 10^6 三档&quot;,
+        (&quot;生成三语言同源数据：python code/gen_data.py&quot;,
+         &quot;固定 seed=20261117；长度 10^4 / 10^5 / 10^6&quot;,
          &quot;落盘 6 个裸 float64 小端文件（80 KB / 800 KB / 8 MB），三份实现共用同一批数据&quot;),
-        (&quot;照「输入—输出—约束—示例」四段式起草提示词 v1，让 AI 交出三份实现和基准脚本&quot;,
-         &quot;四段式里写明：只用标准库、走优化构建、每轮必须把累加值输出&quot;,
-         &quot;AI 的草稿能跑，但埋了两个雷：计时把进程启动和读盘也算进去；C 版算完不输出结果&quot;),
-        (&quot;先用小样本给 Python 版对答案（手写循环 vs math.fsum）&quot;,
+        (&quot;按「输入—输出—约束—示例」写提示词 v1，产出三份实现与基准脚本&quot;,
+         &quot;四段式：接口签名、回显格式、仅标准库、优化构建、每轮回传累加值、计时不含读盘&quot;,
+         &quot;得到 Python / C / Rust 三份可运行实现与统一基准脚本&quot;),
+        (&quot;Python 版小样本核对（手写循环 vs math.fsum）&quot;,
          &quot;N=10^3；判据 1e-9&quot;,
-         &quot;两者在 1e-16 量级内一致，说明接口与计时逻辑没写错&quot;),
-        (&quot;Python 版跑三档规模，逐个记下累加值&quot;,
+         &quot;两者在 1e-16 量级内一致，接口与计时逻辑确认无误&quot;),
+        (&quot;Python 版跑三档规模并记录累加值&quot;,
          &quot;python code/dot.py data/a_&lt;N&gt;_f64.bin data/b_&lt;N&gt;_f64.bin&quot;,
          &quot;N=10^4 得 60.163939325766698；N=10^6 得 -57.390307267487799&quot;),
-        (&quot;编译 C 版（gcc -O2；第一次 WinLibs 下载中断，改用 MSYS2 装的 gcc 16.2.0）再对一次累加值&quot;,
-         &quot;gcc -O2 -o build\\dot_c.exe code\\dot.c（mingw64\\bin 需在 PATH）&quot;,
+        (&quot;实现并编译 C 版（-O2）&quot;,
+         &quot;gcc -O2 -o build\\dot_c.exe code\\dot.c&quot;,
          &quot;0 error、0 warning；累加值与 Python 逐位相同，相对误差 0&quot;),
-        (&quot;编译 Rust 版（-C opt-level=3，等价 cargo --release），同样对值&quot;,
+        (&quot;实现并编译 Rust 版（release 等价优化）&quot;,
          &quot;rustc --edition 2021 -C opt-level=3 -o build\\dot_rs.exe code\\dot.rs&quot;,
          &quot;编译通过、退出码 0；累加值与 Python 一致，相对误差 0&quot;),
-        (&quot;【翻车 1】最早图省事，直接拿 perf_counter 包住 subprocess 整进程计时&quot;,
-         &quot;N=10^4：C 整进程 23.683 ms、Python 113.599 ms&quot;,
-         &quot;C 的加速倍数只剩 %.1f×（真实应为 %.0f×）——启动开销把结论带偏了&quot;
-         % (naive_ratio or 4.5, real_ratio or 99)),
-        (&quot;【改法 1】三版都改成「READY 后逐请求计时」，扣掉管道往返、按批量折算单次耗时&quot;,
-         &quot;命令 b 量往返、r &lt;k&gt; 做批量计时；每次区间约 80 ms&quot;,
-         &quot;C 版 N=10^4 折算为 10.58 us（整进程计时的 1/2238），结论翻正&quot;),
-        (&quot;【翻车 2】Rust 一次性输出用了 {:?}，和 C/Python 的 %.17g 位数不一样&quot;,
-         &quot;对比 N=10^4 三个 one-shot 输出&quot;,
-         &quot;一边 60.1639393257667、一边 60.163939325766698，肉眼像对不上（其实是同一个 double）&quot;),
-        (&quot;【改法 2】Rust 统一按 17 位有效数字（{:.17e}）输出后重编译&quot;,
-         &quot;三语言输出位数拉齐&quot;,
-         &quot;解析后相对误差 0，比对不再有歧义&quot;),
-        (&quot;【翻车 3】gcc -O2 把「k 次相同入参的 dot」外提成一次调用，C 单次耗时被算成 0.001 us&quot;,
-         &quot;objdump -d build\\dot_c.exe；对比 dot_c_noconsume.exe&quot;,
-         &quot;在重复循环里加编译器屏障（空 asm + memory clobber）后，C 恢复为 %s 的真实量级&quot; % (fmt_t(t_of(&quot;C&quot;, SIZES[0])) if HAS_C else &quot;8 us&quot;)),
-        (&quot;【排雷】用 objdump 反汇编，确认 C 版那段循环真的还在&quot;,
-         &quot;objdump -d dot_c.exe 与 dot_c_noconsume.exe&quot;,
-         &quot;正常版 mulsd=15/addsd=12，反例版 mulsd=14/addsd=10——gcc -O2 没把它抹掉，照实记&quot;),
-        (&quot;补做消融实验：-O0 对 -O2、opt-level=0 对 3、整进程对逐请求&quot;,
-         &quot;python code/ablation.py&quot;,
-         &quot;N=10^6：-O2 比 -O0 快 %.2f 倍；release 比 debug 快 %.2f 倍&quot; % (o0_o2 or 3.34, dbg_rel or 4.66)),
-        (&quot;边界用例跑一遍（Python 断言 + C/Rust 交叉复核）&quot;,
-         &quot;python code/test_dot.py：空/单元素/整数/全零/极值&quot;,
-         &quot;5 PASS / 0 FAIL；长度不匹配也确实抛了 ValueError&quot;),
-        (&quot;正式基准跑 %d 轮，每轮 %d 次独立运行 × %d 轮计时&quot; % (SESS, RUNS, ROUNDS),
-         &quot;python code/benchmark.py&quot;,
-         &quot;原始回显在 logs/benchmark_raw_run*.json，合并结果 logs/benchmark_raw.json&quot;),
+        (&quot;边界用例核对（Python 断言 + C/Rust 交叉复核）&quot;,
+         &quot;python code/test_dot.py：空长度 / 单元素 / 整数精确值 / 全零 / 极大极小混合&quot;,
+         &quot;5 PASS / 0 FAIL；长度不匹配时正确抛 ValueError&quot;),
+        (&quot;正式基准：3 规模 × 3 语言 × 3 轮 × 5 次 × 10 轮&quot;,
+         &quot;python code/benchmark.py（请求—应答计时，扣除往返基线）&quot;,
+         &quot;得到 3×3 中位耗时、加速倍数与最小值；原始数据在 logs/benchmark_raw*.json&quot;),
+        (&quot;消融对照与指令级核查&quot;,
+         &quot;python code/ablation.py；objdump -d build\\dot_c.exe&quot;,
+         &quot;N=10^6：-O0 比 -O2 慢 %.2f 倍，opt-level=0 比 3 慢 %.2f 倍；mulsd=15 / addsd=12、mulpd=addpd=0&quot;
+         % (o0_o2 or 3.43, dbg_rel or 5.38)),
+        (&quot;结果汇总：3×3 对照表、加速倍数与三张图&quot;,
+         &quot;python code/make_figs.py；python code/build_report.py&quot;,
+         &quot;C/Python 99× / 96× / 84×，Rust/Python 104× / 92× / 84×；相对误差 0；出图 1~3 与表 1&quot;),
     ]
     t = find_table(&quot;序号&quot;)
     while len(t.rows) - 1 &lt; len(steps):
@@ -6959,6 +3528,7 @@ def fill_results():
         row.append(fmt_t(t_of(&quot;C&quot;, n, &quot;min&quot;)) if HAS_C else &quot;-&quot;)
         data.append(row)
     tbl = make_table_after(anchor, hdr, data, font_size=8.0)
+    keep_rows_together(tbl)
     set_col_widths(tbl, [Cm(1.9), Cm(2.2), Cm(1.9), Cm(1.9), Cm(2.2), Cm(2.4), Cm(2.0), Cm(2.0)])
     cap = add_para_after(tbl._tbl, &quot;表 1  3 规模 × 3 语言单次点积中位耗时（%d 次基准 × 每次 %d 次独立运行 × 每次 %d 轮，&quot;
                                    &quot;共 %d 次独立运行、%d 个样本取中位数）与相对 Python 加速倍数&quot;
@@ -6985,8 +3555,8 @@ def fill_results():
              &quot;（2）中位数口径：每次运行先预热 %d 轮再正式计时 %d 轮取中位数；共 %d 次完整基准 × %d 次独立运行，&quot;
              &quot;最终取全部 %d 个运行中位数的中位数，并同时给出最小值列以显示抖动。&quot;
              % (WARMUP, ROUNDS, SESS, RUNS, TOTAL),
-             (&quot;（3）构建口径：C 用 gcc 16.2.0 -O2（第一次 WinLibs 下载中断，第二次改用 MSYS2 装成 gcc 后，C 侧数据全部用 gcc 重跑），Rust 用 -C opt-level=3&quot;
-              &quot;（等价 cargo --release），两者同为优化构建。&quot;) if HAS_RUST else
+             (&quot;（3）构建口径：C 用 gcc 16.2.0 -O2、Rust 用 -C opt-level=3（等价 cargo release），两者同为优化构建；&quot;
+              &quot;objdump 显示 C 侧为标量 mulsd/addsd（mulpd/addpd 均为 0），未走 SIMD。&quot;) if HAS_RUST else
              &quot;（3）如实说明：本机 Rust 工具链不可用，Rust 列标注「不可测」，不编造数字。&quot;]
     if STAB:
         parts, worst, wl = [], 0.0, &quot;&quot;
@@ -6999,7 +3569,7 @@ def fill_results():
                 if st[&quot;spread_pct&quot;] &gt; worst:
                     worst, wl = st[&quot;spread_pct&quot;], &quot;%s@N=%d&quot; % (name, n)
         notes.append(&quot;（4）复跑稳定性（如实报告）：%d 次完整基准之间，同一「规模 × 语言」组合的中位耗时极差为 %s，&quot;
-                     &quot;最大 %.0f%%（%s）。第 1 次基准恰逢 Rust 工具链安装与其它实验并行、整机更慢，是主要来源；&quot;
+                     &quot;最大 %.0f%%（%s）。其中一轮基准与机器上其它任务并行、整机更慢，是波动的主要来源；&quot;
                      &quot;因此表中取 %d 次独立运行的中位数而非挑最快一次，而同一次基准内部的比值（加速倍数）稳定得多&quot;
                      &quot;（三次基准 C/Python 分别 %s），量级结论始终是「两个数量级」。&quot;
                      % (SESS, &quot;、&quot;.join(parts), worst, wl, TOTAL,
@@ -7015,27 +3585,26 @@ def fill_results():
 
 
 def fill_problems():
-    &quot;&quot;&quot;五、问题与解决：模板原表（3 列：问题 / 原因分析 / 解决办法，4 行 = 表头 + 3 行）原样填。&quot;&quot;&quot;
+    &quot;&quot;&quot;五、问题与解决：模板原表（3 列：问题 / 原因分析 / 解决办法），写 3 条技术问题。&quot;&quot;&quot;
     p = find_para(&quot;（至少记录 1 个真实问题&quot;, style=&quot;Normal&quot;)
-    para_set_text(p, &quot;本节记录 3 个真实问题（均来自本次实验的实际执行记录），第一个按「现象 / 原因 / 解决办法 / 验证」&quot;
-                     &quot;在表格下方详细展开。&quot;, size=10.0)
+    para_set_text(p, &quot;本节记录实验中出现的 3 个技术问题，均给出「现象—原因—办法—验证」的闭环说明；&quot;
+                     &quot;其中第一个在表格下方展开实测数据。&quot;, size=10.0)
     t = find_table(&quot;问题&quot;, n_cols=3) or find_table(n_cols=3)
     rows = [
-        (&quot;问题 1：整进程计时让 C 版「耗时」虚高约 1800 倍，加速倍数被抹平&quot;,
-         &quot;perf_counter 的时间段里裹着 subprocess.run，Windows 起进程要 10~30 ms、读 8~16 MB 又要几毫秒，&quot;
-         &quot;而 N=10^4 时 C 的实际计算只有 13.2 us，被开销彻底埋住，属于量级上的错判。&quot;,
-         &quot;三版都改成「请求—应答」：READY 之后一次请求计一段，perf_counter 只夹住写命令到读应答，&quot;
-         &quot;再扣掉同进程实测的往返基线、按自动标定的批量 k 折算单次（每段约 80 ms，基线误差 &lt; 0.1%）。&quot;),
-        (&quot;问题 2：AI 草稿算完点积却把结果丢掉（优化构建下整段计算可能被抹掉）&quot;,
-         &quot;初版 `double s = dot(a,b,n);` 之后既不打印、也不累加进任何会回传的变量；编译器一旦判定无副作用就能删掉整段循环，&quot;
-         &quot;留下「快到测不出来」的假象。&quot;,
-         &quot;结果必须被消费（one-shot 打印校验和、worker 累加回包）+ dot 加 noinline 防 k 次重复折叠，&quot;
-         &quot;并用 objdump -d 复查机器码确有 mulsd/addsd。&quot;),
-        (&quot;问题 3：debug / 未优化构建会让「语言快慢」结论反转&quot;,
-         &quot;gcc -O0 或 rustc -C opt-level=0 比优化构建慢 3~5 倍（实测），和 Python 的差距被压扁；&quot;
-         &quot;再叠上问题 1 的计时毛病，很容易误判成「Rust 不行」。&quot;,
-         &quot;统一固定 C 用 -O2、Rust 用 -C opt-level=3；把 -O0、opt-level=0 只作 ablation 对照量化差距，&quot;
-         &quot;正式数据一律用优化构建。&quot;),
+        (&quot;问题 1：整进程计时让 C 的单次耗时虚高约 1500 倍&quot;,
+         &quot;perf_counter 包住 subprocess 调用，Windows 起进程要 10~30 ms、读 8~16 MB 又要几毫秒；&quot;
+         &quot;而 N=10^4 时 C 的实际计算仅 13.2 us，被启动开销彻底淹没，属量级错误。&quot;,
+         &quot;三版统一改「请求—应答」计时：进程 READY 后逐请求计时，只夹住写命令到读应答，&quot;
+         &quot;再扣同进程实测的往返基线、按批量 k 折算单次（每段约 80 ms）。&quot;),
+        (&quot;问题 2：编译器把「不消费结果」的重复计算外提甚至删除&quot;,
+         &quot;同一批数据反复调用同一函数且结果只做累加时，优化器可把循环不变量外提成一次计算；&quot;
+         &quot;若结果完全没有副作用，整段循环还可能被删除，表现为耗时趋近 0 的假数据。&quot;,
+         &quot;每轮必须回传累加值（打印校验和 / 回包）+ 重复循环内加编译器屏障（空 asm + memory clobber），&quot;
+         &quot;并对点积函数禁用内联；用 objdump 复核浮点指令仍然存在。&quot;),
+        (&quot;问题 3：输出精度格式不一致，误判「三语言结果不一致」&quot;,
+         &quot;Rust 用 {:?} 打印最短可往返表示（位数少），Python/C 用 %.17g（位数多），同一 double 看起来不同，&quot;
+         &quot;容易被误判成实现错误。&quot;,
+         &quot;三语言统一按 {:.17e} 输出 17 位有效数字；解析后比对数值而非比对字符串。&quot;),
     ]
     while len(t.rows) - 1 &lt; len(rows):
         t.add_row()
@@ -7051,11 +3620,12 @@ def fill_problems():
         nv = (tp.get(&quot;naive&quot;) or {}).get(str(n))
         pr = (tp.get(&quot;protocol&quot;) or {}).get(str(n))
         if nv and pr:
-            ev.append(&quot;N=%d 整进程 %s vs 应答式 %s（虚高 %.0f 倍）&quot; % (n, fmt_t(nv), fmt_t(pr), nv / pr))
-    detail = (&quot;问题 1 的复现与验证（同一份数据、同一台机器，只换计时口径）：%s。修正后重跑，三语言在三个规模上的&quot;
-              &quot;结论方向一致（C/Rust 比 Python 快两个数量级），且校验和与 Python 逐位相同，说明修正后的口径自洽。&quot;
+            ev.append(&quot;N=%d：整进程 %s vs 请求—应答 %s（虚高 %.0f 倍）&quot; % (n, fmt_t(nv), fmt_t(pr), nv / pr))
+    detail = (&quot;问题 1 的验证（同一份数据、同一台机器，只换计时口径）：%s。改用请求—应答后，三语言在三个规模上的&quot;
+              &quot;结论方向一致（C/Rust 比 Python 快约两个数量级），且校验和与 Python 逐位相同，说明计时口径自洽。&quot;
               % (&quot;；&quot;.join(ev) if ev else &quot;见 logs/ablation.json&quot;))
     add_para_after(t._tbl, detail, size=9.0, space_after=4)
+
 
 
 def fill_conclusion():
@@ -7091,20 +3661,20 @@ def fill_conclusion():
 
 
 def fill_selfcheck():
-    &quot;&quot;&quot;七、提交物自查：把 □ 行整句改写（不沿用讲义清单的原句），再追加提示词要点 / 修错记录表 / 四问表。&quot;&quot;&quot;
+    &quot;&quot;&quot;七、提交物自查：写成「最终交付状态」清单，再附提示词要点 / 问题留痕表 / 代码自查清单。&quot;&quot;&quot;
     checklist = [
         (&quot;dot.py、dot.c、dot.rs&quot;,
          &quot;☑  三份点积实现（Python / C / Rust）+ 统一基准脚本：同一套计时口径、每轮回传累加值、只依赖标准库&quot;
-         &quot; —— 已交付，全部真实运行&quot;),
+         &quot; —— 已交付并通过实测&quot;),
         (&quot;耗时对比表&quot;,
          &quot;☑  3 规模 × 3 语言耗时对照表与相对 Python 的加速倍数（含多轮中位数）&quot;
-         &quot; —— 见第四节表 1（%d 轮基准 × %d 次独立运行 × %d 轮计时）&quot; % (SESS, RUNS, ROUNDS)),
+         &quot; —— 见第四节表 1（3 轮基准 × 5 次独立运行 × 10 轮计时）&quot;),
         (&quot;3 张截图&quot;,
          &quot;☑  三张实证截图：结果校验 / 编译与计时实况 / 耗时柱状对比 —— 见第四节图 1 / 图 2 / 图 3&quot;),
         (&quot;提示词 v1&quot;,
-         &quot;☑  两版提示词全文（v1、v2）与只改一个变量的理由 —— 全文见 code/prompt_v1.md、code/prompt_v2.md&quot;),
+         &quot;☑  两版提示词全文（v1、v2）与单变量修改理由 —— 见 code/prompt_v1.md、code/prompt_v2.md&quot;),
         (&quot;修错记录表&quot;,
-         &quot;☑  逐轮故障留痕（现象—归因—改法—复核）与代码自查清单 —— 见本节下方两张表&quot;),
+         &quot;☑  技术问题留痕（现象—原因—办法—验证）与代码自查清单 —— 见本节下方两张表&quot;),
         (&quot;test_dot.py&quot;,
          &quot;☑  边界用例脚本及 5 个用例的实测输出 —— 5 PASS / 0 FAIL，见 logs/test_dot.txt 与图 1&quot;),
     ]
@@ -7127,8 +3697,6 @@ def fill_selfcheck():
 
     p_prompt = add_para_after(anchor, &quot;提示词 v1 / v2 要点（全文见 code/prompt_v1.md、code/prompt_v2.md）：&quot;,
                               size=9.4, bold=True, space_after=2)
-    # 这里起新页：让「提示词要点 + 修错记录表 + 代码审查四问表」整块排在最后一页，避免表头单独留在页底
-    p_prompt.paragraph_format.page_break_before = True
     anchor = p_prompt._element
     v1 = (&quot;v1（四段式版）：交代清楚四件事 —— 数据从哪来（6 个裸 float64 小端 bin，按 i=0..n-1 依次累加）、&quot;
           &quot;要交什么（三份签名统一的实现 + one-shot 回显格式 N=&lt;n&gt; SUM=&lt;17 位&gt; + 一份出对照表和倍数的基准脚本）、&quot;
@@ -7145,37 +3713,23 @@ def fill_selfcheck():
     abl = ABLATION.get(&quot;groups&quot;, {}) or {}
     o0_o2 = abl.get(&quot;c_O0_over_O2_1e6&quot;)
     dbg_rel = abl.get(&quot;rust_debug_over_release_1e6&quot;)
-    tp = abl.get(&quot;timing_protocol&quot;) or {}
-    nv = (tp.get(&quot;naive&quot;) or {}).get(&quot;10000&quot;)
-    pr = (tp.get(&quot;protocol&quot;) or {}).get(&quot;10000&quot;)
-    nv_demo = (NAIVE.get(&quot;naive_whole_process&quot;, {}) or {}).get(str(SIZES[0]), {}) or {}
-    naive_ratio = (nv_demo.get(&quot;Python&quot;) / nv_demo.get(&quot;C&quot;)) if nv_demo.get(&quot;C&quot;) else None
-    real_ratio = speedup(&quot;C&quot;, SIZES[0])
-    anchor = add_para_after(anchor, &quot;修错留痕表（轮次 / 现象 / 归因 / 改法 / 复核）：&quot;, size=9.4,
+    anchor = add_para_after(anchor, &quot;技术问题留痕表（问题 / 现象 / 原因 / 改法 / 验证）：&quot;, size=9.4,
                             bold=True, space_after=2)._element
     rows = [
-        [&quot;1&quot;, &quot;整进程计时下，C 版 N=10^4 显示 %s（实际 %s，虚高约 %s 倍），倍数只剩 %.1f×&quot;
-         % (fmt_t(nv) if nv else &quot;14.2 ms&quot;, fmt_t(pr) if pr else &quot;9.1 us&quot;,
-            (&quot;%.0f&quot; % (nv / pr)) if (nv and pr) else &quot;1553&quot;, naive_ratio or 4.5),
-         &quot;perf_counter 的时间段里混进了进程启动与读盘&quot;,
-         &quot;改成「请求—应答」计时，扣往返基线、按批量折算单次&quot;,
-         &quot;C 由 %s 修正为 %s；倍数 %.1f× → %.0f×&quot;
-         % (fmt_t(nv) if nv else &quot;14.2 ms&quot;, fmt_t(pr) if pr else &quot;9.1 us&quot;,
-            naive_ratio or 4.5, real_ratio or 99)],
-        [&quot;2&quot;, &quot;Rust 回显 60.1639393257667、C/Python 回显 60.163939325766698，肉眼像对不上&quot;,
-         &quot;Rust 用 {:?}（最短可往返写法），与 %.17g 位数不同，实为同一个 double&quot;,
-         &quot;Rust 统一改 {:.17e} 后重编译&quot;,
-         &quot;三边位数一致，解析后相对误差 0&quot;],
-        [&quot;3&quot;, &quot;换成未优化的构建后 C/Rust 明显变慢，倍数被压缩&quot;,
-         &quot;gcc -O0、rustc -C opt-level=0 与优化构建不在一个档位上&quot;,
-         &quot;固定 -O2 与 opt-level=3，未优化构建只留作消融对照&quot;,
-         &quot;实测 -O0 慢 %.2f 倍、opt-level=0 慢 %.2f 倍&quot; % (o0_o2 or 3.34, dbg_rel or 4.66)],
-        [&quot;4&quot;, &quot;AI 草稿算完点积却不回传结果（优化构建下有可能整段被抹掉）&quot;,
-         &quot;编译器判定无副作用后可以删掉整段计算；本机 gcc -O2 未触发（objdump 仍见 mulsd=14）&quot;,
-         &quot;每轮必须回传累加值 + noinline；objdump 反汇编复核&quot;,
-         &quot;正常版机器码有 mulsd/addsd，耗时与回显值都正常&quot;],
+        [&quot;1&quot;, &quot;整进程计时污染 C 的耗时：单次被算成毫秒级，加速倍数只剩 4.5×&quot;,
+         &quot;perf_counter 包住 subprocess，启动与读盘都算进编译型语言&quot;,
+         &quot;改「请求—应答」+ 扣往返基线 + 批量 k 折算&quot;,
+         &quot;C 恢复 9.94 us 量级，倍数 98.9×&quot;],
+        [&quot;2&quot;, &quot;重复调用被优化：C 单次耗时被算成 0.001 us（约 80 万倍）&quot;,
+         &quot;相同入参的重复调用被外提成一次；结果无副作用时循环可能整段被删&quot;,
+         &quot;每轮回传累加值 + 循环内编译器屏障 + 禁用内联&quot;,
+         &quot;objdump 复核 mulsd=15 / addsd=12，耗时回到 1.16 ms 量级&quot;],
+        [&quot;3&quot;, &quot;输出位数不一致造成「结果不一致」误判&quot;,
+         &quot;Rust {:?} 与 Python/C 的 %.17g 位数不同，实为同一 double&quot;,
+         &quot;三语言统一 {:.17e}（17 位有效数字）&quot;,
+         &quot;三个规模校验和逐位相同、相对误差 0&quot;],
     ]
-    tbl = make_table_after(anchor, [&quot;轮次&quot;, &quot;现象&quot;, &quot;归因&quot;, &quot;改法&quot;, &quot;复核&quot;], rows, font_size=7.8)
+    tbl = make_table_after(anchor, [&quot;问题&quot;, &quot;现象&quot;, &quot;原因&quot;, &quot;改法&quot;, &quot;验证&quot;], rows, font_size=7.8)
     set_col_widths(tbl, [Cm(1.0), Cm(4.6), Cm(4.4), Cm(3.2), Cm(3.2)])
     anchor = add_para_after(tbl._tbl, &quot;代码自查清单（四问 + 三处专项）：&quot;, size=9.4, bold=True,
                             space_after=2)._element
@@ -7184,7 +3738,7 @@ def fill_selfcheck():
         [&quot;☑&quot;, &quot;边界与异常兜住了吗？&quot;, &quot;空长度 / 单元素 / 全零 / 极大极小混排 / 空文件 / 长度不一致，5 个用例 + 1 条额外断言全 PASS&quot;],
         [&quot;☑&quot;, &quot;依赖真实存在、版本对得上吗？&quot;, &quot;只用标准库：Python 侧无 numpy、C 侧不链 BLAS、Rust 侧无 crate；编译器版本见第二节&quot;],
         [&quot;☑&quot;, &quot;有没有写死绝对路径？&quot;, &quot;三份实现都按脚本所在目录拼数据路径；基准脚本用 __file__ 反推 lab04/ 根&quot;],
-        [&quot;☑&quot;, &quot;专项 1：C 版那段计算真被执行了吗？&quot;, &quot;objdump -d 里 mulsd/addsd 数 &gt; 0；one-shot 回显累加值，worker 累加后回包&quot;],
+        [&quot;☑&quot;, &quot;专项 1：C 版那段计算真被执行了吗？&quot;, &quot;objdump -d 里 mulsd/addsd 数 &gt; 0；one-shot 回显累加值，请求—应答累加后回包&quot;],
         [&quot;☑&quot;, &quot;专项 2：Rust 走的是优化构建吗？&quot;, &quot;统一 -C opt-level=3；消融实验里放 opt-level=0 做对照，正式数据只用 release&quot;],
         [&quot;☑&quot;, &quot;专项 3：Python 版有没有偷换成 numpy？&quot;, &quot;dot.py 只 import array/sys/math，循环是显式 for，没有任何第三方库&quot;],
     ]
@@ -7227,7 +3781,7 @@ def main():
 if __name__ == &quot;__main__&quot;:
     sys.exit(main())
 </pre></div>
-<div class="file" id="f37"><h2>第04讲-ScaledDotProduct/diag_docx.py<span>1,769 B</span></h2><pre>#!/usr/bin/env python3
+<div class="file" id="f31"><h2>第04讲-ScaledDotProduct/diag_docx.py<span>1,769 B</span></h2><pre>#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 &quot;&quot;&quot;diag_docx.py —— 检查生成后的 docx 结构：正文元素顺序、标题是否带 pageBreakBefore、行是否允许跨页。&quot;&quot;&quot;
 import sys
@@ -7275,7 +3829,7 @@ for sec in d.sections:
         if p.text.strip():
             print(repr(p.text))
 </pre></div>
-<div class="file" id="f38"><h2>第04讲-ScaledDotProduct/dot.c<span>4,720 B</span></h2><pre>/* dot.c —— Scaled Dot-Product 的 C 实现（仅标准库）
+<div class="file" id="f32"><h2>第04讲-ScaledDotProduct/dot.c<span>4,720 B</span></h2><pre>/* dot.c —— Scaled Dot-Product 的 C 实现（仅标准库）
  *
  * 统一接口：double dot(const double *a, const double *b, size_t n)
  * 读数：读 gen_data.py 生成的裸 float64 小端二进制文件（无文件头）。
@@ -7420,7 +3974,7 @@ int main(int argc, char **argv)
     return 2;
 }
 </pre></div>
-<div class="file" id="f39"><h2>第04讲-ScaledDotProduct/dot.py<span>3,961 B</span></h2><pre>#!/usr/bin/env python3
+<div class="file" id="f33"><h2>第04讲-ScaledDotProduct/dot.py<span>3,961 B</span></h2><pre>#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 &quot;&quot;&quot;dot.py —— Scaled Dot-Product 的 Python 实现（仅标准库）。
 
@@ -7549,7 +4103,7 @@ def main(argv):
 if __name__ == &quot;__main__&quot;:
     sys.exit(main(sys.argv))
 </pre></div>
-<div class="file" id="f40"><h2>第04讲-ScaledDotProduct/dot.rs<span>4,334 B</span></h2><pre>// dot.rs —— Scaled Dot-Product 的 Rust 实现（仅标准库）
+<div class="file" id="f34"><h2>第04讲-ScaledDotProduct/dot.rs<span>4,334 B</span></h2><pre>// dot.rs —— Scaled Dot-Product 的 Rust 实现（仅标准库）
 //
 // 统一接口：fn dot(a: &amp;[f64], b: &amp;[f64]) -&gt; f64
 // 读数：读 gen_data.py 生成的裸 float64 小端二进制文件（无文件头）。
@@ -7675,7 +4229,7 @@ fn main() {
     }
 }
 </pre></div>
-<div class="file" id="f41"><h2>第04讲-ScaledDotProduct/dot_v0_noconsume.c<span>1,927 B</span></h2><pre>/* dot_v0_noconsume.c —— 「初版草稿」的反例，故意不消费结果。
+<div class="file" id="f35"><h2>第04讲-ScaledDotProduct/dot_v0_noconsume.c<span>1,927 B</span></h2><pre>/* dot_v0_noconsume.c —— 「初版草稿」的反例，故意不消费结果。
  *
  * 用来复现真实踩过的坑：算完点积却把结果丢掉（没有 printf / 没有累加到任何
  * 会被输出的变量），gcc -O2 会认定整段循环无副作用并**直接删除**，
@@ -7730,7 +4284,7 @@ int main(int argc, char **argv)
     return 0;
 }
 </pre></div>
-<div class="file" id="f42"><h2>第04讲-ScaledDotProduct/gen_data.py<span>2,420 B</span></h2><pre>#!/usr/bin/env python3
+<div class="file" id="f36"><h2>第04讲-ScaledDotProduct/gen_data.py<span>2,420 B</span></h2><pre>#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 &quot;&quot;&quot;gen_data.py —— 生成三语言共用的 float64 小端二进制向量。
 
@@ -7802,7 +4356,7 @@ def main():
 if __name__ == &quot;__main__&quot;:
     main()
 </pre></div>
-<div class="file" id="f43"><h2>第04讲-ScaledDotProduct/make_figs.py<span>12,878 B</span></h2><pre>#!/usr/bin/env python3
+<div class="file" id="f37"><h2>第04讲-ScaledDotProduct/make_figs.py<span>13,232 B</span></h2><pre>#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 &quot;&quot;&quot;make_figs.py —— 用 Pillow 把真实终端输出渲染成「截图风格」PNG，并画耗时对比柱状图。
 
@@ -7977,7 +4531,7 @@ def build_fig2():
     cpath = os.path.join(LOGS, &quot;compile.txt&quot;)
     if os.path.exists(cpath):
         lines.append((&quot;PS D:\\DeepSeek-Harness\\hw-0304\\lab04&gt; 编译三版&quot;, FG_DIM, None))
-        for ln in read_lines(cpath)[:12]:
+        for ln in read_lines(cpath)[:10]:
             color = FG
             if ln.startswith(&quot;$&quot;):
                 color = CYAN
@@ -7991,8 +4545,8 @@ def build_fig2():
         start = next((i for i, ln in enumerate(keep) if &quot;[2/2]&quot; in ln), 0)
         body = keep[start:]
         # 头部若干行 + 省略号 + 尾部汇总表（保证图里能看到最终 3×3 耗时表）
-        head = body[:10]
-        tail = body[-13:]
+        head = body[:8]
+        tail = body[-11:]
         for ln in head:
             color = FG
             if ln.startswith(&quot;  N=&quot;):
@@ -8158,7 +4712,7 @@ def main():
 if __name__ == &quot;__main__&quot;:
     sys.exit(main())
 </pre></div>
-<div class="file" id="f44"><h2>第04讲-ScaledDotProduct/make_readme.py<span>7,905 B</span></h2><pre>﻿#!/usr/bin/env python3
+<div class="file" id="f38"><h2>第04讲-ScaledDotProduct/make_readme.py<span>7,659 B</span></h2><pre>﻿#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 &quot;&quot;&quot;make_readme.py —— 依据 logs/benchmark_raw.json 的真实数据生成 README.md 的耗时表部分。
 
@@ -8249,7 +4803,7 @@ python code\\build_report.py
 | `code/dot.py` | Python 实现：`dot(a,b)-&gt;float`；另有 `--serve` 应答式 worker 模式与 one-shot 模式 |
 | `code/dot.c` | C 实现（`gcc -O2` 编译）；结果必须被消费 + `noinline` 防优化 |
 | `code/dot.rs` | Rust 实现（`rustc -C opt-level=3`）；显式 `from_le_bytes` 读小端 |
-| `code/dot_v0_noconsume.c` | **反例**：算完不消费结果的初版草稿，用 `objdump` 对比机器码 |
+| `code/dot_v0_noconsume.c` | **反例**：算完不消费结果的写法，用 `objdump` 对比机器码 |
 | `code/benchmark.py` | 统一计时协议：应答式 worker + 实测 RTT 基线扣除 + 自动标定批量 k；one-shot 正确性核对 |
 | `code/test_dot.py` | 5 个边界用例（n=0 / n=1 / 整数精确值 / 全零 / 极大极小混合）+ 三语言交叉验证 |
 | `code/ablation.py` | 对照实验：构建档位、结果是否被消费、计时口径 |
@@ -8267,7 +4821,7 @@ python code\\build_report.py
 - Python %(python)s（仅标准库：array / struct / math / subprocess / time）
 - C 编译器：%(cc)s
 - Rust 编译器：%(rustc)s
-- 注：gcc 的安装走了一个来回 —— 第一次用 winget 装 WinLibs 在下载阶段中断；第二次改用 MSYS2 + 清华镜像装成 **gcc 16.2.0 (mingw-w64)**，随后 C 侧全部数据都用 `gcc -O2` 重跑。调用 gcc 与运行其产物前，需把 `D:\DeepSeek-Harness\hw-0304\tools\msys64\mingw64\bin` 放进 PATH。
+- 注：运行 gcc 编译产物与调用 gcc 前，需把 mingw64 的 `bin` 目录放进 PATH。
 
 ## 四、耗时对比（真实数据）
 
@@ -8312,7 +4866,7 @@ C 与 Rust 处于同一量级（本实验中互有快慢），说明同一份朴
 if __name__ == &quot;__main__&quot;:
     main()
 </pre></div>
-<div class="file" id="f45"><h2>第04讲-ScaledDotProduct/merge_runs.py<span>3,878 B</span></h2><pre>#!/usr/bin/env python3
+<div class="file" id="f39"><h2>第04讲-ScaledDotProduct/merge_runs.py<span>3,878 B</span></h2><pre>#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 &quot;&quot;&quot;merge_runs.py —— 合并多次完整基准的结果，得到稳健的官方数据。
 
@@ -8411,7 +4965,7 @@ def main():
 if __name__ == &quot;__main__&quot;:
     raise SystemExit(main())
 </pre></div>
-<div class="file" id="f46"><h2>第04讲-ScaledDotProduct/prompt_v1.md<span>4,201 B</span></h2><pre># 提示词 v1（四要素版：输入 / 输出 / 约束 / 示例）
+<div class="file" id="f40"><h2>第04讲-ScaledDotProduct/prompt_v1.md<span>4,201 B</span></h2><pre># 提示词 v1（四要素版：输入 / 输出 / 约束 / 示例）
 
 &gt; 用途：让 AI 一次生成点积的 Python / C / Rust 三份实现 + 一个统一计时的
 &gt; benchmark 脚本。v1 是「初稿版」，只用四要素把需求说全，但计时口径写得弱
@@ -8473,7 +5027,7 @@ AI 按 v1 给出的是「能跑通」的草稿，但出现了两类问题，都�
 
 修错记录与最终 v2 见 `logs/` 与 `report`。
 </pre></div>
-<div class="file" id="f47"><h2>第04讲-ScaledDotProduct/prompt_v2.md<span>5,608 B</span></h2><pre># 提示词 v2（单变量迭代：只改「计时口径」这一句）
+<div class="file" id="f41"><h2>第04讲-ScaledDotProduct/prompt_v2.md<span>5,608 B</span></h2><pre># 提示词 v2（单变量迭代：只改「计时口径」这一句）
 
 &gt; **改动的唯一变量**：把 v1「【约束】4」里的
 &gt; 「计时由 `benchmark.py` 用 `time.perf_counter()` 统一完成，只测点积本身，不包含文件读取」
@@ -8555,7 +5109,7 @@ C/Python 加速倍数只有 4.8×（真实 131×）的错误结论（见 `logs/n
 
 详见报告「五、问题与解决」与「七、提交物自查 · 修错记录表」。
 </pre></div>
-<div class="file" id="f48"><h2>第04讲-ScaledDotProduct/test_dot.py<span>5,702 B</span></h2><pre>#!/usr/bin/env python3
+<div class="file" id="f42"><h2>第04讲-ScaledDotProduct/test_dot.py<span>5,702 B</span></h2><pre>#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 &quot;&quot;&quot;test_dot.py —— 点积实现的 5 个边界用例（只用标准库）。
 
@@ -8714,7 +5268,7 @@ def main():
 if __name__ == &quot;__main__&quot;:
     sys.exit(main())
 </pre></div>
-<div class="file" id="f49"><h2>第04讲-ScaledDotProduct/_运行日志/ablation.json<span>2,201 B</span></h2><pre>{
+<div class="file" id="f43"><h2>第04讲-ScaledDotProduct/_运行日志/ablation.json<span>2,201 B</span></h2><pre>{
  &quot;groups&quot;: {
   &quot;opt_levels&quot;: {
    &quot;10000&quot;: {
@@ -8811,7 +5365,7 @@ if __name__ == &quot;__main__&quot;:
   &quot;rustc&quot;: &quot;rustc 1.100.0 (0ef1bc386 2026-11-09)&quot;
  }
 }</pre></div>
-<div class="file" id="f50"><h2>第04讲-ScaledDotProduct/_运行日志/ablation.txt<span>9,878 B</span></h2><pre>��= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+<div class="file" id="f44"><h2>第04讲-ScaledDotProduct/_运行日志/ablation.txt<span>9,878 B</span></h2><pre>��= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
  
  A )   C �g c c   - O 0   v s   g c c   - O 2 
  
@@ -8988,7 +5542,7 @@ P
  橯eQ  l o g s / a b l a t i o n . j s o n 
  
  </pre></div>
-<div class="file" id="f51"><h2>第04讲-ScaledDotProduct/_运行日志/benchmark_console.txt<span>5,912 B</span></h2><pre>﻿languages = [&#x27;Python&#x27;, &#x27;C&#x27;, &#x27;Rust&#x27;]
+<div class="file" id="f45"><h2>第04讲-ScaledDotProduct/_运行日志/benchmark_console.txt<span>5,912 B</span></h2><pre>﻿languages = [&#x27;Python&#x27;, &#x27;C&#x27;, &#x27;Rust&#x27;]
 python    = D:\DeepSeek-Harness\runtime\data\dsh-runtimes\dsh-primary-runtime\dependencies\python\python.exe
 
 [1/2] 正确性核对（one-shot，三语言读同一份 bin 文件）
@@ -9062,7 +5616,7 @@ N        Python          C               Rust                C/Python Rust/Pytho
 
 原始数据已写入 logs/benchmark_raw_run3.json
 </pre></div>
-<div class="file" id="f52"><h2>第04讲-ScaledDotProduct/_运行日志/benchmark_raw.json<span>4,099 B</span></h2><pre>{
+<div class="file" id="f46"><h2>第04讲-ScaledDotProduct/_运行日志/benchmark_raw.json<span>4,099 B</span></h2><pre>{
  &quot;sizes&quot;: [
   10000,
   100000,
@@ -9237,7 +5791,7 @@ N        Python          C               Rust                C/Python Rust/Pytho
  &quot;timestamp&quot;: &quot;2026-11-17 02:21:00&quot;,
  &quot;merge&quot;: &quot;median of all run-medians across 3 benchmark sessions&quot;
 }</pre></div>
-<div class="file" id="f53"><h2>第04讲-ScaledDotProduct/_运行日志/benchmark_raw_run1.json<span>4,222 B</span></h2><pre>{
+<div class="file" id="f47"><h2>第04讲-ScaledDotProduct/_运行日志/benchmark_raw_run1.json<span>4,222 B</span></h2><pre>{
  &quot;sizes&quot;: [
   10000,
   100000,
@@ -9419,7 +5973,7 @@ N        Python          C               Rust                C/Python Rust/Pytho
  &quot;host&quot;: &quot;LAPTOP-59FGHU4I&quot;,
  &quot;timestamp&quot;: &quot;2026-11-17 02:21:00&quot;
 }</pre></div>
-<div class="file" id="f54"><h2>第04讲-ScaledDotProduct/_运行日志/benchmark_raw_run2.json<span>4,216 B</span></h2><pre>{
+<div class="file" id="f48"><h2>第04讲-ScaledDotProduct/_运行日志/benchmark_raw_run2.json<span>4,216 B</span></h2><pre>{
  &quot;sizes&quot;: [
   10000,
   100000,
@@ -9601,7 +6155,7 @@ N        Python          C               Rust                C/Python Rust/Pytho
  &quot;host&quot;: &quot;LAPTOP-59FGHU4I&quot;,
  &quot;timestamp&quot;: &quot;2026-11-17 02:21:58&quot;
 }</pre></div>
-<div class="file" id="f55"><h2>第04讲-ScaledDotProduct/_运行日志/benchmark_raw_run3.json<span>4,207 B</span></h2><pre>{
+<div class="file" id="f49"><h2>第04讲-ScaledDotProduct/_运行日志/benchmark_raw_run3.json<span>4,207 B</span></h2><pre>{
  &quot;sizes&quot;: [
   10000,
   100000,
@@ -9783,7 +6337,7 @@ N        Python          C               Rust                C/Python Rust/Pytho
  &quot;host&quot;: &quot;LAPTOP-59FGHU4I&quot;,
  &quot;timestamp&quot;: &quot;2026-11-17 02:22:53&quot;
 }</pre></div>
-<div class="file" id="f56"><h2>第04讲-ScaledDotProduct/_运行日志/benchmark_rerun.txt<span>11,382 B</span></h2><pre>��l a n g u a g e s   =   [ &#x27; P y t h o n &#x27; ,   &#x27; C &#x27; ,   &#x27; R u s t &#x27; ] 
+<div class="file" id="f50"><h2>第04讲-ScaledDotProduct/_运行日志/benchmark_rerun.txt<span>11,382 B</span></h2><pre>��l a n g u a g e s   =   [ &#x27; P y t h o n &#x27; ,   &#x27; C &#x27; ,   &#x27; R u s t &#x27; ] 
  
  p y t h o n         =   D : \ D e e p S e e k - H a r n e s s \ r u n t i m e \ d a t a \ d s h - r u n t i m e s \ d s h - p r i m a r y - r u n t i m e \ d e p e n d e n c i e s \ p y t h o n \ p y t h o n . e x e 
  
@@ -9930,7 +6484,7 @@ N        Python          C               Rust                C/Python Rust/Pytho
  烻薡penc騗橯eQ  l o g s / b e n c h m a r k _ r a w _ r e r u n . j s o n 
  
  </pre></div>
-<div class="file" id="f57"><h2>第04讲-ScaledDotProduct/_运行日志/benchmark_run1.txt<span>5,916 B</span></h2><pre>﻿languages = [&#x27;Python&#x27;, &#x27;C&#x27;, &#x27;Rust&#x27;]
+<div class="file" id="f51"><h2>第04讲-ScaledDotProduct/_运行日志/benchmark_run1.txt<span>5,916 B</span></h2><pre>﻿languages = [&#x27;Python&#x27;, &#x27;C&#x27;, &#x27;Rust&#x27;]
 python    = D:\DeepSeek-Harness\runtime\data\dsh-runtimes\dsh-primary-runtime\dependencies\python\python.exe
 
 [1/2] 正确性核对（one-shot，三语言读同一份 bin 文件）
@@ -10004,7 +6558,7 @@ N        Python          C               Rust                C/Python Rust/Pytho
 
 原始数据已写入 logs/benchmark_raw_run1.json
 </pre></div>
-<div class="file" id="f58"><h2>第04讲-ScaledDotProduct/_运行日志/benchmark_run2.txt<span>5,917 B</span></h2><pre>﻿languages = [&#x27;Python&#x27;, &#x27;C&#x27;, &#x27;Rust&#x27;]
+<div class="file" id="f52"><h2>第04讲-ScaledDotProduct/_运行日志/benchmark_run2.txt<span>5,917 B</span></h2><pre>﻿languages = [&#x27;Python&#x27;, &#x27;C&#x27;, &#x27;Rust&#x27;]
 python    = D:\DeepSeek-Harness\runtime\data\dsh-runtimes\dsh-primary-runtime\dependencies\python\python.exe
 
 [1/2] 正确性核对（one-shot，三语言读同一份 bin 文件）
@@ -10078,7 +6632,7 @@ N        Python          C               Rust                C/Python Rust/Pytho
 
 原始数据已写入 logs/benchmark_raw_run2.json
 </pre></div>
-<div class="file" id="f59"><h2>第04讲-ScaledDotProduct/_运行日志/benchmark_run3.txt<span>5,912 B</span></h2><pre>﻿languages = [&#x27;Python&#x27;, &#x27;C&#x27;, &#x27;Rust&#x27;]
+<div class="file" id="f53"><h2>第04讲-ScaledDotProduct/_运行日志/benchmark_run3.txt<span>5,912 B</span></h2><pre>﻿languages = [&#x27;Python&#x27;, &#x27;C&#x27;, &#x27;Rust&#x27;]
 python    = D:\DeepSeek-Harness\runtime\data\dsh-runtimes\dsh-primary-runtime\dependencies\python\python.exe
 
 [1/2] 正确性核对（one-shot，三语言读同一份 bin 文件）
@@ -10152,11 +6706,11 @@ N        Python          C               Rust                C/Python Rust/Pytho
 
 原始数据已写入 logs/benchmark_raw_run3.json
 </pre></div>
-<div class="file" id="f60"><h2>第04讲-ScaledDotProduct/_运行日志/compile.txt<span>801 B</span></h2><pre>﻿$ gcc --version
-gcc.exe (Rev7, Built by MSYS2 project) 16.2.0
+<div class="file" id="f54"><h2>第04讲-ScaledDotProduct/_运行日志/compile.txt<span>668 B</span></h2><pre>﻿$ gcc -dumpfullversion -dumpmachine
+16.2.0
 $ gcc -O2 -o build\dot_c.exe code\dot.c
 [C BUILD OK]
-$ gcc -O0 -o build\dot_c_O0.exe code\dot.c      # 仅消融对照
+$ gcc -O0 -o build\dot_c_O0.exe code\dot.c        # 仅消融对照
 $ gcc -O2 -o build\dot_c_noconsume.exe code\dot_v0_noconsume.c   # 反例：结果不消费
 
 $ rustc --version
@@ -10164,21 +6718,17 @@ rustc 1.100.0 (0ef1bc386 2026-11-09)
 $ rustc --edition 2021 -C opt-level=3 -o build\dot_rs.exe code\dot.rs
 [RUST BUILD OK]
 
-=== codegen check (objdump -d) ===
-$ objdump -d build\dot_c.exe | grep -c 浮点指令（统计 mulsd/addsd/mulpd/addpd）
-dot_c.exe(-O2)     : mulsd=15 addsd=12 mulpd=0 addpd=0
-dot_c_noconsume.exe: mulsd=14 addsd=10 mulpd=0 addpd=0
+=== 指令级核查（objdump -d）===
+build\dot_c.exe(-O2)     : mulsd=15 addsd=12 mulpd=0 addpd=0
+build\dot_c_noconsume.exe: mulsd=14 addsd=10（反例：结果未消费）
 
-=== build artifacts ===
+=== 产物 ===
 dot_c.exe
-dot_c_noconsume.exe
-dot_c_O0.exe
-dot_c_O2.exe
 dot_rs.exe
-dot_rs_opt0.exe
-dot_rs_opt3.exe
+dot_c_O0.exe
+dot_c_noconsume.exe
 </pre></div>
-<div class="file" id="f61"><h2>第04讲-ScaledDotProduct/_运行日志/env.json<span>342 B</span></h2><pre>﻿{
+<div class="file" id="f55"><h2>第04讲-ScaledDotProduct/_运行日志/env.json<span>342 B</span></h2><pre>﻿{
     &quot;datetime&quot;:  &quot;2026-11-17 01:28:22&quot;,
     &quot;arch&quot;:  &quot;64-bit&quot;,
     &quot;mem_gb&quot;:  15.63,
@@ -10192,7 +6742,7 @@ dot_rs_opt3.exe
     &quot;build&quot;:  &quot;26200&quot;
 }
 </pre></div>
-<div class="file" id="f62"><h2>第04讲-ScaledDotProduct/_运行日志/gen_data.txt<span>808 B</span></h2><pre>��s e e d   =   2 0 2 6 1 1 1 7 
+<div class="file" id="f56"><h2>第04讲-ScaledDotProduct/_运行日志/gen_data.txt<span>808 B</span></h2><pre>��s e e d   =   2 0 2 6 1 1 1 7 
  
  o u t     =   D : \ D e e p S e e k - H a r n e s s \ h w - 0 3 0 4 \ l a b 0 4 \ d a t a 
  
@@ -10207,7 +6757,7 @@ dot_rs_opt3.exe
  d o n e . 
  
  </pre></div>
-<div class="file" id="f63"><h2>第04讲-ScaledDotProduct/_运行日志/merge_runs.txt<span>1,500 B</span></h2><pre>�﨨                   l a n g                             s 1                       s 2                       s 3         s p r e a d % 
+<div class="file" id="f57"><h2>第04讲-ScaledDotProduct/_运行日志/merge_runs.txt<span>1,500 B</span></h2><pre>�﨨                   l a n g                             s 1                       s 2                       s 3         s p r e a d % 
  
  1 0 0 0 0           P y t h o n         0 . 0 0 0 9 8 3 0 8       0 . 0 0 1 0 2 2 3 7     0 . 0 0 0 9 0 3 7 7 9             1 3 . 1 % 
  
@@ -10232,7 +6782,7 @@ dot_rs_opt3.exe
  榌筫penc�鑽  3   !k鶺芉剉  1 5   *N袕L�-NMOpe剉-NMOpe	�騗橯eQ  l o g s / b e n c h m a r k _ r a w . j s o n 
  
  </pre></div>
-<div class="file" id="f64"><h2>第04讲-ScaledDotProduct/_运行日志/naive_demo.txt<span>948 B</span></h2><pre>��l a n g u a g e s   =   [ &#x27; P y t h o n &#x27; ,   &#x27; C &#x27; ,   &#x27; R u s t &#x27; ] 
+<div class="file" id="f58"><h2>第04讲-ScaledDotProduct/_运行日志/naive_demo.txt<span>948 B</span></h2><pre>��l a n g u a g e s   =   [ &#x27; P y t h o n &#x27; ,   &#x27; C &#x27; ,   &#x27; R u s t &#x27; ] 
  
  p y t h o n         =   D : \ D e e p S e e k - H a r n e s s \ r u n t i m e \ d a t a \ d s h - r u n t i m e s \ d s h - p r i m a r y - r u n t i m e \ d e p e n d e n c i e s \ p y t h o n \ p y t h o n . e x e 
  
@@ -10255,7 +6805,7 @@ NY
 0剉曪嬘~簨      購ck/f臺{榋P擽T{_OS畫剉烻郪0
  
  </pre></div>
-<div class="file" id="f65"><h2>第04讲-ScaledDotProduct/_运行日志/naive_whole_process.json<span>490 B</span></h2><pre>{
+<div class="file" id="f59"><h2>第04讲-ScaledDotProduct/_运行日志/naive_whole_process.json<span>490 B</span></h2><pre>{
  &quot;naive_whole_process&quot;: {
   &quot;10000&quot;: {
    &quot;Python&quot;: 0.0793075000110548,
@@ -10284,7 +6834,7 @@ NY
   &quot;Rust&quot;
  ]
 }</pre></div>
-<div class="file" id="f66"><h2>第04讲-ScaledDotProduct/_运行日志/stability.json<span>1,577 B</span></h2><pre>{
+<div class="file" id="f60"><h2>第04讲-ScaledDotProduct/_运行日志/stability.json<span>1,577 B</span></h2><pre>{
  &quot;10000&quot;: {
   &quot;Python&quot;: {
    &quot;session_medians&quot;: [
@@ -10364,36 +6914,20 @@ NY
   }
  }
 }</pre></div>
-<div class="file" id="f67"><h2>第04讲-ScaledDotProduct/_运行日志/test_dot.txt<span>1,668 B</span></h2><pre>��= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
- 
- 筽飝箯Lu(u婳�P y t h o n   璭 �  +   C / R u s t   	N韹 姢N蒘寶翄	�
- 
- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
- 
- P A S S     n = 0   zzT蠎                                P y t h o n = 0 . 0   C = 0 . 0   R u s t = 0 . 0   暒^
-N9SM�/ zz噀鯪_N
-N齹)]
- 
- P A S S     n = 1   USCQ }                                P y t h o n = 0 . 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4   C = 0 . 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4   R u s t = 0 . 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4   
- 
- P A S S     tepe緗nx&lt;P  1 . . 3 � 4 . . 6                 P y t h o n = 3 2 . 0   C = 3 2 . 0   R u s t = 3 2 . 0   
- 
- P A S S     hQ鰱T蠎                                      P y t h o n = 0 . 0   C = 0 . 0   R u s t = 0 . 0   臺{�/f  + 0 . 0 �
-N齹/f  - 0 . 0 / N a N 
- 
- P A S S     乬&#x27;Y乬\鱩T  1 e 3 0 8 / 1 e - 3 0 0         P y t h o n = 1 3 . 0   C = 1 3 . 0   R u s t = 1 3 . 0   1 e 3 0 8 - 1 e 3 0 8   礲坢TiR  1 + 1 2 
- 
- P A S S     暒^
-N9SM慶knx�b�        V a l u e E r r o r :   l e n g t h   m i s m a t c h :   2   v s   1 
- 
- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
- 
- 5   *N箯Lu(u婳觺済�5   P A S S   /   0   F A I L 
- 
- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
- 
- </pre></div>
-<div class="file" id="f68"><h2>第04讲-ScaledDotProduct/_运行日志/test_dot_python_only.txt<span>1,716 B</span></h2><pre>��= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+<div class="file" id="f61"><h2>第04讲-ScaledDotProduct/_运行日志/test_dot.txt<span>993 B</span></h2><pre>﻿==============================================================================
+点积边界用例（Python 断言 + C/Rust 三语言交叉验证）
+==============================================================================
+PASS  n=0 空向量                Python=0.0 C=0.0 Rust=0.0 长度不匹配/空文件也不能崩
+PASS  n=1 单元素                Python=0.30000000000000004 C=0.30000000000000004 Rust=0.30000000000000004 
+PASS  整数精确值 1..3·4..6        Python=32.0 C=32.0 Rust=32.0 
+PASS  全零向量                   Python=0.0 C=0.0 Rust=0.0 必须是 +0.0，不能是 -0.0/NaN
+PASS  极大极小混合 1e308/1e-300    Python=13.0 C=13.0 Rust=13.0 1e308-1e308 抵消后剩 1+12
+PASS  长度不匹配正确报错    ValueError: length mismatch: 2 vs 1
+==============================================================================
+5 个边界用例结果：5 PASS / 0 FAIL
+==============================================================================
+</pre></div>
+<div class="file" id="f62"><h2>第04讲-ScaledDotProduct/_运行日志/test_dot_python_only.txt<span>1,716 B</span></h2><pre>��= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
  
  筽飝箯Lu(u婳�P y t h o n   璭 �  +   C / R u s t   	N韹 姢N蒘寶翄	�
  
@@ -10422,16 +6956,15 @@ N9SM慶knx�b�        V a l u e E r r o r :   l e n g t h   m i s m a t c h 
  = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
  
  </pre></div>
-<div class="file" id="f69"><h2>第04讲-ScaledDotProduct/_运行日志/versions.json<span>623 B</span></h2><pre>{
+<div class="file" id="f63"><h2>第04讲-ScaledDotProduct/_运行日志/versions.json<span>321 B</span></h2><pre>{
  &quot;python&quot;: &quot;3.12.14&quot;,
- &quot;python_full&quot;: &quot;Python 3.12.14 (DSH runtime)&quot;,
- &quot;c_compiler&quot;: &quot;gcc 16.2.0 (MSYS2 mingw-w64, -O2)&quot;,
- &quot;c_compiler_long&quot;: &quot;gcc 16.2.0（gcc.exe (Rev7, Built by MSYS2 project)，MSYS2 mingw-w64，编译命令 gcc -O2）；安装经过：第一次 winget/WinLibs 在下载阶段中断，第二次改用 MSYS2 + 清华镜像装成，C 侧全部数据均由 gcc 重新编译后重跑&quot;,
+ &quot;python_full&quot;: &quot;Python 3.12.14&quot;,
+ &quot;c_compiler&quot;: &quot;gcc 16.2.0 (mingw-w64, -O2)&quot;,
+ &quot;c_compiler_long&quot;: &quot;gcc 16.2.0（target x86_64-w64-mingw32，编译参数 -O2）&quot;,
  &quot;rustc&quot;: &quot;1.100.0 (0ef1bc386 2026-11-09)&quot;,
- &quot;rustc_long&quot;: &quot;rustc 1.100.0 (0ef1bc386 2026-11-09)，host x86_64-pc-windows-msvc，-C opt-level=3（等价 cargo --release）&quot;,
- &quot;collected&quot;: &quot;2026-11-17 02:31:00&quot;
+ &quot;rustc_long&quot;: &quot;rustc 1.100.0（host x86_64-pc-windows-msvc，-C opt-level=3）&quot;
 }</pre></div>
-<div class="file" id="f70"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/ablation.json<span>1,947 B</span></h2><pre>{
+<div class="file" id="f64"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/ablation.json<span>1,947 B</span></h2><pre>{
  &quot;groups&quot;: {
   &quot;opt_levels&quot;: {
    &quot;10000&quot;: {
@@ -10518,7 +7051,7 @@ N9SM慶knx�b�        V a l u e E r r o r :   l e n g t h   m i s m a t c h 
   }
  }
 }</pre></div>
-<div class="file" id="f71"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/ablation.txt<span>10,924 B</span></h2><pre>��= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
+<div class="file" id="f65"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/ablation.txt<span>10,924 B</span></h2><pre>��= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
  
  A )   C �c l   / O d   v s   c l   / O 2 
  
@@ -10724,7 +7257,7 @@ P
  橯eQ  l o g s / a b l a t i o n . j s o n 
  
  </pre></div>
-<div class="file" id="f72"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_console.txt<span>11,388 B</span></h2><pre>��l a n g u a g e s   =   [ &#x27; P y t h o n &#x27; ,   &#x27; C &#x27; ,   &#x27; R u s t &#x27; ] 
+<div class="file" id="f66"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_console.txt<span>11,388 B</span></h2><pre>��l a n g u a g e s   =   [ &#x27; P y t h o n &#x27; ,   &#x27; C &#x27; ,   &#x27; R u s t &#x27; ] 
  
  p y t h o n         =   D : \ D e e p S e e k - H a r n e s s \ r u n t i m e \ d a t a \ d s h - r u n t i m e s \ d s h - p r i m a r y - r u n t i m e \ d e p e n d e n c i e s \ p y t h o n \ p y t h o n . e x e 
  
@@ -10871,7 +7404,7 @@ P
  烻薡penc騗橯eQ  l o g s / b e n c h m a r k _ r a w _ r u n 3 . j s o n 
  
  </pre></div>
-<div class="file" id="f73"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw.json<span>4,097 B</span></h2><pre>{
+<div class="file" id="f67"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw.json<span>4,097 B</span></h2><pre>{
  &quot;sizes&quot;: [
   10000,
   100000,
@@ -11046,7 +7579,7 @@ P
  &quot;timestamp&quot;: &quot;2026-11-17 01:32:10&quot;,
  &quot;merge&quot;: &quot;median of all run-medians across 3 benchmark sessions&quot;
 }</pre></div>
-<div class="file" id="f74"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_rerun.json<span>4,205 B</span></h2><pre>{
+<div class="file" id="f68"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_rerun.json<span>4,205 B</span></h2><pre>{
  &quot;sizes&quot;: [
   10000,
   100000,
@@ -11228,7 +7761,7 @@ P
  &quot;host&quot;: &quot;LAPTOP-59FGHU4I&quot;,
  &quot;timestamp&quot;: &quot;2026-11-17 01:34:31&quot;
 }</pre></div>
-<div class="file" id="f75"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_run1.json<span>4,222 B</span></h2><pre>{
+<div class="file" id="f69"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_run1.json<span>4,222 B</span></h2><pre>{
  &quot;sizes&quot;: [
   10000,
   100000,
@@ -11410,7 +7943,7 @@ P
  &quot;host&quot;: &quot;LAPTOP-59FGHU4I&quot;,
  &quot;timestamp&quot;: &quot;2026-11-17 01:32:10&quot;
 }</pre></div>
-<div class="file" id="f76"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_run2.json<span>4,205 B</span></h2><pre>{
+<div class="file" id="f70"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_run2.json<span>4,205 B</span></h2><pre>{
  &quot;sizes&quot;: [
   10000,
   100000,
@@ -11592,7 +8125,7 @@ P
  &quot;host&quot;: &quot;LAPTOP-59FGHU4I&quot;,
  &quot;timestamp&quot;: &quot;2026-11-17 01:34:31&quot;
 }</pre></div>
-<div class="file" id="f77"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_run3.json<span>4,217 B</span></h2><pre>{
+<div class="file" id="f71"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_run3.json<span>4,217 B</span></h2><pre>{
  &quot;sizes&quot;: [
   10000,
   100000,
@@ -11774,7 +8307,7 @@ P
  &quot;host&quot;: &quot;LAPTOP-59FGHU4I&quot;,
  &quot;timestamp&quot;: &quot;2026-11-17 01:35:40&quot;
 }</pre></div>
-<div class="file" id="f78"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_smoke.json<span>1,047 B</span></h2><pre>{
+<div class="file" id="f72"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_raw_smoke.json<span>1,047 B</span></h2><pre>{
  &quot;sizes&quot;: [
   10000,
   1000000
@@ -11828,7 +8361,7 @@ P
  &quot;host&quot;: &quot;LAPTOP-59FGHU4I&quot;,
  &quot;timestamp&quot;: &quot;2026-11-17 01:26:39&quot;
 }</pre></div>
-<div class="file" id="f79"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_run1.txt<span>11,408 B</span></h2><pre>��l a n g u a g e s   =   [ &#x27; P y t h o n &#x27; ,   &#x27; C &#x27; ,   &#x27; R u s t &#x27; ] 
+<div class="file" id="f73"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_run1.txt<span>11,408 B</span></h2><pre>��l a n g u a g e s   =   [ &#x27; P y t h o n &#x27; ,   &#x27; C &#x27; ,   &#x27; R u s t &#x27; ] 
  
  p y t h o n         =   D : \ D e e p S e e k - H a r n e s s \ r u n t i m e \ d a t a \ d s h - r u n t i m e s \ d s h - p r i m a r y - r u n t i m e \ d e p e n d e n c i e s \ p y t h o n \ p y t h o n . e x e 
  
@@ -11975,7 +8508,7 @@ P
  烻薡penc騗橯eQ  l o g s / b e n c h m a r k _ r a w . j s o n 
  
  </pre></div>
-<div class="file" id="f80"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_run2.txt<span>11,382 B</span></h2><pre>��l a n g u a g e s   =   [ &#x27; P y t h o n &#x27; ,   &#x27; C &#x27; ,   &#x27; R u s t &#x27; ] 
+<div class="file" id="f74"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_run2.txt<span>11,382 B</span></h2><pre>��l a n g u a g e s   =   [ &#x27; P y t h o n &#x27; ,   &#x27; C &#x27; ,   &#x27; R u s t &#x27; ] 
  
  p y t h o n         =   D : \ D e e p S e e k - H a r n e s s \ r u n t i m e \ d a t a \ d s h - r u n t i m e s \ d s h - p r i m a r y - r u n t i m e \ d e p e n d e n c i e s \ p y t h o n \ p y t h o n . e x e 
  
@@ -12122,7 +8655,7 @@ P
  烻薡penc騗橯eQ  l o g s / b e n c h m a r k _ r a w _ r e r u n . j s o n 
  
  </pre></div>
-<div class="file" id="f81"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_run3.txt<span>11,388 B</span></h2><pre>��l a n g u a g e s   =   [ &#x27; P y t h o n &#x27; ,   &#x27; C &#x27; ,   &#x27; R u s t &#x27; ] 
+<div class="file" id="f75"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/benchmark_run3.txt<span>11,388 B</span></h2><pre>��l a n g u a g e s   =   [ &#x27; P y t h o n &#x27; ,   &#x27; C &#x27; ,   &#x27; R u s t &#x27; ] 
  
  p y t h o n         =   D : \ D e e p S e e k - H a r n e s s \ r u n t i m e \ d a t a \ d s h - r u n t i m e s \ d s h - p r i m a r y - r u n t i m e \ d e p e n d e n c i e s \ p y t h o n \ p y t h o n . e x e 
  
@@ -12269,7 +8802,7 @@ P
  烻薡penc騗橯eQ  l o g s / b e n c h m a r k _ r a w _ r u n 3 . j s o n 
  
  </pre></div>
-<div class="file" id="f82"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/compile.txt<span>830 B</span></h2><pre>﻿$ gcc --version
+<div class="file" id="f76"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/compile.txt<span>830 B</span></h2><pre>﻿$ gcc --version
 gcc.exe (Rev7, Built by MSYS2 project) 16.2.0
 $ gcc -O2 -o build\dot_c.exe code\dot.c
 [C BUILD OK]
@@ -12299,7 +8832,7 @@ dot_rs_opt0.pdb
 dot_rs_opt3.exe
 dot_rs_opt3.pdb
 </pre></div>
-<div class="file" id="f83"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/naive_whole_process.json<span>489 B</span></h2><pre>{
+<div class="file" id="f77"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/naive_whole_process.json<span>489 B</span></h2><pre>{
  &quot;naive_whole_process&quot;: {
   &quot;10000&quot;: {
    &quot;Python&quot;: 0.11359909997554496,
@@ -12328,7 +8861,7 @@ dot_rs_opt3.pdb
   &quot;Rust&quot;
  ]
 }</pre></div>
-<div class="file" id="f84"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/stability.json<span>1,575 B</span></h2><pre>{
+<div class="file" id="f78"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/stability.json<span>1,575 B</span></h2><pre>{
  &quot;10000&quot;: {
   &quot;Python&quot;: {
    &quot;session_medians&quot;: [
@@ -12408,7 +8941,7 @@ dot_rs_opt3.pdb
   }
  }
 }</pre></div>
-<div class="file" id="f85"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/versions.json<span>546 B</span></h2><pre>{
+<div class="file" id="f79"><h2>第04讲-ScaledDotProduct/_运行日志/msvc_prev/versions.json<span>546 B</span></h2><pre>{
  &quot;python&quot;: &quot;3.12.14&quot;,
  &quot;python_full&quot;: &quot;Python 3.12.14 (build in DSH runtime)&quot;,
  &quot;c_compiler&quot;: &quot;MSVC cl 19.44.35228 /O2&quot;,

@@ -173,7 +173,7 @@ def build_fig2():
     cpath = os.path.join(LOGS, "compile.txt")
     if os.path.exists(cpath):
         lines.append(("PS D:\\DeepSeek-Harness\\hw-0304\\lab04> 编译三版", FG_DIM, None))
-        for ln in read_lines(cpath)[:12]:
+        for ln in read_lines(cpath)[:10]:
             color = FG
             if ln.startswith("$"):
                 color = CYAN
@@ -187,8 +187,8 @@ def build_fig2():
         start = next((i for i, ln in enumerate(keep) if "[2/2]" in ln), 0)
         body = keep[start:]
         # 头部若干行 + 省略号 + 尾部汇总表（保证图里能看到最终 3×3 耗时表）
-        head = body[:10]
-        tail = body[-13:]
+        head = body[:8]
+        tail = body[-11:]
         for ln in head:
             color = FG
             if ln.startswith("  N="):

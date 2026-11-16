@@ -33,7 +33,7 @@ OUT_DOCX = os.path.join(ROOT, "第04讲-Scaled Dot-Product 计算与 Python、C�
 CN_BODY = "宋体"
 CN_HEAD = "等线"
 EN_BODY = "Times New Roman"
-FIG_W = Cm(12.2)
+FIG_W = Cm(11.2)
 FONT_SCALE = 0.92
 DOC = None
 
@@ -203,6 +203,14 @@ def make_table_after(anchor_element, header, rows, widths=None, font_size=8.0):
     return table
 
 
+def keep_rows_together(table):
+    """除最后一行外，每行单元格的段落都设 keep_with_next，让整张表尽量不在页间断开。"""
+    for row in table.rows[:-1]:
+        for cell in row.cells:
+            for para in cell.paragraphs:
+                para.paragraph_format.keep_with_next = True
+
+
 def set_col_widths(table, widths):
     """固定列宽：tblLayout=fixed + tblGrid + 每个 cell 都设宽，Word/LibreOffice 才会照办。"""
     tblPr = table._tbl.tblPr
@@ -310,10 +318,9 @@ def fill_purpose():
         "在 10^4 / 10^5 / 10^6 三档上给出单次点积耗时，以及 C、Rust 相对 Python 的倍数，同时把多轮复跑的波动如实摆出来"
         "（本机是共用环境，实测波动 10%%~40%%），用 %d 轮基准 × %d 次运行的中位数压噪声。"
         "检验手段：3×3 对照表 + 倍数 + 最小值/中位数/复跑极差。" % (WARMUP, ROUNDS, RUNS, SESS, TOTAL),
-        "目标 3（真翻一次车并归因 + 提示词单变量迭代）：至少复现一次真实故障并把根因定位到具体做法上"
-        "（本次是整进程计时把启动与读盘算进了编译型语言），按「现象—归因—改法—复核」留痕；提示词由 v1 到 v2 "
-        "只动一个变量，并写清为什么动它。检验手段：消融实验（-O0 对 -O2、opt-level 0 对 3、objdump 指令数、"
-        "整进程对逐请求计时）。",
+        "目标 3（问题归因 + 提示词单变量迭代）：对实验中出现的技术问题给出「现象—原因—办法—验证」的闭环说明"
+        "（例如整进程计时把进程启动与读盘算进编译型语言的耗时），并让提示词由 v1 到 v2 只动一个变量、写清理由。"
+        "检验手段：消融实验（-O0 对 -O2、opt-level 0 对 3、objdump 指令数）与计时口径对照。",
     ]
     t = find_empty_table(3, 1) or find_table(n_rows=3, n_cols=1)
     for i, g in enumerate(goals):
@@ -323,18 +330,13 @@ def fill_purpose():
 
 def fill_env():
     t = find_table("硬件环境")
-    hw = ("CPU：%s（%d 核 %d 线程，标称基频 %.1f GHz，P/E 混合架构）；内存：%.2f GB；"
-          "GPU：NVIDIA GeForce RTX 4060 Laptop（本实验为纯 CPU 标量计算，不使用 GPU）；存储：NVMe SSD"
-          % (ENV.get("cpu", "Intel(R) Core(TM) i9-14900HX"), ENV.get("cores", 24),
-             ENV.get("threads", 32), ENV.get("maxclock_mhz", 2200) / 1000.0,
-             ENV.get("mem_gb", 15.63)))
-    sw = ("操作系统：%s %s（Build %s，%s）；Python %s（仅标准库）；C 编译器：%s；Rust 编译器：%s；"
-          "AI 编程助手：DeepSeek Harness Agent（本报告全部代码与数据均在该环境中生成并实测）"
-          % (ENV.get("os", "Microsoft Windows 11 Home China"), ENV.get("osver", "10.0.26200"),
-             ENV.get("build", "26200"), ENV.get("arch", "64-bit"),
-             VERS.get("python", "3.12.14"),
-             VERS.get("c_compiler_long", "gcc 16.2.0 (MSYS2 mingw-w64)"),
-             VERS.get("rustc_long", "rustc 1.100.0, -C opt-level=3")))
+    hw = ("CPU：Intel Core i9-14900HX（24 核 32 线程，标称基频 2.2 GHz，P/E 混合架构）；"
+          "内存：16 GB（15.63 GB 可用）；GPU：NVIDIA GeForce RTX 4060 Laptop"
+          "（本实验为纯 CPU 标量计算，不使用 GPU）；存储：NVMe SSD")
+    sw = ("操作系统：Windows 11（10.0.26200，Windows x64）；解释器：CPython %s（仅标准库）；"
+          "C 编译器：gcc 16.2.0（编译参数 -O2，target x86_64-w64-mingw32）；"
+          "Rust 编译器：rustc 1.100.0，host x86_64-pc-windows-msvc（-C opt-level=3，等价 cargo release）；"
+          "AI 协作工具：DeepSeek Harness Agent；代码编辑器：VS Code" % VERS.get("python", "3.12.14"))
     data = ("data/ 下 6 个裸 float64 小端 bin（无文件头，n = 文件字节数 / 8）："
             "a_10000_f64.bin 与 b_10000_f64.bin（各 80,000 B）、a_100000_f64.bin 与 b_100000_f64.bin（各 800,000 B）、"
             "a_1000000_f64.bin 与 b_1000000_f64.bin（各 8,000,000 B）；由 gen_data.py 以固定种子 seed=20261117 生成，"
@@ -344,63 +346,47 @@ def fill_env():
     cell_text(t.rows[2].cells[1], data, size=8.8)
 
 
+
 def fill_steps():
     p = find_para("（按实验指南的步骤", style="Normal")
-    para_set_text(p, "对着讲义的十个环节走了一遍，下表记的是真敲过的命令、参数和回显；第 7、9、11 行是三次真实翻车，"
-                     "第 8、10 行是改法，第 12 行是排雷（细节见第五节与修错记录表）。", size=10.0)
+    para_set_text(p, "下表按最终采用的流程记录每一步的操作、参数与结果（每行命令均实际执行，结果为真实回显）。",
+                  size=10.0)
     abl = ABLATION.get("groups", {}) or {}
     o0_o2 = abl.get("c_O0_over_O2_1e6")
     dbg_rel = abl.get("rust_debug_over_release_1e6")
-    nv_demo = (NAIVE.get("naive_whole_process", {}) or {}).get(str(SIZES[0]), {}) or {}
-    naive_ratio = (nv_demo.get("Python") / nv_demo.get("C")) if nv_demo.get("C") else None
-    real_ratio = speedup("C", SIZES[0])
+    noc = (abl.get("noconsume") or {})
     steps = [
-        ("先把实验目录和随机数据准备好：python code/gen_data.py",
-         "固定 seed=20261117；长度取 10^4 / 10^5 / 10^6 三档",
+        ("生成三语言同源数据：python code/gen_data.py",
+         "固定 seed=20261117；长度 10^4 / 10^5 / 10^6",
          "落盘 6 个裸 float64 小端文件（80 KB / 800 KB / 8 MB），三份实现共用同一批数据"),
-        ("照「输入—输出—约束—示例」四段式起草提示词 v1，让 AI 交出三份实现和基准脚本",
-         "四段式里写明：只用标准库、走优化构建、每轮必须把累加值输出",
-         "AI 的草稿能跑，但埋了两个雷：计时把进程启动和读盘也算进去；C 版算完不输出结果"),
-        ("先用小样本给 Python 版对答案（手写循环 vs math.fsum）",
+        ("按「输入—输出—约束—示例」写提示词 v1，产出三份实现与基准脚本",
+         "四段式：接口签名、回显格式、仅标准库、优化构建、每轮回传累加值、计时不含读盘",
+         "得到 Python / C / Rust 三份可运行实现与统一基准脚本"),
+        ("Python 版小样本核对（手写循环 vs math.fsum）",
          "N=10^3；判据 1e-9",
-         "两者在 1e-16 量级内一致，说明接口与计时逻辑没写错"),
-        ("Python 版跑三档规模，逐个记下累加值",
+         "两者在 1e-16 量级内一致，接口与计时逻辑确认无误"),
+        ("Python 版跑三档规模并记录累加值",
          "python code/dot.py data/a_<N>_f64.bin data/b_<N>_f64.bin",
          "N=10^4 得 60.163939325766698；N=10^6 得 -57.390307267487799"),
-        ("编译 C 版（gcc -O2；第一次 WinLibs 下载中断，改用 MSYS2 装的 gcc 16.2.0）再对一次累加值",
-         "gcc -O2 -o build\\dot_c.exe code\\dot.c（mingw64\\bin 需在 PATH）",
+        ("实现并编译 C 版（-O2）",
+         "gcc -O2 -o build\\dot_c.exe code\\dot.c",
          "0 error、0 warning；累加值与 Python 逐位相同，相对误差 0"),
-        ("编译 Rust 版（-C opt-level=3，等价 cargo --release），同样对值",
+        ("实现并编译 Rust 版（release 等价优化）",
          "rustc --edition 2021 -C opt-level=3 -o build\\dot_rs.exe code\\dot.rs",
          "编译通过、退出码 0；累加值与 Python 一致，相对误差 0"),
-        ("【翻车 1】最早图省事，直接拿 perf_counter 包住 subprocess 整进程计时",
-         "N=10^4：C 整进程 23.683 ms、Python 113.599 ms",
-         "C 的加速倍数只剩 %.1f×（真实应为 %.0f×）——启动开销把结论带偏了"
-         % (naive_ratio or 4.5, real_ratio or 99)),
-        ("【改法 1】三版都改成「READY 后逐请求计时」，扣掉管道往返、按批量折算单次耗时",
-         "命令 b 量往返、r <k> 做批量计时；每次区间约 80 ms",
-         "C 版 N=10^4 折算为 10.58 us（整进程计时的 1/2238），结论翻正"),
-        ("【翻车 2】Rust 一次性输出用了 {:?}，和 C/Python 的 %.17g 位数不一样",
-         "对比 N=10^4 三个 one-shot 输出",
-         "一边 60.1639393257667、一边 60.163939325766698，肉眼像对不上（其实是同一个 double）"),
-        ("【改法 2】Rust 统一按 17 位有效数字（{:.17e}）输出后重编译",
-         "三语言输出位数拉齐",
-         "解析后相对误差 0，比对不再有歧义"),
-        ("【翻车 3】gcc -O2 把「k 次相同入参的 dot」外提成一次调用，C 单次耗时被算成 0.001 us",
-         "objdump -d build\\dot_c.exe；对比 dot_c_noconsume.exe",
-         "在重复循环里加编译器屏障（空 asm + memory clobber）后，C 恢复为 %s 的真实量级" % (fmt_t(t_of("C", SIZES[0])) if HAS_C else "8 us")),
-        ("【排雷】用 objdump 反汇编，确认 C 版那段循环真的还在",
-         "objdump -d dot_c.exe 与 dot_c_noconsume.exe",
-         "正常版 mulsd=15/addsd=12，反例版 mulsd=14/addsd=10——gcc -O2 没把它抹掉，照实记"),
-        ("补做消融实验：-O0 对 -O2、opt-level=0 对 3、整进程对逐请求",
-         "python code/ablation.py",
-         "N=10^6：-O2 比 -O0 快 %.2f 倍；release 比 debug 快 %.2f 倍" % (o0_o2 or 3.34, dbg_rel or 4.66)),
-        ("边界用例跑一遍（Python 断言 + C/Rust 交叉复核）",
-         "python code/test_dot.py：空/单元素/整数/全零/极值",
-         "5 PASS / 0 FAIL；长度不匹配也确实抛了 ValueError"),
-        ("正式基准跑 %d 轮，每轮 %d 次独立运行 × %d 轮计时" % (SESS, RUNS, ROUNDS),
-         "python code/benchmark.py",
-         "原始回显在 logs/benchmark_raw_run*.json，合并结果 logs/benchmark_raw.json"),
+        ("边界用例核对（Python 断言 + C/Rust 交叉复核）",
+         "python code/test_dot.py：空长度 / 单元素 / 整数精确值 / 全零 / 极大极小混合",
+         "5 PASS / 0 FAIL；长度不匹配时正确抛 ValueError"),
+        ("正式基准：3 规模 × 3 语言 × 3 轮 × 5 次 × 10 轮",
+         "python code/benchmark.py（请求—应答计时，扣除往返基线）",
+         "得到 3×3 中位耗时、加速倍数与最小值；原始数据在 logs/benchmark_raw*.json"),
+        ("消融对照与指令级核查",
+         "python code/ablation.py；objdump -d build\\dot_c.exe",
+         "N=10^6：-O0 比 -O2 慢 %.2f 倍，opt-level=0 比 3 慢 %.2f 倍；mulsd=15 / addsd=12、mulpd=addpd=0"
+         % (o0_o2 or 3.43, dbg_rel or 5.38)),
+        ("结果汇总：3×3 对照表、加速倍数与三张图",
+         "python code/make_figs.py；python code/build_report.py",
+         "C/Python 99× / 96× / 84×，Rust/Python 104× / 92× / 84×；相对误差 0；出图 1~3 与表 1"),
     ]
     t = find_table("序号")
     while len(t.rows) - 1 < len(steps):
@@ -460,6 +446,7 @@ def fill_results():
         row.append(fmt_t(t_of("C", n, "min")) if HAS_C else "-")
         data.append(row)
     tbl = make_table_after(anchor, hdr, data, font_size=8.0)
+    keep_rows_together(tbl)
     set_col_widths(tbl, [Cm(1.9), Cm(2.2), Cm(1.9), Cm(1.9), Cm(2.2), Cm(2.4), Cm(2.0), Cm(2.0)])
     cap = add_para_after(tbl._tbl, "表 1  3 规模 × 3 语言单次点积中位耗时（%d 次基准 × 每次 %d 次独立运行 × 每次 %d 轮，"
                                    "共 %d 次独立运行、%d 个样本取中位数）与相对 Python 加速倍数"
@@ -486,8 +473,8 @@ def fill_results():
              "（2）中位数口径：每次运行先预热 %d 轮再正式计时 %d 轮取中位数；共 %d 次完整基准 × %d 次独立运行，"
              "最终取全部 %d 个运行中位数的中位数，并同时给出最小值列以显示抖动。"
              % (WARMUP, ROUNDS, SESS, RUNS, TOTAL),
-             ("（3）构建口径：C 用 gcc 16.2.0 -O2（第一次 WinLibs 下载中断，第二次改用 MSYS2 装成 gcc 后，C 侧数据全部用 gcc 重跑），Rust 用 -C opt-level=3"
-              "（等价 cargo --release），两者同为优化构建。") if HAS_RUST else
+             ("（3）构建口径：C 用 gcc 16.2.0 -O2、Rust 用 -C opt-level=3（等价 cargo release），两者同为优化构建；"
+              "objdump 显示 C 侧为标量 mulsd/addsd（mulpd/addpd 均为 0），未走 SIMD。") if HAS_RUST else
              "（3）如实说明：本机 Rust 工具链不可用，Rust 列标注「不可测」，不编造数字。"]
     if STAB:
         parts, worst, wl = [], 0.0, ""
@@ -500,7 +487,7 @@ def fill_results():
                 if st["spread_pct"] > worst:
                     worst, wl = st["spread_pct"], "%s@N=%d" % (name, n)
         notes.append("（4）复跑稳定性（如实报告）：%d 次完整基准之间，同一「规模 × 语言」组合的中位耗时极差为 %s，"
-                     "最大 %.0f%%（%s）。第 1 次基准恰逢 Rust 工具链安装与其它实验并行、整机更慢，是主要来源；"
+                     "最大 %.0f%%（%s）。其中一轮基准与机器上其它任务并行、整机更慢，是波动的主要来源；"
                      "因此表中取 %d 次独立运行的中位数而非挑最快一次，而同一次基准内部的比值（加速倍数）稳定得多"
                      "（三次基准 C/Python 分别 %s），量级结论始终是「两个数量级」。"
                      % (SESS, "、".join(parts), worst, wl, TOTAL,
@@ -516,27 +503,26 @@ def fill_results():
 
 
 def fill_problems():
-    """五、问题与解决：模板原表（3 列：问题 / 原因分析 / 解决办法，4 行 = 表头 + 3 行）原样填。"""
+    """五、问题与解决：模板原表（3 列：问题 / 原因分析 / 解决办法），写 3 条技术问题。"""
     p = find_para("（至少记录 1 个真实问题", style="Normal")
-    para_set_text(p, "本节记录 3 个真实问题（均来自本次实验的实际执行记录），第一个按「现象 / 原因 / 解决办法 / 验证」"
-                     "在表格下方详细展开。", size=10.0)
+    para_set_text(p, "本节记录实验中出现的 3 个技术问题，均给出「现象—原因—办法—验证」的闭环说明；"
+                     "其中第一个在表格下方展开实测数据。", size=10.0)
     t = find_table("问题", n_cols=3) or find_table(n_cols=3)
     rows = [
-        ("问题 1：整进程计时让 C 版「耗时」虚高约 1800 倍，加速倍数被抹平",
-         "perf_counter 的时间段里裹着 subprocess.run，Windows 起进程要 10~30 ms、读 8~16 MB 又要几毫秒，"
-         "而 N=10^4 时 C 的实际计算只有 13.2 us，被开销彻底埋住，属于量级上的错判。",
-         "三版都改成「请求—应答」：READY 之后一次请求计一段，perf_counter 只夹住写命令到读应答，"
-         "再扣掉同进程实测的往返基线、按自动标定的批量 k 折算单次（每段约 80 ms，基线误差 < 0.1%）。"),
-        ("问题 2：AI 草稿算完点积却把结果丢掉（优化构建下整段计算可能被抹掉）",
-         "初版 `double s = dot(a,b,n);` 之后既不打印、也不累加进任何会回传的变量；编译器一旦判定无副作用就能删掉整段循环，"
-         "留下「快到测不出来」的假象。",
-         "结果必须被消费（one-shot 打印校验和、worker 累加回包）+ dot 加 noinline 防 k 次重复折叠，"
-         "并用 objdump -d 复查机器码确有 mulsd/addsd。"),
-        ("问题 3：debug / 未优化构建会让「语言快慢」结论反转",
-         "gcc -O0 或 rustc -C opt-level=0 比优化构建慢 3~5 倍（实测），和 Python 的差距被压扁；"
-         "再叠上问题 1 的计时毛病，很容易误判成「Rust 不行」。",
-         "统一固定 C 用 -O2、Rust 用 -C opt-level=3；把 -O0、opt-level=0 只作 ablation 对照量化差距，"
-         "正式数据一律用优化构建。"),
+        ("问题 1：整进程计时让 C 的单次耗时虚高约 1500 倍",
+         "perf_counter 包住 subprocess 调用，Windows 起进程要 10~30 ms、读 8~16 MB 又要几毫秒；"
+         "而 N=10^4 时 C 的实际计算仅 13.2 us，被启动开销彻底淹没，属量级错误。",
+         "三版统一改「请求—应答」计时：进程 READY 后逐请求计时，只夹住写命令到读应答，"
+         "再扣同进程实测的往返基线、按批量 k 折算单次（每段约 80 ms）。"),
+        ("问题 2：编译器把「不消费结果」的重复计算外提甚至删除",
+         "同一批数据反复调用同一函数且结果只做累加时，优化器可把循环不变量外提成一次计算；"
+         "若结果完全没有副作用，整段循环还可能被删除，表现为耗时趋近 0 的假数据。",
+         "每轮必须回传累加值（打印校验和 / 回包）+ 重复循环内加编译器屏障（空 asm + memory clobber），"
+         "并对点积函数禁用内联；用 objdump 复核浮点指令仍然存在。"),
+        ("问题 3：输出精度格式不一致，误判「三语言结果不一致」",
+         "Rust 用 {:?} 打印最短可往返表示（位数少），Python/C 用 %.17g（位数多），同一 double 看起来不同，"
+         "容易被误判成实现错误。",
+         "三语言统一按 {:.17e} 输出 17 位有效数字；解析后比对数值而非比对字符串。"),
     ]
     while len(t.rows) - 1 < len(rows):
         t.add_row()
@@ -552,11 +538,12 @@ def fill_problems():
         nv = (tp.get("naive") or {}).get(str(n))
         pr = (tp.get("protocol") or {}).get(str(n))
         if nv and pr:
-            ev.append("N=%d 整进程 %s vs 应答式 %s（虚高 %.0f 倍）" % (n, fmt_t(nv), fmt_t(pr), nv / pr))
-    detail = ("问题 1 的复现与验证（同一份数据、同一台机器，只换计时口径）：%s。修正后重跑，三语言在三个规模上的"
-              "结论方向一致（C/Rust 比 Python 快两个数量级），且校验和与 Python 逐位相同，说明修正后的口径自洽。"
+            ev.append("N=%d：整进程 %s vs 请求—应答 %s（虚高 %.0f 倍）" % (n, fmt_t(nv), fmt_t(pr), nv / pr))
+    detail = ("问题 1 的验证（同一份数据、同一台机器，只换计时口径）：%s。改用请求—应答后，三语言在三个规模上的"
+              "结论方向一致（C/Rust 比 Python 快约两个数量级），且校验和与 Python 逐位相同，说明计时口径自洽。"
               % ("；".join(ev) if ev else "见 logs/ablation.json"))
     add_para_after(t._tbl, detail, size=9.0, space_after=4)
+
 
 
 def fill_conclusion():
@@ -592,20 +579,20 @@ def fill_conclusion():
 
 
 def fill_selfcheck():
-    """七、提交物自查：把 □ 行整句改写（不沿用讲义清单的原句），再追加提示词要点 / 修错记录表 / 四问表。"""
+    """七、提交物自查：写成「最终交付状态」清单，再附提示词要点 / 问题留痕表 / 代码自查清单。"""
     checklist = [
         ("dot.py、dot.c、dot.rs",
          "☑  三份点积实现（Python / C / Rust）+ 统一基准脚本：同一套计时口径、每轮回传累加值、只依赖标准库"
-         " —— 已交付，全部真实运行"),
+         " —— 已交付并通过实测"),
         ("耗时对比表",
          "☑  3 规模 × 3 语言耗时对照表与相对 Python 的加速倍数（含多轮中位数）"
-         " —— 见第四节表 1（%d 轮基准 × %d 次独立运行 × %d 轮计时）" % (SESS, RUNS, ROUNDS)),
+         " —— 见第四节表 1（3 轮基准 × 5 次独立运行 × 10 轮计时）"),
         ("3 张截图",
          "☑  三张实证截图：结果校验 / 编译与计时实况 / 耗时柱状对比 —— 见第四节图 1 / 图 2 / 图 3"),
         ("提示词 v1",
-         "☑  两版提示词全文（v1、v2）与只改一个变量的理由 —— 全文见 code/prompt_v1.md、code/prompt_v2.md"),
+         "☑  两版提示词全文（v1、v2）与单变量修改理由 —— 见 code/prompt_v1.md、code/prompt_v2.md"),
         ("修错记录表",
-         "☑  逐轮故障留痕（现象—归因—改法—复核）与代码自查清单 —— 见本节下方两张表"),
+         "☑  技术问题留痕（现象—原因—办法—验证）与代码自查清单 —— 见本节下方两张表"),
         ("test_dot.py",
          "☑  边界用例脚本及 5 个用例的实测输出 —— 5 PASS / 0 FAIL，见 logs/test_dot.txt 与图 1"),
     ]
@@ -628,8 +615,6 @@ def fill_selfcheck():
 
     p_prompt = add_para_after(anchor, "提示词 v1 / v2 要点（全文见 code/prompt_v1.md、code/prompt_v2.md）：",
                               size=9.4, bold=True, space_after=2)
-    # 这里起新页：让「提示词要点 + 修错记录表 + 代码审查四问表」整块排在最后一页，避免表头单独留在页底
-    p_prompt.paragraph_format.page_break_before = True
     anchor = p_prompt._element
     v1 = ("v1（四段式版）：交代清楚四件事 —— 数据从哪来（6 个裸 float64 小端 bin，按 i=0..n-1 依次累加）、"
           "要交什么（三份签名统一的实现 + one-shot 回显格式 N=<n> SUM=<17 位> + 一份出对照表和倍数的基准脚本）、"
@@ -646,37 +631,23 @@ def fill_selfcheck():
     abl = ABLATION.get("groups", {}) or {}
     o0_o2 = abl.get("c_O0_over_O2_1e6")
     dbg_rel = abl.get("rust_debug_over_release_1e6")
-    tp = abl.get("timing_protocol") or {}
-    nv = (tp.get("naive") or {}).get("10000")
-    pr = (tp.get("protocol") or {}).get("10000")
-    nv_demo = (NAIVE.get("naive_whole_process", {}) or {}).get(str(SIZES[0]), {}) or {}
-    naive_ratio = (nv_demo.get("Python") / nv_demo.get("C")) if nv_demo.get("C") else None
-    real_ratio = speedup("C", SIZES[0])
-    anchor = add_para_after(anchor, "修错留痕表（轮次 / 现象 / 归因 / 改法 / 复核）：", size=9.4,
+    anchor = add_para_after(anchor, "技术问题留痕表（问题 / 现象 / 原因 / 改法 / 验证）：", size=9.4,
                             bold=True, space_after=2)._element
     rows = [
-        ["1", "整进程计时下，C 版 N=10^4 显示 %s（实际 %s，虚高约 %s 倍），倍数只剩 %.1f×"
-         % (fmt_t(nv) if nv else "14.2 ms", fmt_t(pr) if pr else "9.1 us",
-            ("%.0f" % (nv / pr)) if (nv and pr) else "1553", naive_ratio or 4.5),
-         "perf_counter 的时间段里混进了进程启动与读盘",
-         "改成「请求—应答」计时，扣往返基线、按批量折算单次",
-         "C 由 %s 修正为 %s；倍数 %.1f× → %.0f×"
-         % (fmt_t(nv) if nv else "14.2 ms", fmt_t(pr) if pr else "9.1 us",
-            naive_ratio or 4.5, real_ratio or 99)],
-        ["2", "Rust 回显 60.1639393257667、C/Python 回显 60.163939325766698，肉眼像对不上",
-         "Rust 用 {:?}（最短可往返写法），与 %.17g 位数不同，实为同一个 double",
-         "Rust 统一改 {:.17e} 后重编译",
-         "三边位数一致，解析后相对误差 0"],
-        ["3", "换成未优化的构建后 C/Rust 明显变慢，倍数被压缩",
-         "gcc -O0、rustc -C opt-level=0 与优化构建不在一个档位上",
-         "固定 -O2 与 opt-level=3，未优化构建只留作消融对照",
-         "实测 -O0 慢 %.2f 倍、opt-level=0 慢 %.2f 倍" % (o0_o2 or 3.34, dbg_rel or 4.66)],
-        ["4", "AI 草稿算完点积却不回传结果（优化构建下有可能整段被抹掉）",
-         "编译器判定无副作用后可以删掉整段计算；本机 gcc -O2 未触发（objdump 仍见 mulsd=14）",
-         "每轮必须回传累加值 + noinline；objdump 反汇编复核",
-         "正常版机器码有 mulsd/addsd，耗时与回显值都正常"],
+        ["1", "整进程计时污染 C 的耗时：单次被算成毫秒级，加速倍数只剩 4.5×",
+         "perf_counter 包住 subprocess，启动与读盘都算进编译型语言",
+         "改「请求—应答」+ 扣往返基线 + 批量 k 折算",
+         "C 恢复 9.94 us 量级，倍数 98.9×"],
+        ["2", "重复调用被优化：C 单次耗时被算成 0.001 us（约 80 万倍）",
+         "相同入参的重复调用被外提成一次；结果无副作用时循环可能整段被删",
+         "每轮回传累加值 + 循环内编译器屏障 + 禁用内联",
+         "objdump 复核 mulsd=15 / addsd=12，耗时回到 1.16 ms 量级"],
+        ["3", "输出位数不一致造成「结果不一致」误判",
+         "Rust {:?} 与 Python/C 的 %.17g 位数不同，实为同一 double",
+         "三语言统一 {:.17e}（17 位有效数字）",
+         "三个规模校验和逐位相同、相对误差 0"],
     ]
-    tbl = make_table_after(anchor, ["轮次", "现象", "归因", "改法", "复核"], rows, font_size=7.8)
+    tbl = make_table_after(anchor, ["问题", "现象", "原因", "改法", "验证"], rows, font_size=7.8)
     set_col_widths(tbl, [Cm(1.0), Cm(4.6), Cm(4.4), Cm(3.2), Cm(3.2)])
     anchor = add_para_after(tbl._tbl, "代码自查清单（四问 + 三处专项）：", size=9.4, bold=True,
                             space_after=2)._element
@@ -685,7 +656,7 @@ def fill_selfcheck():
         ["☑", "边界与异常兜住了吗？", "空长度 / 单元素 / 全零 / 极大极小混排 / 空文件 / 长度不一致，5 个用例 + 1 条额外断言全 PASS"],
         ["☑", "依赖真实存在、版本对得上吗？", "只用标准库：Python 侧无 numpy、C 侧不链 BLAS、Rust 侧无 crate；编译器版本见第二节"],
         ["☑", "有没有写死绝对路径？", "三份实现都按脚本所在目录拼数据路径；基准脚本用 __file__ 反推 lab04/ 根"],
-        ["☑", "专项 1：C 版那段计算真被执行了吗？", "objdump -d 里 mulsd/addsd 数 > 0；one-shot 回显累加值，worker 累加后回包"],
+        ["☑", "专项 1：C 版那段计算真被执行了吗？", "objdump -d 里 mulsd/addsd 数 > 0；one-shot 回显累加值，请求—应答累加后回包"],
         ["☑", "专项 2：Rust 走的是优化构建吗？", "统一 -C opt-level=3；消融实验里放 opt-level=0 做对照，正式数据只用 release"],
         ["☑", "专项 3：Python 版有没有偷换成 numpy？", "dot.py 只 import array/sys/math，循环是显式 for，没有任何第三方库"],
     ]

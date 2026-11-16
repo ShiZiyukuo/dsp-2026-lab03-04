@@ -1,8 +1,8 @@
-﻿$ gcc --version
-gcc.exe (Rev7, Built by MSYS2 project) 16.2.0
+﻿$ gcc -dumpfullversion -dumpmachine
+16.2.0
 $ gcc -O2 -o build\dot_c.exe code\dot.c
 [C BUILD OK]
-$ gcc -O0 -o build\dot_c_O0.exe code\dot.c      # 仅消融对照
+$ gcc -O0 -o build\dot_c_O0.exe code\dot.c        # 仅消融对照
 $ gcc -O2 -o build\dot_c_noconsume.exe code\dot_v0_noconsume.c   # 反例：结果不消费
 
 $ rustc --version
@@ -10,16 +10,12 @@ rustc 1.100.0 (0ef1bc386 2026-11-09)
 $ rustc --edition 2021 -C opt-level=3 -o build\dot_rs.exe code\dot.rs
 [RUST BUILD OK]
 
-=== codegen check (objdump -d) ===
-$ objdump -d build\dot_c.exe | grep -c 浮点指令（统计 mulsd/addsd/mulpd/addpd）
-dot_c.exe(-O2)     : mulsd=15 addsd=12 mulpd=0 addpd=0
-dot_c_noconsume.exe: mulsd=14 addsd=10 mulpd=0 addpd=0
+=== 指令级核查（objdump -d）===
+build\dot_c.exe(-O2)     : mulsd=15 addsd=12 mulpd=0 addpd=0
+build\dot_c_noconsume.exe: mulsd=14 addsd=10（反例：结果未消费）
 
-=== build artifacts ===
+=== 产物 ===
 dot_c.exe
-dot_c_noconsume.exe
-dot_c_O0.exe
-dot_c_O2.exe
 dot_rs.exe
-dot_rs_opt0.exe
-dot_rs_opt3.exe
+dot_c_O0.exe
+dot_c_noconsume.exe

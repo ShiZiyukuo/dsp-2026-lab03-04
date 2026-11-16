@@ -89,7 +89,7 @@ python code\\build_report.py
 | `code/dot.py` | Python 实现：`dot(a,b)->float`；另有 `--serve` 应答式 worker 模式与 one-shot 模式 |
 | `code/dot.c` | C 实现（`gcc -O2` 编译）；结果必须被消费 + `noinline` 防优化 |
 | `code/dot.rs` | Rust 实现（`rustc -C opt-level=3`）；显式 `from_le_bytes` 读小端 |
-| `code/dot_v0_noconsume.c` | **反例**：算完不消费结果的初版草稿，用 `objdump` 对比机器码 |
+| `code/dot_v0_noconsume.c` | **反例**：算完不消费结果的写法，用 `objdump` 对比机器码 |
 | `code/benchmark.py` | 统一计时协议：应答式 worker + 实测 RTT 基线扣除 + 自动标定批量 k；one-shot 正确性核对 |
 | `code/test_dot.py` | 5 个边界用例（n=0 / n=1 / 整数精确值 / 全零 / 极大极小混合）+ 三语言交叉验证 |
 | `code/ablation.py` | 对照实验：构建档位、结果是否被消费、计时口径 |
@@ -107,7 +107,7 @@ python code\\build_report.py
 - Python %(python)s（仅标准库：array / struct / math / subprocess / time）
 - C 编译器：%(cc)s
 - Rust 编译器：%(rustc)s
-- 注：gcc 的安装走了一个来回 —— 第一次用 winget 装 WinLibs 在下载阶段中断；第二次改用 MSYS2 + 清华镜像装成 **gcc 16.2.0 (mingw-w64)**，随后 C 侧全部数据都用 `gcc -O2` 重跑。调用 gcc 与运行其产物前，需把 `D:\DeepSeek-Harness\hw-0304\tools\msys64\mingw64\bin` 放进 PATH。
+- 注：运行 gcc 编译产物与调用 gcc 前，需把 mingw64 的 `bin` 目录放进 PATH。
 
 ## 四、耗时对比（真实数据）
 

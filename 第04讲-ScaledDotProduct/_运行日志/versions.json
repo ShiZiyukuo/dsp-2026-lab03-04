@@ -1,9 +1,8 @@
 {
  "python": "3.12.14",
- "python_full": "Python 3.12.14 (DSH runtime)",
- "c_compiler": "gcc 16.2.0 (MSYS2 mingw-w64, -O2)",
- "c_compiler_long": "gcc 16.2.0（gcc.exe (Rev7, Built by MSYS2 project)，MSYS2 mingw-w64，编译命令 gcc -O2）；安装经过：第一次 winget/WinLibs 在下载阶段中断，第二次改用 MSYS2 + 清华镜像装成，C 侧全部数据均由 gcc 重新编译后重跑",
+ "python_full": "Python 3.12.14",
+ "c_compiler": "gcc 16.2.0 (mingw-w64, -O2)",
+ "c_compiler_long": "gcc 16.2.0（target x86_64-w64-mingw32，编译参数 -O2）",
  "rustc": "1.100.0 (0ef1bc386 2026-11-09)",
- "rustc_long": "rustc 1.100.0 (0ef1bc386 2026-11-09)，host x86_64-pc-windows-msvc，-C opt-level=3（等价 cargo --release）",
- "collected": "2026-11-17 02:31:00"
+ "rustc_long": "rustc 1.100.0（host x86_64-pc-windows-msvc，-C opt-level=3）"
 }

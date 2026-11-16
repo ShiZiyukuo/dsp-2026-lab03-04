@@ -2,7 +2,7 @@
 
 2026 秋《数字媒体程序设计》· 第2章 编程语言概论
 在线地址：https://github.com/ShiZiyukuo/dsp-2026-lab03-04
-同步时间：2026-11-17 02:39
+同步时间：2026-11-17 03:08
 
 配套实验报告（两讲各 6 页，日期均为 2026-11-16）：
 - 第03讲：矩阵乘法四层实现—从 Verilog 到 CUDA
@@ -18,17 +18,21 @@
 | `matmul_O0.s` / `matmul_O2.s` | 真实 **gcc 16.2.0 `-S`** 输出（AT&T 语法），460 行 / 285 行 |
 | `matmul.v` / `tb_matmul.v` | Verilog RTL：generate+genvar 例化 27 个 mul8s + testbench |
 | `matmul.cu` / `matmul_musa.cu` / `musa_diff.txt` | CUDA 核函数、MUSA 前缀改写版、两者 unified diff |
-| `matmul_cu_ref.c` | 把 CUDA 核函数累加循环搬到 CPU 的等价实现（本机无 nvcc 时的语义验证） |
+| `matmul_cu_ref.c` | 把 CUDA 核函数累加循环搬到 CPU 的等价实现（CPU 参考对照） |
 | `bench_matmul.c` | `-O0` vs `-O2` 耗时基准（2000 万轮 × 3 次取中位数） |
-| `appendix_msvc_cl/` | 附录：MSVC `cl /FA` 的 MASM 汇编（先前环境对照，正文数字不用它） |
+| `matmul_cu_bench.cu` | 真机 CUDA 基准：N=1024，CPU vs GPU naive vs GPU tiled，cudaEvent 计时 + 设备属性采集 |
+| `build_cuda.ps1` | 一键编译运行 CUDA 版（处理 vcvars64 与 cudart PATH） |
 | `README.md` | 五维度对照表（并行粒度 / 数据落点 / 调度归属 / 代码行数 / 出错方式）+ 复现命令 |
 | `_运行日志/` | 全部真实终端输出（run_gcc_O0.txt、run_gcc_O2.txt、bench_gcc.txt、sim.txt…） |
 
 关键真实结果：`C = [30,24,18; 84,69,54; 138,114,90]`，`CHECKSUM = 621`；
-C(-O0) / C(-O2) / Verilog 仿真（Icarus Verilog 12.0）/ CUDA-CPU 等价实现四路均 **9/9 PASS**；
+C(-O0) / C(-O2) / Verilog 仿真（Icarus Verilog 12.0）/ CUDA（nvcc 13.5 真机）四路均 **9/9 PASS**；
 `-O0` 2.8780 s → `-O2` 0.3370 s（**8.54×**），汇编 **460 → 285 行**；
 `-O0` 内层 `c[i][j]+=a[i][k]*b[k][j]` 对应 `imull` + `leal`（第 138、139 行），`-O2` 把 k 循环展开成 3 `imull` + 2 `addl`；
 向量化只出现在校验和规约（3 条 `paddd`），矩阵乘法本身未向量化。
+CUDA 基准（N=1024，RTX 4060 Laptop / sm_89）说明 3×3 规模下 1024 线程仅用 9 个（利用率 0.88%）；
+N=1024 时 CPU 三重循环 5660 ms、GPU naive 3.2777 ms（1726.82×）、GPU tiled 1.7674 ms（3202.46×，比 naive 再快 1.85×），
+三者 CHECKSUM 均为 `21758082314`、逐元素不一致 0 个。
 
 ## 第04讲 Scaled Dot-Product 效率对比（`第04讲-ScaledDotProduct/`）
 
